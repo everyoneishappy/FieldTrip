@@ -1,0 +1,175 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Classes\CircleSDF (SF2D Function) help.v4p" scrollx="0" scrolly="105">
+   <BOUNDS type="Window" left="945" top="4515" width="9000" height="6000">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|CircleSDF (SF2D Function)|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="5">
+   <BOUNDS type="Node" left="2040" top="4755" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2040" top="4755" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11865" top="4830" width="8445" height="8535">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="CircleSDF (SF2D Function)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2220" top="2130" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2220" top="2130" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Function Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="0,0" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" visible="1" values="0.14">
+   </PIN>
+   <BOUNDS type="Window" left="16005" top="1740" width="11640" height="11055">
+   </BOUNDS>
+   </NODE>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
+   <BOUNDS type="Box" left="3870" top="3855" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3870" top="3855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2280" top="3420" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF2D Class" visible="1" slicecount="1" values="|&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Circle Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fCircleSDF_0_&quot;&cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;// Paramaters&cr;&lf;StructuredBuffer&lt;float2&gt; fCircleSDF_0_pos : fCircleSDF_0_POS;&cr;&lf;StructuredBuffer&lt;float&gt; fCircleSDF_0_radius : fCircleSDF_0_RADIUS;&cr;&lf;&cr;&lf;uint circleCount;&cr;&lf;&cr;&lf;float fCircleSDF_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(uint i; i&lt; circleCount; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;d = min (d, fCircle(p-fCircleSDF_0_pos[i], fCircleSDF_0_radius[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define SF2D fCircleSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1" slicecount="1" values="|&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Circle Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fCircleSDF_0_&quot;&cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;// Paramaters&cr;&lf;StructuredBuffer&lt;float2&gt; fCircleSDF_0_pos : fCircleSDF_0_POS;&cr;&lf;StructuredBuffer&lt;float&gt; fCircleSDF_0_radius : fCircleSDF_0_RADIUS;&cr;&lf;&cr;&lf;uint fCircleSDF_0_count : fCircleSDF_0_COUNT ;&cr;&lf;&cr;&lf;float fCircleSDF_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(uint i; i&lt; fCircleSDF_0_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;d = min (d, fCircle(p-fCircleSDF_0_pos[i], fCircleSDF_0_radius[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define SF2D fCircleSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.09925,0.88508,0.30646,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Function Resource Semantics" dstnodeid="4" dstpinname="Function Resource Semantics">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Technique Valid" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Function Parameter Semantics" dstnodeid="4" dstpinname="Function Parameter Semantics">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="SF2D Function" dstnodeid="4" dstpinname="SF2D Function">
+   </LINK>
+   <NODE systemname="CircularSpread (Spreads)" nodename="CircularSpread (Spreads)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="2175" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Output Y" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="8">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" visible="1" values="0.11">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="2235" top="1710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output X" dstnodeid="10" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output Y" dstnodeid="10" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="XY" dstnodeid="0" dstpinname="Position">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="3450" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3450" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="8">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Spread Count">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13">
+   <BOUNDS type="Box" left="3525" top="1365" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3525" top="1365" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.1,0.2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="2295" top="900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="9" dstpinname="Phase">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Radius">
+   </LINK>
+   </PATCH>
