@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\DomainRepeat (SF2D Function) help.v4p" scrollx="0" scrolly="0" systemname="DomainRepeat (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\DomainRepeat (SF2D Function) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainRepeat (SF2D Function) help.v4p" scrollx="0" scrolly="0" systemname="DomainRepeat (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\DomainRepeat (SF2D Function) help.v4p">
    <BOUNDS type="Window" left="2475" top="6135" width="9000" height="7920">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -17,9 +17,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="5">
-   <BOUNDS type="Node" left="945" top="5805" width="100" height="100">
+   <BOUNDS type="Node" left="990" top="6675" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="945" top="5805" width="6000" height="4500">
+   <BOUNDS type="Box" left="990" top="6675" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="11865" top="4830" width="8445" height="8535">
    </BOUNDS>
@@ -35,9 +35,9 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2775" top="4905" width="480" height="480">
+   <BOUNDS type="Box" left="2295" top="5640" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2775" top="4905" width="0" height="0">
+   <BOUNDS type="Node" left="2295" top="5640" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -46,6 +46,10 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
    </PIN>
    </NODE>
    <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="4">
@@ -65,48 +69,12 @@
    </PIN>
    <PIN pinname="Color" slicecount="1" values="|0.09925,0.88508,0.30646,1.00000|">
    </PIN>
+   <PIN pinname="Input SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Technique Valid" dstnodeid="6" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="BoxSDF (SF2D Function)" componentmode="Hidden" id="0" systemname="BoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\BoxSDF (SF2D Function).v4p">
-   <BOUNDS type="Node" left="885" top="2370" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="885" top="2370" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Function Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="SF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Position" slicecount="16" visible="1" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Radius" slicecount="1" visible="1" values="0.14">
-   </PIN>
-   <BOUNDS type="Window" left="16005" top="1740" width="11640" height="11055">
-   </BOUNDS>
-   <PIN pinname="Size XY" visible="1" slicecount="1" values="0.09">
-   </PIN>
-   </NODE>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="1905" top="4650" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 3" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="4" dstpinname="Function Parameter Semantics">
    </LINK>
    <NODE systemname="DomainRepeat (SF2D Function)" filename="%VVVV%\packs\FieldTrip\Nodes\modules\Field Functions\DomainRepeat (SF2D Function).v4p" nodename="DomainRepeat (SF2D Function)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="1125" top="4110" width="100" height="100">
@@ -129,7 +97,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2925" top="3405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.4,0.4">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.3,0.3">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -145,7 +113,7 @@
    <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Size XY">
    </LINK>
    <NODE systemname="OutlineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\OutlineSDF (SF2D Function).v4p" nodename="OutlineSDF (SF2D Function)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="900" top="2805" width="100" height="100">
+   <BOUNDS type="Node" left="990" top="2775" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input SF2D Function" visible="1">
    </PIN>
@@ -155,17 +123,11 @@
    </BOUNDS>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
-   <PIN pinname="Outline Width" slicecount="1" values="0.05">
+   <PIN pinname="Outline Width" slicecount="1" values="0.06">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="SF2D Function" dstnodeid="16" dstpinname="Input SF2D Function">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Function Parameter Semantics" dstnodeid="17" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Function Parameter Semantics" dstnodeid="17" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="TrianlgeSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\TrianlgeSDF (SF2D Function).v4p" nodename="TrianlgeSDF (SF2D Function)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="2100" top="2280" width="100" height="100">
+   <BOUNDS type="Node" left="945" top="2190" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SF2D Function" visible="1">
    </PIN>
@@ -177,23 +139,19 @@
    </PIN>
    <PIN pinname="B XY" visible="1" slicecount="2" values="0,0.5">
    </PIN>
-   <PIN pinname="A XY" slicecount="2" values="-0.1,-0.1" visible="1">
+   <PIN pinname="A XY" slicecount="2" visible="1" values="-0.1,-0.1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="SF2D Function" dstnodeid="22" dstpinname="Input SF2D Function">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Function Parameter Semantics" dstnodeid="17" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="23" srcpinname="Function Resource Semantics" dstnodeid="4" dstpinname="Function Resource Semantics">
    </LINK>
    <LINK srcnodeid="16" srcpinname="SF2D Function" dstnodeid="4" dstpinname="SF2D Function">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
-   <BOUNDS type="Box" left="2925" top="1425" width="795" height="480">
+   <BOUNDS type="Box" left="1770" top="1335" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2925" top="1425" width="0" height="0">
+   <BOUNDS type="Node" left="1770" top="1335" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.03,-0.05">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.024,-0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -207,11 +165,11 @@
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="23" dstpinname="B XY">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27">
-   <BOUNDS type="Box" left="3825" top="1455" width="795" height="480">
+   <BOUNDS type="Box" left="2670" top="1365" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3825" top="1455" width="0" height="0">
+   <BOUNDS type="Node" left="2670" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.1,-0.08">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.1,-0.04">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -221,7 +179,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|C XY|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="23" dstpinname="C XY">
@@ -239,9 +197,9 @@
    <LINK srcnodeid="29" srcpinname="Output Enum" dstnodeid="16" dstpinname="Combination Operation">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
-   <BOUNDS type="Box" left="2070" top="1470" width="795" height="480">
+   <BOUNDS type="Box" left="915" top="1380" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2070" top="1470" width="0" height="0">
+   <BOUNDS type="Node" left="915" top="1380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.11,-0.07">
    </PIN>
@@ -256,4 +214,14 @@
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="23" dstpinname="A XY">
    </LINK>
+   <LINK srcnodeid="4" srcpinname="Compiled" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="SF2D Function" dstnodeid="22" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="SF2D Function" dstnodeid="16" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="SF2D Function" dstnodeid="4" dstpinname="Input SF2D Function">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

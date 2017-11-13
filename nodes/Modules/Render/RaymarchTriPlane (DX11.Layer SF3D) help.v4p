@@ -10,90 +10,16 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="990" top="4080" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="990" top="4080" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Scalar Field Basic Ops Functions + - * /&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;FN_&quot;&cr;&lf;#ifndef SF3D&cr;&lf;&cr;&lf;#define cScalarOpS3D_0_OP +&cr;&lf;#ifndef FN_OP&cr;&lf;#define FN_OP +&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float FN_Default : FN_DEFAULT;&cr;&lf;float FN_reverseOrder : FN_REVERSEORDER;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef FN_INPUT1&cr;&lf;#define FN_INPUT1 placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input 2 Defualt option&cr;&lf;#ifndef FN_INPUT2&cr;&lf;float FN_singleValue (float3 p)&cr;&lf;{&cr;&lf;&tab;return FN_Default; // if a second input class is not provided defualt to semantic&cr;&lf;}&cr;&lf;#define FN_INPUT2 FN_singleValue&cr;&lf;#endif&cr;&lf;&cr;&lf;float FN_ (float3 p)&cr;&lf;{&cr;&lf;&tab;#if(FN_REVERSE==1) &cr;&lf;&tab;return FN_INPUT2(p) FN_OP FN_INPUT1(p);&cr;&lf;&tab;#else&cr;&lf;&tab;return FN_INPUT1(p) FN_OP FN_INPUT2(p); &cr;&lf;&tab;#endif&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D FN_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="1785" top="3375" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 5" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 6" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4575" top="7230" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4575" top="7230" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
-   </PIN>
-   </NODE>
    <NODE systemname="FileTexture (DX11 3d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 3d)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="2655" top="1125" width="100" height="100">
+   <BOUNDS type="Node" left="4410" top="2145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\FatBuddha.dds">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="21" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2325" top="4095" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2325" top="4095" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="22" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3270" top="3915" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3270" top="3915" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Resource Semantics|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\Assets\Stanford Dragon.dds|">
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="1560" top="735" width="100" height="100">
+   <BOUNDS type="Node" left="2865" top="1650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -117,9 +43,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2235" top="4920" width="795" height="240">
+   <BOUNDS type="Box" left="2775" top="5835" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2235" top="4920" width="0" height="0">
+   <BOUNDS type="Node" left="2775" top="5835" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.29">
    </PIN>
@@ -130,32 +56,12 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|March Step Length|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="21" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Cons (DX11.ResourceSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.ResourceSemantic)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="3225" top="3435" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="22" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49">
    <BOUNDS type="Box" left="6600" top="5565" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="6600" top="5565" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="16">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -165,9 +71,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52">
-   <BOUNDS type="Box" left="2565" top="390" width="795" height="240">
+   <BOUNDS type="Box" left="3870" top="1305" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2565" top="390" width="0" height="0">
+   <BOUNDS type="Node" left="3870" top="1305" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.96">
    </PIN>
@@ -185,7 +91,7 @@
    <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="23" dstpinname="ScaleX">
    </LINK>
    <NODE systemname="VolumeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VolumeSDF (SF3D Function).v4p" nodename="VolumeSDF (SF3D Function)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="1185" top="1365" width="100" height="100">
+   <BOUNDS type="Node" left="2940" top="2385" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Distance Volume Texture" visible="1">
    </PIN>
@@ -206,12 +112,8 @@
    </LINK>
    <LINK srcnodeid="23" srcpinname="Transform Out" dstnodeid="19" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="19" srcpinname="Function Parameter Semantics" dstnodeid="10" dstpinname="Input 4" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Function Resource Semantics" dstnodeid="48" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="CombineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\CombineSDF (SF3D Function).v4p" nodename="CombineSDF (SF3D Function)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="720" top="2880" width="100" height="100">
+   <BOUNDS type="Node" left="2475" top="3900" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input SF3D Class" visible="1">
    </PIN>
@@ -243,35 +145,35 @@
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Input 1 SF3D FUnction" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SF3D FUnction" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Function Parameter Semantics" dstnodeid="10" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="SF3D Class" dstnodeid="9" dstpinname="SDF 1 SDF3D Class">
    </LINK>
    <NODE systemname="Noise (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF3D Function).v4p" nodename="Noise (SF3D Function)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="1245" top="2310" width="100" height="100">
+   <BOUNDS type="Node" left="3000" top="3330" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
    <PIN pinname="SF3D Class" visible="1">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="-0.12">
+   <PIN pinname="Amplitude" slicecount="1" values="0.0057">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="4">
+   <PIN pinname="Frequency" slicecount="1" values="16.64">
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
    <PIN pinname="Center" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Shape" slicecount="1" values="0.5">
+   <PIN pinname="Shape" slicecount="1" values="0.71">
    </PIN>
    <PIN pinname="Domain Offset" slicecount="3" visible="1" values="2.74,2.74,2.74">
    </PIN>
    <PIN pinname="Inflection" slicecount="1" values="Billow">
    </PIN>
    </NODE>
-   <LINK srcnodeid="53" srcpinname="Function Parameter Semantics" dstnodeid="10" dstpinname="Input 5">
-   </LINK>
    <NODE systemname="RaymarchTriPlane (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" nodename="RaymarchTriPlane (DX11.Layer SF3D)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2580" top="6645" width="100" height="100">
    </BOUNDS>
@@ -319,20 +221,14 @@
    </PIN>
    <PIN pinname="Write Depth" slicecount="1" visible="1" values="0">
    </PIN>
+   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Technique Valid" dstnodeid="16" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="0" dstpinname="SF3D Class">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="0" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="0" dstpinname="Function Resource Semantics">
-   </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="0" dstpinname="March Step Length">
    </LINK>
    <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Texture Scale">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="0" dstpinname="SF3D Function">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="61">
    <BOUNDS type="Node" left="1350" top="9045" width="100" height="100">
@@ -417,7 +313,9 @@
    </PIN>
    <PIN pinname="Projection" visible="1">
    </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" values="0.95">
+   <PIN pinname="Initial Distance" slicecount="1" values="0.75">
+   </PIN>
+   <PIN pinname="Initial Longitude" slicecount="1" visible="1" values="0.03">
    </PIN>
    </NODE>
    <LINK srcnodeid="62" srcpinname="View" dstnodeid="61" dstpinname="View">
@@ -501,7 +399,7 @@
    <LINK srcnodeid="53" srcpinname="SF3D Function" dstnodeid="9" dstpinname="SF3D Function 2">
    </LINK>
    <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="1935" top="1920" width="100" height="100">
+   <BOUNDS type="Node" left="3690" top="2940" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
@@ -509,26 +407,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="69" srcpinname="Position Out" dstnodeid="53" dstpinname="Domain Offset">
-   </LINK>
-   <NODE systemname="ScalarOp (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (SF3D Function).v4p" nodename="ScalarOp (SF3D Function)" componentmode="Hidden" id="70">
-   <BOUNDS type="Node" left="3540" top="2565" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1 SF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 SF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="SF3D Function" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="19" srcpinname="SF3D Function" dstnodeid="70" dstpinname="Input 1 SF3D Function">
-   </LINK>
-   <LINK srcnodeid="53" srcpinname="SF3D Function" dstnodeid="70" dstpinname="Input 2 SF3D Function">
-   </LINK>
-   <LINK srcnodeid="70" srcpinname="Function Parameter Semantics" dstnodeid="10" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="70" srcpinname="SF3D Function" dstnodeid="6" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71">
    <BOUNDS type="Box" left="7905" top="5700" width="480" height="480">
@@ -568,4 +446,50 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="19" srcpinname="SF3D Function" dstnodeid="9" dstpinname="Input 1 SF3D FUnction">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="SF3D Function" dstnodeid="9" dstpinname="Input 2 SF3D FUnction">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="2955" top="7905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="60">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="62" dstpinname="Initial Longitude">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="74">
+   <BOUNDS type="Box" left="5355" top="7065" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5355" top="7065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="74" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="75">
+   <BOUNDS type="Box" left="2565" top="5040" width="1605" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2565" top="5040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Output Node" dstnodeid="0" dstpinname="Input SF3D Function">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="SF3D Function" dstnodeid="75" dstpinname="Input Node">
+   </LINK>
    </PATCH>

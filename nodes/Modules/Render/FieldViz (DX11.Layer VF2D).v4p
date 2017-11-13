@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF2D).v4p" systemname="FieldViz (DX11.Layer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\FieldViz (DX11.Layer VF2D).v4p" scrollx="0" scrolly="1440">
-   <BOUNDS type="Window" left="3270" top="3780" width="9000" height="8430">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF2D).v4p" systemname="FieldViz (DX11.Layer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\FieldViz (DX11.Layer VF2D).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="18435" top="4680" width="9000" height="9945">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -235,6 +235,8 @@
    </PIN>
    <PIN pinname="Position 3D Buffer" visible="1">
    </PIN>
+   <PIN pinname="Color Defaut" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="1" dstpinname="Input Bin Size">
    </LINK>
@@ -294,48 +296,6 @@
    </NODE>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Width Defualt">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="23">
-   <BOUNDS type="Box" left="465" top="435" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="465" top="435" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="24">
-   <BOUNDS type="Box" left="900" top="930" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="900" top="930" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="25">
-   <BOUNDS type="Box" left="1230" top="1380" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1230" top="1380" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Resource Semantics|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
    <BOUNDS type="Box" left="5730" top="285" width="795" height="480">
    </BOUNDS>
@@ -449,13 +409,15 @@
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="7" dstpinname="DataXY">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="31">
-   <BOUNDS type="Box" left="3150" top="5415" width="2250" height="480">
+   <BOUNDS type="Box" left="5565" top="5430" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3150" top="5415" width="0" height="0">
+   <BOUNDS type="Node" left="5565" top="5430" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.86283,0.86283,0.86283,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="31" srcpinname="Color Output" dstnodeid="1" dstpinname="Color">
@@ -507,11 +469,13 @@
    </PIN>
    <PIN pinname="Function Integration Mode" visible="1">
    </PIN>
-   <PIN pinname="VF2D Function" visible="1">
+   <PIN pinname="VF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Technique Valid" visible="1">
    </PIN>
    <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Input VF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Points Per Seed">
@@ -529,32 +493,6 @@
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Spread Count">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Output Enum" dstnodeid="18" dstpinname="Function Integration Mode">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Output String" dstnodeid="18" dstpinname="VF2D Class">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="18" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Output Node" dstnodeid="18" dstpinname="Function Resource Semantics">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Output String" dstnodeid="18" dstpinname="VF2D Function">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34">
-   <BOUNDS type="Box" left="5565" top="7275" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5565" top="7275" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="18" srcpinname="Technique Valid" dstnodeid="34" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="35">
    <BOUNDS type="Box" left="3510" top="6090" width="795" height="240">
@@ -631,11 +569,11 @@
    <NODE systemname="StreamLine (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\StreamLine (2D Buffer VF2D).v4p" nodename="StreamLine (2d Buffer VF2D)" componentmode="Hidden" id="39">
    <BOUNDS type="Node" left="60" top="4410" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="VF2D Function" visible="1">
+   <PIN pinname="VF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Function Resource Semantics" visible="1">
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Step Size" visible="1">
    </PIN>
@@ -649,13 +587,11 @@
    </PIN>
    <PIN pinname="Start Position 2D Buffer" visible="1">
    </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Input VF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output String" dstnodeid="39" dstpinname="VF2D Function">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="39" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Output Node" dstnodeid="39" dstpinname="Function Resource Semantics">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Step Size">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Step Count">
@@ -707,5 +643,39 @@
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <LINK srcnodeid="16" srcpinname="3D Buffer" dstnodeid="1" dstpinname="Position 3D Buffer">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="42">
+   <BOUNDS type="Node" left="855" top="15" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="15" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF2D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45">
+   <BOUNDS type="Box" left="4755" top="7440" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4755" top="7440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Compiled" dstnodeid="45" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output Node" dstnodeid="39" dstpinname="Input VF2D Function">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output Node" dstnodeid="18" dstpinname="Input VF2D Function">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Color Output" dstnodeid="1" dstpinname="Color Defaut">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" systemname="RaymarchTriPlane (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" scrollx="1455" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" systemname="RaymarchTriPlane (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1305" top="4305" width="15870" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -43,9 +43,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="675" top="945" width="795" height="240">
+   <BOUNDS type="Box" left="480" top="1965" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="675" top="945" width="0" height="0">
+   <BOUNDS type="Node" left="480" top="1965" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -58,6 +58,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
    </PIN>
    <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
@@ -193,13 +195,15 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
    <NODE id="25" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="705" top="1935" width="795" height="240">
+   <BOUNDS type="Box" left="510" top="2955" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="705" top="1935" width="0" height="0">
+   <BOUNDS type="Node" left="510" top="2955" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -209,9 +213,9 @@
    </PIN>
    </NODE>
    <NODE id="24" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1005" top="2430" width="795" height="240">
+   <BOUNDS type="Box" left="810" top="3450" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1005" top="2430" width="0" height="0">
+   <BOUNDS type="Node" left="810" top="3450" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -475,6 +479,8 @@
    </PIN>
    <PIN pinname="AO Bias" visible="1" slicecount="1" values="0.5">
    </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
    </LINK>
@@ -491,8 +497,6 @@
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="7" dstpinname="Render State">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Technique Valid" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
    </LINK>
@@ -566,4 +570,38 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="45">
+   <BOUNDS type="Node" left="855" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="540" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="870" top="915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="870" top="915" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output Node" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

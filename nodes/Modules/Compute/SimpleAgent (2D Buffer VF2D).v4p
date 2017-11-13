@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" systemname="SimpleAgent (2D Buffer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="1275" top="2445" width="12750" height="11100">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" systemname="SimpleAgent (2D Buffer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="9435" top="2985" width="12750" height="11100">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -11,9 +11,9 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="135" top="300" width="795" height="240">
+   <BOUNDS type="Box" left="225" top="1155" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="135" top="300" width="0" height="0">
+   <BOUNDS type="Node" left="225" top="1155" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="||">
    </PIN>
@@ -41,7 +41,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="15">
@@ -59,9 +61,9 @@
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="17" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="435" top="945" width="795" height="240">
+   <BOUNDS type="Box" left="525" top="1800" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="435" top="945" width="0" height="0">
+   <BOUNDS type="Node" left="525" top="1800" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -71,9 +73,9 @@
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="15" dstpinname="Custom Semantics">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="18" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="645" top="1500" width="795" height="240">
+   <BOUNDS type="Box" left="735" top="2355" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="645" top="1500" width="0" height="0">
+   <BOUNDS type="Node" left="735" top="2355" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -301,7 +303,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5370" top="1290" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.15">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -361,7 +363,7 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1" slicecount="1" values="|// INTEGRATIONMODE: Integrate postion by vector field&cr;&lf;// 0:Euler, 1:RK2, 2:RK4&cr;&lf;&cr;&lf;#ifndef FIELDS_FXH&cr;&lf;#include &lt;packs\happy.fxh\fields.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Vector Field Function Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// VF3D START&cr;&lf;&cr;&lf;&tab;// placeholders for two input firld classes&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT1 START&cr;&lf;&tab;class cInput1 : iVectorField3D &cr;&lf;&tab;{&cr;&lf;&tab;&tab;&cr;&lf;&tab;&tab;float3 Vector (float3 p)&cr;&lf;&tab;&tab;{&cr;&lf;&tab;&tab;&tab;return float3(.01,0,0);&cr;&lf;&tab;&tab;}&cr;&lf;&tab;};&cr;&lf;&tab;cInput1 INPUT1;&cr;&lf;&tab;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT2 START&cr;&lf;// paramaters&cr;&lf;float3 direction : DIRECTION = float3(1.0, 0.0, 0.0);&cr;&lf;&tab;&cr;&lf;// classes&cr;&lf;class cDirection3D : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;//return direction;  // getting glitches???&cr;&lf;&tab;&tab;return mad(p, .00001, direction);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cDirection3D INPUT2; &cr;&lf;&cr;&lf;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;class cAdd : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return INPUT1.Vector(p) + INPUT2.Vector(p);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cAdd VF3D; &cr;&lf;&cr;&lf;// VF3D END&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Seed Position 3D Buffer&quot;;&gt;;&cr;&lf;&cr;&lf;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;uint stepCount = 12;&cr;&lf;float stepSize = 0.01666;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_StreamLine( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&cr;&lf;&tab;Output[dtid.x] = bPos[dtid.x];&cr;&lf;&tab;float3 p = bPos[dtid.x];&cr;&lf;&tab;for (uint i = 0; i &lt; stepCount; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;uint index = dtid.x * stepCount + i;&cr;&lf;&tab;&tab;p = integrate(VF3D, p, stepSize); &cr;&lf;&tab;&tab;Output[index] =  p;&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 StreamLine&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_StreamLine() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// Input placeholder&cr;&lf;#ifndef VF2D&cr;&lf;#define VF2D placeHolderV2&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;// integration method selector&cr;&lf;    #if (INTEGRATIONMODE==1) &cr;&lf;&tab;#define integrate calcRK2V2&cr;&lf;&tab;#elif (INTEGRATIONMODE==2) &cr;&lf;&tab;#define integrate calcRK4V2&cr;&lf;&tab;#else &cr;&lf;&tab;#define integrate calcEulerV2&cr;&lf;&tab;#endif&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float2&gt; bPos &lt;string uiname=&quot;Seed Position 2D Buffer&quot;;&gt;;&cr;&lf;RWStructuredBuffer&lt;float2&gt; Output : BACKBUFFER;&cr;&lf;float stepSize = 0.01666;&cr;&lf;float maxDist &lt;string uiname=&quot;Maximum Distance from Seed Position&quot;;&gt; = .2;&cr;&lf;float reset;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_SimpleAgent( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&cr;&lf;&tab;if (reset |||| maxDist &lt; distance(Output[dtid.x], bPos[dtid.x])) &cr;&lf;&tab;{ Output[dtid.x] = bPos[dtid.x]; }&cr;&lf;&tab;&cr;&lf;&tab;integrate(VF2D, Output[dtid.x], stepSize);&cr;&lf;&tab;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 SimpleAgent&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_SimpleAgent() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Vector Field Texture Sample Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fTexVF2_0_&quot;&cr;&lf;#ifndef VF2D&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float4x4 fTexVF2_0_InvMat : fTexVF2_0_INVMAT=  { 1, 0, 0,  0, &cr;&lf; &tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;0, 1, 0,  0, &cr;&lf; &tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;0, 0, 1,  0, &cr;&lf;  &tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;0, 0, 0,  1  };&cr;&lf;Texture2D fTexVF2_0_vfTex : fTexVF2_0_VFTEX;&cr;&lf;SamplerState fTexVF2_0_Samp : Immutable;&cr;&lf;&cr;&lf;float2 fTexVF2_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p = mul(float4(p, 0, 1), fTexVF2_0_InvMat).xy; &cr;&lf;&tab;p.y = -p.y;&cr;&lf;&tab;p += .5;&cr;&lf;&tab;float2 v = fTexVF2_0_vfTex.SampleLevel(fTexVF2_0_Samp, p, 0).xy;&cr;&lf;&tab;return v;&cr;&lf;}&cr;&lf;&cr;&lf;#define VF2D fTexVF2_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// Input placeholder&cr;&lf;#ifndef VF2D&cr;&lf;#define VF2D placeHolderV2&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;// integration method selector&cr;&lf;    #if (INTEGRATIONMODE==1) &cr;&lf;&tab;#define integrate calcRK2V2&cr;&lf;&tab;#elif (INTEGRATIONMODE==2) &cr;&lf;&tab;#define integrate calcRK4V2&cr;&lf;&tab;#else &cr;&lf;&tab;#define integrate calcEulerV2&cr;&lf;&tab;#endif&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float2&gt; bPos &lt;string uiname=&quot;Seed Position 2D Buffer&quot;;&gt;;&cr;&lf;RWStructuredBuffer&lt;float2&gt; Output : BACKBUFFER;&cr;&lf;float stepSize = 0.01666;&cr;&lf;float maxDist &lt;string uiname=&quot;Maximum Distance from Seed Position&quot;;&gt; = .2;&cr;&lf;float reset;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_SimpleAgent( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&cr;&lf;&tab;if (reset |||| maxDist &lt; distance(Output[dtid.x], bPos[dtid.x])) &cr;&lf;&tab;{ Output[dtid.x] = bPos[dtid.x]; }&cr;&lf;&tab;&cr;&lf;&tab;integrate(VF2D, Output[dtid.x], stepSize);&cr;&lf;&tab;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 SimpleAgent&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_SimpleAgent() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="||">
    </PIN>
@@ -397,9 +399,9 @@
    </PIN>
    <PIN pinname="Seed Position 2D Buffer" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Technique Valid" dstnodeid="14" dstpinname="Y Input Value" linkstyle="PolyLine" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="15" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -425,5 +427,41 @@
    <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="0" dstpinname="Seed Position 2D Buffer">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="0" dstpinname="threadCount">
+   </LINK>
+   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="780" top="615" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="780" top="615" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="62">
+   <BOUNDS type="Node" left="855" top="210" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="210" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF2D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output Node" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="HLSL" dstnodeid="8" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Custom Semantics" dstnodeid="17" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Resource Semantics" dstnodeid="18" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

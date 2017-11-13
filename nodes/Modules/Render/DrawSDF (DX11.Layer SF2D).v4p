@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" systemname="DrawSDF (DX11.Layer SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" scrollx="165" scrolly="1050">
-   <BOUNDS type="Window" left="18510" top="7740" width="9000" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" systemname="DrawSDF (DX11.Layer SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="13275" top="4515" width="12240" height="7455">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -45,9 +45,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="675" top="945" width="795" height="240">
+   <BOUNDS type="Box" left="495" top="1380" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="675" top="945" width="0" height="0">
+   <BOUNDS type="Node" left="495" top="1380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -60,6 +60,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
    </PIN>
    <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
@@ -143,9 +145,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5610" top="6855" width="480" height="480">
+   <BOUNDS type="Box" left="5730" top="5715" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5610" top="6855" width="0" height="0">
+   <BOUNDS type="Node" left="5730" top="5715" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -155,9 +157,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <NODE id="25" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
@@ -267,15 +269,15 @@
    <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="35" dstpinname="Transform In">
    </LINK>
    <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="8430" top="5265" width="100" height="100">
+   <BOUNDS type="Node" left="8940" top="5250" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Query Save" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
-   <BOUNDS type="Box" left="8430" top="4590" width="480" height="480">
+   <BOUNDS type="Box" left="8940" top="4575" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8430" top="4590" width="0" height="0">
+   <BOUNDS type="Node" left="8940" top="4575" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -315,7 +317,7 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbControls:register(b0)&cr;&lf;{&cr;&lf;&tab;float4x4 tVP:VIEWPROJECTION;&cr;&lf;&tab;float4 drawCol  = { 1.0f,1.0f,1.0f,1.0f };&cr;&lf;&tab;float2 apsectRatio = 1;&cr;&lf;&tab;float softness;&cr;&lf;};&cr;&lf;&cr;&lf;struct VS_IN{float4 PosO:POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;struct VS_OUT{float4 PosWVP:SV_POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In.PosO.xy,0,1);return Out;}&cr;&lf;&cr;&lf;float4 PS_SDF(VS_OUT In) : SV_TARGET&cr;&lf;{&cr;&lf;&tab;float2 p = In.TexCd.xy;&cr;&lf;&tab;p = p*2-1;&cr;&lf;&tab;p.y *=-1;&cr;&lf;&tab;p *= apsectRatio; &cr;&lf;&tab;float dist = SF2D(p);&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;c = draw2DSDF(dist, softness);&cr;&lf;&tab;return drawCol * draw2DSDF(dist, softness);&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 DrawSDF&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_SDF()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbControls:register(b0)&cr;&lf;{&cr;&lf;&tab;float4x4 tVP:VIEWPROJECTION;&cr;&lf;&tab;float4 drawCol  = { 1.0f,1.0f,1.0f,1.0f };&cr;&lf;&tab;float2 apsectRatio = 1;&cr;&lf;&tab;float softness;&cr;&lf;};&cr;&lf;&cr;&lf;struct VS_IN{float4 PosO:POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;struct VS_OUT{float4 PosWVP:SV_POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In.PosO.xy,0,1);return Out;}&cr;&lf;&cr;&lf;float4 PS_SDF(VS_OUT In) : SV_TARGET&cr;&lf;{&cr;&lf;&tab;float2 p = In.TexCd.xy;&cr;&lf;&tab;p = p*2-1;&cr;&lf;&tab;p.y *=-1;&cr;&lf;&tab;p *= apsectRatio; &cr;&lf;&tab;float dist = SF2D(p);&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;c = draw2DSDF(dist, softness);&cr;&lf;&tab;return drawCol * draw2DSDF(dist, softness);&cr;&lf;}&cr;&lf;&cr;&lf;float4 PS_Dist(VS_OUT In) : SV_TARGET&cr;&lf;{&cr;&lf;&tab;float2 p = In.TexCd.xy;&cr;&lf;&tab;p = p*2-1;&cr;&lf;&tab;p.y *=-1;&cr;&lf;&tab;p *= apsectRatio; &cr;&lf;&tab;float dist = SF2D(p);&cr;&lf;&tab;return drawCol * dist;&cr;&lf;}&cr;&lf;&cr;&lf;technique11 DrawSDF&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_SDF()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;technique11 RawDistance&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_Dist()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="||">
    </PIN>
@@ -353,6 +355,8 @@
    </PIN>
    <PIN pinname="drawColXYZW" slicecount="4" visible="1" values="0.8,0.8,0.8,0.8">
    </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname=" RGBA" dstnodeid="7" dstpinname="drawColXYZW">
    </LINK>
@@ -361,8 +365,6 @@
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="7" dstpinname="softness">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Technique Valid" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="7" dstpinname="Defines">
    </LINK>
@@ -375,5 +377,41 @@
    <LINK srcnodeid="3" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="45">
+   <BOUNDS type="Node" left="1185" top="435" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1185" top="435" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF2D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="1200" top="810" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1200" top="810" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output Node" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\HeightFieldSDF (SF3D Function).v4p" systemname="HeightFieldSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\HeightFieldSDF (SF3D Function).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\HeightFieldSDF (SF3D Function).v4p" systemname="HeightFieldSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\HeightFieldSDF (SF3D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1005" top="3750" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -272,24 +272,6 @@
    </NODE>
    <LINK srcnodeid="65" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="79" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="330" top="195" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="330" top="195" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Height Field SF2D Function|">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="78">
    <BOUNDS type="Node" left="345" top="5445" width="100" height="100">
    </BOUNDS>
@@ -304,8 +286,6 @@
    <BOUNDS type="Box" left="345" top="5445">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="79" srcpinname="Output String" dstnodeid="78" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="77" systemname="IOBox (String)">
    <BOUNDS type="Box" left="525" top="3915" width="795" height="240">
    </BOUNDS>
@@ -445,6 +425,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="70" dstpinname="Input 2">
    </LINK>
@@ -454,4 +438,66 @@
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="17" dstpinname="Input Node">
    </LINK>
+   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="4425" top="8175" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4425" top="8175" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="81">
+   <BOUNDS type="Box" left="4410" top="8745" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4410" top="8745" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="81" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="82" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="82" dstpinname="Custom Semantic">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="83">
+   <BOUNDS type="Node" left="4920" top="510" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4920" top="510" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Height Field SF2D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="4890" top="930" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4890" top="930" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output Node" dstnodeid="84" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="HLSL" dstnodeid="78" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Custom Semantics" dstnodeid="70" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Resource Semantics" dstnodeid="82" dstpinname="Resource Semantic">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

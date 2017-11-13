@@ -249,6 +249,8 @@
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="84">
    <BOUNDS type="Node" left="5550" top="3285" width="100" height="100">
@@ -338,6 +340,8 @@
    <BOUNDS type="Node" left="4035" top="6255" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="90" dstpinname="Input Node">
@@ -579,5 +583,35 @@
    <LINK srcnodeid="91" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="81" dstpinname="DataXYZ">
+   </LINK>
+   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="4920" top="7935" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4920" top="7935" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="103">
+   <BOUNDS type="Box" left="4905" top="8505" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4905" top="8505" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="104" srcpinname="Output" dstnodeid="103" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="104" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="104" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output Node" dstnodeid="104" dstpinname="Resource Semantic">
    </LINK>
    </PATCH>

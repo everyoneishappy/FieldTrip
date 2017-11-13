@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TruchetSDF (SF2D Function).v4p" systemname="TruchetSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\Modules\Field Functions\Signed Distance FIelds\TruchetSDF (SF2D Function).v4p" scrollx="630" scrolly="0">
-   <BOUNDS type="Window" left="1665" top="3180" width="13440" height="11055">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\FieldTripFunction DataType\TruchetSDF (SF2D Function).v4p" systemname="TruchetSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\Modules\Field Functions\Signed Distance FIelds\TruchetSDF (SF2D Function).v4p" scrollx="105" scrolly="120">
+   <BOUNDS type="Window" left="11460" top="3525" width="13440" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -136,26 +136,6 @@
    <PIN pinname="Substitute To" visible="1">
    </PIN>
    </NODE>
-   <NODE id="8" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1635" top="6255" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1635" top="6255" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="8" dstpinname="Input String">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Shader Content" dstnodeid="63" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="63" dstpinname="To">
@@ -186,18 +166,6 @@
    </LINK>
    <LINK srcnodeid="64" srcpinname="Instance index" dstnodeid="56" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="102" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="5910" top="7740" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5910" top="7740" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7380" top="1140" width="795" height="720">
    </BOUNDS>
@@ -292,8 +260,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="102" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="95" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5400" top="1185" width="795" height="240">
    </BOUNDS>
@@ -411,7 +377,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9015" top="450" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Line">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Octogon">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -526,4 +492,32 @@
    </NODE>
    <LINK srcnodeid="76" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
+   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="3660" top="8250" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3660" top="8250" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="114">
+   <BOUNDS type="Box" left="3645" top="8820" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3645" top="8820" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="115" srcpinname="Output" dstnodeid="114" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="115" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="115" dstpinname="Custom Semantic">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

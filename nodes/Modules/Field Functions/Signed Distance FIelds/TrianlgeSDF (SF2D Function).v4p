@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\TrianlgeSDF (SF2D Function).v4p" systemname="TrianlgeSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\TrianlgeSDF (SF2D Function).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TrianlgeSDF (SF2D Function).v4p" systemname="TrianlgeSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\TrianlgeSDF (SF2D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="16005" top="1740" width="12555" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -319,6 +319,8 @@
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Count (2d)" nodename="Count (2d)" componentmode="Hidden" id="83" filename="%VVVV%\lib\nodes\modules\2D\Count (2D).v4p">
    <BOUNDS type="Node" left="4995" top="1155" width="100" height="100">
@@ -434,6 +436,8 @@
    <BOUNDS type="Node" left="4035" top="6255" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="90" dstpinname="Input Node">
@@ -630,4 +634,36 @@
    </LINK>
    <LINK srcnodeid="101" srcpinname="Buffer" dstnodeid="93" dstpinname="Input">
    </LINK>
+   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="4875" top="8430" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4875" top="8430" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="102">
+   <BOUNDS type="Box" left="4860" top="9000" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="9000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="102" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="103" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="103" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output Node" dstnodeid="103" dstpinname="Resource Semantic">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

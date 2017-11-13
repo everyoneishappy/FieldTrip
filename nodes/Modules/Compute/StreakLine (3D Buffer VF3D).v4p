@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Compute\StreakLine (3D Buffer VF3D).v4p" systemname="StreakLine (3D Buffer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\StreakLine (3D Buffer VF3D).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\StreakLine (3D Buffer VF3D).v4p" systemname="StreakLine (3D Buffer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\StreakLine (3D Buffer VF3D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="-15060" top="3315" width="12750" height="11100">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -11,9 +11,9 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="135" top="300" width="795" height="240">
+   <BOUNDS type="Box" left="210" top="1230" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="135" top="300" width="0" height="0">
+   <BOUNDS type="Node" left="210" top="1230" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="||">
    </PIN>
@@ -41,9 +41,9 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Technique Valid|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="15">
@@ -61,9 +61,9 @@
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="17" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="435" top="945" width="795" height="240">
+   <BOUNDS type="Box" left="510" top="1875" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="435" top="945" width="0" height="0">
+   <BOUNDS type="Node" left="510" top="1875" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -73,9 +73,9 @@
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="15" dstpinname="Custom Semantics">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="18" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="645" top="1500" width="795" height="240">
+   <BOUNDS type="Box" left="720" top="2430" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="645" top="1500" width="0" height="0">
+   <BOUNDS type="Node" left="720" top="2430" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -489,7 +489,7 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1" slicecount="1" values="|// INTEGRATIONMODE: Integrate postion by vector field&cr;&lf;// 0:Euler, 1:RK2, 2:RK4&cr;&lf;&cr;&lf;#ifndef FIELDS_FXH&cr;&lf;#include &lt;packs\happy.fxh\fields.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Vector Field Function Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// VF3D START&cr;&lf;&cr;&lf;&tab;// placeholders for two input firld classes&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT1 START&cr;&lf;&tab;class cInput1 : iVectorField3D &cr;&lf;&tab;{&cr;&lf;&tab;&tab;&cr;&lf;&tab;&tab;float3 Vector (float3 p)&cr;&lf;&tab;&tab;{&cr;&lf;&tab;&tab;&tab;return float3(.01,0,0);&cr;&lf;&tab;&tab;}&cr;&lf;&tab;};&cr;&lf;&tab;cInput1 INPUT1;&cr;&lf;&tab;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT2 START&cr;&lf;// paramaters&cr;&lf;float3 direction : DIRECTION = float3(1.0, 0.0, 0.0);&cr;&lf;&tab;&cr;&lf;// classes&cr;&lf;class cDirection3D : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;//return direction;  // getting glitches???&cr;&lf;&tab;&tab;return mad(p, .00001, direction);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cDirection3D INPUT2; &cr;&lf;&cr;&lf;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;class cAdd : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return INPUT1.Vector(p) + INPUT2.Vector(p);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cAdd VF3D; &cr;&lf;&cr;&lf;// VF3D END&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Seed Position 3D Buffer&quot;;&gt;;&cr;&lf;&cr;&lf;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;uint stepCount = 12;&cr;&lf;float stepSize = 0.01666;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_StreamLine( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&cr;&lf;&tab;Output[dtid.x] = bPos[dtid.x];&cr;&lf;&tab;float3 p = bPos[dtid.x];&cr;&lf;&tab;for (uint i = 0; i &lt; stepCount; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;uint index = dtid.x * stepCount + i;&cr;&lf;&tab;&tab;p = integrate(VF3D, p, stepSize); &cr;&lf;&tab;&tab;Output[index] =  p;&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 StreamLine&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_StreamLine() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// Input placeholder&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D placeHolderV3&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// integration method selector&cr;&lf;    #if (INTEGRATIONMODE==1) &cr;&lf;&tab;#define integrate calcRK2V3&cr;&lf;&tab;#elif (INTEGRATIONMODE==2) &cr;&lf;&tab;#define integrate calcRK4V3&cr;&lf;&tab;#else &cr;&lf;&tab;#define integrate calcEulerV3&cr;&lf;&tab;#endif&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Seed Position 3D Buffer&quot;;&gt;;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;float stepSize = 0.01666;&cr;&lf;uint pathSize &lt;string uiname=&quot;Points Per Seed&quot;;&gt; = 32;&cr;&lf;uint indexOffset;&cr;&lf;float reset;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_StreakLine( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&tab;uint offset = (dtid.x + indexOffset) % pathSize;&cr;&lf;&tab;uint seedIndex = floor(dtid.x / pathSize);&cr;&lf;&tab;&cr;&lf;&tab;if (reset |||| offset == 0)&cr;&lf;&tab;Output[dtid.x] = bPos[seedIndex];&cr;&lf;&tab;else &cr;&lf;&tab;{&cr;&lf;&tab;integrate(VF3D, Output[dtid.x], stepSize);&cr;&lf;&tab;}&cr;&lf;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 StreakLine&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_StreakLine() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// Input placeholder&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D placeHolderV3&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// integration method selector&cr;&lf;    #if (INTEGRATIONMODE==1) &cr;&lf;&tab;#define integrate calcRK2V3&cr;&lf;&tab;#elif (INTEGRATIONMODE==2) &cr;&lf;&tab;#define integrate calcRK4V3&cr;&lf;&tab;#else &cr;&lf;&tab;#define integrate calcEulerV3&cr;&lf;&tab;#endif&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Seed Position 3D Buffer&quot;;&gt;;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;float stepSize = 0.01666;&cr;&lf;uint pathSize &lt;string uiname=&quot;Points Per Seed&quot;;&gt; = 32;&cr;&lf;uint indexOffset;&cr;&lf;float reset;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(128, 1, 1)]&cr;&lf;void CS_StreakLine( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&tab;uint offset = (dtid.x + indexOffset) % pathSize;&cr;&lf;&tab;uint seedIndex = floor(dtid.x / pathSize);&cr;&lf;&tab;&cr;&lf;&tab;if (reset |||| offset == 0)&cr;&lf;&tab;Output[dtid.x] = bPos[seedIndex];&cr;&lf;&tab;else &cr;&lf;&tab;{&cr;&lf;&tab;integrate(VF3D, Output[dtid.x], stepSize);&cr;&lf;&tab;}&cr;&lf;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 StreakLine&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_StreakLine() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="INTEGRATIONMODE=1">
    </PIN>
@@ -529,6 +529,8 @@
    </PIN>
    <PIN pinname="indexOffset" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="Y Output Value" dstnodeid="0" dstpinname="reset">
    </LINK>
@@ -556,6 +558,40 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="15" dstpinname="Layer In">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Technique Valid" dstnodeid="14" dstpinname="Y Input Value" linkstyle="PolyLine" hiddenwhenlocked="1">
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="73">
+   <BOUNDS type="Node" left="840" top="210" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="210" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="855" top="585" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="585" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Output Node" dstnodeid="72" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="HLSL" dstnodeid="8" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Custom Semantics" dstnodeid="17" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Resource Semantics" dstnodeid="18" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

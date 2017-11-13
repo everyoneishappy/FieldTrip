@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\BoxSDF (SF2D Function) help.v4p" scrollx="0" scrolly="105" systemname="BoxSDF (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\BoxSDF (SF2D Function) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\BoxSDF (SF2D Function) help.v4p" scrollx="0" scrolly="105" systemname="BoxSDF (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\BoxSDF (SF2D Function) help.v4p">
    <BOUNDS type="Window" left="945" top="4515" width="9000" height="6000">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -62,6 +62,8 @@
    <PIN pinname="SF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Color" slicecount="1" values="|0.09925,0.88508,0.30646,1.00000|">
+   </PIN>
+   <PIN pinname="Input SF2D Function" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
@@ -164,12 +166,6 @@
    <PIN pinname="Size XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Function Resource Semantics" dstnodeid="4" dstpinname="Function Resource Semantics">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Function Parameter Semantics" dstnodeid="4" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="SF2D Function" dstnodeid="4" dstpinname="SF2D Function">
-   </LINK>
    <LINK srcnodeid="10" srcpinname="XY" dstnodeid="0" dstpinname="Position">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Radius">
@@ -192,4 +188,8 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="XY" dstnodeid="0" dstpinname="Size XY">
    </LINK>
+   <LINK srcnodeid="0" srcpinname="SF2D Function" dstnodeid="4" dstpinname="Input SF2D Function">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

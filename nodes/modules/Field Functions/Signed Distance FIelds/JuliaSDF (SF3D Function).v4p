@@ -227,6 +227,8 @@
    </PIN>
    <PIN pinname="Input Node" visible="1">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="94" dstpinname="Input 1">
    </LINK>
@@ -363,5 +365,31 @@
    <LINK srcnodeid="105" srcpinname="Output" dstnodeid="104" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="106" srcpinname="Output" dstnodeid="104" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="2430" top="8040" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2430" top="8040" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="107">
+   <BOUNDS type="Box" left="2415" top="8610" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2415" top="8610" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Output" dstnodeid="107" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output Node" dstnodeid="108" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="108" dstpinname="HLSL">
    </LINK>
    </PATCH>

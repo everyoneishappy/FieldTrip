@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" scrollx="0" scrolly="60">
-   <BOUNDS type="Window" left="645" top="825" width="11580" height="9825">
+   <BOUNDS type="Window" left="645" top="825" width="9195" height="9525">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -10,40 +10,10 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1035" top="4395" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1035" top="4395" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_0_&quot;&cr;&lf;#ifndef cIQFBMNoiseS3D_0_INPUT&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_0_NOISEBASIS simplex&cr;&lf;#define fNoiseS3D_0_INFLECTION 0&cr;&lf;#ifndef fNoiseS3D_0_NOISEBASIS&cr;&lf;#define fNoiseS3D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_INFLECTION&cr;&lf;#define fNoiseS3D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_0_noiseFreq : fNoiseS3D_0_NOISEFREQ = 2; &cr;&lf;float fNoiseS3D_0_noiseAmp : fNoiseS3D_0_NOISEAMP = .1; &cr;&lf;float fNoiseS3D_0_center : fNoiseS3D_0_CENTER; &cr;&lf;float fNoiseS3D_0_bias : fNoiseS3D_0_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_0_noiseOffset : fNoiseS3D_0_NOISEOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_0_noiseFreq + fNoiseS3D_0_noiseOffset;&cr;&lf;&tab;float noise = fNoiseS3D_0_NOISEBASIS(p  fNoiseS3D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_0_bias);&cr;&lf;&tab;#if fNoiseS3D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseS3D_0_noiseAmp + fNoiseS3D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define cIQFBMNoiseS3D_0_INPUT fNoiseS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Scalar FBM Fractal Sum&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;cIQFBMNoiseS3D_0_&quot;&cr;&lf;#ifndef SF3D&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef cIQFBMNoiseS3D_0_INPUT&cr;&lf;#define cIQFBMNoiseS3D_0_INPUT placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float cIQFBMNoiseS3D_0_persistence : cIQFBMNoiseS3D_0_PERSISTENCE = 0.5;  &cr;&lf;float cIQFBMNoiseS3D_0_lacunarity : cIQFBMNoiseS3D_0_LACUNARITY = 2;    &cr;&lf;int cIQFBMNoiseS3D_0_octaves: cIQFBMNoiseS3D_0_OCTAVES = 4;  &cr;&lf;&cr;&lf;// Persitance Defualt&cr;&lf;#ifndef cIQFBMNoiseS3D_0_PERSINPUT&cr;&lf;float PERSDEFUALT(float3 p)&cr;&lf;{&cr;&lf;&tab;return cIQFBMNoiseS3D_0_persistence;&lf;}&cr;&lf;#define cIQFBMNoiseS3D_0_PERSINPUT PERSDEFUALT&cr;&lf;#endif&cr;&lf;&cr;&lf;float cIQFBMNoiseS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;IQFBM3D(cIQFBMNoiseS3D_0_noise, cIQFBMNoiseS3D_0_INPUT, p, cIQFBMNoiseS3D_0_persistence, cIQFBMNoiseS3D_0_lacunarity, cIQFBMNoiseS3D_0_octaves);     &cr;&lf;&tab;return cIQFBMNoiseS3D_0_noise;&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D cIQFBMNoiseS3D_0_&cr;&lf;&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="21" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2265" top="4425" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2265" top="4425" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2865" top="5325" width="795" height="240">
+   <BOUNDS type="Box" left="2790" top="4155" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2865" top="5325" width="0" height="0">
+   <BOUNDS type="Node" left="2790" top="4155" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.6">
    </PIN>
@@ -57,15 +27,15 @@
    </PIN>
    </NODE>
    <NODE systemname="PerfMeter (DX11.Debug)" filename="%VVVV%\packs\dx11\nodes\modules\PerfMeter (DX11.Debug).v4p" nodename="PerfMeter (DX11.Debug)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="4665" top="645" width="100" height="100">
+   <BOUNDS type="Node" left="4080" top="6450" width="100" height="100">
    </BOUNDS>
    <PIN pinname="fps" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="46">
-   <BOUNDS type="Box" left="5550" top="1260" width="795" height="240">
+   <BOUNDS type="Box" left="4965" top="7065" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5550" top="1260" width="0" height="0">
+   <BOUNDS type="Node" left="4965" top="7065" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -75,17 +45,17 @@
    <LINK srcnodeid="45" srcpinname="fps" dstnodeid="46" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="50">
-   <BOUNDS type="Node" left="4815" top="4755" width="100" height="100">
+   <BOUNDS type="Node" left="4740" top="3585" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4815" top="4755" width="6000" height="4500">
+   <BOUNDS type="Box" left="4740" top="3585" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="4785" top="10680" width="2580" height="2835">
+   <BOUNDS type="Window" left="7230" top="10365" width="2580" height="2835">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" nodename="RaymarchMatCap (DX11.Layer SF3D)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2325" top="5820" width="100" height="100">
+   <BOUNDS type="Node" left="2250" top="4650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -123,15 +93,17 @@
    </PIN>
    <PIN pinname="Write Depth" visible="1">
    </PIN>
+   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="0" dstpinname="Function Parameter Semantics">
-   </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="0" dstpinname="March Step Length">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56">
-   <BOUNDS type="Box" left="4455" top="6360" width="480" height="480">
+   <BOUNDS type="Box" left="4005" top="5205" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4455" top="6360" width="0" height="0">
+   <BOUNDS type="Node" left="4005" top="5205" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -141,13 +113,13 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Technique Valid" dstnodeid="56" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="0" dstpinname="SF3D Function">
-   </LINK>
    <NODE systemname="HeightFieldSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\Nodes\modules\Field Functions\HeightFieldSDF (SF3D Function).v4p" nodename="HeightFieldSDF (SF3D Function)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="990" top="3450" width="100" height="100">
+   <BOUNDS type="Node" left="1290" top="2580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position" visible="1" slicecount="3" values="-0.21,-0.21,-0.21">
    </PIN>
@@ -159,7 +131,7 @@
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
-   <PIN pinname="Height Field SF2D Function" visible="1" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Worley Noise Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fWorleyS2D_0_&quot;&cr;&lf;#ifndef SF2D&cr;&lf;&cr;&lf;#define fWorleyS2D_0_WORLEYOPTIONS , Chebyshev, F2&cr;&lf;#ifndef fWorleyS2D_0_WORLEYOPTIONS&cr;&lf;#define fWorleyS2D_0_WORLEYOPTIONS , EuclideanSquared, F2MinusF1&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fWorleyS2D_0_noiseFreq : fWorleyS2D_0_NOISEFREQ = 2; &cr;&lf;float fWorleyS2D_0_noiseAmp : fWorleyS2D_0_NOISEAMP = .1; &cr;&lf;float fWorleyS2D_0_center : fWorleyS2D_0_CENTER; &cr;&lf;float2 fWorleyS2D_0_noiseOffset : fWorleyS2D_0_NOISEOFFSET;&cr;&lf;&tab;&cr;&lf;float fWorleyS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return worley(p * fWorleyS2D_0_noiseFreq + fWorleyS2D_0_noiseOffset fWorleyS2D_0_WORLEYOPTIONS) * fWorleyS2D_0_noiseAmp + fWorleyS2D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;#define SF2D fWorleyS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Circle Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fLatticeSDF_1_&quot;&cr;&lf;&cr;&lf;#ifndef fCombineSDF2D_1_INPUT1&cr;&lf;&cr;&lf;#define LATTICEFUNC fLineLattice&cr;&lf;#ifndef LATTICEFUNC&cr;&lf;#define LATTICEFUNC fLineLattice&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fLatticeSDF_1_freq : fLatticeSDF_1_FREQ = 2; &cr;&lf;float fLatticeSDF_1_width : fLatticeSDF_1_WIDTH = .1; &cr;&lf;float2 fLatticeSDF_1_offset : fLatticeSDF_1_OFFSET;&cr;&lf;&cr;&lf;int fLatticeSDF_1_count : fLatticeSDF_1_COUNT;&cr;&lf;&cr;&lf;float fLatticeSDF_1_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return LATTICEFUNC(p * fLatticeSDF_1_freq + fLatticeSDF_1_offset, fLatticeSDF_1_width) / fLatticeSDF_1_freq;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fCombineSDF2D_1_INPUT1 fLatticeSDF_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Circle Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fLatticeSDF_0_&quot;&cr;&lf;&cr;&lf;#ifndef fCombineSDF2D_1_INPUT2&cr;&lf;&cr;&lf;#define LATTICEFUNC fOctoLattice&cr;&lf;#ifndef LATTICEFUNC&cr;&lf;#define LATTICEFUNC fLineLattice&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fLatticeSDF_0_freq : fLatticeSDF_0_FREQ = 2; &cr;&lf;float fLatticeSDF_0_width : fLatticeSDF_0_WIDTH = .1; &cr;&lf;float2 fLatticeSDF_0_offset : fLatticeSDF_0_OFFSET;&cr;&lf;&cr;&lf;int fLatticeSDF_0_count : fLatticeSDF_0_COUNT;&cr;&lf;&cr;&lf;float fLatticeSDF_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return LATTICEFUNC(p * fLatticeSDF_0_freq + fLatticeSDF_0_offset, fLatticeSDF_0_width) / fLatticeSDF_0_freq;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fCombineSDF2D_1_INPUT2 fLatticeSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D SDF Combination Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fCombineSDF2D_1_&quot;&cr;&lf;#ifndef SF2D&cr;&lf;&cr;&lf;&cr;&lf;#define fCombineSDF2D_1_OP fOpUnionStairs(fCombineSDF2D_1_INPUT1(p), fCombineSDF2D_1_INPUT2(p), fCombineSDF2D_1_p1, fCombineSDF2D_1_p2)&cr;&lf;#ifndef fCombineSDF2D_1_OP &cr;&lf;#define fCombineSDF2D_1_OP U(fCombineSDF2D_1_INPUT1(p), fCombineSDF2D_1_INPUT2(p))&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef fCombineSDF2D_1_INPUT1&cr;&lf;#define fCombineSDF2D_1_INPUT1 placeHolderS2&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef fCombineSDF2D_1_INPUT2&cr;&lf;#define fCombineSDF2D_1_INPUT2 placeHolderS2&cr;&lf;#endif&cr;&lf;// Paramaters&cr;&lf;float fCombineSDF2D_1_p1 : fCombineSDF2D_1_P1;&cr;&lf;float fCombineSDF2D_1_p2 : fCombineSDF2D_1_P2;&cr;&lf;&cr;&lf;float fCombineSDF2D_1_ (float2 p)&cr;&lf;{&cr;&lf;&tab;&tab;return fCombineSDF2D_1_OP; // #defined in patch&cr;&lf;}&cr;&lf;&cr;&lf;#define SF2D fCombineSDF2D_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Scalar Field Basic Ops Functions + - * /&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;cScalarOpS3D_0_&quot;&cr;&lf;#ifndef SF3D&cr;&lf;&cr;&lf;#define cScalarOpS3D_0_OP +&cr;&lf;#ifndef cScalarOpS3D_0_OP&cr;&lf;#define cScalarOpS3D_0_OP +&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float cScalarOpS3D_0_Default : cScalarOpS3D_0_DEFAULT;&cr;&lf;float cScalarOpS3D_0_reverseOrder : cScalarOpS3D_0_REVERSEORDER;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef cScalarOpS3D_0_INPUT1&cr;&lf;#define cScalarOpS3D_0_INPUT1 placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input 2 Defualt option&cr;&lf;#ifndef cScalarOpS3D_0_INPUT2&cr;&lf;float cScalarOpS3D_0_singleValue (float3 p)&cr;&lf;{&cr;&lf;&tab;return cScalarOpS3D_0_Default; // if a second input class is not provided defualt to semantic&cr;&lf;}&cr;&lf;#define cScalarOpS3D_0_INPUT2 cScalarOpS3D_0_singleValue&cr;&lf;#endif&cr;&lf;&cr;&lf;float cScalarOpS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;#if(cScalarOpS3D_0_REVERSE==1) &cr;&lf;&tab;return cScalarOpS3D_0_INPUT2(p) cScalarOpS3D_0_OP cScalarOpS3D_0_INPUT1(p);&cr;&lf;&tab;#else&cr;&lf;&tab;return cScalarOpS3D_0_INPUT1(p) cScalarOpS3D_0_OP cScalarOpS3D_0_INPUT2(p); &cr;&lf;&tab;#endif&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D cScalarOpS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN pinname="Height Field SF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Amplitude" slicecount="1" visible="1" values="-0.06">
    </PIN>
@@ -167,11 +139,11 @@
    </PIN>
    <BOUNDS type="Window" left="1005" top="3750" width="11640" height="11055">
    </BOUNDS>
-   <BOUNDS type="Box" left="990" top="3450">
+   <BOUNDS type="Box" left="1290" top="2580">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="990" top="615" width="100" height="100">
+   <BOUNDS type="Node" left="1230" top="1035" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SF2D Function" visible="1">
    </PIN>
@@ -189,13 +161,13 @@
    </PIN>
    <PIN pinname="Worley Function" slicecount="1" values="F2">
    </PIN>
-   <BOUNDS type="Box" left="990" top="615">
+   <BOUNDS type="Box" left="1230" top="1035">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainDistortion (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\DomainDistortion (SF2D Function).v4p" nodename="DomainDistortion (SF2D Function)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="990" top="1530" width="100" height="100">
+   <BOUNDS type="Node" left="1230" top="1950" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input SF2D Function" visible="1">
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Distortion VF2D Class" visible="1" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Vector Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseV2D_0_&quot;&cr;&lf;#ifndef VF2D&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseV2D_0_NOISEBASIS simplex&cr;&lf;#define fNoiseV2D_0_INFLECTION 0&cr;&lf;#ifndef fNoiseV2D_0_NOISEBASIS&cr;&lf;#define fNoiseV2D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseV2D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseV2D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseV2D_0_INFLECTION&cr;&lf;#define fNoiseV2D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float2 fNoiseV2D_0_noiseFreq : fNoiseV2D_0_NOISEFREQ = 2; &cr;&lf;float2 fNoiseV2D_0_noiseAmp : fNoiseV2D_0_NOISEAMP = .1; &cr;&lf;float2 fNoiseV2D_0_center : fNoiseV2D_0_CENTER; &cr;&lf;float2 fNoiseV2D_0_noiseOffset : fNoiseV2D_0_NOISEOFFSET;&cr;&lf;float2 fNoiseV2D_0_bias : fNoiseV2D_0_BIAS = 0.5;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float2 fNoiseV2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseV2D_0_noiseFreq + fNoiseV2D_0_noiseOffset;&cr;&lf;&tab;float2 noise = fNoiseV2D_0_NOISEBASIS(p  fNoiseV2D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise.x = sign(noise.x) * bias(abs(noise.x), fNoiseV2D_0_bias.x);&cr;&lf;&tab;noise.y = sign(noise.y) * bias(abs(noise.y), fNoiseV2D_0_bias.y);&cr;&lf;&tab;#if fNoiseV2D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseV2D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseV2D_0_noiseAmp + fNoiseV2D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define VF2D fNoiseV2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
@@ -205,59 +177,21 @@
    </PIN>
    <PIN pinname="Distortion Strength" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Distortion VF2D Function" visible="1">
+   <PIN pinname="Distortion VF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <BOUNDS type="Box" left="990" top="1530">
+   <BOUNDS type="Box" left="1230" top="1950">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="92" srcpinname="SF2D Function" dstnodeid="94" dstpinname="Input SF2D Function">
-   </LINK>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="2310" top="3960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 5" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 6" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 7" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 8" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="21" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="Function Parameter Semantics" dstnodeid="95" dstpinname="Input 4">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="SF3D Function" dstnodeid="6" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="92" srcpinname="Function Parameter Semantics" dstnodeid="95" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="94" srcpinname="Field Parameter Semantics" dstnodeid="95" dstpinname="Input 7">
-   </LINK>
-   <LINK srcnodeid="94" srcpinname="SF2D Function" dstnodeid="30" dstpinname="Height Field SF2D Function">
-   </LINK>
    <NODE id="93" systemname="Noise (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" nodename="Noise (VF2D Function)" componentmode="Hidden">
-   <BOUNDS type="Node" left="2640" top="630" width="100" height="100">
+   <BOUNDS type="Node" left="2880" top="1050" width="100" height="100">
    </BOUNDS>
    <PIN pinname="VF2D Function" visible="1">
    </PIN>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
-   <PIN pinname="Frequency XY" slicecount="2" visible="1" values="0.14,0.14">
+   <PIN pinname="Frequency XY" slicecount="2" visible="1" values="0.27,0.27">
    </PIN>
-   <PIN pinname="Amplitude XY" slicecount="2" values="0.37,0.37">
+   <PIN pinname="Amplitude XY" slicecount="2" values="0.257,1">
    </PIN>
    <PIN pinname="Shape XY" slicecount="1" values="0.5">
    </PIN>
@@ -268,24 +202,20 @@
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="93" srcpinname="VF2D Function" dstnodeid="94" dstpinname="Distortion VF2D Function">
-   </LINK>
-   <LINK srcnodeid="93" srcpinname="Function Parameter Semantics" dstnodeid="95" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="100">
-   <BOUNDS type="Node" left="4785" top="3705" width="100" height="100">
+   <BOUNDS type="Node" left="4710" top="1500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\MatCapSample02.png">
+   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\MatCapSample01.png" visible="1">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="105">
-   <BOUNDS type="Node" left="1110" top="8775" width="100" height="100">
+   <BOUNDS type="Node" left="1035" top="7605" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1110" top="8775" width="6000" height="4500">
+   <BOUNDS type="Box" left="1035" top="7605" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="12375" top="810" width="9315" height="9765">
+   <BOUNDS type="Window" left="9780" top="795" width="9315" height="9765">
    </BOUNDS>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
@@ -305,7 +235,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="1230" top="8400" width="100" height="100">
+   <BOUNDS type="Node" left="1155" top="7230" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Alignment" slicecount="1" values="FitOut">
    </PIN>
@@ -317,7 +247,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="1680" top="7620" width="100" height="100">
+   <BOUNDS type="Node" left="1605" top="6450" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -333,7 +263,7 @@
    <LINK srcnodeid="103" srcpinname="Layer Out" dstnodeid="104" dstpinname="Layer In">
    </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="102">
-   <BOUNDS type="Node" left="120" top="7470" width="100" height="100">
+   <BOUNDS type="Node" left="45" top="6300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -345,7 +275,7 @@
    <LINK srcnodeid="102" srcpinname="Layer" dstnodeid="103" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="101">
-   <BOUNDS type="Node" left="315" top="7035" width="100" height="100">
+   <BOUNDS type="Node" left="240" top="5865" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -357,7 +287,7 @@
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="103" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.47.149-g29575610a3\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="106">
-   <BOUNDS type="Node" left="2520" top="8235" width="100" height="100">
+   <BOUNDS type="Node" left="2445" top="7065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -373,7 +303,7 @@
    <LINK srcnodeid="106" srcpinname="Projection" dstnodeid="105" dstpinname="Projection">
    </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="107">
-   <BOUNDS type="Node" left="2565" top="7665" width="100" height="100">
+   <BOUNDS type="Node" left="2490" top="6495" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -383,9 +313,9 @@
    <LINK srcnodeid="107" srcpinname="Output" dstnodeid="106" dstpinname="Initial Longitude">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="108">
-   <BOUNDS type="Box" left="4785" top="4110" width="795" height="240">
+   <BOUNDS type="Box" left="4710" top="2940" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4785" top="4110" width="0" height="0">
+   <BOUNDS type="Node" left="4710" top="2940" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -396,14 +326,12 @@
    </NODE>
    <LINK srcnodeid="108" srcpinname="Output Node" dstnodeid="0" dstpinname="MatCap Texture">
    </LINK>
-   <LINK srcnodeid="100" srcpinname="Texture Out" dstnodeid="108" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="108" srcpinname="Output Node" dstnodeid="50" dstpinname="Texture In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="110">
-   <BOUNDS type="Box" left="6840" top="3855" width="480" height="480">
+   <BOUNDS type="Box" left="6765" top="2685" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="6840" top="3855" width="0" height="0">
+   <BOUNDS type="Node" left="6765" top="2685" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -423,9 +351,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="109">
-   <BOUNDS type="Node" left="6750" top="4380" width="2250" height="270">
+   <BOUNDS type="Node" left="6675" top="3210" width="2250" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6750" top="4380" width="2070" height="705">
+   <BOUNDS type="Box" left="6675" top="3210" width="2070" height="705">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|May not work on windows&lt;10 if the SDF uses structured buffers|">
    </PIN>
@@ -440,4 +368,86 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="111">
+   <BOUNDS type="Box" left="1290" top="3990" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1290" top="3990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="111" srcpinname="Output Node" dstnodeid="0" dstpinname="Input SF3D Function">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="SF3D Function" dstnodeid="111" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="SF2D Function" dstnodeid="94" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="VF2D Function" dstnodeid="94" dstpinname="Distortion VF2D Function">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="SF2D Function" dstnodeid="30" dstpinname="Height Field SF2D Function">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="56" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="113">
+   <BOUNDS type="Box" left="4725" top="690" width="2205" height="555">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4725" top="690" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="2" visible="1" values="..\..\..\Assets\MatCapSample01.png,..\..\..\Assets\MatCapSample02.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="113" srcpinname="Output String" dstnodeid="100" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="114">
+   <BOUNDS type="Box" left="7020" top="675" width="1020" height="930">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7020" top="675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Change Material|">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="4950" top="2415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Texture Out" dstnodeid="115" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="Output Node" dstnodeid="108" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="115" dstpinname="Index">
+   </LINK>
    </PATCH>
