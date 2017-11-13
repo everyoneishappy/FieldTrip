@@ -5,26 +5,29 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Divergence Scalar from 3D Vector Field Function
+//		2D Vector Field from two 2D Scaler Field Functions
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
-#ifndef SF3D
+#ifndef VF2D
 
-// Input class placeholder
-#ifndef FN_INPUT
-#define FN_INPUT placeHolderV3
+// Input Function placeholder
+#ifndef FN_INPUT_X
+#define FN_INPUT_X placeHolderS2
 #endif
 
-// Paramaters
-float FN_eps : FN_EPS = 0.01;
+#ifndef FN_INPUT_Y
+#define FN_INPUT_Y placeHolderS2
+#endif
 
-float FN_ (float3 p)
+
+float2 FN_ (float2 p)
 {
-	return calcDivV3(FN_INPUT, p, FN_eps);
+	return float2(FN_INPUT_X(p), FN_INPUT_Y(p) );
+	
 }
 
-#define SF3D FN_
+#define VF2D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
 

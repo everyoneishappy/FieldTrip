@@ -13,6 +13,10 @@
 #include<packs\happy.fxh\uv.fxh>
 #endif
 
+#ifndef WRITEDEPTH
+#define WRITEDEPTH 1
+#endif
+
 
 Texture2D DNS_Textures[3];
 SamplerState sTex <string uiname="Sampler State";>
@@ -81,7 +85,9 @@ VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In
 struct PS_OUT
 {
 	float4 Color:SV_TARGET;
+	#if WRITEDEPTH == 1
 	float Depth:SV_DEPTH;
+	#endif
 };
 
 
@@ -119,10 +125,14 @@ PS_OUT PS_IBL(VS_OUT In)
 	c.rgb *= shadow;
 	#endif
 	
-	float4 PosWVP=mul(float4(p.xyz,1),tVP);
 	PS_OUT Out;
 	Out.Color=c;
+	
+	#if WRITEDEPTH == 1
+	float4 PosWVP=mul(float4(p.xyz,1),tVP);
 	Out.Depth=PosWVP.z/PosWVP.w;
+	#endif
+	
 	return Out;
 }
 

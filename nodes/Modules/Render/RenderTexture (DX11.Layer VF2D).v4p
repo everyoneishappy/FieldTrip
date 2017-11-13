@@ -335,7 +335,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5085" top="660" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="R32_Float">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="R32G32_Float">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Format|">
    </PIN>

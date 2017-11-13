@@ -1,6 +1,9 @@
+#ifndef CALC_FXH
+#include <packs\happy.fxh\calc.fxh>
+#endif
 
 #ifndef VF3D
-#define VF3D length // Just a place holder
+#define VF3D placeHolderV3 // Just a place holder
 #endif
 
 
@@ -23,7 +26,7 @@ void CS_Vol( uint3 ti : SV_DispatchThreadID)
 	p *= InvVolumeSize;
 	p -= 0.5f;
 	float3 tp = mul(float4(p,1),InvTransform).xyz;
-	OUTPUT[ti] = VF3D(tp);
+	OUTPUT[ti] = float4(VF3D(tp), 1.0);
 }
 
 

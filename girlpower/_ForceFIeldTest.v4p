@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_ForceFIeldTest.v4p" systemname="_ForceFIeldTests" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_ForceFIeldTests.v4p" scrollx="1335" scrolly="1815">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_ForceFIeldTest.v4p" systemname="_ForceFIeldTests" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_ForceFIeldTests.v4p" scrollx="0" scrolly="4455">
    <BOUNDS type="Window" left="0" top="2100" width="12990" height="12540">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -16,6 +16,8 @@
    <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.27562,0.53012,0.47243,1.00000|">
+   </PIN>
+   <PIN pinname="3D" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67" systemname="IOBox (Value Advanced)">

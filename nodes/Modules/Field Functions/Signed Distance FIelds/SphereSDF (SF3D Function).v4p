@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" systemname="SphereSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\SphereSDF (SF3D Function).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" systemname="SphereSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\SphereSDF (SF3D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1125" top="4965" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -83,7 +83,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1695" top="2055" width="1125" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="fSphereDist">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fSphere3DSDF">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -290,26 +290,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE id="88" systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden">
-   <BOUNDS type="Node" left="6900" top="5835" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="InputXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Semantic" slicecount="1" visible="1" values="POS">
-   </PIN>
-   <PIN pinname="Mandatory" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="InputXY" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="88" dstpinname="Semantic">
-   </LINK>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="88" dstpinname="InputXY">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="86">
    <BOUNDS type="Box" left="6885" top="7545" width="795" height="240">
    </BOUNDS>
@@ -318,22 +298,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Function Resource Semantics|">
    </PIN>
    <PIN pinname="Input Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="85" systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8445" top="5850" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="InputXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Semantic" slicecount="1" visible="1" values="POS">
-   </PIN>
-   <PIN pinname="Mandatory" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="InputXY" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Value)" componentmode="Hidden" id="84">
@@ -351,8 +315,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="92" srcpinname="Y Output Value" dstnodeid="84" dstpinname="Data">
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="Buffer" dstnodeid="85" dstpinname="Input">
    </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="83">
    <BOUNDS type="Node" left="6375" top="1680" width="100" height="100">
@@ -397,19 +359,13 @@
    <NODE systemname="Cons (DX11.ResourceSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.ResourceSemantic)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="6900" top="6375" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="79" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="79" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="85" dstpinname="Semantic">
-   </LINK>
    <LINK srcnodeid="79" srcpinname="Output" dstnodeid="86" dstpinname="Input Node">
    </LINK>
    <NODE systemname="RenderSemantic (DX11.Layer Int)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Int)" componentmode="Hidden" id="78">
@@ -498,8 +454,6 @@
    </NODE>
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="87" dstpinname="DataXY">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="Buffer" dstnodeid="88" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Element Count">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="77" dstpinname="Input 1">
@@ -509,5 +463,43 @@
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="94" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="87" dstpinname="DataXYZ">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="8250" top="5970" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8250" top="5970" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Semantic" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Buffer" dstnodeid="95" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="95" dstpinname="Semantic">
+   </LINK>
+   <NODE systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="6825" top="5955" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6825" top="5955" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Semantic" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="96" dstpinname="Semantic">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Buffer" dstnodeid="96" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="79" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="79" dstpinname="Input 2">
    </LINK>
    </PATCH>

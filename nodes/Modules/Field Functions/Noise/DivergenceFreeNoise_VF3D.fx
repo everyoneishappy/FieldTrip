@@ -9,7 +9,7 @@
 #ifndef VF3D
 // DEFINES
 #ifndef FN_NOISEBASIS
-#define FN_NOISEBASIS perlin
+#define FN_NOISEBASIS perlinDFV
 #endif
 
 #ifndef FN_WORLEYOPTIONS

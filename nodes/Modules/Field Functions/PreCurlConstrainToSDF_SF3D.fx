@@ -35,7 +35,8 @@ float3 FN_ (float3 p)
 	float3 normal = calcNormS3(FN_SDF, p, FN_eps);
 	float d = FN_SDF(p);
 	float ramp = abs(PRECURLRAMP(d/FN_radius));
-	return ramp * pf + (1 - ramp) * normal * dot(normal, pf);
+	ramp = saturate(ramp);
+	return (ramp * pf) + ( (1 - ramp) * normal * dot(normal, pf) );
 }
 #define VF3D FN_
 #endif

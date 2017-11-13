@@ -1,34 +1,37 @@
+
 #ifndef CALC_FXH
 #include <packs\happy.fxh\calc.fxh>
 #endif
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Divergence Scalar from 3D Vector Field Function
+//		3D Domain Distortion Class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
 #ifndef SF3D
 
-// Input class placeholder
+// Input function placeholder
 #ifndef FN_INPUT
-#define FN_INPUT placeHolderV3
+#define FN_INPUT placeHolderS3
 #endif
 
+
 // Paramaters
-float FN_eps : FN_EPS = 0.01;
+float4x4 FN_Transform : FN_TRANSFORM = { 	1, 0, 0, 0, 
+ 										0, 1, 0, 0, 
+ 										0, 0, 1, 0, 
+  										0, 0, 0, 1  };
 
 float FN_ (float3 p)
 {
-	return calcDivV3(FN_INPUT, p, FN_eps);
+	p = mul(float4(p,1), FN_Transform).xyz;
+	return FN_INPUT(p);
 }
 
 #define SF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 technique11 RemoveMe{}
 

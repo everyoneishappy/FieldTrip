@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\DivergenceFreeNoise (VF3D Function).v4p" systemname="DivergenceFreeNoise (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\DivergenceFreeNoise (VF3D Function).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\DivergenceFreeNoise (VF3D Function).v4p" systemname="DivergenceFreeNoise (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\DivergenceFreeNoise (VF3D Function).v4p" scrollx="0" scrolly="195">
    <BOUNDS type="Window" left="-17055" top="3090" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -75,9 +75,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="43" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="5505" top="4230" width="1425" height="1065">
+   <BOUNDS type="Box" left="5310" top="4440" width="1425" height="1065">
    </BOUNDS>
-   <BOUNDS type="Node" left="5505" top="4230" width="0" height="0">
+   <BOUNDS type="Node" left="5310" top="4440" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="4" visible="1" values="NOISEFREQ,NOISEAMP,NOISEOFFSET,CENTER">
    </PIN>
@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8085" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Chebyshev">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="EuclideanSquared">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
    </PIN>
@@ -444,4 +444,6 @@
    </LINK>
    <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Input">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

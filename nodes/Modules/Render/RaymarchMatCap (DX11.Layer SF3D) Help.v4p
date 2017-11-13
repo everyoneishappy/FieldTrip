@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="915" top="810" width="6585" height="9825">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" scrollx="0" scrolly="60">
+   <BOUNDS type="Window" left="645" top="825" width="11580" height="9825">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -121,6 +121,8 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
+   <PIN pinname="Write Depth" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="0" dstpinname="Function Parameter Semantics">
    </LINK>
@@ -175,13 +177,13 @@
    </PIN>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
-   <PIN pinname="Basis" slicecount="1" values="worleyFast">
+   <PIN pinname="Basis" slicecount="1" values="perlin">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="3">
+   <PIN pinname="Frequency" slicecount="1" values="1.64">
    </PIN>
-   <PIN pinname="Shape" slicecount="1" values="0.81">
+   <PIN pinname="Shape" slicecount="1" values="0.72">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="3.52">
+   <PIN pinname="Amplitude" slicecount="1" values="3.64">
    </PIN>
    <PIN pinname="Worley Distance Metric" slicecount="1" values="Manhattan">
    </PIN>
@@ -273,7 +275,7 @@
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="100">
    <BOUNDS type="Node" left="4785" top="3705" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\MatCapSample01.png">
+   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\MatCapSample02.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -283,7 +285,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1110" top="8775" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="7350" top="780" width="9315" height="9765">
+   <BOUNDS type="Window" left="12375" top="810" width="9315" height="9765">
    </BOUNDS>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
@@ -398,4 +400,44 @@
    </LINK>
    <LINK srcnodeid="108" srcpinname="Output Node" dstnodeid="50" dstpinname="Texture In">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="110">
+   <BOUNDS type="Box" left="6840" top="3855" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6840" top="3855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Write Depth|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="109">
+   <BOUNDS type="Node" left="6750" top="4380" width="2250" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6750" top="4380" width="2070" height="705">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|May not work on windows&lt;10 if the SDF uses structured buffers|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="110" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Write Depth">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

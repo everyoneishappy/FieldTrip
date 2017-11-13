@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\RenderTexture (DX11.Layer SF2D).v4p" systemname="RenderTexture (DX11.Layer SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RenderTexture (DX11.Layer SF2D).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RenderTexture (DX11.Layer SF2D).v4p" systemname="RenderTexture (DX11.Layer SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RenderTexture (DX11.Layer SF2D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -10,16 +10,6 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4380" top="6555" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4380" top="6555" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
-   </PIN>
-   <PIN pinname="Input Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
    </BOUNDS>
@@ -34,8 +24,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="1725" top="3030" width="100" height="100">
    </BOUNDS>
@@ -346,4 +334,6 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

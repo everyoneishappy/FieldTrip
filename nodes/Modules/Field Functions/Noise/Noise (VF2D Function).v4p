@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" systemname="Noise (VF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" scrollx="0" scrolly="555">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" systemname="Noise (VF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="2490" top="4545" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2640" top="990" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1.93,1.93">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1.91,1.91">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -135,7 +135,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3915" top="990" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,1">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.17,0.17">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -375,7 +375,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="2" values="0,0">
+   <PIN pinname="Y Input Value" slicecount="2" values="0.44,0.44">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -383,11 +383,11 @@
    <INFO author="Everyoneishappy" description="" tags="FieldTrip, noise.fxh">
    </INFO>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="101" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="8565" top="255" width="1590" height="270">
+   <BOUNDS type="Box" left="8445" top="285" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="8565" top="255" width="0" height="0">
+   <BOUNDS type="Node" left="8445" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worleyFast">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="perlin">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Basis">
    </PIN>
@@ -425,7 +425,7 @@
    </PIN>
    <PIN pinname="Inflection" visible="1">
    </PIN>
-   <PIN pinname="Basis Postfix" slicecount="1" values="2" visible="1">
+   <PIN pinname="Basis Postfix" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="101" srcpinname="Output Enum" dstnodeid="100" dstpinname="Noise Basis">
@@ -477,7 +477,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6150" top="990" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.5,0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -564,4 +564,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

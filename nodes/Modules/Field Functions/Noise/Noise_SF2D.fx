@@ -32,6 +32,7 @@ float FN_freq : FN_FREQ = 2;
 float FN_amp : FN_AMP = .1; 
 float FN_center : FN_CENTER; 
 float FN_bias : FN_BIAS = 0.5;
+float FN_time : FN_TIME; 
 float2 FN_domainOffset : FN_DOMAINOFFSET;
 	
 
@@ -39,7 +40,8 @@ float2 FN_domainOffset : FN_DOMAINOFFSET;
 float FN_ (float2 p)
 {
 	p = p * FN_freq + FN_domainOffset;
-	float noise = FN_NOISEBASIS(p  FN_WORLEYOPTIONS);
+	float3 pt = float3(p, FN_time);
+	float noise = FN_NOISEBASIS(pt  FN_WORLEYOPTIONS);
 	noise = sign(noise) * bias(abs(noise), FN_bias);
 	#if FN_INFLECTION == 1
 	// Billow

@@ -1,34 +1,32 @@
-#ifndef CALC_FXH
-#include <packs\happy.fxh\calc.fxh>
-#endif
 
+
+#ifndef SDF_FXH
+#include <packs\happy.fxh\sdf.fxh>
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Divergence Scalar from 3D Vector Field Function
+//		Simple Sphere Distance Class
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
 #ifndef SF3D
 
-// Input class placeholder
-#ifndef FN_INPUT
-#define FN_INPUT placeHolderV3
-#endif
-
 // Paramaters
-float FN_eps : FN_EPS = 0.01;
+float4 FN_pars : FN_PARS;
+int FN_iter : FN_ITER;
+
 
 float FN_ (float3 p)
 {
-	return calcDivV3(FN_INPUT, p, FN_eps);
+	float d = 999999;
+	d = min (d, fJulia(p, FN_pars, FN_iter));
+	return d;
 }
 
 #define SF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 technique11 RemoveMe{}
 

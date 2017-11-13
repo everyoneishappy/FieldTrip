@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RenderVolume (DX11.Layer VF3D).v4p" systemname="RenderVolume (DX11.Layer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RenderVolume (DX11.Layer VF3D).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RenderVolume (DX11.Layer VF3D).v4p" systemname="RenderVolume (DX11.Layer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RenderVolume (DX11.Layer VF3D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="14400" top="3150" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -10,16 +10,6 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4380" top="6555" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4380" top="6555" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
-   </PIN>
-   <PIN pinname="Input Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
    </BOUNDS>
@@ -34,8 +24,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
    <BOUNDS type="Box" left="675" top="945" width="795" height="240">
    </BOUNDS>
@@ -49,7 +37,7 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|VF3D Function|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -207,11 +195,11 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;RWTexture3D&lt;float4&gt; OUTPUT : BACKBUFFER;&lf;&lf;float4x4 InvTransform;&lf;float3 InvVolumeSize : INVTARGETSIZE;&cr;&lf;uint tranformCount, radCount, maxCount;&lf;//float3 VolumeSize : TARGETSIZE;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&lf;&lf;[numthreads(8, 8, 8)]&lf;void CS_Vol( uint3 ti : SV_DispatchThreadID)&lf;{ &lf;&tab;float3 p = ti;&lf;&tab;p *= InvVolumeSize;&lf;&tab;p -= 0.5f;&cr;&lf;&tab;float3 tp = mul(float4(p,1),InvTransform).xyz;&cr;&lf;&tab;OUTPUT[ti] = VF3D(tp);&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;technique11 AsVolume&cr;&lf;{&lf;&tab;pass P0&lf;&tab;{&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_Vol() ) );&lf;&tab;}&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_2_&quot;&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_X&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_2_NOISEBASIS perlin&cr;&lf;#define fNoiseS3D_2_INFLECTION 0&cr;&lf;#ifndef fNoiseS3D_2_NOISEBASIS&cr;&lf;#define fNoiseS3D_2_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_2_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_2_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_2_INFLECTION&cr;&lf;#define fNoiseS3D_2_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_2_freq : fNoiseS3D_2_FREQ = 2; &cr;&lf;float fNoiseS3D_2_amp : fNoiseS3D_2_AMP = .1; &cr;&lf;float fNoiseS3D_2_center : fNoiseS3D_2_CENTER; &cr;&lf;float fNoiseS3D_2_bias : fNoiseS3D_2_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_2_domainOffset : fNoiseS3D_2_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_2_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_2_freq + fNoiseS3D_2_domainOffset;&cr;&lf;&tab;float noise = fNoiseS3D_2_NOISEBASIS(p  fNoiseS3D_2_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_2_bias);&cr;&lf;&tab;#if fNoiseS3D_2_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_2_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * noise * fNoiseS3D_2_amp + fNoiseS3D_2_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fVecJoinVF3D_0_INPUT_X fNoiseS3D_2_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_1_&quot;&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_Y&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_1_NOISEBASIS perlin&cr;&lf;#define fNoiseS3D_1_INFLECTION 0&cr;&lf;#ifndef fNoiseS3D_1_NOISEBASIS&cr;&lf;#define fNoiseS3D_1_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_1_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_1_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_1_INFLECTION&cr;&lf;#define fNoiseS3D_1_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_1_freq : fNoiseS3D_1_FREQ = 2; &cr;&lf;float fNoiseS3D_1_amp : fNoiseS3D_1_AMP = .1; &cr;&lf;float fNoiseS3D_1_center : fNoiseS3D_1_CENTER; &cr;&lf;float fNoiseS3D_1_bias : fNoiseS3D_1_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_1_domainOffset : fNoiseS3D_1_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_1_freq + fNoiseS3D_1_domainOffset;&cr;&lf;&tab;float noise = fNoiseS3D_1_NOISEBASIS(p  fNoiseS3D_1_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_1_bias);&cr;&lf;&tab;#if fNoiseS3D_1_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_1_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * noise * fNoiseS3D_1_amp + fNoiseS3D_1_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fVecJoinVF3D_0_INPUT_Y fNoiseS3D_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_0_&quot;&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_Z&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_0_NOISEBASIS worley&cr;&lf;#define fNoiseS3D_0_INFLECTION 0&cr;&lf;#define fNoiseS3D_0_WORLEYOPTIONS , Manhattan, F2MinusF1&cr;&lf;#ifndef fNoiseS3D_0_NOISEBASIS&cr;&lf;#define fNoiseS3D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_INFLECTION&cr;&lf;#define fNoiseS3D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_0_freq : fNoiseS3D_0_FREQ = 2; &cr;&lf;float fNoiseS3D_0_amp : fNoiseS3D_0_AMP = .1; &cr;&lf;float fNoiseS3D_0_center : fNoiseS3D_0_CENTER; &cr;&lf;float fNoiseS3D_0_bias : fNoiseS3D_0_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_0_domainOffset : fNoiseS3D_0_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_0_freq + fNoiseS3D_0_domainOffset;&cr;&lf;&tab;float noise = fNoiseS3D_0_NOISEBASIS(p  fNoiseS3D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_0_bias);&cr;&lf;&tab;#if fNoiseS3D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * noise * fNoiseS3D_0_amp + fNoiseS3D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fVecJoinVF3D_0_INPUT_Z fNoiseS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Vector Field from three 3D Scaler Field Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fVecJoinVF3D_0_&quot;&cr;&lf;#ifndef VF3D&cr;&lf;&cr;&lf;// Input Function placeholder&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_X&cr;&lf;#define fVecJoinVF3D_0_INPUT_X placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_Y&cr;&lf;#define fVecJoinVF3D_0_INPUT_Y placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fVecJoinVF3D_0_INPUT_Z&cr;&lf;#define fVecJoinVF3D_0_INPUT_Z placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;float3 fVecJoinVF3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;return float3(fVecJoinVF3D_0_INPUT_X(p), fVecJoinVF3D_0_INPUT_Y(p), fVecJoinVF3D_0_INPUT_Z(p) );&cr;&lf;&tab;&cr;&lf;}&cr;&lf;&cr;&lf;#define VF3D fVecJoinVF3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D placeHolderV3 // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;RWTexture3D&lt;float4&gt; OUTPUT : BACKBUFFER;&lf;&lf;float4x4 InvTransform;&lf;float3 InvVolumeSize : INVTARGETSIZE;&cr;&lf;uint tranformCount, radCount, maxCount;&lf;//float3 VolumeSize : TARGETSIZE;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&lf;&lf;[numthreads(8, 8, 8)]&lf;void CS_Vol( uint3 ti : SV_DispatchThreadID)&lf;{ &lf;&tab;float3 p = ti;&lf;&tab;p *= InvVolumeSize;&lf;&tab;p -= 0.5f;&cr;&lf;&tab;float3 tp = mul(float4(p,1),InvTransform).xyz;&cr;&lf;&tab;OUTPUT[ti] = float4(VF3D(tp), 1.0);&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;technique11 AsVolume&cr;&lf;{&lf;&tab;pass P0&lf;&tab;{&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_Vol() ) );&lf;&tab;}&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Technique" slicecount="1" visible="1" values="AsTexture">
+   <PIN pinname="Technique" slicecount="1" visible="1" values="AsVolume">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -277,7 +265,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7410" top="1035" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="32,32,32">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="64,64,64">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -364,4 +352,6 @@
    </NODE>
    <LINK srcnodeid="60" srcpinname="Shader Path" dstnodeid="9" dstpinname="File Path">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" systemname="FieldViz (DX11.Layer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" scrollx="105" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" systemname="FieldViz (DX11.Layer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" scrollx="105" scrolly="0">
    <BOUNDS type="Window" left="-13230" top="3915" width="10785" height="10395">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -75,7 +75,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1950" top="2940" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.018">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.007">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -172,6 +172,8 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="1" dstpinname="Input Bin Size">
@@ -307,7 +309,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7455" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.7,0.7">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,0.1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -594,4 +596,34 @@
    </LINK>
    <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Enabled">
    </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="38">
+   <BOUNDS type="Box" left="3855" top="1815" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3855" top="1815" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Transform|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="37">
+   <BOUNDS type="Box" left="3675" top="1440" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3675" top="1440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="1" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="1" dstpinname="Texture Transform">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

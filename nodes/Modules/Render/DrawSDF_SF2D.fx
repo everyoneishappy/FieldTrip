@@ -32,6 +32,15 @@ float4 PS_SDF(VS_OUT In) : SV_TARGET
 	return drawCol * draw2DSDF(dist, softness);
 }
 
+float4 PS_Dist(VS_OUT In) : SV_TARGET
+{
+	float2 p = In.TexCd.xy;
+	p = p*2-1;
+	p.y *=-1;
+	p *= apsectRatio; 
+	float dist = SF2D(p);
+	return drawCol * dist;
+}
 
 technique11 DrawSDF
 {
@@ -41,6 +50,16 @@ technique11 DrawSDF
 		SetPixelShader(CompileShader(ps_5_0,PS_SDF()));
 	}
 }
+
+technique11 RawDistance
+{
+	pass P0
+	{
+		SetVertexShader(CompileShader(vs_5_0,VS()));
+		SetPixelShader(CompileShader(ps_5_0,PS_Dist()));
+	}
+}
+
 
 
 

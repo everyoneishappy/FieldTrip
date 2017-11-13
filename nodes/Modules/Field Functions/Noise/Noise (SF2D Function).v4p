@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="0" scrolly="-360">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="13005" top="4035" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -93,7 +93,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3030" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4.18">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3915" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.92">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -367,7 +367,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8565" top="255" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="perlin">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worley">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Basis">
    </PIN>
@@ -377,7 +377,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9855" top="1920" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="EuclideanSquared">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Minkowski">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
    </PIN>
@@ -387,7 +387,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10755" top="2970" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="F2MinusF1">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Crackle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
    </PIN>
@@ -425,7 +425,7 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="4">
+   <PIN pinname="Input Count" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -436,6 +436,8 @@
    <PIN pinname="Input 4" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="98" dstpinname="X">
@@ -455,7 +457,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6150" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.42">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -473,7 +475,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9135" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="None">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Billow">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Inflection">
    </PIN>
@@ -481,11 +483,11 @@
    <LINK srcnodeid="105" srcpinname="Output Enum" dstnodeid="100" dstpinname="Inflection">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="106" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4545" top="4590" width="1245" height="765">
+   <BOUNDS type="Box" left="4545" top="4590" width="1065" height="1035">
    </BOUNDS>
    <BOUNDS type="Node" left="4545" top="4590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="4" visible="1" values="FREQ,AMP,CENTER,BIAS">
+   <PIN pinname="Input String" slicecount="5" visible="1" values="FREQ,AMP,CENTER,BIAS,TIME">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="SEMANTIC">
    </PIN>
@@ -495,7 +497,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
+   <PIN pinname="Rows" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -520,4 +522,22 @@
    </NODE>
    <LINK srcnodeid="107" srcpinname="Output String" dstnodeid="95" dstpinname="Input 2">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="108">
+   <BOUNDS type="Box" left="6225" top="1740" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6225" top="1740" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 5">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

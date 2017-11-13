@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="18405" top="6915" width="9000" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="-16395" top="2430" width="12060" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -99,7 +99,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3495" top="945" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.19">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5040" top="945" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.07">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.13">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -147,7 +147,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7215" top="945" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="140">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="180">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -188,22 +188,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Render State|">
    </PIN>
    <PIN pinname="Pin Visibility" slicecount="1" values="Hidden">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="17" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="9105" top="1485" width="675" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9105" top="1485" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Defines">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
@@ -274,20 +258,6 @@
    </NODE>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Query Save">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8055" top="1575" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8055" top="1575" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
-   </PIN>
-   </NODE>
    <NODE systemname="RaymarchMatCap_SF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap_SF3D.fx" nodename="RaymarchMatCap_SF3D (DX11.Effect)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2280" top="1335" width="100" height="100">
    </BOUNDS>
@@ -349,9 +319,9 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;#define AO&cr;&lf;//#define SHADOW&cr;&lf;//#define SSS&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef RAYMARCH_FXH&cr;&lf;#include&lt;packs\happy.fxh\raymarch.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbControls:register(b0)&cr;&lf;{&cr;&lf;&tab;float4x4 tVP:VIEWPROJECTION;&cr;&lf;&tab;float4x4 tV:VIEW;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;Texture2D matCapTex &lt;string uiname=&quot;MatCap Texture&quot;;&gt; ;&cr;&lf;&cr;&lf;SamplerState sMatCap &lt;bool visible=false;&gt;&cr;&lf;{&cr;&lf;&tab;Filter=MIN_MAG_MIP_LINEAR;&cr;&lf;&tab;AddressU=CLAMP;&cr;&lf;&tab;AddressV=CLAMP;&cr;&lf;};&cr;&lf;////////////////////////////////////////////////////////////////&cr;&lf;float4 matCap(float3 vn)&cr;&lf;{&cr;&lf;&tab;vn.y = -vn.y;&cr;&lf;&tab;return float4(matCapTex.Sample(sMatCap, vn.xy *.5+.5));&cr;&lf;}&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////&cr;&lf;float4 matCapGrad(float3 vn, float3 gx, float3 gy)&cr;&lf;{&cr;&lf;&tab;vn.y = -vn.y;&cr;&lf;&tab;vn.xy = vn.xy * .5 + .5;&cr;&lf;&tab;return matCapTex.SampleGrad(sMatCap, vn, gx, gy);&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;struct VS_IN{float4 PosO:POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;struct VS_OUT{float4 PosWVP:SV_POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In.PosO.xy,0,1);return Out;}&cr;&lf;&cr;&lf;struct PS_OUT&cr;&lf;{&cr;&lf;&tab;float4 Color:SV_TARGET;&cr;&lf;&tab;float Depth:SV_DEPTH;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;PS_OUT PS_Grad(VS_OUT In)&cr;&lf;{&cr;&lf;&tab;// Raymarch &cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;float3 ro, rd, p, n;   &tab;// origin, direction, position, normal&cr;&lf;&tab;float z;&tab;&tab;&tab;&tab;// depth&cr;&lf;&tab;int matID;&tab;&tab;&tab;&tab;// matID (optional)&cr;&lf;&tab;float2 uv=In.TexCd.xy;&cr;&lf;&tab;rayMarch(uv, ro, rd, p, n, z);&cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;float g = saturate(-dot(rd,n));&cr;&lf;&cr;&lf;&tab;#ifdef AO&cr;&lf;&tab;float ao = calcAO(p,n);&cr;&lf;&tab;c.rgb *= ao;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;#ifdef SHADOW&cr;&lf;&tab;float shadow = calcShadow(p);&cr;&lf;&tab;c.rgb *= shadow;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;float4 PosWVP=mul(float4(p.xyz,1),tVP);&cr;&lf;&tab;PS_OUT Out;&cr;&lf;&tab;Out.Color=c;&cr;&lf;&tab;Out.Depth=PosWVP.z/PosWVP.w;&cr;&lf;&tab;return Out;&cr;&lf;}&cr;&lf;&cr;&lf;PS_OUT PS_MatCap(VS_OUT In)&cr;&lf;{&cr;&lf;&tab;// Raymarch &cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;float3 ro, rd, p, n;&cr;&lf;&tab;float z;&cr;&lf;&tab;int matID;&cr;&lf;&tab;float2 uv=In.TexCd.xy;&cr;&lf;&tab;rayMarch(uv, ro, rd, p, n, z);&cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;float3 ppdx, ppdy;&cr;&lf;&tab;calcPPD(uv, z, rd, n, ppdx, ppdy);&cr;&lf;&tab;&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;float3 vn = mul(float4(n, 0), tV).xyz;&cr;&lf;&tab;c = matCap(vn);&cr;&lf;&tab;c = matCapGrad(vn, ppdx, ppdy);&cr;&lf;&tab;#ifdef AO&cr;&lf;&tab;float ao = calcAO(p,n);&cr;&lf;&tab;c.rgb *= ao;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;#ifdef SHADOW&cr;&lf;&tab;float shadow = calcShadow(p);&cr;&lf;&tab;c.rgb *= shadow;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;float4 PosWVP=mul(float4(p.xyz,1),tVP);&cr;&lf;&tab;PS_OUT Out;&cr;&lf;&tab;Out.Color=c;&cr;&lf;&tab;Out.Depth=PosWVP.z/PosWVP.w;&cr;&lf;&tab;return Out;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 RayMarchMatCap&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_MatCap()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS2D_0_&quot;&cr;&lf;#ifndef fDomainDistortionS2D_0_INPUT&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS2D_0_NOISEBASIS worleyFast&cr;&lf;#define fNoiseS2D_0_INFLECTION 1&cr;&lf;#ifndef fNoiseS2D_0_NOISEBASIS&cr;&lf;#define fNoiseS2D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS2D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseS2D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS2D_0_INFLECTION&cr;&lf;#define fNoiseS2D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS2D_0_freq : fNoiseS2D_0_FREQ = 2; &cr;&lf;float fNoiseS2D_0_amp : fNoiseS2D_0_AMP = .1; &cr;&lf;float fNoiseS2D_0_center : fNoiseS2D_0_CENTER; &cr;&lf;float fNoiseS2D_0_bias : fNoiseS2D_0_BIAS = 0.5;&cr;&lf;float fNoiseS2D_0_time : fNoiseS2D_0_TIME; &cr;&lf;float2 fNoiseS2D_0_domainOffset : fNoiseS2D_0_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS2D_0_freq + fNoiseS2D_0_domainOffset;&cr;&lf;&tab;float3 pt = float3(p, fNoiseS2D_0_time);&cr;&lf;&tab;float noise = fNoiseS2D_0_NOISEBASIS(pt  fNoiseS2D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS2D_0_bias);&cr;&lf;&tab;#if fNoiseS2D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS2D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseS2D_0_amp + fNoiseS2D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fDomainDistortionS2D_0_INPUT fNoiseS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Vector Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseV2D_0_&quot;&cr;&lf;#ifndef fDomainDistortionS2D_0_DISTORTION&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseV2D_0_NOISEBASIS simplex2&cr;&lf;#define fNoiseV2D_0_INFLECTION 0&cr;&lf;#ifndef fNoiseV2D_0_NOISEBASIS&cr;&lf;#define fNoiseV2D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseV2D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseV2D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseV2D_0_INFLECTION&cr;&lf;#define fNoiseV2D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float2 fNoiseV2D_0_freq : fNoiseV2D_0_FREQ = 2; &cr;&lf;float2 fNoiseV2D_0_amp : fNoiseV2D_0_AMP = .1; &cr;&lf;float2 fNoiseV2D_0_center : fNoiseV2D_0_CENTER; &cr;&lf;float2 fNoiseV2D_0_bias : fNoiseV2D_0_BIAS = 0.5;&cr;&lf;float2 fNoiseV2D_0_domainOffset : fNoiseV2D_0_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float2 fNoiseV2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseV2D_0_freq + fNoiseV2D_0_domainOffset;&cr;&lf;&tab;&cr;&lf;&tab;float2 noise = fNoiseV2D_0_NOISEBASIS(p fNoiseV2D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise.x = sign(noise.x) * bias(abs(noise.x), fNoiseV2D_0_bias.x);&cr;&lf;&tab;noise.y = sign(noise.y) * bias(abs(noise.y), fNoiseV2D_0_bias.y);&cr;&lf;&tab;#if fNoiseV2D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseV2D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseV2D_0_amp + fNoiseV2D_0_center;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#define fDomainDistortionS2D_0_DISTORTION fNoiseV2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Scalar Domain Distortion Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fDomainDistortionS2D_0_&quot;&cr;&lf;#ifndef fHeightFieldSDF_0_INPUT&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fDomainDistortionS2D_0_INPUT&cr;&lf;#define fDomainDistortionS2D_0_INPUT placeHolderS2&cr;&lf;#endif&cr;&lf;&cr;&lf;// Distortion function placeholder&cr;&lf;#ifndef fDomainDistortionS2D_0_DISTORTION&cr;&lf;#define fDomainDistortionS2D_0_DISTORTION placeHolderV2&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float fDomainDistortionS2D_0_Strength : fDomainDistortionS2D_0_STRENGTH = 1.0;&cr;&lf;&cr;&lf;float fDomainDistortionS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p += fDomainDistortionS2D_0_DISTORTION(p) * fDomainDistortionS2D_0_Strength;&cr;&lf;&tab;return fDomainDistortionS2D_0_INPUT(p);&cr;&lf;}&cr;&lf;&cr;&lf;#define fHeightFieldSDF_0_INPUT fDomainDistortionS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Simple Sphere Distance Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fHeightFieldSDF_0_&quot;&cr;&lf;#ifndef SF3D&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fHeightFieldSDF_0_INPUT&cr;&lf;#define fHeightFieldSDF_0_INPUT placeHolderS2&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float3 fHeightFieldSDF_0_orientation : fHeightFieldSDF_0_ORIENTATION = float3(0,1,0);&cr;&lf;float fHeightFieldSDF_0_amp : fHeightFieldSDF_0_AMPLITUDE = 1;&cr;&lf;&cr;&lf;float fHeightFieldSDF_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;return fPlane(p, fHeightFieldSDF_0_INPUT(p.xz) * -fHeightFieldSDF_0_amp, fHeightFieldSDF_0_orientation);&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D fHeightFieldSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#define AO&cr;&lf;//#define SHADOW&cr;&lf;//#define SSS&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef RAYMARCH_FXH&cr;&lf;#include&lt;packs\happy.fxh\raymarch.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef WRITEDEPTH&cr;&lf;#define WRITEDEPTH 1&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbControls:register(b0)&cr;&lf;{&cr;&lf;&tab;float4x4 tVP:VIEWPROJECTION;&cr;&lf;&tab;float4x4 tV:VIEW;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;Texture2D matCapTex &lt;string uiname=&quot;MatCap Texture&quot;;&gt; ;&cr;&lf;&cr;&lf;SamplerState sMatCap &lt;bool visible=false;&gt;&cr;&lf;{&cr;&lf;&tab;Filter=MIN_MAG_MIP_LINEAR;&cr;&lf;&tab;AddressU=CLAMP;&cr;&lf;&tab;AddressV=CLAMP;&cr;&lf;};&cr;&lf;////////////////////////////////////////////////////////////////&cr;&lf;float4 matCap(float3 vn)&cr;&lf;{&cr;&lf;&tab;vn.y = -vn.y;&cr;&lf;&tab;return float4(matCapTex.Sample(sMatCap, vn.xy *.5+.5));&cr;&lf;}&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////&cr;&lf;float4 matCapGrad(float3 vn, float3 gx, float3 gy)&cr;&lf;{&cr;&lf;&tab;vn.y = -vn.y;&cr;&lf;&tab;vn.xy = vn.xy * .5 + .5;&cr;&lf;&tab;return matCapTex.SampleGrad(sMatCap, vn, gx, gy);&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;struct VS_IN{float4 PosO:POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;struct VS_OUT{float4 PosWVP:SV_POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In.PosO.xy,0,1);return Out;}&cr;&lf;&cr;&lf;struct PS_OUT&cr;&lf;{&cr;&lf;&tab;float4 Color:SV_TARGET;&cr;&lf;&tab;#if WRITEDEPTH == 1&cr;&lf;&tab;float Depth:SV_DEPTH;&cr;&lf;&tab;#endif&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;PS_OUT PS_Grad(VS_OUT In)&cr;&lf;{&cr;&lf;&tab;// Raymarch &cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;float3 ro, rd, p, n;   &tab;// origin, direction, position, normal&cr;&lf;&tab;float z;&tab;&tab;&tab;&tab;// depth&cr;&lf;&tab;int matID;&tab;&tab;&tab;&tab;// matID (optional)&cr;&lf;&tab;float2 uv=In.TexCd.xy;&cr;&lf;&tab;rayMarch(uv, ro, rd, p, n, z);&cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;float g = saturate(-dot(rd,n));&cr;&lf;&cr;&lf;&tab;#ifdef AO&cr;&lf;&tab;float ao = calcAO(p,n);&cr;&lf;&tab;c.rgb *= ao;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;#ifdef SHADOW&cr;&lf;&tab;float shadow = calcShadow(p);&cr;&lf;&tab;c.rgb *= shadow;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;PS_OUT Out;&cr;&lf;&tab;Out.Color=c;&cr;&lf;&cr;&lf;&tab;#if WRITEDEPTH == 1&cr;&lf;&tab;float4 PosWVP=mul(float4(p.xyz,1),tVP);&cr;&lf;&tab;Out.Depth=PosWVP.z/PosWVP.w;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;return Out;&cr;&lf;}&cr;&lf;&cr;&lf;PS_OUT PS_MatCap(VS_OUT In)&cr;&lf;{&cr;&lf;&tab;// Raymarch &cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;float3 ro, rd, p, n;&cr;&lf;&tab;float z;&cr;&lf;&tab;int matID;&cr;&lf;&tab;float2 uv=In.TexCd.xy;&cr;&lf;&tab;rayMarch(uv, ro, rd, p, n, z);&cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;float3 ppdx, ppdy;&cr;&lf;&tab;calcPPD(uv, z, rd, n, ppdx, ppdy);&cr;&lf;&tab;&cr;&lf;&tab;float4 c=1;&cr;&lf;&tab;float3 vn = mul(float4(n, 0), tV).xyz;&cr;&lf;&tab;c = matCap(vn);&cr;&lf;&tab;c = matCapGrad(vn, ppdx, ppdy);&cr;&lf;&tab;#ifdef AO&cr;&lf;&tab;float ao = calcAO(p,n);&cr;&lf;&tab;c.rgb *= ao;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;#ifdef SHADOW&cr;&lf;&tab;float shadow = calcShadow(p);&cr;&lf;&tab;c.rgb *= shadow;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;float4 PosWVP=mul(float4(p.xyz,1),tVP);&cr;&lf;&tab;PS_OUT Out;&cr;&lf;&tab;Out.Color=c;&cr;&lf;&tab;Out.Depth=PosWVP.z/PosWVP.w;&cr;&lf;&tab;return Out;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 RayMarchMatCap&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_MatCap()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
-   <PIN pinname="ConfigDefines" slicecount="1" values="||">
+   <PIN pinname="ConfigDefines" slicecount="1" values="WRITEDEPTH=1">
    </PIN>
    <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchGradient">
    </PIN>
@@ -402,18 +372,62 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="7" dstpinname="Render State">
    </LINK>
-   <LINK srcnodeid="17" srcpinname="Output String" dstnodeid="7" dstpinname="Defines">
-   </LINK>
    <LINK srcnodeid="7" srcpinname="Technique Valid" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="7" dstpinname="alpha">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="7" dstpinname="AO Scale">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="7" dstpinname="AO Bias">
    </LINK>
    <LINK srcnodeid="32" srcpinname="Output Node" dstnodeid="7" dstpinname="MatCap Texture">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="9360" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="WRITEDEPTH=">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="9480" top="2520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33">
+   <BOUNDS type="Box" left="9480" top="1740" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9480" top="1740" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Write Depth|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="35" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="7" dstpinname="Defines">
    </LINK>
    </PATCH>

@@ -42,7 +42,7 @@ float4 PS(psInput input): SV_Target
 
 technique11 AsTexture
 {
-	pass P0 <string format="R32_Float";>
+	pass P0 //<string format="R32_Float";>
 	{
 		SetVertexShader(CompileShader(vs_5_0,VS()));
 		SetPixelShader(CompileShader(ps_5_0,PS()));

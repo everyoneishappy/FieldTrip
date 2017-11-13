@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D) help.v4p" systemname="RaymarchTriPlane (DX11.Layer SF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D) help.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="585" top="3090" width="12015" height="11040">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D) help.v4p" systemname="RaymarchTriPlane (DX11.Layer SF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="0" top="3135" width="12015" height="11040">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -265,7 +265,7 @@
    </PIN>
    <PIN pinname="Shape" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Domain Offset" slicecount="3" values="2.74,2.74,2.74" visible="1">
+   <PIN pinname="Domain Offset" slicecount="3" visible="1" values="2.74,2.74,2.74">
    </PIN>
    <PIN pinname="Inflection" slicecount="1" values="Billow">
    </PIN>
@@ -273,11 +273,11 @@
    <LINK srcnodeid="53" srcpinname="Function Parameter Semantics" dstnodeid="10" dstpinname="Input 5">
    </LINK>
    <NODE systemname="RaymarchTriPlane (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" nodename="RaymarchTriPlane (DX11.Layer SF3D)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2505" top="6645" width="100" height="100">
+   <BOUNDS type="Node" left="2580" top="6645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="1305" top="4305" width="12060" height="11295">
+   <BOUNDS type="Window" left="1305" top="4305" width="15870" height="11295">
    </BOUNDS>
    <PIN pinname="SF3D Class" visible="1">
    </PIN>
@@ -316,6 +316,8 @@
    <PIN pinname="Gloss" slicecount="1" values="0.6">
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Write Depth" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Technique Valid" dstnodeid="16" dstpinname="Y Input Value">
@@ -528,4 +530,42 @@
    </LINK>
    <LINK srcnodeid="70" srcpinname="SF3D Function" dstnodeid="6" dstpinname="Input String">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71">
+   <BOUNDS type="Box" left="7905" top="5700" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7905" top="5700" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Write Depth|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Write Depth">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="72">
+   <BOUNDS type="Node" left="7815" top="6225" width="2250" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7815" top="6225" width="2070" height="705">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|May not work on windows&lt;10 if the SDF uses structured buffers|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

@@ -20,7 +20,7 @@
 #define FN_INPUT placeHolderS2
 #endif
 
-
+  
 // Paramaters
 float FN_depth : FN_DEPTH;
 float FN_radius : FN_RADIUS;

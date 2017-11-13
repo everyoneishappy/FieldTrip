@@ -15,7 +15,7 @@
 // Paramaters
 StructuredBuffer<float3> FN_pos : FN_POS;
 StructuredBuffer<float> FN_radius : FN_RADIUS;
-int FN_count : FN_COUNT;
+int FN_count : FN_COUNT = 1 ;
 
 float FN_ (float3 p)
 {

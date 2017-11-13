@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\nodes\modules\Field Functions\Normalize (VF3D Function).v4p" systemname="Normalize (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Normalize (VF3D Function).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Normalize (VF3D Function).v4p" systemname="Normalize (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Normalize (VF3D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -153,7 +153,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6615" top="4980" width="1125" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="fCurlV3D">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fNormV3D">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -306,4 +306,6 @@
    </NODE>
    <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

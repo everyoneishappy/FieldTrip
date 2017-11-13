@@ -25,7 +25,7 @@ float FN_amp : FN_AMPLITUDE = 1;
 
 float FN_ (float3 p)
 {
-	return fPlane(p, FN_INPUT(p.xz) * FN_amp, FN_orientation);
+	return fPlane(p, FN_INPUT(p.xz) * -FN_amp, FN_orientation);
 }
 
 #define SF3D FN_
