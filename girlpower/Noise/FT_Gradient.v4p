@@ -145,6 +145,10 @@
    </PIN>
    <BOUNDS type="Window" left="2985" top="2730" width="14670" height="12255">
    </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="55" systemname="IOBox (String)">
    <BOUNDS type="Node" left="6375" top="5085" width="4395" height="270">
@@ -187,6 +191,8 @@
    </PIN>
    <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Center">
    </LINK>
@@ -234,6 +240,8 @@
    <PIN pinname="2D Buffer" visible="1">
    </PIN>
    <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Multiply (Value Spectral)" nodename="Multiply (Value Spectral)" componentmode="Hidden" id="62" hiddenwhenlocked="1">
@@ -487,6 +495,10 @@
    </PIN>
    <BOUNDS type="Window" left="10245" top="3345" width="14670" height="12255">
    </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="81">
    <BOUNDS type="Box" left="3420" top="4935" width="795" height="780">
@@ -707,6 +719,8 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Texture" dstnodeid="99" dstpinname="Texture">
    </LINK>
@@ -719,9 +733,9 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="SF2D Function" dstnodeid="100" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="47" dstpinname="Input SF2D Function">
    </LINK>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="80">
@@ -738,10 +752,6 @@
    </NODE>
    <LINK srcnodeid="81" srcpinname="Y Output Value" dstnodeid="80" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="47" srcpinname="VF2D Function" dstnodeid="80" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="VF2D Function" dstnodeid="80" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="101">
    <BOUNDS type="Node" left="3405" top="6690" width="100" height="100">
    </BOUNDS>
@@ -749,7 +759,7 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
    </PIN>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
@@ -764,4 +774,18 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="100" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="47" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="79" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="80" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="80" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="58" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="17" dstpinname="Input">
+   </LINK>
    </PATCH>

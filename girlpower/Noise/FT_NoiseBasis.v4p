@@ -97,9 +97,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="36" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="5595" top="5700" width="1365" height="945">
+   <BOUNDS type="Box" left="5595" top="5445" width="1365" height="945">
    </BOUNDS>
-   <BOUNDS type="Node" left="5595" top="5700" width="0" height="0">
+   <BOUNDS type="Node" left="5595" top="5445" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="None">
    </PIN>
@@ -111,9 +111,9 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="37" systemname="IOBox (String)">
    <BOUNDS type="Node" left="4305" top="150" width="1155" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4305" top="150" width="4260" height="750">
+   <BOUNDS type="Box" left="4305" top="150" width="5280" height="750">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Basis Functions|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Noise Basis Functions|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -139,9 +139,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="43" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="5490" top="2565" width="1350" height="1560">
+   <BOUNDS type="Box" left="5295" top="1980" width="1350" height="1560">
    </BOUNDS>
-   <BOUNDS type="Node" left="5490" top="2565" width="0" height="0">
+   <BOUNDS type="Node" left="5295" top="1980" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Chebyshev">
    </PIN>
@@ -151,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="44" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="7500" top="2565" width="810" height="1575">
+   <BOUNDS type="Box" left="7305" top="1980" width="810" height="1575">
    </BOUNDS>
-   <BOUNDS type="Node" left="7500" top="2565" width="0" height="0">
+   <BOUNDS type="Node" left="7305" top="1980" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="F2MinusF1">
    </PIN>
@@ -163,9 +163,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="50" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="5940" top="1800" width="2055" height="270">
+   <BOUNDS type="Node" left="5745" top="1215" width="2055" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="5940" top="1800" width="2055" height="270">
+   <BOUNDS type="Box" left="5745" top="1215" width="2055" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Only used for Worley Noise|">
    </PIN>
@@ -203,6 +203,8 @@
    </PIN>
    <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Center">
    </LINK>
@@ -253,9 +255,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="53">
-   <BOUNDS type="Node" left="7140" top="5685" width="3465" height="270">
+   <BOUNDS type="Node" left="7140" top="5430" width="3465" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7140" top="5685" width="2130" height="630">
+   <BOUNDS type="Box" left="7140" top="5430" width="2130" height="630">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Inflections fold the noise, giving it sharp edges|">
    </PIN>
@@ -267,11 +269,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="56" nodename="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="0" left="5505" top="6885" type="Node" width="0">
+   <BOUNDS height="0" left="5505" top="6630" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="4866" top="3785" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="1320" left="5505" top="6885" type="Box" width="6270">
+   <BOUNDS height="1320" left="5505" top="6630" type="Box" width="6270">
    </BOUNDS>
    <PIN pinname="Show Connections" slicecount="1" values="1">
    </PIN>
@@ -299,11 +301,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="59" nodename="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="0" left="5520" top="8280" type="Node" width="0">
+   <BOUNDS height="0" left="5520" top="8025" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="4866" top="3785" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="1320" left="5520" top="8280" type="Box" width="6270">
+   <BOUNDS height="1320" left="5520" top="8025" type="Box" width="6270">
    </BOUNDS>
    <PIN pinname="Show Connections" slicecount="1" values="1">
    </PIN>
@@ -331,11 +333,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="60" nodename="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="0" left="5505" top="9645" type="Node" width="0">
+   <BOUNDS height="0" left="5505" top="9390" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="4866" top="3785" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="1320" left="5505" top="9645" type="Box" width="6270">
+   <BOUNDS height="1320" left="5505" top="9390" type="Box" width="6270">
    </BOUNDS>
    <PIN pinname="Show Connections" slicecount="1" values="1">
    </PIN>
@@ -363,11 +365,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="62">
-   <BOUNDS type="Node" left="4755" top="8955" width="390" height="270">
+   <BOUNDS type="Node" left="4200" top="8580" width="390" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4755" top="8955" width="705" height="330">
+   <BOUNDS type="Box" left="4200" top="8580" width="1200" height="300">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="ABS(x)">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Billow ABS(x)|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -377,11 +379,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="63">
-   <BOUNDS type="Node" left="4650" top="10200" width="735" height="270">
+   <BOUNDS type="Node" left="4110" top="9930" width="735" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="4650" top="10200" width="735" height="270">
+   <BOUNDS type="Box" left="4110" top="9930" width="1335" height="255">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="1-ABS(x)">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Ridge 1-ABS(x)|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -415,6 +417,8 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="SF2D Function" dstnodeid="17" dstpinname="SF2D Function">
    </LINK>
@@ -424,4 +428,6 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="17" dstpinname="Input">
+   </LINK>
    </PATCH>

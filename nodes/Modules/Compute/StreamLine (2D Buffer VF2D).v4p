@@ -442,7 +442,21 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="0" dstpinname="Seed Position 2D Buffer">
    </LINK>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="56">
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="55">
+   <BOUNDS type="Node" left="1380" top="255" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1380" top="255" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Split (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (VF2D)" componentmode="Hidden" id="56">
    <BOUNDS type="Node" left="1455" top="630" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1455" top="630" width="3000" height="3000">
@@ -456,16 +470,6 @@
    <PIN pinname="Resource Semantics" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="55">
-   <BOUNDS type="Node" left="1380" top="255" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1380" top="255" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF2D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="56" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="56" srcpinname="HLSL" dstnodeid="8" dstpinname="Input String">
@@ -474,8 +478,4 @@
    </LINK>
    <LINK srcnodeid="56" srcpinname="Resource Semantics" dstnodeid="18" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
    </PATCH>

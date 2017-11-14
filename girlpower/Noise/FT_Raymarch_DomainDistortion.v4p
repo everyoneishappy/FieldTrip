@@ -219,6 +219,8 @@
    </PIN>
    <PIN pinname="Default Color" slicecount="1" values="|0.46317,0.95925,0.78627,1.00000|">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="117">
    <BOUNDS type="Node" left="615" top="1965" width="100" height="100">
@@ -232,6 +234,8 @@
    <PIN pinname="Position" slicecount="3" visible="1" values="0,0,0">
    </PIN>
    <PIN pinname="Radius" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="117" srcpinname="Function Resource Semantics" dstnodeid="116" dstpinname="Function Resource Semantics" hiddenwhenlocked="1">
@@ -377,6 +381,8 @@
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Amplitude">
    </LINK>
@@ -405,6 +411,12 @@
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="117" srcpinname="SF3D Function" dstnodeid="132" dstpinname="Input VF3D Function">
    </LINK>
@@ -415,12 +427,12 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Distortion VF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Distortion Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="134" srcpinname="Output Node" dstnodeid="132" dstpinname="Distortion VF3D Function">
-   </LINK>
-   <LINK srcnodeid="95" srcpinname="VF3D Function" dstnodeid="134" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="135">
    <BOUNDS type="Box" left="675" top="5595" width="795" height="240">
@@ -429,15 +441,25 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="135" srcpinname="Output Node" dstnodeid="132" dstpinname="Input SF3D Function">
-   </LINK>
-   <LINK srcnodeid="117" srcpinname="SF3D Function" dstnodeid="135" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="132" srcpinname="SF3D Function" dstnodeid="116" dstpinname="SF3D Function">
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="134" srcpinname="Output Node" dstnodeid="132" dstpinname="Distortion Function">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="134" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="Output Node" dstnodeid="132" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="117" srcpinname="Output" dstnodeid="135" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="132" srcpinname="Output" dstnodeid="116" dstpinname="Input">
+   </LINK>
    </PATCH>

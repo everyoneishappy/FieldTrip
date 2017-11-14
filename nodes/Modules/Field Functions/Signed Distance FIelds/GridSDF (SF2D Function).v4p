@@ -526,7 +526,17 @@
    </NODE>
    <LINK srcnodeid="76" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="115">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="114">
+   <BOUNDS type="Box" left="2835" top="9525" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2835" top="9525" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (SF2D)" componentmode="Hidden" id="115">
    <BOUNDS type="Node" left="2850" top="8955" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2850" top="8955" width="3000" height="3000">
@@ -538,20 +548,10 @@
    <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="114">
-   <BOUNDS type="Box" left="2835" top="9525" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2835" top="9525" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="114" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="115" dstpinname="HLSL">
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output Node" dstnodeid="115" dstpinname="Custom Semantic">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
    </PATCH>

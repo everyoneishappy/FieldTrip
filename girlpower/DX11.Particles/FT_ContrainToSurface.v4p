@@ -111,6 +111,8 @@
    </PIN>
    <PIN pinname="Worley Function" slicecount="1" values="F2MinusF1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="HeightFieldSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\HeightFieldSDF (SF3D Function).v4p" nodename="HeightFieldSDF (SF3D Function)" componentmode="Hidden" id="292">
    <BOUNDS type="Node" left="1680" top="2100" width="100" height="100">
@@ -122,6 +124,10 @@
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
    <PIN pinname="Amplitude" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Height Field Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer 3d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 3d)" componentmode="Hidden" id="295">
@@ -170,6 +176,12 @@
    <PIN pinname="Input 2 VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (3D Buffer VF3D).v4p" nodename="ClosestPointOnSDF (3d Buffer VF3D)" componentmode="Hidden" id="305">
@@ -225,11 +237,15 @@
    </PIN>
    </NODE>
    <NODE systemname="Normalize (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Normalize (VF3D Function).v4p" nodename="Normalize (VF3D Function)" componentmode="Hidden" id="309">
-   <BOUNDS type="Node" left="3975" top="4935" width="100" height="100">
+   <BOUNDS type="Node" left="3975" top="5040" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input VF3D Function" visible="1">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="303" srcpinname="VF3D Function" dstnodeid="309" dstpinname="Input VF3D Function">
@@ -258,6 +274,8 @@
    <PIN pinname="Domain Offset" slicecount="3" visible="1" values="1.55,1.55,1.55">
    </PIN>
    <PIN pinname="Amplitude" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="315" systemname="IOBox (Value Advanced)">
@@ -291,6 +309,10 @@
    </PIN>
    <PIN pinname="Input 2 Defualt XYZ" slicecount="3" visible="1" values="0,0,0">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="318">
    <BOUNDS type="Node" left="1860" top="1155" width="100" height="100">
@@ -317,6 +339,8 @@
    </PIN>
    <PIN pinname="Worley Function" slicecount="1" values="F2MinusF1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="ScalarOp (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (SF2D Function).v4p" nodename="ScalarOp (SF2D Function)" componentmode="Hidden" id="319">
    <BOUNDS type="Node" left="1710" top="1725" width="100" height="100">
@@ -342,6 +366,12 @@
    <PIN pinname="Input 2 SF2D FUnction" visible="1">
    </PIN>
    <PIN pinname="Input 1 SF2D FUnction" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="291" srcpinname="SF2D Function" dstnodeid="319" dstpinname="Input 1 SF3D Function">
@@ -631,19 +661,23 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1695" top="2400" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SDF Function|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="292" srcpinname="SF3D Function" dstnodeid="362" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Gradient (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Gradient (SF3D Function).v4p" nodename="Gradient (SF3D Function)" componentmode="Hidden" id="301">
    <BOUNDS type="Node" left="3255" top="4095" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="301" dstpinname="Input SF3D Function">
@@ -654,6 +688,10 @@
    <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="302" srcpinname="SF3D Function" dstnodeid="310" dstpinname="Input SF3D Function">
@@ -683,6 +721,8 @@
    </PIN>
    <PIN pinname="Target Attribute" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="338" srcpinname="Modifier Out" dstnodeid="342" dstpinname="Layer 2">
    </LINK>
@@ -705,9 +745,9 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="309" srcpinname="VF3D Function" dstnodeid="364" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="364" srcpinname="Output Node" dstnodeid="338" dstpinname="Input VF3D Function">
    </LINK>
    <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="365">
@@ -720,6 +760,8 @@
    <PIN pinname="Default Color" slicecount="1" values="|0.69417,1.00000,0.70404,1.00000|">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="365" dstpinname="SF3D Function">
@@ -851,5 +893,31 @@
    <LINK srcnodeid="372" srcpinname="Output Node" dstnodeid="348" dstpinname="Position Buffer">
    </LINK>
    <LINK srcnodeid="305" srcpinname="3D Buffer" dstnodeid="372" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="291" srcpinname="Output" dstnodeid="319" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="318" srcpinname="Output" dstnodeid="319" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="319" srcpinname="Output" dstnodeid="292" dstpinname="Height Field Function">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Output" dstnodeid="362" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="365" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="301" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="301" srcpinname="Output" dstnodeid="303" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="317" srcpinname="Output" dstnodeid="303" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="310" srcpinname="Output" dstnodeid="317" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="310" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="309" srcpinname="Output" dstnodeid="364" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="364" srcpinname="Output Node" dstnodeid="338" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="303" srcpinname="Output" dstnodeid="309" dstpinname="Input">
    </LINK>
    </PATCH>

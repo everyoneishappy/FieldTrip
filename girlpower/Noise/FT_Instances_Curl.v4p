@@ -247,6 +247,8 @@
    </PIN>
    <PIN pinname="Domain Offset XYZ" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Amplitude">
    </LINK>
@@ -294,6 +296,8 @@
    <PIN pinname="Function Integration Mode" slicecount="1" values="RK4">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Heading (Transform Buffer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\Transform Buffer\Heading (Transform Buffer)\Heading (Transform Buffer).v4p" nodename="Heading (Transform Buffer)" componentmode="Hidden" id="99">
@@ -477,6 +481,10 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="PreCurlDirection (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlDirection (VF3D Function).v4p" nodename="PreCurlDirection (VF3D Function)" componentmode="Hidden" id="117">
    <BOUNDS type="Node" left="675" top="2235" width="100" height="100">
@@ -486,6 +494,8 @@
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
    <PIN pinname="Direction" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="VectorOp (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VectorOp (VF3D Function).v4p" nodename="VectorOp (VF3D Function)" componentmode="Hidden" id="118">
@@ -498,6 +508,12 @@
    <PIN pinname="Input 1 VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119" systemname="IOBox (Value Advanced)">
@@ -720,12 +736,20 @@
    </NODE>
    <LINK srcnodeid="128" srcpinname="Output" dstnodeid="136" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="116" srcpinname="VF3D Function" dstnodeid="128" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="118" srcpinname="VF3D Function" dstnodeid="128" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="136" srcpinname="Output Node" dstnodeid="94" dstpinname="Input VF3D Function">
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="117" srcpinname="Output" dstnodeid="118" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Output" dstnodeid="118" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="118" srcpinname="Output" dstnodeid="116" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="128" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Output Node" dstnodeid="94" dstpinname="Input">
+   </LINK>
    </PATCH>

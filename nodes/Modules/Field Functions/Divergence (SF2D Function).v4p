@@ -337,12 +337,34 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2610" top="1335" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="74">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="76">
+   <BOUNDS type="Box" left="3000" top="10710" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3000" top="10710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="8535" top="9450" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8535" top="9450" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="78" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Split (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (VF2D)" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="2625" top="1710" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2625" top="1710" width="3000" height="3000">
@@ -358,7 +380,11 @@
    </NODE>
    <LINK srcnodeid="75" srcpinname="Output Node" dstnodeid="74" dstpinname="Input">
    </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="77">
+   <LINK srcnodeid="74" srcpinname="Custom Semantics" dstnodeid="78" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (SF2D)" componentmode="Hidden" id="77">
    <BOUNDS type="Node" left="3015" top="10140" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3015" top="10140" width="3000" height="3000">
@@ -372,35 +398,9 @@
    <PIN pinname="Resource Semantic" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="76">
-   <BOUNDS type="Box" left="3000" top="10710" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3000" top="10710" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="77" srcpinname="Output" dstnodeid="76" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="77" dstpinname="HLSL">
-   </LINK>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="8535" top="9450" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8535" top="9450" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="78" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Custom Semantics" dstnodeid="78" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="77" dstpinname="Custom Semantic">
    </LINK>

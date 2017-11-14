@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" systemname="DrawSDF (DX11.Layer SF2D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" systemname="DrawSDF (DX11.Layer SF2D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" scrollx="0" scrolly="75">
    <BOUNDS type="Window" left="165" top="2955" width="12360" height="11040">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -109,9 +109,11 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="2715" top="5940" width="100" height="100">
+   <BOUNDS type="Node" left="2340" top="6105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
@@ -125,7 +127,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2445" top="525" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.15">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.14">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -135,7 +137,7 @@
    </PIN>
    </NODE>
    <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="1275" top="4290" width="100" height="100">
+   <BOUNDS type="Node" left="2160" top="4455" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input SF3D Class" visible="1">
    </PIN>
@@ -171,6 +173,12 @@
    </PIN>
    <PIN pinname="Input 2 SF2D FUnction" visible="1">
    </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="TextureSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TextureSDF (SF2D Function).v4p" nodename="TextureSDF (SF2D Function)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="3585" top="915" width="100" height="100">
@@ -190,6 +198,8 @@
    <PIN pinname="Distance Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Transform Out" dstnodeid="19" dstpinname="Transform">
@@ -211,6 +221,8 @@
    </PIN>
    <PIN pinname="Function Resource Semantics" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Position">
    </LINK>
@@ -223,11 +235,11 @@
    <LINK srcnodeid="19" srcpinname="SF2D Function" dstnodeid="9" dstpinname="SF2D Function 2">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="50">
-   <BOUNDS type="Box" left="5355" top="6060" width="2250" height="480">
+   <BOUNDS type="Box" left="3930" top="5550" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5355" top="6060" width="0" height="0">
+   <BOUNDS type="Node" left="3930" top="5550" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00278,0.00278,0.00278,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.14180,0.14180,0.14180,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
@@ -366,23 +378,9 @@
    </NODE>
    <LINK srcnodeid="60" srcpinname="Output Enum" dstnodeid="9" dstpinname="Combination Operation">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="61">
-   <BOUNDS type="Box" left="1260" top="5910" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1260" top="5910" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF2D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="61" srcpinname="Output Node" dstnodeid="0" dstpinname="Input SF2D Function">
-   </LINK>
    <LINK srcnodeid="29" srcpinname="SF2D Function" dstnodeid="9" dstpinname="Input 1 SF2D FUnction">
    </LINK>
    <LINK srcnodeid="19" srcpinname="SF2D Function" dstnodeid="9" dstpinname="Input 2 SF2D FUnction">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="SF2D Function" dstnodeid="61" dstpinname="Input Node">
    </LINK>
    <NODE systemname="DistanceField (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\modules\DistanceField\DistanceField (DX11.Texture 2d).v4p" nodename="DistanceField (DX11.Texture 2d)" componentmode="Hidden" id="63">
    <BOUNDS type="Node" left="5835" top="705" width="100" height="100">
@@ -411,7 +409,7 @@
    </PIN>
    <PIN pinname="Height" slicecount="1" values="0.76">
    </PIN>
-   <PIN pinname="Input X" slicecount="1" values="0">
+   <PIN pinname="Input X" slicecount="1" values="-0.09">
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="65">
@@ -441,9 +439,9 @@
    <LINK srcnodeid="65" srcpinname="XY" dstnodeid="30" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67">
-   <BOUNDS type="Box" left="2790" top="4110" width="795" height="240">
+   <BOUNDS type="Box" left="3675" top="4275" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2790" top="4110" width="0" height="0">
+   <BOUNDS type="Node" left="3675" top="4275" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.09">
    </PIN>
@@ -457,5 +455,11 @@
    <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Combination Parameter 1">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="16" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="9" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="9" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="0" dstpinname="Input">
    </LINK>
    </PATCH>

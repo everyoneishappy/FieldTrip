@@ -41,6 +41,8 @@
    </PIN>
    <BOUNDS type="Window" left="16005" top="1740" width="11640" height="11055">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -88,6 +90,8 @@
    <PIN pinname="Compiled" visible="1">
    </PIN>
    <PIN pinname="Input SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
@@ -184,4 +188,6 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
    </PATCH>

@@ -49,7 +49,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" visible="1">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
@@ -313,33 +313,11 @@
    </BOUNDS>
    <BOUNDS type="Node" left="645" top="150" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="630" top="465" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="630" top="465" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Output Node" dstnodeid="49" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="49" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="49" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="49" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="AsTexture_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsTexture_SF2D.fx" nodename="AsTexture_SF2D (DX11.Effect)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2280" top="1335" width="100" height="100">
    </BOUNDS>
@@ -371,5 +349,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (SF2D)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="630" top="465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="630" top="465" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output Node" dstnodeid="49" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
    </LINK>
    </PATCH>

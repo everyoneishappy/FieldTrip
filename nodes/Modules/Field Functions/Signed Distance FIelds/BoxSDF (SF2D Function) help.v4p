@@ -65,6 +65,8 @@
    </PIN>
    <PIN pinname="Input SF2D Function" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
    </LINK>
@@ -165,6 +167,8 @@
    </BOUNDS>
    <PIN pinname="Size XY" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="XY" dstnodeid="0" dstpinname="Position">
    </LINK>
@@ -192,4 +196,6 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Vector2DJoin (VF2D Function).v4p" systemname="Vector2DJoin (VF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Vector2DJoin (VF2D Function).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="7200" top="3090" width="14670" height="12255">
+   <BOUNDS type="Window" left="7785" top="1695" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -345,73 +345,33 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1590" top="1005" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input X SF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input X Function|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="1605" top="1380" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1605" top="1380" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="92" srcpinname="Output Node" dstnodeid="91" dstpinname="Input">
-   </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="94">
    <BOUNDS type="Node" left="3375" top="930" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3375" top="930" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Y SF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input Y Function|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="3390" top="1305" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3390" top="1305" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="94" srcpinname="Output Node" dstnodeid="93" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="91" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="93" srcpinname="HLSL" dstnodeid="87" dstpinname="Input">
-   </LINK>
    <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="95">
    <BOUNDS type="Node" left="1725" top="2370" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="1725" top="2370" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="91" srcpinname="Custom Semantics" dstnodeid="95" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="93" srcpinname="Custom Semantics" dstnodeid="95" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="Cons (DX11.ResourceSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.ResourceSemantic)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="2955" top="2340" width="100" height="100">
    </BOUNDS>
@@ -424,34 +384,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="91" srcpinname="Resource Semantics" dstnodeid="96" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="93" srcpinname="Resource Semantics" dstnodeid="96" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="2730" top="10275" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2730" top="10275" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="97">
    <BOUNDS type="Box" left="2715" top="10845" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="2715" top="10845" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="97" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="99">
    <BOUNDS type="Box" left="1155" top="9300" width="795" height="240">
    </BOUNDS>
@@ -468,8 +408,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="HLSL">
    </PIN>
    </NODE>
-   <LINK srcnodeid="99" srcpinname="Output String" dstnodeid="98" dstpinname="HLSL">
-   </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="99" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="100">
@@ -482,8 +420,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Custom Semantic|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="98" dstpinname="Custom Semantic">
-   </LINK>
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="100" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="101">
@@ -496,8 +432,72 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Resource Semantic|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="98" dstpinname="Resource Semantic">
-   </LINK>
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="101" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (SF2D)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="1605" top="1380" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1605" top="1380" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="92" srcpinname="Output Node" dstnodeid="91" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Custom Semantics" dstnodeid="95" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Resource Semantics" dstnodeid="96" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (SF2D)" componentmode="Hidden" id="93">
+   <BOUNDS type="Node" left="3390" top="1305" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3390" top="1305" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output Node" dstnodeid="93" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="HLSL" dstnodeid="87" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Custom Semantics" dstnodeid="95" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Resource Semantics" dstnodeid="96" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Join (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (VF2D)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="2730" top="10275" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2730" top="10275" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="97" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Output String" dstnodeid="98" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output Node" dstnodeid="98" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="98" dstpinname="Resource Semantic">
    </LINK>
    </PATCH>

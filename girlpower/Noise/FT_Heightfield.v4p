@@ -26,18 +26,6 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="22" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1965" top="4155" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1965" top="4155" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="450" top="1695" width="795" height="240">
    </BOUNDS>
@@ -155,6 +143,8 @@
    </PIN>
    <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Amplitude">
    </LINK>
@@ -197,7 +187,7 @@
    </PIN>
    <PIN pinname="Resolution XY" visible="1" slicecount="2" values="256,256">
    </PIN>
-   <PIN pinname="Height" slicecount="1" values="-0.5" visible="1">
+   <PIN pinname="Height" slicecount="1" visible="1" values="-0.5">
    </PIN>
    </NODE>
    <NODE systemname="GouraudDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\GouraudDirectional.fx" nodename="GouraudDirectional (DX11.Effect)" componentmode="Hidden" id="76">
@@ -348,8 +338,6 @@
    </LINK>
    <LINK srcnodeid="90" srcpinname="Output Node" dstnodeid="76" dstpinname="Geometry">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Function Parameter Semantics" dstnodeid="22" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="91">
    <BOUNDS type="Node" left="1230" top="9600" width="600" height="270">
    </BOUNDS>
@@ -383,7 +371,11 @@
    </PIN>
    <PIN pinname="Height Field SF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="0.5" visible="1">
+   <PIN pinname="Amplitude" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Height Field Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="94">
@@ -406,6 +398,8 @@
    <PIN pinname="Default Color" slicecount="1" visible="1" values="|0.82406,1.00000,0.78690,1.00000|">
    </PIN>
    <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchNormals">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="94" srcpinname="Layer" dstnodeid="91" dstpinname="Layer 2" linkstyle="PolyLine">
@@ -483,6 +477,8 @@
    </PIN>
    <PIN pinname="Target Format" slicecount="1" values="R16G16B16A16_Float">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Texture" dstnodeid="82" dstpinname="Input Node">
    </LINK>
@@ -500,23 +496,7 @@
    </NODE>
    <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="17" dstpinname="SF2D Function">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="SF2D Function" dstnodeid="101" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="93" dstpinname="Height Field SF2D Function">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="102">
-   <BOUNDS type="Box" left="4050" top="6120" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4050" top="6120" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="93" srcpinname="SF3D Function" dstnodeid="102" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="102" srcpinname="Output Node" dstnodeid="94" dstpinname="SF3D Function">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="103">
    <BOUNDS type="Box" left="5265" top="4740" width="795" height="240">
@@ -540,4 +520,12 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="101" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output Node" dstnodeid="93" dstpinname="Height Field Function">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Output" dstnodeid="94" dstpinname="Input">
+   </LINK>
    </PATCH>

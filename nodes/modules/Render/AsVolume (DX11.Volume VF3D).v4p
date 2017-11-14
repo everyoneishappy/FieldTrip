@@ -41,7 +41,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Input String" visible="1">
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
@@ -363,12 +363,14 @@
    </BOUNDS>
    <BOUNDS type="Node" left="990" top="120" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="62">
+   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (VF3D)" componentmode="Hidden" id="62">
    <BOUNDS type="Node" left="975" top="495" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="975" top="495" width="3000" height="3000">
@@ -389,7 +391,5 @@
    <LINK srcnodeid="62" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="21" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

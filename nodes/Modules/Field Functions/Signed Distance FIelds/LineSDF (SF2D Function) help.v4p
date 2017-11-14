@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\Modules\Field Functions\Signed Distance FIelds\LineSDF (SF2D Function) help.v4p" scrollx="0" scrolly="105" systemname="LineSDF (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\LineSDF (SF2D Function) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\LineSDF (SF2D Function) help.v4p" scrollx="0" scrolly="105" systemname="LineSDF (SF2D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\LineSDF (SF2D Function) help.v4p">
    <BOUNDS type="Window" left="945" top="4515" width="9000" height="6000">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|TriangleSDF (SF2D Function)|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|LineSDF (SF2D Function)|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -71,6 +71,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
    </LINK>
@@ -83,49 +85,65 @@
    </PIN>
    <PIN pinname="From XY" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.19">
+   <PIN pinname="Width" slicecount="1" values="0.06">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="SF2D Function" dstnodeid="4" dstpinname="Input SF2D Function">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
-   <BOUNDS type="Box" left="3870" top="1950" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3870" top="1950" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.6,0.1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="28" dstpinname="To XY">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
-   <BOUNDS type="Box" left="2040" top="2010" width="795" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2040" top="2010" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.71,-0.2">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="28" dstpinname="From XY">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Compiled" dstnodeid="6" dstpinname="Y Input Value">
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE systemname="RandomSpread (Spreads 2d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 2d).v4p" nodename="RandomSpread (Spreads 2d)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="2310" top="1890" width="1320" height="270">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="SizeXY" slicecount="2" values="2,2">
+   </PIN>
+   </NODE>
+   <NODE systemname="RandomSpread (Spreads 2d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 2d).v4p" nodename="RandomSpread (Spreads 2d)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="2610" top="2190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="36">
+   </PIN>
+   <PIN pinname="SizeXY" slicecount="2" values="2,2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="XY" dstnodeid="28" dstpinname="From XY">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="XY" dstnodeid="28" dstpinname="To XY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33">
+   <BOUNDS type="Box" left="3690" top="1380" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3690" top="1380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="31" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Spread Count">
+   </LINK>
    </PATCH>

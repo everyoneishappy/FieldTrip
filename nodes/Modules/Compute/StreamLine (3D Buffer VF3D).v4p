@@ -443,12 +443,16 @@
    </BOUNDS>
    <BOUNDS type="Box" left="855" top="345" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="55">
+   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (VF3D)" componentmode="Hidden" id="55">
    <BOUNDS type="Node" left="870" top="720" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="870" top="720" width="3000" height="3000">
@@ -470,8 +474,4 @@
    </LINK>
    <LINK srcnodeid="55" srcpinname="Resource Semantics" dstnodeid="18" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="14" dstpinname="Y Input Value">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" scrollx="0" scrolly="60">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D) Help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="645" top="825" width="9195" height="9525">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -97,6 +97,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="0" dstpinname="March Step Length">
    </LINK>
@@ -133,7 +135,7 @@
    </PIN>
    <PIN pinname="Height Field SF2D Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" visible="1" values="-0.06">
+   <PIN pinname="Amplitude" slicecount="1" visible="1" values="-0.1">
    </PIN>
    <PIN pinname="Orientation" slicecount="3" visible="1" values="0,1,0">
    </PIN>
@@ -141,6 +143,10 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1290" top="2580">
    </BOUNDS>
+   <PIN pinname="Height Field Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="92">
    <BOUNDS type="Node" left="1230" top="1035" width="100" height="100">
@@ -163,6 +169,8 @@
    </PIN>
    <BOUNDS type="Box" left="1230" top="1035">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="DomainDistortion (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\DomainDistortion (SF2D Function).v4p" nodename="DomainDistortion (SF2D Function)" componentmode="Hidden" id="94">
    <BOUNDS type="Node" left="1230" top="1950" width="100" height="100">
@@ -181,6 +189,12 @@
    </PIN>
    <BOUNDS type="Box" left="1230" top="1950">
    </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Distortion Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE id="93" systemname="Noise (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" nodename="Noise (VF2D Function)" componentmode="Hidden">
    <BOUNDS type="Node" left="2880" top="1050" width="100" height="100">
@@ -201,19 +215,21 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="100">
    <BOUNDS type="Node" left="4710" top="1500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\..\Assets\MatCapSample01.png" visible="1">
+   <PIN pinname="Filename" slicecount="1" visible="1" values="..\..\..\Assets\MatCapSample01.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="105">
-   <BOUNDS type="Node" left="1035" top="7605" width="100" height="100">
+   <BOUNDS type="Node" left="945" top="8295" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1035" top="7605" width="6000" height="4500">
+   <BOUNDS type="Box" left="945" top="8295" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="9780" top="795" width="9315" height="9765">
    </BOUNDS>
@@ -235,7 +251,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="1155" top="7230" width="100" height="100">
+   <BOUNDS type="Node" left="1050" top="7485" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Alignment" slicecount="1" values="FitOut">
    </PIN>
@@ -375,12 +391,12 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="111" srcpinname="Output Node" dstnodeid="0" dstpinname="Input SF3D Function">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="SF3D Function" dstnodeid="111" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="92" srcpinname="SF2D Function" dstnodeid="94" dstpinname="Input SF2D Function">
    </LINK>
@@ -417,7 +433,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7020" top="675" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -429,7 +445,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Change Material|">
    </PIN>
@@ -449,5 +465,15 @@
    <LINK srcnodeid="115" srcpinname="Output Node" dstnodeid="108" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="115" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Output" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Output" dstnodeid="94" dstpinname="Distortion Function">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Output" dstnodeid="30" dstpinname="Height Field Function">
+   </LINK>
+   <LINK srcnodeid="111" srcpinname="Output Node" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="111" dstpinname="Input Node">
    </LINK>
    </PATCH>

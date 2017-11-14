@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Helpers\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p" scrollx="15" scrolly="0" systemname="SDFReflector (SF3D DX11.Particles.Modifiers)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Miscellaneous\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p" scrollx="15" scrolly="0" systemname="SDFReflector (SF3D DX11.Particles.Modifiers)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p">
    <BOUNDS type="Window" left="1320" top="1485" width="15585" height="12900">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
@@ -547,12 +547,12 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2175" top="450" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="111">
+   <NODE systemname="Split (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (SF3D)" componentmode="Hidden" id="111">
    <BOUNDS type="Node" left="2190" top="825" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2190" top="825" width="3000" height="3000">

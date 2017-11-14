@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" systemname="PreCurlConstrainToSDF (VF3D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" scrollx="0" scrolly="2535">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" systemname="PreCurlConstrainToSDF (VF3D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="585" top="1275" width="14325" height="12855">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -71,6 +71,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="60" dstpinname="March Step Length">
    </LINK>
@@ -138,6 +140,8 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Gradient (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Gradient.tfx" nodename="Gradient (DX11.TextureFX)" componentmode="Hidden" id="152">
@@ -291,11 +295,13 @@
    </PIN>
    <PIN pinname="Domain Offset XYZ" slicecount="3" visible="1" values="9.81,9.81,9.81">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="161" srcpinname="Position Out" dstnodeid="68" dstpinname="Offset">
    </LINK>
    <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="1290" top="1575" width="100" height="100">
+   <BOUNDS type="Node" left="2745" top="1395" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position" visible="1" slicecount="3" values="0,0,0">
    </PIN>
@@ -308,6 +314,8 @@
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
    <PIN pinname="Function Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function).v4p" nodename="PreCurlConstrainToSDF (VF3D Function)" componentmode="Hidden" id="150">
@@ -333,6 +341,12 @@
    </PIN>
    <PIN pinname="SDF SF3D Function " visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SDF Function " visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <NODE systemname="VectorOp (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VectorOp (VF3D Function).v4p" nodename="VectorOp (VF3D Function)" componentmode="Hidden" id="156">
    <BOUNDS type="Node" left="6705" top="2925" width="100" height="100">
@@ -348,6 +362,12 @@
    <PIN pinname="Input 2 VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="VF3D Class" dstnodeid="156" dstpinname="Input 1 VF3D Class">
@@ -373,6 +393,8 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="155" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Direction">
    </LINK>
@@ -380,41 +402,15 @@
    </LINK>
    <LINK srcnodeid="153" srcpinname="VF3D Function" dstnodeid="156" dstpinname="Input 2 VF3D Function">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="163">
-   <BOUNDS type="Box" left="6945" top="7590" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6945" top="7590" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="163" srcpinname="Output Node" dstnodeid="149" dstpinname="Input VF3D Function">
-   </LINK>
-   <LINK srcnodeid="163" srcpinname="Output Node" dstnodeid="159" dstpinname="Input VF3D Function">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="164">
-   <BOUNDS type="Box" left="480" top="3120" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="480" top="3120" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="164" srcpinname="Output Node" dstnodeid="60" dstpinname="SF3D Function">
-   </LINK>
    <LINK srcnodeid="156" srcpinname="VF3D Function" dstnodeid="150" dstpinname="PreCurl VF3D Function ">
    </LINK>
    <NODE systemname="Curl (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (VF3D Function).v4p" nodename="Curl (VF3D Function)" componentmode="Hidden" id="166">
    <BOUNDS type="Node" left="6870" top="5355" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="166" srcpinname="VF3D Class" dstnodeid="149" dstpinname="VF3D Class">
    </LINK>
@@ -423,12 +419,6 @@
    <LINK srcnodeid="150" srcpinname="VF3D Class" dstnodeid="166" dstpinname="Input VF3D Class">
    </LINK>
    <LINK srcnodeid="150" srcpinname="VF3D Function" dstnodeid="166" dstpinname="Input VF3D Function">
-   </LINK>
-   <LINK srcnodeid="166" srcpinname="VF3D Function" dstnodeid="163" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="54" srcpinname="SF3D Function" dstnodeid="164" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Output Node" dstnodeid="150" dstpinname="SDF SF3D Function ">
    </LINK>
    <LINK srcnodeid="60" srcpinname="Compiled" dstnodeid="67" dstpinname="Y Input Value">
    </LINK>
@@ -521,13 +511,15 @@
    </PIN>
    <PIN pinname="View" visible="1">
    </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" visible="1" values="2.06">
+   <PIN pinname="Initial Distance" slicecount="1" visible="1" values="0.63">
    </PIN>
    <PIN pinname="Distortion" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Far Plane" slicecount="1" values="1000">
    </PIN>
    <PIN pinname="Target Initial Position" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.1">
    </PIN>
    </NODE>
    <LINK srcnodeid="167" srcpinname="Projection" dstnodeid="172" dstpinname="Projection">
@@ -553,5 +545,33 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="174" srcpinname="XYZ" dstnodeid="54" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="150" srcpinname="Output" dstnodeid="166" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="156" srcpinname="Output" dstnodeid="150" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="156" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="156" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="175">
+   <BOUNDS type="Box" left="2310" top="3060" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2310" top="3060" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SDF Function |">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Output Node" dstnodeid="150" dstpinname="SDF Function ">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="175" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="175" srcpinname="Output Node" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="Output" dstnodeid="149" dstpinname="Input">
    </LINK>
    </PATCH>

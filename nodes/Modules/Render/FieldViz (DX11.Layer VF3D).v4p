@@ -593,10 +593,10 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    </NODE>
-   <LINK srcnodeid="39" srcpinname="Output Node" dstnodeid="18" dstpinname="Input VF3D Function">
+   <LINK srcnodeid="39" srcpinname="Output Node" dstnodeid="18" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="18" srcpinname="3D Buffer" dstnodeid="1" dstpinname="Position 3D Buffer">
    </LINK>

@@ -344,8 +344,26 @@
    </LINK>
    <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Input">
    </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="3540" top="7260" width="100" height="100">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="96" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3525" top="7830" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3525" top="7830" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="AsVectorField_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\AsVectorField_VF2D.fx" nodename="AsVectorField_VF2D (DX11.Effect)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="1260" top="720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
+   </LINK>
+   <NODE systemname="Join (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (VF2D)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="3540" top="7260" width="450" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="3540" top="7260" width="3000" height="3000">
    </BOUNDS>
@@ -358,14 +376,6 @@
    <PIN pinname="Resource Semantic" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="96" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3525" top="7830" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3525" top="7830" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="97" srcpinname="Output" dstnodeid="96" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="97" dstpinname="HLSL">
@@ -373,15 +383,5 @@
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="97" dstpinname="Custom Semantic">
    </LINK>
    <LINK srcnodeid="80" srcpinname="Output Node" dstnodeid="97" dstpinname="Resource Semantic">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
-   <NODE systemname="AsVectorField_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\AsVectorField_VF2D.fx" nodename="AsVectorField_VF2D (DX11.Effect)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="1260" top="720" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shader Path" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="95" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
    </PATCH>

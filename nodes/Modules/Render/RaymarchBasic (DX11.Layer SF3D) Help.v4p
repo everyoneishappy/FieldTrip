@@ -69,6 +69,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="0" dstpinname="March Step Length">
    </LINK>
@@ -104,30 +106,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Radius">
    </PIN>
    </NODE>
-   <NODE systemname="OutlineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\OutlineSDF (SF3D Function).v4p" nodename="OutlineSDF (SF3D Function)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="3585" top="2280" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1 SF2D Class" visible="1">
-   </PIN>
-   <PIN pinname="SF2D Class" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 Defualt Value" slicecount="1" values="0.02">
-   </PIN>
-   <PIN pinname="Outline Width" visible="1" slicecount="1" values="0.011">
-   </PIN>
-   <PIN pinname="Input SDF SF2D Class" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input SDF SF3D Class" visible="1" slicecount="1" values="|#ifndef FIELDS_FXH&cr;&lf;#include &lt;packs\happy.fxh\fields.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Volume Texture Distance Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with class name: cSampleVolDist_0_&cr;&lf;#ifndef cSampleVolDist_0_CLASS&cr;&lf;#define cSampleVolDist_0_CLASS&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float4x4 cSampleVolDist_0_InvMat : cSampleVolDist_0_INVMAT;&cr;&lf;Texture3D cSampleVolDist_0_dVol : cSampleVolDist_0_DVOL;&cr;&lf;SamplerState cSampleVolDist_0_Samp : Immutable;&cr;&lf;&cr;&lf;// Class&cr;&lf;class cSampleVolDist_0_ : iScalarField3D &cr;&lf;{&cr;&lf;&tab;float Value (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return fDistVolume(p, cSampleVolDist_0_dVol, cSampleVolDist_0_Samp, cSampleVolDist_0_InvMat);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;#endif&cr;&lf;&cr;&lf;// Instance&cr;&lf;#ifndef SF3D_INSTANCE&cr;&lf;#define SF3D_INSTANCE&cr;&lf;cSampleVolDist_0_ SF3D;&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
-   </PIN>
-   <PIN pinname="SF3D Class" visible="1">
-   </PIN>
-   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="|&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Divergence Free Noise 3D Vector Field Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseDFV_1_&quot;&cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define fNoiseDFV_1_NOISEBASIS perlinDFV&cr;&lf;#define fNoiseDFV_1_INFLECTION 0&cr;&lf;#ifndef fNoiseDFV_1_NOISEBASIS&cr;&lf;#define fNoiseDFV_1_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseDFV_1_WORLEYOPTIONS&cr;&lf;#define fNoiseDFV_1_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float3 fNoiseDFV_1_noiseFreq : fNoiseDFV_1_NOISEFREQ = 2; &cr;&lf;float3 fNoiseDFV_1_noiseAmp : fNoiseDFV_1_NOISEAMP = .1; &cr;&lf;float3 fNoiseDFV_1_noiseOffset : fNoiseDFV_1_NOISEOFFSET;&cr;&lf;float3 fNoiseDFV_1_center : fNoiseDFV_1_CENTER;&cr;&lf;&tab;&cr;&lf;&cr;&lf;float3 fNoiseDFV_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;return fNoiseDFV_1_NOISEBASIS(p * fNoiseDFV_1_noiseFreq + fNoiseDFV_1_noiseOffset fNoiseDFV_1_WORLEYOPTIONS) * fNoiseDFV_1_noiseAmp + fNoiseDFV_1_center;&cr;&lf;}&cr;&lf;#define VF3D fNoiseDFV_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Input SF3D Function" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="930" top="2235" width="100" height="100">
    </BOUNDS>
@@ -143,12 +121,12 @@
    </PIN>
    <PIN pinname="Function Resource Semantics" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Position">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Radius">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="SF3D Class" dstnodeid="29" dstpinname="Input SDF SF3D Class">
    </LINK>
    <NODE systemname="CombineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CombineSDF (SF3D Function).v4p" nodename="CombineSDF (SF3D Function)" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="2415" top="3090" width="100" height="100">
@@ -169,7 +147,7 @@
    </PIN>
    <PIN pinname="Combination Parameter 2" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Combination Parameter 1" slicecount="1" values="0.11">
+   <PIN pinname="Combination Parameter 1" slicecount="1" values="0.1">
    </PIN>
    <PIN pinname="Combination Operation" slicecount="1" values="IntersectionRound">
    </PIN>
@@ -187,13 +165,15 @@
    </PIN>
    <PIN pinname="Input 2 SF3D FUnction" visible="1">
    </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="29" srcpinname="SF3D Class" dstnodeid="9" dstpinname="SDF 1 SDF3D Class">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="SF3D Function" dstnodeid="9" dstpinname="SF3D Function 2">
-   </LINK>
    <NODE systemname="Noise (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF3D Function).v4p" nodename="Noise (SF3D Function)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="3600" top="1020" width="100" height="100">
+   <BOUNDS type="Node" left="2685" top="2640" width="100" height="100">
    </BOUNDS>
    <PIN pinname="VF3D Class" visible="1">
    </PIN>
@@ -207,7 +187,7 @@
    </PIN>
    <PIN pinname="Offset" slicecount="3" values="2.59,2.59,2.59">
    </PIN>
-   <BOUNDS type="Box" left="3600" top="1020">
+   <BOUNDS type="Box" left="2685" top="2640">
    </BOUNDS>
    <BOUNDS type="Window" left="-26130" top="2265" width="13335" height="11055">
    </BOUNDS>
@@ -229,9 +209,9 @@
    </PIN>
    <PIN pinname="Domain Offset" slicecount="3" values="1.28,1.28,1.28">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="SF3D Function" dstnodeid="29" dstpinname="SF3D Function">
-   </LINK>
    <NODE systemname="RandomSpread (Spreads)" nodename="RandomSpread (Spreads)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="450" top="405" width="100" height="100">
    </BOUNDS>
@@ -396,26 +376,14 @@
    </NODE>
    <LINK srcnodeid="54" srcpinname="Output" dstnodeid="51" dstpinname="Initial Longitude">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="55">
-   <BOUNDS type="Box" left="2370" top="5175" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2370" top="5175" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="0" dstpinname="SF3D Function">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="SF3D Function" dstnodeid="9" dstpinname="Input 1 SF3D FUnction">
    </LINK>
-   <LINK srcnodeid="9" srcpinname="SF3D Function" dstnodeid="55" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="SF3D Function" dstnodeid="9" dstpinname="Input 2 SF3D FUnction">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="SF3D Function" dstnodeid="29" dstpinname="Input SF3D Function">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Compiled" dstnodeid="16" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="9" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="9" dstpinname="Input 2 SDF">
    </LINK>
    </PATCH>

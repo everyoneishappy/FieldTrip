@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_2D_Flow_Editor.v4p" systemname="_MorphEdit" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_MorphEdit.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_2D_Flow_Editor.v4p" systemname="_MorphEdit" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_MorphEdit.v4p" scrollx="0" scrolly="840">
    <BOUNDS type="Window" left="1035" top="1500" width="13560" height="12870">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -364,16 +364,6 @@
    </LINK>
    <LINK srcnodeid="114" srcpinname="Output" dstnodeid="131" dstpinname="Alpha">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="163" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3450" top="2715" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3450" top="2715" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Vector FIeld Texture|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="177">
    <BOUNDS type="Node" left="6585" top="8775" width="100" height="100">
    </BOUNDS>
@@ -638,8 +628,6 @@
    <PIN pinname="Helper Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="168" srcpinname="Vector FIeld Texture" dstnodeid="163" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="228" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Blur Width">
    </LINK>
    <LINK srcnodeid="230" srcpinname="Y Output Value" dstnodeid="168" dstpinname="Brush Strength">
@@ -681,6 +669,10 @@
    </PIN>
    <PIN pinname="Width Defualt" slicecount="1" values="0.174">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="0.33">
+   </PIN>
    </NODE>
    <LINK srcnodeid="246" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 1">
    </LINK>
@@ -689,9 +681,9 @@
    <LINK srcnodeid="198" srcpinname="Render State" dstnodeid="246" dstpinname="Render State">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="247">
-   <BOUNDS type="Box" left="255" top="810" width="795" height="240">
+   <BOUNDS type="Box" left="300" top="5265" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="255" top="810" width="0" height="0">
+   <BOUNDS type="Node" left="300" top="5265" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -739,11 +731,11 @@
    <LINK srcnodeid="248" srcpinname="Height" dstnodeid="235" dstpinname="Aspect Height">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="250">
-   <BOUNDS type="Box" left="11220" top="6435" width="990" height="945">
+   <BOUNDS type="Box" left="11280" top="8130" width="990" height="945">
    </BOUNDS>
-   <BOUNDS type="Node" left="11220" top="6435" width="0" height="0">
+   <BOUNDS type="Node" left="11280" top="8130" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -753,7 +745,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Show Vectors|">
    </PIN>
@@ -761,7 +753,7 @@
    <LINK srcnodeid="250" srcpinname="Y Output Value" dstnodeid="246" dstpinname="Enabled">
    </LINK>
    <NODE systemname="AsVectorField (DX11.Texture VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\AsVectorField (DX11.Texture VF2D Function).v4p" nodename="AsVectorField (DX11.Texture VF2D Function)" componentmode="Hidden" id="175">
-   <BOUNDS type="Node" left="1650" top="3555" width="100" height="100">
+   <BOUNDS type="Node" left="2985" top="4065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Vector FIeld Texture" visible="1" slicecount="1" values="||">
    </PIN>
@@ -773,23 +765,9 @@
    </PIN>
    <PIN pinname="VF2D Function" visible="1">
    </PIN>
-   </NODE>
-   <LINK srcnodeid="163" srcpinname="Output Node" dstnodeid="175" dstpinname="Vector FIeld Texture">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="251">
-   <BOUNDS type="Box" left="1680" top="4245" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1680" top="4245" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="175" srcpinname="VF2D Function" dstnodeid="251" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="251" srcpinname="Output Node" dstnodeid="246" dstpinname="Input VF2D Function">
-   </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="253">
@@ -803,6 +781,34 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="50" srcpinname="Layer Out" dstnodeid="253" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="254">
+   <BOUNDS type="Box" left="9450" top="7590" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9450" top="7590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="111" srcpinname="Output" dstnodeid="254" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="255">
+   <BOUNDS type="Box" left="8160" top="7320" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8160" top="7320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="114" srcpinname="Output" dstnodeid="255" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="168" srcpinname="Vector FIeld Texture" dstnodeid="175" dstpinname="Vector FIeld Texture">
+   </LINK>
+   <LINK srcnodeid="175" srcpinname="Output" dstnodeid="246" dstpinname="Input">
    </LINK>
    <NODE systemname="SimpleAgent (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" nodename="SimpleAgent (2d Buffer VF2D)" componentmode="Hidden" id="61">
    <BOUNDS type="Node" left="2970" top="8415" width="100" height="100">
@@ -837,6 +843,8 @@
    </BOUNDS>
    <PIN pinname="Input VF2D Function" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Spread Count">
    </LINK>
@@ -850,28 +858,24 @@
    </LINK>
    <LINK srcnodeid="61" srcpinname="2D Buffer" dstnodeid="86" dstpinname="uvBuffer">
    </LINK>
-   <LINK srcnodeid="251" srcpinname="Output Node" dstnodeid="61" dstpinname="Input VF2D Function">
+   <LINK srcnodeid="175" srcpinname="Output" dstnodeid="61" dstpinname="Input">
    </LINK>
-   <NODE systemname="SimpleAgent (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" nodename="SimpleAgent (2d Buffer VF2D)" componentmode="Hidden" id="252">
-   <BOUNDS type="Node" left="5415" top="8430" width="100" height="100">
+   <NODE id="257" systemname="SimpleAgent (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" nodename="SimpleAgent (2d Buffer VF2D)" componentmode="Hidden">
+   <BOUNDS type="Node" left="5325" top="8355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input VF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
    </NODE>
-   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="252" dstpinname="Spread Count">
+   <LINK srcnodeid="175" srcpinname="Output" dstnodeid="257" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="81" srcpinname="Buffer" dstnodeid="252" dstpinname="Seed Position 2D Buffer">
+   <LINK srcnodeid="257" srcpinname="2D Buffer" dstnodeid="149" dstpinname="uvBuffer">
    </LINK>
-   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="252" dstpinname="Step Size">
+   <LINK srcnodeid="103" srcpinname="Y Output Value" dstnodeid="257" dstpinname="Reset All">
    </LINK>
-   <LINK srcnodeid="106" srcpinname="Output Enum" dstnodeid="252" dstpinname="Function Integration Mode">
+   <LINK srcnodeid="106" srcpinname="Output Enum" dstnodeid="257" dstpinname="Function Integration Mode">
    </LINK>
-   <LINK srcnodeid="103" srcpinname="Y Output Value" dstnodeid="252" dstpinname="Reset All">
+   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="257" dstpinname="Step Size">
    </LINK>
-   <LINK srcnodeid="252" srcpinname="2D Buffer" dstnodeid="149" dstpinname="uvBuffer">
+   <LINK srcnodeid="81" srcpinname="Buffer" dstnodeid="257" dstpinname="Seed Position 2D Buffer">
    </LINK>
-   <LINK srcnodeid="251" srcpinname="Output Node" dstnodeid="252" dstpinname="Input VF2D Function">
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="257" dstpinname="Spread Count">
    </LINK>
    </PATCH>

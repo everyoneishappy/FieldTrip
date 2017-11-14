@@ -463,7 +463,9 @@
    </PIN>
    <PIN pinname="Amplitude XYZ" visible="1">
    </PIN>
-   <PIN pinname="Domain Offset XYZ" visible="1" slicecount="3" values="0,0,0">
+   <PIN pinname="Domain Offset XYZ" visible="1" slicecount="3" values="-4.5,-4.5,-4.5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output Enum" dstnodeid="4" dstpinname="Noise Basis">
@@ -491,6 +493,8 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Direction">
    </LINK>
@@ -516,6 +520,12 @@
    <PIN pinname="Input 2 VF3D Function" visible="1">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="VF3D Function" dstnodeid="42" dstpinname="Input 1 VF3D Function">
@@ -554,6 +564,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="42" srcpinname="VF3D Function" dstnodeid="5" dstpinname="VF3D Function">
@@ -690,4 +702,10 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="42" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="42" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="5" dstpinname="Input">
+   </LINK>
    </PATCH>

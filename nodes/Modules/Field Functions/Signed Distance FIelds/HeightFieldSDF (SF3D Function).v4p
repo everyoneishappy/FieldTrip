@@ -427,7 +427,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="70" dstpinname="Input 2">
@@ -438,7 +438,27 @@
    </LINK>
    <LINK srcnodeid="70" srcpinname="Output" dstnodeid="17" dstpinname="Input Node">
    </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="82">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="81">
+   <BOUNDS type="Box" left="4410" top="8745" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4410" top="8745" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="83">
+   <BOUNDS type="Node" left="4920" top="510" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4920" top="510" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Height Field Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Join (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (SF3D)" componentmode="Hidden" id="82">
    <BOUNDS type="Node" left="4425" top="8175" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4425" top="8175" width="3000" height="3000">
@@ -449,15 +469,7 @@
    </PIN>
    <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Resource Semantic" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="81">
-   <BOUNDS type="Box" left="4410" top="8745" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4410" top="8745" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="81" dstpinname="Input Node">
@@ -466,17 +478,7 @@
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="82" dstpinname="Custom Semantic">
    </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="83">
-   <BOUNDS type="Node" left="4920" top="510" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4920" top="510" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Height Field SF2D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="84">
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (SF2D)" componentmode="Hidden" id="84">
    <BOUNDS type="Node" left="4890" top="930" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4890" top="930" width="3000" height="3000">
@@ -498,6 +500,4 @@
    </LINK>
    <LINK srcnodeid="84" srcpinname="Resource Semantics" dstnodeid="82" dstpinname="Resource Semantic">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
    </PATCH>

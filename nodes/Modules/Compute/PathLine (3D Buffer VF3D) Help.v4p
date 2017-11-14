@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\PathLine (3D Buffer VF3D) Help.v4p" scrollx="0" scrolly="15" systemname="PathLine (3D Buffer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\PathLine (3D Buffer VF3D) Help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\PathLine (3D Buffer VF3D) Help.v4p" scrollx="0" scrolly="0" systemname="PathLine (3D Buffer VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Compute\PathLine (3D Buffer VF3D) Help.v4p">
    <BOUNDS type="Window" left="300" top="975" width="12120" height="13620">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
@@ -233,7 +233,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ConstantBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\ConstantBuffered (DX11.Layer)\ConstantBuffered (DX11.Layer).v4p" nodename="ConstantBuffered (DX11.Layer)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="2025" top="10365" width="100" height="100">
+   <BOUNDS type="Node" left="2070" top="10365" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
    </PIN>
@@ -379,11 +379,11 @@
    <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Enabled">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="88">
-   <BOUNDS type="Box" left="8565" top="5820" width="1590" height="270">
+   <BOUNDS type="Box" left="3585" top="5985" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="8565" top="5820" width="0" height="0">
+   <BOUNDS type="Node" left="3585" top="5985" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK4">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK2">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Function Integration Mode|">
    </PIN>
@@ -417,6 +417,8 @@
    </PIN>
    <PIN pinname="Amplitude XYZ" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output Enum" dstnodeid="4" dstpinname="Noise Basis">
    </LINK>
@@ -443,6 +445,8 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Direction">
    </LINK>
@@ -466,6 +470,12 @@
    <PIN pinname="Input 2 VF3D Function" visible="1">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="VF3D Function" dstnodeid="42" dstpinname="Input 1 VF3D Function">
@@ -505,6 +515,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Reset All">
    </LINK>
@@ -525,9 +537,9 @@
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Points Per Seed">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="95">
-   <BOUNDS type="Node" left="2940" top="13200" width="100" height="100">
+   <BOUNDS type="Node" left="900" top="12885" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2940" top="13200" width="6000" height="4500">
+   <BOUNDS type="Box" left="900" top="12885" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="12930" top="390" width="13980" height="10305">
    </BOUNDS>
@@ -549,7 +561,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="3060" top="12825" width="100" height="100">
+   <BOUNDS type="Node" left="1020" top="12510" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Alignment" slicecount="1" values="FitOut">
    </PIN>
@@ -561,7 +573,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="3750" top="11985" width="100" height="100">
+   <BOUNDS type="Node" left="1710" top="11670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -577,7 +589,7 @@
    <LINK srcnodeid="93" srcpinname="Layer Out" dstnodeid="94" dstpinname="Layer In">
    </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="2115" top="11535" width="100" height="100">
+   <BOUNDS type="Node" left="75" top="11220" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -589,7 +601,7 @@
    <LINK srcnodeid="92" srcpinname="Layer" dstnodeid="93" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="2310" top="11100" width="100" height="100">
+   <BOUNDS type="Node" left="270" top="10785" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -599,7 +611,7 @@
    <LINK srcnodeid="94" srcpinname="Layer Out" dstnodeid="95" dstpinname="Layers">
    </LINK>
    <NODE systemname="Camera (Transform Orbit Legacy)" filename="%VVVV%\addonpack\lib\nodes\modules\Transform\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="4335" top="12645" width="100" height="100">
+   <BOUNDS type="Node" left="2295" top="12330" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Projection" visible="1">
    </PIN>
@@ -623,7 +635,7 @@
    <LINK srcnodeid="90" srcpinname="View" dstnodeid="95" dstpinname="View">
    </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="4605" top="12210" width="100" height="100">
+   <BOUNDS type="Node" left="2565" top="11895" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -643,9 +655,9 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="VF3D Function" dstnodeid="96" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="96" srcpinname="Output Node" dstnodeid="61" dstpinname="VF3D Function">
    </LINK>
    <LINK srcnodeid="61" srcpinname="Compiled" dstnodeid="35" dstpinname="Y Input Value">
@@ -656,4 +668,12 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="42" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="42" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="96" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output Node" dstnodeid="61" dstpinname="Input">
+   </LINK>
    </PATCH>

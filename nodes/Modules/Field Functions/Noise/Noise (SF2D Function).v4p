@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\FieldTripFunction DataType\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="0" scrolly="150">
-   <BOUNDS type="Window" left="29265" top="585" width="12885" height="11055">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="0" scrolly="150">
+   <BOUNDS type="Window" left="3255" top="3195" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -482,32 +482,14 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="2460" top="8025" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2460" top="8025" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="109" dstpinname="HLSL">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="110">
    <BOUNDS type="Box" left="2445" top="8595" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="2445" top="8595" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <LINK srcnodeid="109" srcpinname="Output" dstnodeid="110" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="109" dstpinname="Custom Semantic">
-   </LINK>
    <NODE systemname="DefineNoiseBasis (DX11 Shader)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Helpers\DefineNoiseBasis (DX11 Shader).v4p" nodename="DefineNoiseBasis (DX11 Shader)" componentmode="Hidden" id="100">
    <BOUNDS type="Node" left="7785" top="3570" width="100" height="100">
    </BOUNDS>
@@ -531,5 +513,23 @@
    <LINK srcnodeid="100" srcpinname="Defines" dstnodeid="12" dstpinname="Substitute To">
    </LINK>
    <LINK srcnodeid="105" srcpinname="Output Enum" dstnodeid="100" dstpinname="Inflection">
+   </LINK>
+   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (SF2D)" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="2460" top="8025" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2460" top="8025" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="109" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output" dstnodeid="110" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="109" dstpinname="Custom Semantic">
    </LINK>
    </PATCH>

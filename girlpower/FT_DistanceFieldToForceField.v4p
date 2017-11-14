@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_DistanceFieldToForceFIeld.v4p" systemname="_DistanceFieldToForceFIeld" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_DistanceFieldToForceFIeld.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_DistanceFieldToForceField.v4p" systemname="_DistanceFieldToForceFIeld" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_DistanceFieldToForceFIeld.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="495" top="855" width="12990" height="13605">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -47,7 +47,7 @@
    </PIN>
    <PIN pinname="Pitch" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Roll" slicecount="1" values="0" visible="1">
+   <PIN pinname="Roll" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Yaw" slicecount="1" visible="1" values="-0.65">
    </PIN>
@@ -94,6 +94,8 @@
    <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="March Max Distance" slicecount="1" values="20">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="60" srcpinname="Technique Valid" dstnodeid="67" dstpinname="Y Input Value">
@@ -264,6 +266,8 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="117">
@@ -481,6 +485,8 @@
    </PIN>
    <PIN pinname="Domain Offset XYZ" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="151" srcpinname="Position Out" dstnodeid="68" dstpinname="Offset">
    </LINK>
@@ -501,6 +507,8 @@
    </BOUNDS>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Texture Out" dstnodeid="61" dstpinname="Distance Volume Texture">
    </LINK>
@@ -520,6 +528,12 @@
    <PIN pinname="Input 1 VF3D Function" visible="1">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="VF3D Class" dstnodeid="149" dstpinname="Input 1 VF3D Class">
@@ -542,6 +556,10 @@
    <PIN pinname="Input 1 VF3D Function" visible="1">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="153" srcpinname="Y Output Value" dstnodeid="152" dstpinname="Input 2 Defualt XYZ">
@@ -570,6 +588,10 @@
    <PIN pinname="SDF Surface SF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="195" srcpinname="Y Output Value" dstnodeid="145" dstpinname="Control Direction">
@@ -619,19 +641,17 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SDF Function|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="199" srcpinname="Output Node" dstnodeid="60" dstpinname="SF3D Function">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="SF3D Function" dstnodeid="199" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="200" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4425" top="6330" width="795" height="240">
+   <BOUNDS type="Box" left="4425" top="6705" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4425" top="6330" width="0" height="0">
+   <BOUNDS type="Node" left="4425" top="6705" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -640,8 +660,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="152" srcpinname="VF3D Function" dstnodeid="200" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="199" srcpinname="Output Node" dstnodeid="145" dstpinname="SDF Surface SF3D Function">
    </LINK>
    <LINK srcnodeid="200" srcpinname="Output Node" dstnodeid="116" dstpinname="Input VF3D Function">
@@ -715,5 +733,21 @@
    <LINK srcnodeid="205" srcpinname="Color Output" dstnodeid="135" dstpinname="Data">
    </LINK>
    <LINK srcnodeid="197" srcpinname="Output" dstnodeid="63" dstpinname="Yaw">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="199" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Output Node" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Output Node" dstnodeid="145" dstpinname="Input SDF">
+   </LINK>
+   <LINK srcnodeid="145" srcpinname="Output" dstnodeid="149" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="149" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="149" srcpinname="Output" dstnodeid="152" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Output" dstnodeid="200" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="200" srcpinname="Output Node" dstnodeid="116" dstpinname="Input">
    </LINK>
    </PATCH>

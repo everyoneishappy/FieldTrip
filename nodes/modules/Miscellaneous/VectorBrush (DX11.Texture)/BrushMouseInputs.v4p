@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\BrushMouseInputs.v4p" systemname="BrushMouseInputs" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\BrushMouseInputs.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Miscellaneous\VectorBrush (DX11.Texture)\BrushMouseInputs.v4p" systemname="BrushMouseInputs" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\BrushMouseInputs.v4p">
    <BOUNDS type="Window" left="9105" top="4410" width="11895" height="8100">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -279,7 +279,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.01">
+   <PIN pinname="Input 2" slicecount="1" values="0.06">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -470,4 +470,6 @@
    </LINK>
    <LINK srcnodeid="40" srcpinname="Output" dstnodeid="20" dstpinname="Y Input Value">
    </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
    </PATCH>

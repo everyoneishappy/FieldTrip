@@ -337,12 +337,36 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3360" top="1080" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="74">
+   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="9390" top="8700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9390" top="8700" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="76" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="77">
+   <BOUNDS type="Box" left="2505" top="10425" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2505" top="10425" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (VF3D)" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="3375" top="1455" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3375" top="1455" width="3000" height="3000">
@@ -358,25 +382,11 @@
    </NODE>
    <LINK srcnodeid="75" srcpinname="Output Node" dstnodeid="74" dstpinname="Input">
    </LINK>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="9390" top="8700" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9390" top="8700" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="76" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Custom Semantics" dstnodeid="76" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="74" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
    </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="78">
+   <NODE systemname="Join (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (VF3D)" componentmode="Hidden" id="78">
    <BOUNDS type="Node" left="2520" top="9855" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2520" top="9855" width="3000" height="3000">
@@ -390,14 +400,6 @@
    <PIN pinname="Resource Semantic" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="77">
-   <BOUNDS type="Box" left="2505" top="10425" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2505" top="10425" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF3D Function|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="78" srcpinname="Output" dstnodeid="77" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="78" dstpinname="HLSL">
@@ -406,6 +408,4 @@
    </LINK>
    <LINK srcnodeid="74" srcpinname="Resource Semantics" dstnodeid="78" dstpinname="Resource Semantic">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
    </PATCH>

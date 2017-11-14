@@ -73,6 +73,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
    </LINK>
@@ -90,6 +92,10 @@
    <PIN pinname="Size XY" slicecount="2" visible="1" values="0.71,0.71">
    </PIN>
    <PIN pinname="Combination Operation" slicecount="1" visible="1" values="|Mirror XY|">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
@@ -125,6 +131,10 @@
    </PIN>
    <PIN pinname="Outline Width" slicecount="1" values="0.06">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="TrianlgeSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\TrianlgeSDF (SF2D Function).v4p" nodename="TrianlgeSDF (SF2D Function)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="945" top="2190" width="100" height="100">
@@ -140,6 +150,8 @@
    <PIN pinname="B XY" visible="1" slicecount="2" values="0,0.5">
    </PIN>
    <PIN pinname="A XY" slicecount="2" visible="1" values="-0.1,-0.1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Function Resource Semantics" dstnodeid="4" dstpinname="Function Resource Semantics">
@@ -224,4 +236,10 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="22" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
    </PATCH>
