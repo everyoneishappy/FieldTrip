@@ -3,7 +3,9 @@ vvvv pack for working with scalar &amp; vector fields
 
 Requires: 
 64bit vvvv & dx11
+
 https://github.com/everoneishappy/happy.fxh
+
 https://github.com/everoneishappy/InstanceNoodles
 
 
