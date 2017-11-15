@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\_FieldTripOverview.v4p" bgcolor="12320618" scrollx="0" scrolly="4410" systemname="_FieldTripOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\_FieldTripOverview.v4p">
-   <BOUNDS type="Window" left="31260" top="3600" width="27390" height="14775">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\_FieldTripOverview.v4p" bgcolor="12320618" scrollx="0" scrolly="-360" systemname="_FieldTripOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\_FieldTripOverview.v4p">
+   <BOUNDS type="Window" left="405" top="480" width="27390" height="14775">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="76" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="15225" top="4515" width="975" height="270">
+   <BOUNDS type="Node" left="15600" top="4785" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="15225" top="4515" width="2625" height="570">
+   <BOUNDS type="Box" left="15600" top="4785" width="2625" height="570">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Compute">
    </PIN>
@@ -21,9 +21,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="75" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="9780" top="495" width="975" height="270">
+   <BOUNDS type="Node" left="9780" top="225" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="9780" top="495" width="7620" height="1200">
+   <BOUNDS type="Box" left="9780" top="225" width="7620" height="1200">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="(FieldTrip)">
    </PIN>
@@ -39,9 +39,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="74" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="1230" top="3015" width="975" height="270">
+   <BOUNDS type="Node" left="2205" top="2685" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="1230" top="3015" width="9645" height="930">
+   <BOUNDS type="Box" left="2205" top="2685" width="9645" height="930">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Modular FUnctions|">
    </PIN>
@@ -57,9 +57,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="73" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="16125" top="10935" width="975" height="270">
+   <BOUNDS type="Node" left="15390" top="9615" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="16125" top="10935" width="2205" height="510">
+   <BOUNDS type="Box" left="15390" top="9615" width="2205" height="510">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="texture">
    </PIN>
@@ -75,25 +75,25 @@
    </PIN>
    </NODE>
    <NODE systemname="RaymarchMatCap (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchMatCap (DX11.Layer SF3D).v4p" componentmode="Hidden" id="70" nodename="RaymarchMatCap (DX11.Layer SF3D)">
-   <BOUNDS type="Node" left="23220" top="6420" width="100" height="100">
+   <BOUNDS type="Node" left="23595" top="6690" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23220" top="6420" width="4800" height="3600">
+   <BOUNDS type="Box" left="23595" top="6690" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="18405" top="6915" width="9000" height="6000">
    </BOUNDS>
    </NODE>
    <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" componentmode="Hidden" id="69" nodename="%VVVV%\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p">
-   <BOUNDS type="Node" left="19980" top="5925" width="100" height="100">
+   <BOUNDS type="Node" left="20355" top="6195" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="19980" top="5925" width="4800" height="3600">
+   <BOUNDS type="Box" left="20355" top="6195" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="18510" top="7740" width="9000" height="6000">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="21390" top="4500" width="975" height="270">
+   <BOUNDS type="Node" left="21765" top="4770" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="21390" top="4500" width="2625" height="570">
+   <BOUNDS type="Box" left="21765" top="4770" width="2625" height="570">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Layer">
    </PIN>
@@ -109,9 +109,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="67" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="375" top="10350" width="975" height="270">
+   <BOUNDS type="Node" left="1290" top="9765" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="375" top="10350" width="4590" height="585">
+   <BOUNDS type="Box" left="1290" top="9765" width="4590" height="585">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Distance FIelds|">
    </PIN>
@@ -127,9 +127,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="66" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6750" top="4935" width="975" height="270">
+   <BOUNDS type="Node" left="6750" top="4665" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6750" top="4935" width="3315" height="570">
+   <BOUNDS type="Box" left="6750" top="4665" width="3315" height="570">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Operators">
    </PIN>
@@ -145,15 +145,15 @@
    </PIN>
    </NODE>
    <NODE systemname="PathLine (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\PathLine (3D Buffer VF3D).v4p" nodename="PathLine (3d Buffer VF3D)" componentmode="Hidden" id="65">
-   <BOUNDS type="Node" left="17385" top="6600" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="6870" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="6600">
+   <BOUNDS type="Box" left="17760" top="6870">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="64" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="19725" top="10965" width="975" height="270">
+   <BOUNDS type="Node" left="18315" top="9555" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="19725" top="10965" width="2625" height="570">
+   <BOUNDS type="Box" left="18315" top="9555" width="2625" height="570">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="volume">
    </PIN>
@@ -169,61 +169,61 @@
    </PIN>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (Transform Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (Transform Buffer VF3D).v4p" nodename="ClosestPointOnSDF (Transform Buffer VF3D)" componentmode="Hidden" id="63">
-   <BOUNDS type="Node" left="15345" top="6990" width="100" height="100">
+   <BOUNDS type="Node" left="15720" top="7260" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15345" top="6990">
+   <BOUNDS type="Box" left="15720" top="7260">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\FieldSample (3D Buffer VF3D).v4p" nodename="FieldSample (3d Buffer VF3D)" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="14100" top="6705" width="100" height="100">
+   <BOUNDS type="Node" left="14475" top="6975" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14100" top="6705">
+   <BOUNDS type="Box" left="14475" top="6975">
    </BOUNDS>
    </NODE>
    <NODE systemname="SimpleAgent (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (2D Buffer VF2D).v4p" nodename="SimpleAgent (2d Buffer VF2D)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="15360" top="5700" width="100" height="100">
+   <BOUNDS type="Node" left="15735" top="5970" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15360" top="5700">
+   <BOUNDS type="Box" left="15735" top="5970">
    </BOUNDS>
    </NODE>
    <NODE systemname="SimpleAgent (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (3D Buffer VF3D).v4p" nodename="SimpleAgent (3d Buffer VF3D)" componentmode="Hidden" id="60">
-   <BOUNDS type="Node" left="15360" top="6030" width="100" height="100">
+   <BOUNDS type="Node" left="15735" top="6300" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15360" top="6030">
+   <BOUNDS type="Box" left="15735" top="6300">
    </BOUNDS>
    </NODE>
    <NODE systemname="StreakLine (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\StreakLine (2D Buffer VF2D).v4p" nodename="StreakLine (2d Buffer VF2D)" componentmode="Hidden" id="59">
-   <BOUNDS type="Node" left="17385" top="7755" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="8025" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="7755">
+   <BOUNDS type="Box" left="17760" top="8025">
    </BOUNDS>
    </NODE>
    <NODE systemname="StreakLine (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\StreakLine (3D Buffer VF3D).v4p" nodename="StreakLine (3d Buffer VF3D)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="17385" top="8130" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="8400" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="8130">
+   <BOUNDS type="Box" left="17760" top="8400">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldViz (DX11.Layer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF2D).v4p" nodename="FieldViz (DX11.Layer VF2D)" componentmode="Hidden" id="57">
-   <BOUNDS type="Node" left="19980" top="6390" width="100" height="100">
+   <BOUNDS type="Node" left="20355" top="6660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="19980" top="6390">
+   <BOUNDS type="Box" left="20355" top="6660">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldViz (DX11.Layer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" nodename="FieldViz (DX11.Layer VF3D)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="19980" top="6780" width="100" height="100">
+   <BOUNDS type="Node" left="20355" top="7050" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="19980" top="6780">
+   <BOUNDS type="Box" left="20355" top="7050">
    </BOUNDS>
    </NODE>
    <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="55">
-   <BOUNDS type="Node" left="23235" top="6045" width="100" height="100">
+   <BOUNDS type="Node" left="23610" top="6315" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="53" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="15060" top="3015" width="975" height="270">
+   <BOUNDS type="Node" left="16035" top="2685" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="15060" top="3015" width="7935" height="780">
+   <BOUNDS type="Box" left="16035" top="2685" width="7935" height="780">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="IMPLEMENTATIONS">
    </PIN>
@@ -239,9 +239,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="20" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="15" top="4080" width="975" height="270">
+   <BOUNDS type="Node" left="15" top="3810" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="15" top="4080" width="3315" height="570">
+   <BOUNDS type="Box" left="15" top="3810" width="3315" height="570">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Sources">
    </PIN>
@@ -257,15 +257,15 @@
    </PIN>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (3D Buffer VF3D).v4p" nodename="ClosestPointOnSDF (3d Buffer VF3D)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="15345" top="6585" width="100" height="100">
+   <BOUNDS type="Node" left="15720" top="6855" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15345" top="6585">
+   <BOUNDS type="Box" left="15720" top="6855">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="14" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="10800" top="5685" width="975" height="270">
+   <BOUNDS type="Node" left="10800" top="5415" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="10800" top="5685" width="1410" height="435">
+   <BOUNDS type="Box" left="10800" top="5415" width="1410" height="435">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Curl">
    </PIN>
@@ -281,9 +281,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3015" top="5010" width="975" height="270">
+   <BOUNDS type="Node" left="3015" top="4740" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3015" top="5010" width="1380" height="465">
+   <BOUNDS type="Box" left="3015" top="4740" width="1380" height="465">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="Noise">
    </PIN>
@@ -299,9 +299,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="17280" top="5700" width="975" height="270">
+   <BOUNDS type="Node" left="17655" top="5970" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="17280" top="5700" width="2115" height="420">
+   <BOUNDS type="Box" left="17655" top="5970" width="2115" height="420">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|field lines|">
    </PIN>
@@ -317,9 +317,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="23160" top="5580" width="975" height="270">
+   <BOUNDS type="Node" left="23535" top="5850" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="23160" top="5580" width="2490" height="420">
+   <BOUNDS type="Box" left="23535" top="5850" width="2490" height="420">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="raymarching">
    </PIN>
@@ -335,17 +335,17 @@
    </PIN>
    </NODE>
    <NODE systemname="PathLine (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\PathLine (2D Buffer VF2D).v4p" nodename="PathLine (2D Buffer VF2D)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="17385" top="6240" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="6510" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="6240">
+   <BOUNDS type="Box" left="17760" top="6510">
    </BOUNDS>
    </NODE>
    <NODE systemname="RaymarchTriPlane (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchTriPlane (DX11.Layer SF3D).v4p" nodename="RaymarchTriPlane (DX11.Layer SF3D)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="23190" top="6870" width="100" height="100">
+   <BOUNDS type="Node" left="23565" top="7140" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="26190" top="285" width="100" height="100">
+   <BOUNDS type="Node" left="26190" top="15" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Background Kalle" slicecount="1" values="|0.41613,1.00000,0.73438,0.00000|">
    </PIN>
@@ -359,467 +359,453 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE systemname="FieldSample (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\FieldSample (2D Buffer VF2D).v4p" nodename="FieldSample (2d Buffer VF2D)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="14100" top="6360" width="100" height="100">
+   <BOUNDS type="Node" left="14475" top="6630" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14100" top="6360">
+   <BOUNDS type="Box" left="14475" top="6630">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (Value Buffer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\FieldSample (Value Buffer SF2D).v4p" nodename="FieldSample (Value Buffer SF2D)" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="14100" top="5700" width="100" height="100">
+   <BOUNDS type="Node" left="14475" top="5970" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14100" top="5700">
+   <BOUNDS type="Box" left="14475" top="5970">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (Value Buffer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\FieldSample (Value Buffer SF3D).v4p" nodename="FieldSample (Value Buffer SF3D)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="14100" top="6030" width="100" height="100">
+   <BOUNDS type="Node" left="14475" top="6300" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14100" top="6030">
+   <BOUNDS type="Box" left="14475" top="6300">
    </BOUNDS>
    </NODE>
    <NODE systemname="Curl (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (SF2D Function).v4p" nodename="Curl (SF2D Function)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="10845" top="6195" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="5925" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="6195">
+   <BOUNDS type="Box" left="10845" top="5925">
    </BOUNDS>
    </NODE>
    <NODE systemname="Curl (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (VF2D Function).v4p" nodename="Curl (VF2D Function)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="10845" top="6540" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="6270" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="6540">
+   <BOUNDS type="Box" left="10845" top="6270">
    </BOUNDS>
    </NODE>
    <NODE systemname="Curl (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (VF3D Function).v4p" nodename="Curl (VF3D Function)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="10845" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="6630" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="6900">
+   <BOUNDS type="Box" left="10845" top="6630">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (SF2D Function).v4p" nodename="PreCurlConstrainToSDF (SF2D Function)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="10845" top="7215" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="6945" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="7215">
+   <BOUNDS type="Box" left="10845" top="6945">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function).v4p" nodename="PreCurlConstrainToSDF (VF3D Function)" componentmode="Hidden" id="32">
-   <BOUNDS type="Node" left="10845" top="7605" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="7335" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="7605">
+   <BOUNDS type="Box" left="10845" top="7335">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlDirection (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlDirection (SF2D Function).v4p" nodename="PreCurlDirection (SF2D Function)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="10845" top="7995" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="7725" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="7995">
+   <BOUNDS type="Box" left="10845" top="7725">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlDirection (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlDirection (VF3D Function).v4p" nodename="PreCurlDirection (VF3D Function)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="10845" top="8355" width="100" height="100">
+   <BOUNDS type="Node" left="10845" top="8085" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10845" top="8355">
+   <BOUNDS type="Box" left="10845" top="8085">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Laplacian (SF2D Function).v4p" nodename="Laplacian (SF2D Function)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="9540" top="5685" width="100" height="100">
+   <BOUNDS type="Node" left="9540" top="5415" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9540" top="5685">
+   <BOUNDS type="Box" left="9540" top="5415">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Laplacian (SF3D Function).v4p" nodename="Laplacian (SF3D Function)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="9540" top="6000" width="100" height="100">
+   <BOUNDS type="Node" left="9540" top="5730" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9540" top="6000">
+   <BOUNDS type="Box" left="9540" top="5730">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Laplacian (VF2D Function).v4p" nodename="Laplacian (VF2D Function)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="9540" top="6345" width="100" height="100">
+   <BOUNDS type="Node" left="9540" top="6075" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9540" top="6345">
+   <BOUNDS type="Box" left="9540" top="6075">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Laplacian (VF3D Function).v4p" nodename="Laplacian (VF3D Function)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="9540" top="6720" width="100" height="100">
+   <BOUNDS type="Node" left="9540" top="6450" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9540" top="6720">
+   <BOUNDS type="Box" left="9540" top="6450">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainDistortion (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainDistortion (SF2D Function).v4p" nodename="DomainDistortion (SF2D Function)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="8625" top="7620" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="11145" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8625" top="7620">
+   <BOUNDS type="Box" left="10065" top="11145">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainDistortion (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainDistortion (SF3D Function).v4p" nodename="DomainDistortion (SF3D Function)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="8625" top="7950" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="11475" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8625" top="7950">
+   <BOUNDS type="Box" left="10065" top="11475">
    </BOUNDS>
    </NODE>
    <NODE id="1" systemname="DomainDistortion (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainDistortion (VF2D Function).v4p" nodename="DomainDistortion (VF2D Function)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8625" top="8295" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="11820" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8625" top="8295">
+   <BOUNDS type="Box" left="10065" top="11820">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainDistortion (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainDistortion (VF3D Function).v4p" nodename="DomainDistortion (VF3D Function)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="8625" top="8610" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="12135" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8625" top="8610">
+   <BOUNDS type="Box" left="10065" top="12135">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\InputMorph (SF3D Function).v4p" nodename="InputMorph (SF3D Function)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="7365" top="8025" width="100" height="100">
+   <BOUNDS type="Node" left="6945" top="7440" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7365" top="8025">
+   <BOUNDS type="Box" left="6945" top="7440">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\InputMorph (VF2D Function).v4p" nodename="InputMorph (VF2D Function)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="7365" top="8310" width="100" height="100">
+   <BOUNDS type="Node" left="6945" top="7725" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7365" top="8310">
+   <BOUNDS type="Box" left="6945" top="7725">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\InputMorph (VF3D Function).v4p" nodename="InputMorph (VF3D Function)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="7365" top="8640" width="100" height="100">
+   <BOUNDS type="Node" left="6945" top="8055" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7365" top="8640">
+   <BOUNDS type="Box" left="6945" top="8055">
    </BOUNDS>
    </NODE>
    <NODE systemname="Normalize (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Normalize (VF2D Function).v4p" nodename="Normalize (VF2D Function)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="5415" top="7230" width="100" height="100">
+   <BOUNDS type="Node" left="5760" top="6990" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Normalize (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Normalize (VF3D Function).v4p" nodename="Normalize (VF3D Function)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="5415" top="7575" width="100" height="100">
+   <BOUNDS type="Node" left="5760" top="7335" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Length (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Length (SF2D Function).v4p" nodename="Length (SF2D Function)" componentmode="Hidden" id="84">
-   <BOUNDS type="Node" left="5400" top="7920" width="100" height="100">
+   <BOUNDS type="Node" left="5745" top="7680" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE id="85" systemname="Length (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Length (SF3D Function).v4p" nodename="Length (SF3D Function)" componentmode="Hidden">
-   <BOUNDS type="Node" left="5400" top="8250" width="100" height="100">
+   <BOUNDS type="Node" left="5745" top="8010" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Direction (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Direction (VF2D Function).v4p" nodename="Direction (VF2D Function)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="240" top="4935" width="100" height="100">
+   <BOUNDS type="Node" left="240" top="4665" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="240" top="4935">
+   <BOUNDS type="Box" left="240" top="4665">
    </BOUNDS>
    <BOUNDS type="Window" left="29805" top="3930" width="11640" height="11055">
    </BOUNDS>
    </NODE>
    <NODE systemname="Direction (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Direction (VF3D Function).v4p" nodename="Direction (VF3D Function)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="240" top="5325" width="100" height="100">
+   <BOUNDS type="Node" left="240" top="5055" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="240" top="5325">
+   <BOUNDS type="Box" left="240" top="5055">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsScalarFIeld (DX11.Texture SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\AsScalarFIeld (DX11.Texture SF2D Function).v4p" nodename="AsScalarFIeld (DX11.Texture SF2D Function)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="255" top="5730" width="100" height="100">
+   <BOUNDS type="Node" left="255" top="5460" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="35775" top="2595" width="12630" height="9840">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVectorField (DX11.Texture VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\AsVectorField (DX11.Texture VF2D Function).v4p" nodename="AsVectorField (DX11.Texture VF2D Function)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="225" top="6150" width="100" height="100">
+   <BOUNDS type="Node" left="225" top="5880" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="42750" top="2985" width="12630" height="9150">
    </BOUNDS>
    </NODE>
    <NODE systemname="SurfaceForceField (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\SurfaceForceField (VF3D Function).v4p" nodename="SurfaceForceField (VF3D Function)" componentmode="Hidden" id="26">
-   <BOUNDS type="Node" left="210" top="6525" width="100" height="100">
+   <BOUNDS type="Node" left="210" top="6255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="210" top="6525">
+   <BOUNDS type="Box" left="210" top="6255">
    </BOUNDS>
    </NODE>
    <NODE systemname="PointForceField (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PointForceField (VF3D Function).v4p" nodename="PointForceField (VF3D Function)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="210" top="6930" width="100" height="100">
+   <BOUNDS type="Node" left="210" top="6660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="210" top="6930">
+   <BOUNDS type="Box" left="210" top="6660">
    </BOUNDS>
    </NODE>
    <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="570" top="11130" width="100" height="100">
+   <BOUNDS type="Node" left="7275" top="11925" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="570" top="11130">
+   <BOUNDS type="Box" left="7275" top="11925">
    </BOUNDS>
    <BOUNDS type="Window" left="4710" top="1230" width="22065" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="CombineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CombineSDF (SF3D Function).v4p" nodename="CombineSDF (SF3D Function)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="570" top="11475" width="100" height="100">
+   <BOUNDS type="Node" left="1800" top="11085" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="570" top="11475">
+   <BOUNDS type="Box" left="1800" top="11085">
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\OutlineSDF (SF2D Function).v4p" nodename="OutlineSDF (SF2D Function)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="585" top="12255" width="100" height="100">
+   <BOUNDS type="Node" left="7275" top="11190" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="690" top="3030" width="14670" height="12255">
    </BOUNDS>
+   <BOUNDS type="Box" left="7275" top="11190">
+   </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\OutlineSDF (SF3D Function).v4p" nodename="OutlineSDF (SF3D Function)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="570" top="12690" width="100" height="100">
+   <BOUNDS type="Node" left="3225" top="11100" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3225" top="11100">
    </BOUNDS>
    </NODE>
    <NODE systemname="ExtrudeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\ExtrudeSDF (SF3D Function).v4p" nodename="ExtrudeSDF (SF3D Function)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="570" top="13230" width="100" height="100">
+   <BOUNDS type="Node" left="3225" top="11460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3225" top="11460">
    </BOUNDS>
    </NODE>
    <NODE systemname="CircleSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CircleSDF (SF2D Function).v4p" nodename="CircleSDF (SF2D Function)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="4185" top="11535" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="11610" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4185" top="11535">
+   <BOUNDS type="Box" left="6000" top="11610">
    </BOUNDS>
    </NODE>
    <NODE systemname="TextureSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TextureSDF (SF2D Function).v4p" nodename="TextureSDF (SF2D Function)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="4185" top="11925" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="12000" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4185" top="11925">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="1935" top="11115" width="100" height="100">
+   <BOUNDS type="Box" left="6000" top="12000">
    </BOUNDS>
    </NODE>
    <NODE systemname="VolumeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\VolumeSDF (SF3D Function).v4p" nodename="VolumeSDF (SF3D Function)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="1965" top="11475" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="11085" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="11085">
    </BOUNDS>
    </NODE>
    <NODE systemname="StreamLine (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\StreamLine (2D Buffer VF2D).v4p" nodename="StreamLine (2d Buffer VF2D)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="17385" top="6990" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="7260" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="6990">
+   <BOUNDS type="Box" left="17760" top="7260">
    </BOUNDS>
    </NODE>
    <NODE systemname="StreamLine (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\StreamLine (3D Buffer VF3D).v4p" nodename="StreamLine (3d Buffer VF3D)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="17385" top="7335" width="100" height="100">
+   <BOUNDS type="Node" left="17760" top="7605" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17385" top="7335">
+   <BOUNDS type="Box" left="17760" top="7605">
    </BOUNDS>
    </NODE>
    <NODE systemname="ScalarOp (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (SF2D Function).v4p" nodename="ScalarOp (SF2D Function)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="5100" top="5325" width="100" height="100">
+   <BOUNDS type="Node" left="5760" top="5490" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5100" top="5325">
+   <BOUNDS type="Box" left="5760" top="5490">
    </BOUNDS>
    <BOUNDS type="Window" left="7380" top="1395" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="ScalarOp (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (SF3D Function).v4p" nodename="ScalarOp (SF3D Function)" componentmode="Hidden" id="28">
-   <BOUNDS type="Node" left="5085" top="5685" width="100" height="100">
+   <BOUNDS type="Node" left="5745" top="5850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5085" top="5685">
+   <BOUNDS type="Box" left="5745" top="5850">
    </BOUNDS>
    <BOUNDS type="Window" left="9165" top="1020" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="ScalarOp (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (VF2D Function).v4p" nodename="ScalarOp (VF2D Function)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="5130" top="6045" width="100" height="100">
+   <BOUNDS type="Node" left="5790" top="6210" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5130" top="6045">
+   <BOUNDS type="Box" left="5790" top="6210">
    </BOUNDS>
    <BOUNDS type="Window" left="10440" top="2145" width="17520" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="ScalarOp (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (VF3D Function).v4p" nodename="ScalarOp (VF3D Function)" componentmode="Hidden" id="80">
-   <BOUNDS type="Node" left="5115" top="6405" width="100" height="100">
+   <BOUNDS type="Node" left="5775" top="6570" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5115" top="6405">
+   <BOUNDS type="Box" left="5775" top="6570">
    </BOUNDS>
    </NODE>
    <NODE systemname="Cross (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Cross (VF3D Function).v4p" nodename="Cross (VF3D Function)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="7095" top="5685" width="100" height="100">
+   <BOUNDS type="Node" left="7095" top="5415" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7095" top="5685">
+   <BOUNDS type="Box" left="7095" top="5415">
    </BOUNDS>
    </NODE>
    <NODE systemname="Dot (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Dot (SF3D Function).v4p" nodename="Dot (SF3D Function)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="7080" top="6045" width="100" height="100">
+   <BOUNDS type="Node" left="7080" top="5775" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7080" top="6045">
+   <BOUNDS type="Box" left="7080" top="5775">
    </BOUNDS>
    </NODE>
    <NODE systemname="VectorOp (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VectorOp (VF2D Function).v4p" nodename="VectorOp (VF2D Function)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="7125" top="6390" width="100" height="100">
+   <BOUNDS type="Node" left="7125" top="6120" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7125" top="6390">
+   <BOUNDS type="Box" left="7125" top="6120">
    </BOUNDS>
    </NODE>
    <NODE systemname="VectorOp (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VectorOp (VF3D Function).v4p" nodename="VectorOp (VF3D Function)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="7125" top="6705" width="100" height="100">
+   <BOUNDS type="Node" left="7125" top="6435" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7125" top="6705">
+   <BOUNDS type="Box" left="7125" top="6435">
    </BOUNDS>
    <BOUNDS type="Window" left="8535" top="1320" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Gradient (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Gradient (SF2D Function).v4p" nodename="Gradient (SF2D Function)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="8310" top="5715" width="100" height="100">
+   <BOUNDS type="Node" left="8310" top="5445" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8310" top="5715">
+   <BOUNDS type="Box" left="8310" top="5445">
    </BOUNDS>
    </NODE>
    <NODE systemname="Divergence (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Divergence (SF2D Function).v4p" nodename="Divergence (SF2D Function)" componentmode="Hidden" id="19">
-   <BOUNDS type="Node" left="8310" top="6405" width="100" height="100">
+   <BOUNDS type="Node" left="8310" top="6135" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8310" top="6405">
+   <BOUNDS type="Box" left="8310" top="6135">
    </BOUNDS>
    </NODE>
    <NODE systemname="Divergence (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Divergence (SF3D Function).v4p" nodename="Divergence (SF3D Function)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="8310" top="6720" width="100" height="100">
+   <BOUNDS type="Node" left="8310" top="6450" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8310" top="6720">
+   <BOUNDS type="Box" left="8310" top="6450">
    </BOUNDS>
    <BOUNDS type="Window" left="8625" top="1920" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="38">
-   <BOUNDS type="Node" left="3045" top="5505" width="100" height="100">
+   <BOUNDS type="Node" left="3045" top="5235" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="3255" top="3195" width="13335" height="11055">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF3D Function).v4p" nodename="Noise (SF3D Function)" componentmode="Hidden" id="37">
-   <BOUNDS type="Node" left="3030" top="5910" width="100" height="100">
+   <BOUNDS type="Node" left="3030" top="5640" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF2D Function).v4p" nodename="Noise (VF2D Function)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="3030" top="6255" width="100" height="100">
+   <BOUNDS type="Node" left="3030" top="5985" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (VF3D Function).v4p" nodename="Noise (VF3D Function)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="3015" top="6660" width="100" height="100">
+   <BOUNDS type="Node" left="3015" top="6390" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="DivergenceFreeNoise (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\DivergenceFreeNoise (VF3D Function).v4p" nodename="DivergenceFreeNoise (VF3D Function)" componentmode="Hidden" id="46">
-   <BOUNDS type="Node" left="3000" top="7020" width="100" height="100">
+   <BOUNDS type="Node" left="3000" top="6750" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="FBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\FBM (SF2D Function).v4p" nodename="FBM (SF2D Function)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="1425" top="8430" width="100" height="100">
+   <BOUNDS type="Node" left="1425" top="8160" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="6450" top="1770" width="13335" height="12120">
    </BOUNDS>
    </NODE>
    <NODE systemname="FBM (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\FBM (SF3D Function).v4p" nodename="FBM (SF3D Function)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="1410" top="8745" width="100" height="100">
+   <BOUNDS type="Node" left="1410" top="8475" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="9360" top="2325" width="13335" height="11055">
    </BOUNDS>
    </NODE>
    <NODE systemname="MFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\MFBM (SF2D Function).v4p" nodename="MFBM (SF2D Function)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="3225" top="8430" width="100" height="100">
+   <BOUNDS type="Node" left="3225" top="8160" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="MFBM (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\MFBM (SF3D Function).v4p" nodename="MFBM (SF3D Function)" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="3210" top="8760" width="100" height="100">
+   <BOUNDS type="Node" left="3210" top="8490" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="IQFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" nodename="IQFBM (SF2D Function)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="2295" top="8415" width="100" height="100">
+   <BOUNDS type="Node" left="2295" top="8145" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="11655" top="2130" width="13335" height="12030">
    </BOUNDS>
    </NODE>
    <NODE systemname="IQFBM (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM (SF3D Function).v4p" nodename="IQFBM (SF3D Function)" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="2280" top="8745" width="100" height="100">
+   <BOUNDS type="Node" left="2280" top="8475" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlVortex (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlVortex (SF2D Function).v4p" nodename="PreCurlVortex (SF2D Function)" componentmode="Hidden" id="99">
-   <BOUNDS type="Node" left="10905" top="8820" width="100" height="100">
+   <BOUNDS type="Node" left="11580" top="6165" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlVortex (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlVortex (VF3D Function).v4p" nodename="PreCurlVortex (VF3D Function)" componentmode="Hidden" id="100">
-   <BOUNDS type="Node" left="10890" top="9210" width="100" height="100">
+   <BOUNDS type="Node" left="11565" top="6555" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="Curvature (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curvature (SF3D Function).v4p" nodename="Curvature (SF3D Function)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="8280" top="7080" width="100" height="100">
+   <BOUNDS type="Node" left="8280" top="6810" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="TrianlgeSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TrianlgeSDF (SF2D Function).v4p" nodename="TrianlgeSDF (SF2D Function)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="4185" top="12315" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="12390" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4185" top="12315">
+   <BOUNDS type="Box" left="6000" top="12390">
    </BOUNDS>
    </NODE>
    <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="106">
-   <BOUNDS type="Node" left="5610" top="12210" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="11850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5610" top="12210">
+   <BOUNDS type="Box" left="540" top="11850">
    </BOUNDS>
    </NODE>
    <NODE systemname="LineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\LineSDF (SF2D Function).v4p" nodename="LineSDF (SF2D Function)" componentmode="Hidden" id="107">
-   <BOUNDS type="Node" left="4185" top="12690" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="12765" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4185" top="12690">
+   <BOUNDS type="Box" left="6000" top="12765">
    </BOUNDS>
    </NODE>
    <NODE systemname="HeightFieldSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\HeightFieldSDF (SF3D Function).v4p" nodename="HeightFieldSDF (SF3D Function)" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="2235" top="12465" width="100" height="100">
+   <BOUNDS type="Node" left="1800" top="12465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="12465">
    </BOUNDS>
    </NODE>
    <NODE systemname="BoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\BoxSDF (SF2D Function).v4p" nodename="BoxSDF (SF2D Function)" componentmode="Hidden" id="111">
-   <BOUNDS type="Node" left="4185" top="11145" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="11220" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4185" top="11145">
+   <BOUNDS type="Box" left="6000" top="11220">
    </BOUNDS>
    </NODE>
    <NODE systemname="BezierSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\BezierSDF (SF2D Function).v4p" nodename="BezierSDF (SF2D Function)" componentmode="Hidden" id="112">
-   <BOUNDS type="Node" left="5610" top="11835" width="100" height="100">
+   <BOUNDS type="Node" left="7275" top="12840" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5610" top="11835">
+   <BOUNDS type="Box" left="7275" top="12840">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainRepeat (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainRepeat (SF2D Function).v4p" nodename="DomainRepeat (SF2D Function)" componentmode="Hidden" id="113">
-   <BOUNDS type="Node" left="8595" top="9000" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="12525" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10065" top="12525">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainTransform (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainTransform (SF2D Function).v4p" nodename="DomainTransform (SF2D Function)" componentmode="Hidden" id="114">
-   <BOUNDS type="Node" left="8610" top="9390" width="100" height="100">
+   <BOUNDS type="Node" left="10065" top="10455" width="100" height="100">
    </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="115">
-   <BOUNDS type="Node" left="8205" top="8985" width="240" height="270">
+   <BOUNDS type="Box" left="10065" top="10455">
    </BOUNDS>
-   <BOUNDS type="Box" left="8205" top="8985" width="240" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="*">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="116">
-   <BOUNDS type="Node" left="8235" top="9405" width="240" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8235" top="9405" width="240" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="*">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
    </NODE>
    <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="120">
-   <BOUNDS type="Node" left="16230" top="11595" width="100" height="100">
+   <BOUNDS type="Node" left="15495" top="10275" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15495" top="10275">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsTexture (DX11.Texture VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture VF2D).v4p" nodename="AsTexture (DX11.Texture VF2D)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="16200" top="11955" width="100" height="100">
+   <BOUNDS type="Node" left="15495" top="10635" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15495" top="10635">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="122" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="1455" top="7680" width="975" height="270">
+   <BOUNDS type="Node" left="1455" top="7410" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="1455" top="7680" width="1590" height="660">
+   <BOUNDS type="Box" left="1455" top="7410" width="1590" height="660">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Fractal SUms|">
    </PIN>
@@ -835,9 +821,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="125">
-   <BOUNDS type="Node" left="15855" top="11580" width="240" height="270">
+   <BOUNDS type="Node" left="14055" top="12090" width="240" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="15855" top="11580" width="240" height="270">
+   <BOUNDS type="Box" left="14055" top="12090" width="240" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="*">
    </PIN>
@@ -849,9 +835,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="124">
-   <BOUNDS type="Node" left="15885" top="12000" width="240" height="270">
+   <BOUNDS type="Node" left="14040" top="11925" width="240" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="15885" top="12000" width="240" height="270">
+   <BOUNDS type="Box" left="14040" top="11925" width="240" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="*">
    </PIN>
@@ -862,112 +848,116 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="126">
-   <BOUNDS type="Node" left="11265" top="12150" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Basis" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="127">
-   <BOUNDS type="Box" left="12090" top="10425" width="1830" height="1560">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12090" top="10425" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="simplex">
-   </PIN>
-   <PIN pinname="Style" slicecount="1" values="List">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="127" srcpinname="Output Enum" dstnodeid="126" dstpinname="Basis">
-   </LINK>
    <NODE systemname="AsVolume (DX11.Volume SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsVolume (DX11.Volume SF3D).v4p" nodename="AsVolume (DX11.Volume SF3D)" componentmode="Hidden" id="128">
-   <BOUNDS type="Node" left="20085" top="11595" width="100" height="100">
+   <BOUNDS type="Node" left="18675" top="10185" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVolume (DX11.Volume VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsVolume (DX11.Volume VF3D).v4p" nodename="AsVolume (DX11.Volume VF3D)" componentmode="Hidden" id="129">
-   <BOUNDS type="Node" left="20085" top="12015" width="100" height="100">
+   <BOUNDS type="Node" left="18675" top="10605" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="GridSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\GridSDF (SF2D Function).v4p" nodename="GridSDF (SF2D Function)" componentmode="Hidden" id="108">
-   <BOUNDS type="Node" left="5610" top="12570" width="100" height="100">
+   <BOUNDS type="Node" left="7275" top="12225" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5610" top="12570">
+   <BOUNDS type="Box" left="7275" top="12225">
    </BOUNDS>
    </NODE>
    <NODE systemname="TruchetSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TruchetSDF (SF2D Function).v4p" nodename="TruchetSDF (SF2D Function)" componentmode="Hidden" id="130">
-   <BOUNDS type="Node" left="5610" top="12870" width="100" height="100">
+   <BOUNDS type="Node" left="7275" top="12525" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5610" top="12870">
+   <BOUNDS type="Box" left="7275" top="12525">
    </BOUNDS>
    </NODE>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <NODE systemname="JuliaSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\JuliaSDF (SF3D Function).v4p" nodename="JuliaSDF (SF3D Function)" componentmode="Hidden" id="131">
-   <BOUNDS type="Node" left="2205" top="13185" width="100" height="100">
+   <BOUNDS type="Node" left="3225" top="11820" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="9570" top="4950" width="11640" height="11055">
    </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="132">
-   <BOUNDS type="Node" left="15960" top="10245" width="2655" height="270">
+   <BOUNDS type="Box" left="3225" top="11820">
    </BOUNDS>
-   <BOUNDS type="Box" left="15960" top="10245" width="2655" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|AS BUFFER, AS TEXTURE, AS VOLUME?|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
    </NODE>
    <NODE systemname="Vector2DJoin (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Vector2DJoin (VF2D Function).v4p" nodename="Vector2DJoin (VF2D Function)" componentmode="Hidden" id="133">
-   <BOUNDS type="Node" left="8160" top="10290" width="100" height="100">
+   <BOUNDS type="Node" left="8295" top="7245" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8160" top="10290">
+   <BOUNDS type="Box" left="8295" top="7245">
    </BOUNDS>
    <BOUNDS type="Window" left="28800" top="3030" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DJoin (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Vector3DJoin (VF3D Function).v4p" nodename="Vector3DJoin (VF3D Function)" componentmode="Hidden" id="134">
-   <BOUNDS type="Node" left="9495" top="10290" width="100" height="100">
+   <BOUNDS type="Node" left="8295" top="7965" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9495" top="10290">
+   <BOUNDS type="Box" left="8295" top="7965">
    </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="135">
-   <BOUNDS type="Node" left="1350" top="4920" width="765" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1350" top="4920" width="765" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="constant">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
    </NODE>
    <NODE systemname="Vector2DSplit (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Vector2DSplit (SF2D Function).v4p" nodename="Vector2DSplit (SF2D Function)" componentmode="Hidden" id="136">
-   <BOUNDS type="Node" left="8160" top="10665" width="100" height="100">
+   <BOUNDS type="Node" left="8295" top="7620" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8160" top="10665">
+   <BOUNDS type="Box" left="8295" top="7620">
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DSplit (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Vector3DSplit (SF3D Function).v4p" nodename="Vector3DSplit (SF3D Function)" componentmode="Hidden" id="137">
-   <BOUNDS type="Node" left="9495" top="10665" width="100" height="100">
+   <BOUNDS type="Node" left="8295" top="8340" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9495" top="10665">
+   <BOUNDS type="Box" left="8295" top="8340">
    </BOUNDS>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="140">
-   <BOUNDS type="Node" left="23280" top="7335" width="1110" height="270">
+   <NODE systemname="Gradient (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Gradient (SF3D Function).v4p" nodename="Gradient (SF3D Function)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="8310" top="5760" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23280" top="7335" width="1110" height="270">
+   <BOUNDS type="Box" left="8310" top="5760">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Other Modes?|">
+   </NODE>
+   <NODE systemname="InputMorph (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\InputMorph (SF2D Function).v4p" nodename="InputMorph (SF2D Function)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="6945" top="7065" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6945" top="7065">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DomainTransform (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainTransform (SF3D Function).v4p" nodename="DomainTransform (SF3D Function)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="10065" top="10785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10065" top="10785">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ConeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\ConeSDF (SF3D Function).v4p" nodename="ConeSDF (SF3D Function)" componentmode="Hidden" id="160">
+   <BOUNDS type="Node" left="540" top="12195" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="12195">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="HexPrismSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\HexPrismSDF (SF3D Function).v4p" nodename="HexPrismSDF (SF3D Function)" componentmode="Hidden" id="161">
+   <BOUNDS type="Node" left="1800" top="11745" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="11745">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="TriPrismSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TriPrismSDF (SF3D Function).v4p" nodename="TriPrismSDF (SF3D Function)" componentmode="Hidden" id="162">
+   <BOUNDS type="Node" left="1800" top="11415" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="11415">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="TorusSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\TorusSDF (SF3D Function).v4p" nodename="TorusSDF (SF3D Function)" componentmode="Hidden" id="163">
+   <BOUNDS type="Node" left="540" top="12510" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="12510">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="CylinderSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\CylinderSDF (SF3D Function).v4p" nodename="CylinderSDF (SF3D Function)" componentmode="Hidden" id="164">
+   <BOUNDS type="Node" left="1800" top="12090" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="12090">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="165" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="660" top="10650" width="975" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="660" top="10650" width="705" height="435">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="3D">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -975,225 +965,129 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   </NODE>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="148">
-   <BOUNDS type="Node" left="23175" top="9465" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="23175" top="9465" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   <PIN pinname="Font" slicecount="1" values="Nasalization">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="147">
-   <BOUNDS type="Box" left="23160" top="10035" width="795" height="240">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="166" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6060" top="10605" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="23160" top="10035" width="0" height="0">
+   <BOUNDS type="Box" left="6060" top="10605" width="705" height="435">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="2D">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="Nasalization">
    </PIN>
    </NODE>
-   <LINK srcnodeid="148" srcpinname="Output" dstnodeid="147" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="146">
-   <BOUNDS type="Node" left="24585" top="9495" width="100" height="100">
+   <NODE systemname="RoundBoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF2D Function).v4p" nodename="RoundBoxSDF (SF2D Function)" componentmode="Hidden" id="167">
+   <BOUNDS type="Node" left="7275" top="11565" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="24585" top="9495" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="145">
-   <BOUNDS type="Box" left="24570" top="10065" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="24570" top="10065" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="146" srcpinname="Output" dstnodeid="145" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="144">
-   <BOUNDS type="Node" left="25995" top="9525" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="25995" top="9525" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="143">
-   <BOUNDS type="Box" left="25980" top="10095" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="25980" top="10095" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="144" srcpinname="Output" dstnodeid="143" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Join (FieldTripFunction)" filename="%VVVV%\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (FieldTripFunction)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="27405" top="9555" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="27405" top="9555" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="141">
-   <BOUNDS type="Box" left="27390" top="10125" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="27390" top="10125" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VF3D Function|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="142" srcpinname="Output" dstnodeid="141" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="150">
-   <BOUNDS type="Node" left="23235" top="11235" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="23235" top="11235" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF2D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="149">
-   <BOUNDS type="Node" left="23250" top="11610" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="23250" top="11610" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="150" srcpinname="Output Node" dstnodeid="149" dstpinname="Input">
-   </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="152">
-   <BOUNDS type="Node" left="24315" top="11475" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="24315" top="11475" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF2D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="151">
-   <BOUNDS type="Node" left="24330" top="11850" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="24330" top="11850" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="151" dstpinname="Input">
-   </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="154">
-   <BOUNDS type="Node" left="25440" top="11715" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="25440" top="11715" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input SF3D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="25455" top="12090" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="25455" top="12090" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="154" srcpinname="Output Node" dstnodeid="153" dstpinname="Input">
-   </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="156">
-   <BOUNDS type="Node" left="26385" top="11955" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="26385" top="11955" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input VF3D Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Split (FieldTripFunction)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Split (FieldTripFunction)" componentmode="Hidden" id="155">
-   <BOUNDS type="Node" left="26400" top="12330" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="26400" top="12330" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="156" srcpinname="Output Node" dstnodeid="155" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="158">
-   <BOUNDS type="Node" left="27435" top="12900" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="27435" top="12900" width="3000" height="3000">
+   <BOUNDS type="Box" left="7275" top="11565">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Cons (DX11.ResourceSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.ResourceSemantic)" componentmode="Hidden" id="157">
-   <BOUNDS type="Node" left="27735" top="13200" width="100" height="100">
+   <NODE systemname="BoxSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\BoxSDF (SF3D Function).v4p" nodename="BoxSDF (SF3D Function)" componentmode="Hidden" id="168">
+   <BOUNDS type="Node" left="540" top="11460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="27735" top="13200" width="3000" height="3000">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Gradient (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Gradient (SF3D Function).v4p" nodename="Gradient (SF3D Function)" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="8310" top="6030" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8310" top="6030">
+   <BOUNDS type="Box" left="540" top="11460">
    </BOUNDS>
    </NODE>
-   <NODE systemname="InputMorph (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\InputMorph (SF2D Function).v4p" nodename="InputMorph (SF2D Function)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="7365" top="7650" width="100" height="100">
+   <NODE systemname="DomainRepeat (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainRepeat (SF3D Function).v4p" nodename="DomainRepeat (SF3D Function)" componentmode="Hidden" id="169">
+   <BOUNDS type="Node" left="10065" top="12870" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7365" top="7650">
+   <BOUNDS type="Box" left="10065" top="12870">
    </BOUNDS>
    </NODE>
-   <NODE systemname="DomainTransform (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainTransform (SF3D Function).v4p" nodename="DomainTransform (SF3D Function)" componentmode="Hidden" id="159">
-   <BOUNDS type="Node" left="8580" top="9720" width="100" height="100">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="170" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9855" top="9705" width="975" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9855" top="9705" width="2655" height="660">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Domain Manipulation|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="Nasalization">
+   </PIN>
+   </NODE>
+   <NODE systemname="ParticleSystem (DX11.Particles.Core)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Core\ParticleSystem (DX11.Particles.Core).v4p" nodename="ParticleSystem (DX11.Particles.Core)" componentmode="Hidden" id="171">
+   <BOUNDS type="Node" left="21735" top="10350" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ParticleModifier (VF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Miscellaneous\DX11.Particles\ParticleModifier (VF3D DX11.Particles.Modifiers).v4p" nodename="ParticleModifier (VF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="172">
+   <BOUNDS type="Node" left="21720" top="10695" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="SDFReflector (SF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Miscellaneous\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p" nodename="SDFReflector (SF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="173">
+   <BOUNDS type="Node" left="21735" top="11040" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="174" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="21570" top="9630" width="975" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="21570" top="9630" width="4035" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="DX11.Particles">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="24">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="Nasalization">
+   </PIN>
+   </NODE>
+   <NODE systemname="LineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\LineSDF (SF3D Function).v4p" nodename="LineSDF (SF3D Function)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="540" top="12885" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="12885">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BezierSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\BezierSDF (SF3D Function).v4p" nodename="BezierSDF (SF3D Function)" componentmode="Hidden" id="176">
+   <BOUNDS type="Node" left="1800" top="12855" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1800" top="12855">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BakeTexture (DX11.Texture SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\BakeTexture\BakeTexture (DX11.Texture SF3D).v4p" nodename="BakeTexture (DX11.Texture SF3D)" componentmode="Hidden" id="177">
+   <BOUNDS type="Node" left="15495" top="10995" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15495" top="10995">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BakeTexture (DX11.Texture VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\BakeTexture\BakeTexture (DX11.Texture VF3D).v4p" nodename="BakeTexture (DX11.Texture VF3D)" componentmode="Hidden" id="178">
+   <BOUNDS type="Node" left="15495" top="11370" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15495" top="11370">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="RoundBoxSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF3D Function).v4p" nodename="RoundBoxSDF (SF3D Function)" componentmode="Hidden" id="179">
+   <BOUNDS type="Node" left="3225" top="12165" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3225" top="12165">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="PolyhedronSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\PolyhedronSDF (SF3D Function).v4p" nodename="PolyhedronSDF (SF3D Function)" componentmode="Hidden" id="180">
+   <BOUNDS type="Node" left="3195" top="12480" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3195" top="12480">
    </BOUNDS>
    </NODE>
    </PATCH>

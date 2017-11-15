@@ -1,0 +1,77 @@
+Texture2D inputTexture : register(t0):PREVIOUS; 
+
+SamplerState linearSampler <string uiname="Sampler State";>
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+
+int2 texelSize;
+int Iterations = 1;
+#ifndef ITERATIONS
+#define ITERATIONS 2
+#endif
+
+float4 PS(psInput input) : SV_Target
+{
+	float4 outColor = inputTexture.Sample(linearSampler,input.uv.xy);
+	float numColors = 0.0f;
+    float4 tempColor = float4(0.0f, 0.0f, 0.0f, 0.0f);
+
+	float2 texOffset[8] = {
+		-1.0, -1.0,
+		 0.0, -1.0,
+		 1.0, -1.0,
+		-1.0,  0.0,
+		 1.0,  0.0,
+		-1.0,  1.0,
+		 0.0,  1.0,
+		 1.0,  1.0
+	};
+	
+
+
+	//only grab surrounding colors if this pixel's alpha is 0
+	if(outColor.a == 0.0f)
+	{
+		[unroll]for( int i = 0; i < ITERATIONS; i++ )
+			outColor = float4(0.0f, 0.0f, 0.0f, 0.0f);
+			[unroll]for( int j = 0; j < 8; j++ )
+			{
+				tempColor = inputTexture.Sample(linearSampler,input.uv.xy + texOffset[j]/texelSize);
+				if(tempColor.a == 1.0f)
+				{
+					outColor += tempColor;
+					numColors += 1.0f;
+				}
+			}
+			
+			if(numColors > 0)
+			{
+				outColor *= 1.0f / numColors;
+				outColor.a = 1.0f;
+			}	
+	}
+
+   return outColor;
+	
+}
+
+
+technique11 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_5_0,PS()));
+	}
+}
+
+
+

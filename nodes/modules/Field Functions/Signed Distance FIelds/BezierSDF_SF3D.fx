@@ -1,0 +1,36 @@
+
+#ifndef SDF_FXH
+#include <packs\happy.fxh\sdf.fxh>
+#endif
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Circle Distance Function
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
+// This token will be replaced with function name via RegExpr: "FN_"
+
+#ifndef SF3D
+// Paramaters
+float FN_radius : FN_RADIUS;
+float3 FN_p1 : FN_P1;
+float3 FN_p2 : FN_P2;
+float3 FN_p3 : FN_P3;
+
+
+
+
+
+float FN_ (float3 p)
+{
+
+	return fBezier(p, FN_p1, FN_p2, FN_p3).x - FN_radius;
+}
+
+
+#define SF3D FN_
+#endif
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+technique11 RemoveMe{}
+
