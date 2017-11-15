@@ -183,7 +183,7 @@
    </PIN>
    <PIN pinname="Frequency" slicecount="1" values="3.82">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="0.35">
+   <PIN pinname="Amplitude" slicecount="1" values="0.24">
    </PIN>
    <PIN pinname="Offset" slicecount="3" values="2.59,2.59,2.59">
    </PIN>
@@ -229,7 +229,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4215" top="5340" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RayMarchNormals">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RayMarchGradient">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Technique">
    </PIN>

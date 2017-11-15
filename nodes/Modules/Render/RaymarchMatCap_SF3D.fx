@@ -7,6 +7,8 @@
 #define SF3D length // Just a place holder
 #endif
 
+#define RAYMARCHER
+
 #ifndef RAYMARCH_FXH
 #include<packs\happy.fxh\raymarch.fxh>
 #endif
@@ -60,50 +62,15 @@ struct PS_OUT
 };
 
 
-PS_OUT PS_Grad(VS_OUT In)
-{
-	// Raymarch 
-	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;   	// origin, direction, position, normal
-	float z;				// depth
-	int matID;				// matID (optional)
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
-	////////////////////////////////////////////////////////////////
-	
-	float4 c=1;
-	float g = saturate(-dot(rd,n));
 
-	#ifdef AO
-	float ao = calcAO(p,n);
-	c.rgb *= ao;
-	#endif
-	
-	#ifdef SHADOW
-	float shadow = calcShadow(p);
-	c.rgb *= shadow;
-	#endif
-	
-	PS_OUT Out;
-	Out.Color=c;
-
-	#if WRITEDEPTH == 1
-	float4 PosWVP=mul(float4(p.xyz,1),tVP);
-	Out.Depth=PosWVP.z/PosWVP.w;
-	#endif
-	
-	return Out;
-}
 
 PS_OUT PS_MatCap(VS_OUT In)
 {
-	// Raymarch 
+	// Raymarcher 
 	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;
-	float z;
-	int matID;
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
 	////////////////////////////////////////////////////////////////
 	
 	float3 ppdx, ppdy;

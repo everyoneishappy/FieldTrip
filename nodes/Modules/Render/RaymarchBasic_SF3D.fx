@@ -1,14 +1,21 @@
 //#define AO
 //#define SHADOW
 //#define SSS
+#define RAYMARCHER
 
 #ifndef RAYMARCH_FXH
 #include<packs\happy.fxh\raymarch.fxh>
 #endif
 
+
+
+
+
+
 #ifndef WRITEDEPTH
 #define WRITEDEPTH 1
 #endif
+
 
 
 cbuffer cbControls:register(b0)
@@ -41,12 +48,11 @@ struct PS_OUT
 
 PS_OUT PS_Constant(VS_OUT In)
 {
-	// Raymarch 
+	// Raymarcher 
 	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;   	// origin, direction, position, normal
-	float z;				// depth
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
 	////////////////////////////////////////////////////////////////
 	
 	float4 c;
@@ -68,12 +74,11 @@ PS_OUT PS_Constant(VS_OUT In)
 
 PS_OUT PS_Grad(VS_OUT In)
 {
-	// Raymarch 
+	// Raymarcher 
 	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;   	// origin, direction, position, normal
-	float z;				// depth
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
 	////////////////////////////////////////////////////////////////
 	
 	float4 c=1;
@@ -96,12 +101,11 @@ PS_OUT PS_Grad(VS_OUT In)
 
 PS_OUT PS_Norm(VS_OUT In)
 {
-	// Raymarch 
+	// Raymarcher 
 	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;
-	float z;
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
 	////////////////////////////////////////////////////////////////
 	
 	float4 c=1;

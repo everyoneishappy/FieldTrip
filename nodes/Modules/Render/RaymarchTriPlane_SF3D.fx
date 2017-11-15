@@ -5,6 +5,8 @@
 #define SF3D length // Just a place holder
 #endif
 
+#define RAYMARCHER
+
 #ifndef RAYMARCH_FXH
 #include<packs\happy.fxh\raymarch.fxh>
 #endif
@@ -95,12 +97,11 @@ float texScale <string uiname="Texture Scale";> = 0.2;
 
 PS_OUT PS_IBL(VS_OUT In)
 {
-	// Raymarch 
+	// Raymarcher 
 	////////////////////////////////////////////////////////////////
-	float3 ro, rd, p, n;   	// origin, direction, position, normal
-	float z;				// depth
-	float2 uv=In.TexCd.xy;
-	rayMarch(uv, ro, rd, p, n, z);
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
 	////////////////////////////////////////////////////////////////
 
 	float4 c=1;
