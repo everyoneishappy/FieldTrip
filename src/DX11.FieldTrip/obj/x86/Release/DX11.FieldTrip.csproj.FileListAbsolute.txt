@@ -1,0 +1,1 @@
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\DX11.FieldTrip\obj\x86\Release\DX11.FieldTrip.csprojResolveAssemblyReference.cache

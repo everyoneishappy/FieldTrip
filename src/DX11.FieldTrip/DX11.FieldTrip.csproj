@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(SolutionDir)\References\DX11.DynamicShader.Build.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{9E219A50-3B86-4EFC-B44A-A76BD8C9F9BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DX11.FieldTrip</RootNamespace>
+    <AssemblyName>DX11.FieldTrip</AssemblyName>
+    <OutputPath>$(OutputPath)..\nodes\plugins\</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Nodes\DX11StringShaderNode.cs" />
+    <Compile Include="Nodes\FileChangeNode.cs" />
+    <Compile Include="Nodes\FunctionJoinSplit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="References\DX11.DynamicShader.Build.targets" />
+    <None Include="References\DX11.DynamicShader.VVVV.References.targets">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
