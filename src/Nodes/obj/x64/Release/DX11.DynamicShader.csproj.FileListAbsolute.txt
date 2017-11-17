@@ -1,0 +1,6 @@
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\packs\dx11.particles\nodes\plugins\DX11.Extensions\x64\DX11.DynamicShader.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\x64\Release\DX11.DynamicShader.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\TestBed\DX11.DynamicShader.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\Happy.fxh\nodes\plugins\DX11.DynamicShader.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\x64\Release\FieldTripHelpers.dll

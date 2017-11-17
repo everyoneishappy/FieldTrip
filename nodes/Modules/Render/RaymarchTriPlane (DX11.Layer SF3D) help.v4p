@@ -167,9 +167,9 @@
    </PIN>
    <PIN pinname="SF3D Class" visible="1">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="0.0057">
+   <PIN pinname="Amplitude" slicecount="1" values="0.002">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="40.58">
+   <PIN pinname="Frequency" slicecount="1" values="29.53">
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>

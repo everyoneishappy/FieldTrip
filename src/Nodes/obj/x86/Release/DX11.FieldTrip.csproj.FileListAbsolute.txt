@@ -1,0 +1,3 @@
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\x86\FieldTripHelpers.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\Nodes\obj\x86\Release\DX11.FieldTrip.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\Nodes\obj\x86\Release\FieldTripHelpers.dll

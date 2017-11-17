@@ -1,0 +1,5 @@
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\packs\dx11.particles\nodes\plugins\DX11.Extensions\AnyCpu\DX11.Extensions.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\packs\dx11.particles\nodes\plugins\DX11.Extensions\AnyCpu\DX11.Extensions.pdb
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\Debug\DX11.Extensions.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\Debug\DX11.Extensions.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\Debug\DX11.Extensions.pdb

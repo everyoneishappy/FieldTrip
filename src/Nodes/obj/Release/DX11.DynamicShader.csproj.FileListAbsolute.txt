@@ -1,0 +1,3 @@
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\Release\DX11.DynamicShader.csprojResolveAssemblyReference.cache
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\packs\dx11.particles\nodes\plugins\DX11.Extensions\AnyCpu\DX11.DynamicShader.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\C# Dev\dx11-particles-master\src\nodes\DX11.Extensions\obj\Release\DX11.DynamicShader.dll

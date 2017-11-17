@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Reference Include="SlimDX">
+      <HintPath>$(MSBuildThisFileDirectory)\lib\$(Platform)\SlimDX.dll</HintPath>
+      <Private>$(SlimDXPrivate)</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
