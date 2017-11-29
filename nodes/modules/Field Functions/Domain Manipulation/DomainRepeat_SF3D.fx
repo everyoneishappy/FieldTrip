@@ -38,7 +38,7 @@ float3 FN_size : FN_SIZE = 1;
 
 float FN_ (float3 p)
 {
-	p.FN_SWIZZLE+=9999; // just to get rid of flipping at zero
+	//p.FN_SWIZZLE+=9999; // just to get rid of flipping at zero
 	FN_DOMAINOP(p.FN_SWIZZLE, FN_size);
 	return FN_INPUT(p);
 }

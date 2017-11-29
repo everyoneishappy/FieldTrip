@@ -288,16 +288,6 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="DoubleClick (Animation)" filename="%VVVV%\packs\leappack\nodes\modules\DoubleClick (Animation).v4p" nodename="DoubleClick (Animation)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3465" top="4680" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Set" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="19" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1">
    <BOUNDS type="Box" left="2745" top="3255" width="480" height="480">
    </BOUNDS>
@@ -371,8 +361,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Up Edge" dstnodeid="2" dstpinname="Set">
    </LINK>
    <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="29">
    <BOUNDS type="Node" left="2040" top="1560" width="100" height="100">
@@ -472,4 +460,44 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="3240" top="4530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.3">
+   </PIN>
+   <PIN pinname="Retriggerable" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="3240" top="5505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FrameDelay (Animation Legacy)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="41" filename="">
+   <BOUNDS type="Node" left="3240" top="4980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="41" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output 1" dstnodeid="42" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Up Edge" dstnodeid="43" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Up Edge" dstnodeid="42" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="19" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

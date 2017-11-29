@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF3D Function).v4p" systemname="RoundBoxSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF3D Function).v4p" scrollx="1125" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF3D Function).v4p" systemname="RoundBoxSDF (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\RoundBoxSDF (SF3D Function).v4p" scrollx="2295" scrolly="0">
    <BOUNDS type="Window" left="3495" top="2040" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -361,7 +361,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7575" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.5,0.5,0.5">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.22,0.22,0.22">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -523,8 +523,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="92" srcpinname="Count" dstnodeid="84" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Input">
    </LINK>
    <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="83" filename="">
    <BOUNDS type="Node" left="5175" top="1920" width="100" height="100">
@@ -717,5 +715,9 @@
    <LINK srcnodeid="109" srcpinname="Output" dstnodeid="86" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="106" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="108" dstpinname="Element Count">
    </LINK>
    </PATCH>

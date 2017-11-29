@@ -209,7 +209,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="3">
+   <PIN pinname="Vector Size" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -299,7 +299,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5400" top="1185" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5.76">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="9.65">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -315,7 +315,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6285" top="1155" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.07">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -411,7 +411,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9015" top="450" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Grid">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Hexogon">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainRepeat (SF2D Function).v4p" systemname="DomainRepeat (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\DomainRepeat (SF2D Function).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="4590" top="1710" width="19710" height="12255">
+   <BOUNDS type="Window" left="6420" top="5520" width="19710" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -347,9 +347,9 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="String">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="7" values="|Wrap XY|,|Mirror XY|,|Grid XY|,|Wrap X|,|Mirror X|,|Wrap Y|,|Mirror Y|">
+   <PIN pinname="Input String" visible="1" slicecount="8" values="|Wrap XY|,|Mirror XY|,|Grid XY|,|Wrap X|,|Mirror X|,|Wrap Y|,|Mirror Y|,|Polar XY|">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="7">
+   <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
@@ -413,9 +413,9 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="String">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="7" values="pMod2,pModMirror2,pModGrid2,pMod1,pModMirror1,pMod1,pModMirror1">
+   <PIN pinname="Input String" visible="1" slicecount="8" values="pMod2,pModMirror2,pModGrid2,pMod1,pModMirror1,pMod1,pModMirror1,pModPolar">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="7">
+   <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
@@ -513,9 +513,9 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="String">
    </PIN>
-   <PIN pinname="Input String" visible="1" slicecount="7" values="xy,xy,xy,x,x,y,y">
+   <PIN pinname="Input String" visible="1" slicecount="8" values="xy,xy,xy,x,x,y,y,xy">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="7">
+   <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>

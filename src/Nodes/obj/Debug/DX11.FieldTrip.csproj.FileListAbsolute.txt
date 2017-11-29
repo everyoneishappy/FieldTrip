@@ -1,5 +1,5 @@
-C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\AnyCpu\FieldTripHelpers.dll
-C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\AnyCpu\FieldTripHelpers.pdb
 C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\Nodes\obj\Debug\DX11.FieldTrip.csprojResolveAssemblyReference.cache
 C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\Nodes\obj\Debug\FieldTripHelpers.dll
 C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\src\Nodes\obj\Debug\FieldTripHelpers.pdb
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll
+C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\plugins\FieldTripHelpers.pdb

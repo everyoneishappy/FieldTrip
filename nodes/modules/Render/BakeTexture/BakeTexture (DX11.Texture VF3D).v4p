@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture (DX11.Texture SF3D)\BakeTexture (DX11.Texture VF3D).v4p" systemname="BakeTexture (DX11.Texture VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture (DX11.Texture SF3D)\BakeTexture (DX11.Texture VF3D).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture\BakeTexture (DX11.Texture VF3D).v4p" systemname="BakeTexture (DX11.Texture VF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture (DX11.Texture SF3D)\BakeTexture (DX11.Texture VF3D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1065" top="1665" width="11790" height="11445">
    </BOUNDS>
    <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="1">
@@ -374,7 +374,81 @@
    </LINK>
    <LINK srcnodeid="0" srcpinname="Shader Path" dstnodeid="40" dstpinname="File Path">
    </LINK>
-   <NODE systemname="Shader (DX11.Effect String)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Shader (DX11.Effect String)" componentmode="Hidden" id="42">
+   <LINK srcnodeid="39" srcpinname="Output String" dstnodeid="41" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="2565" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="43" dstpinname="Custom Semantics">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="43" dstpinname="Resource Semantics">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layer">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="44" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8085" top="10320" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8085" top="10320" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6210" top="10155" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6210" top="10155" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layout Message|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF3D)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="870" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="870" top="540" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="35" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="HLSL" dstnodeid="39" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Custom Semantics" dstnodeid="38" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Resource Semantics" dstnodeid="37" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Shader (DX11.Effect Fieldtrip String)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Shader (DX11.Effect Fieldtrip String)" componentmode="Hidden" id="42">
    <BOUNDS type="Node" left="2250" top="5850" width="5040" height="270">
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1" slicecount="1" values="|text&cr;&lf;//@author: Everyoneishappy&cr;&lf;//@help: Render WorldPos to uv layout&cr;&lf;//@tags: UV&cr;&lf;//@credits: &cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbPerDraw : register( b0 )&cr;&lf;{&cr;&lf;&tab;float4x4 tP : PROJECTION;&cr;&lf;&tab;float4x4 tW : WORLD;&cr;&lf;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;struct VS_IN&cr;&lf;{&cr;&lf;&tab;float4 Pos : POSITION;&cr;&lf;&tab;float4 Norm : NORMAL;&cr;&lf;&tab;float4 UV : TEXCOORD0;&cr;&lf;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;struct vs2ps&cr;&lf;{&cr;&lf;    float4 pPos: SV_POSITION;&cr;&lf;&tab;float4 Norm : NORMAL;&cr;&lf;    float4 UV: TEXCOORD0;&cr;&lf;&tab;float4 PosW: TEXCOORD01;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;vs2ps VS(VS_IN input)&cr;&lf;{&cr;&lf;    vs2ps Out = (vs2ps)0;&cr;&lf;  &cr;&lf;&tab;//transform position to UV&cr;&lf;&tab;Out.pPos = mul((input.UV-.5), tP);&cr;&lf;&tab;Out.pPos.y *= -1.0f;&cr;&lf;&tab;Out.pPos.z=0;&cr;&lf;&tab;&cr;&lf;&tab;Out.Norm = normalize(mul(input.Norm,tW));&cr;&lf;&tab;&cr;&lf;    Out.UV = input.UV;&cr;&lf;&tab;Out.PosW  = mul(input.Pos,tW);&cr;&lf;&cr;&lf;&tab;&cr;&lf;    return Out;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;float4 PS(vs2ps In): SV_Target&cr;&lf;{&cr;&lf;    float4 col = 1;&cr;&lf;&tab;float3 p = In.PosW.xyz;&cr;&lf;&tab;&cr;&lf;&tab;col.rgb = SF3D(p);&cr;&lf;    return col;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;technique11 BakeTexture&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader( CompileShader( vs_5_0, VS() ) );&cr;&lf;&tab;&tab;SetPixelShader( CompileShader( ps_5_0, PS() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
@@ -428,29 +502,7 @@
    </LINK>
    <LINK srcnodeid="41" srcpinname="Output" dstnodeid="42" dstpinname="ShaderCode">
    </LINK>
-   <LINK srcnodeid="39" srcpinname="Output String" dstnodeid="41" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="2565" top="6480" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="42" srcpinname="Layer" dstnodeid="43" dstpinname="Layer In">
-   </LINK>
-   <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="43" dstpinname="Custom Semantics">
-   </LINK>
-   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="43" dstpinname="Resource Semantics">
-   </LINK>
-   <LINK srcnodeid="43" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="42" dstpinname="Transform In">
    </LINK>
@@ -458,60 +510,8 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Enabled">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="44" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8085" top="10320" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8085" top="10320" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="42" srcpinname="Compiled" dstnodeid="44" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6210" top="10155" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6210" top="10155" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Layout Message|">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="42" srcpinname="Layout Message" dstnodeid="45" dstpinname="Input String">
-   </LINK>
-   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF3D)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="870" top="540" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="870" top="540" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="35" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="35" srcpinname="HLSL" dstnodeid="39" dstpinname="Input String">
-   </LINK>
-   <LINK srcnodeid="35" srcpinname="Custom Semantics" dstnodeid="38" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="35" srcpinname="Resource Semantics" dstnodeid="37" dstpinname="Input Node">
    </LINK>
    </PATCH>

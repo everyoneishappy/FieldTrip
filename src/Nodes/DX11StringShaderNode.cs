@@ -25,7 +25,7 @@ using VVVV.Core.Logging;
 namespace VVVV.DX11.Nodes
 {
     #region PluginInfo
-    [PluginInfo(Name = "Shader", Category = "DX11.Effect", Version="String", Help = "Build a shader with a string input", Author="tmp", Tags = "")]
+    [PluginInfo(Name = "Shader", Category = "DX11.Effect", Version = "Fieldtrip String", Help = "Build a shader with a string input", Author = "tmp", Tags = "")]
     #endregion PluginInfo
     public unsafe class DX11StringShaderNode : IPluginEvaluate, IDX11LayerHost, IPartImportsSatisfiedNotification, IDisposable
     {
@@ -43,7 +43,7 @@ namespace VVVV.DX11.Nodes
         [Input("Geometry", CheckIfChanged = true)]
         protected Pin<DX11Resource<IDX11Geometry>> FGeometry;
 
-        [Input("ShaderCode", DefaultString = "", IsSingle=true)]
+        [Input("ShaderCode", DefaultString = "", IsSingle = true)]
         public IDiffSpread<string> FShaderCode;
 
         [Input("IncludePath", StringType = StringType.Filename, DefaultString = "", FileMask = "", IsSingle = true)]
@@ -84,7 +84,7 @@ namespace VVVV.DX11.Nodes
 
         /*[Output("Shader Signature", Visibility = PinVisibility.OnlyInspector)]
         protected ISpread<DX11Resource<DX11Shader>> FOutShader;*/
-        
+
         [Config("ConfigShader", DefaultString = "")]
         public IDiffSpread<string> FConfigShader;
         [Config("ConfigDefines", DefaultString = "")]
@@ -119,12 +119,12 @@ namespace VVVV.DX11.Nodes
         private int spmax = 0;
         private bool geomconnected;
         private bool stateconnected;
-        
+
         public event DX11QueryableDelegate BeginQuery;
         public event DX11QueryableDelegate EndQuery;
 
         protected IDiffSpread<EnumEntry> FInTechnique;
-        
+
         protected string TechniqueEnumId;
 
         private int techniqueindex;
@@ -145,7 +145,7 @@ namespace VVVV.DX11.Nodes
                 this.EndQuery(context);
             }
         }
-       
+
         #region Set the shader instance
         public void SetShader(DX11Effect shader, bool isnew)
         {
@@ -215,10 +215,10 @@ namespace VVVV.DX11.Nodes
         }
         #endregion
 
-        
+
         public bool HasDynamicPins(DX11Effect shader)
         {
-            
+            if (shader.DefaultEffect == null) return false;
             for (int i = 0; i < shader.DefaultEffect.Description.GlobalVariableCount; i++)
             {
                 EffectVariable var = shader.DefaultEffect.GetVariableByIndex(i);
@@ -238,7 +238,7 @@ namespace VVVV.DX11.Nodes
 
             if (FShaderCode.IsChanged || FFileName.IsChanged || FInDefines.IsChanged)
             {
-                
+
                 List<ShaderMacro> sms = new List<ShaderMacro>();
                 for (int i = 0; i < this.FInDefines.SliceCount; i++)
                 {
@@ -381,7 +381,7 @@ namespace VVVV.DX11.Nodes
             {
                 this.deviceshaderdata[context] = new DX11ShaderData(context, this.FShader);
             }
-            if (!this.shaderVariableCache.Contains(context))
+            if (!this.shaderVariableCache.Contains(context) && this.deviceshaderdata[context].ShaderInstance != null)
             {
                 this.shaderVariableCache[context] = new DX11ShaderVariableCache(context, this.deviceshaderdata[context].ShaderInstance, this.varmanager);
             }
@@ -400,7 +400,7 @@ namespace VVVV.DX11.Nodes
         #endregion
 
         #region Destroy
-        public void Destroy( DX11RenderContext context, bool force)
+        public void Destroy(DX11RenderContext context, bool force)
         {
             if (force)
             {
@@ -493,7 +493,7 @@ namespace VVVV.DX11.Nodes
         }
 
         #region Render
-        public void Render( DX11RenderContext context, DX11RenderSettings settings)
+        public void Render(DX11RenderContext context, DX11RenderSettings settings)
         {
             Device device = context.Device;
             DeviceContext ctx = context.CurrentDeviceContext;
@@ -786,13 +786,13 @@ namespace VVVV.DX11.Nodes
         bool ShaderCreatedByConfig = false;
         private void HandleConfigShaderChangeOnStartup(IDiffSpread<string> spread)
         {
-            if (FConfigShader[0] != ""  && !configWritten)
+            if (FConfigShader[0] != "" && !configWritten)
             {
                 DX11ShaderInclude FIncludeHandler = new DX11ShaderInclude();
                 List<ShaderMacro> sms = new List<ShaderMacro>();
-                
+
                 FShader = DX11Effect.FromString(FConfigShader[0], FIncludeHandler, sms.ToArray());
-                this.SetShader(FShader, true);
+                this.SetShader(FShader, !ShaderCreatedByConfig);
                 ShaderCreatedByConfig = true;
             }
         }
@@ -829,7 +829,7 @@ namespace VVVV.DX11.Nodes
                         }
                     }
                 }
-                
+
                 FShader = DX11Effect.FromString(FConfigShader[0], FIncludeHandler, sms.ToArray());
                 this.SetShader(FShader, !ShaderCreatedByConfig);
                 ShaderCreatedByConfig = true;
