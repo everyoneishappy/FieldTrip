@@ -1,0 +1,39 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		3D Volume Texture Distance Function
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
+// This token will be replaced with function name via RegExpr: "FN_"
+
+// ensures the function is defined only once per instance
+#ifndef FN_BODY 
+#define FN_BODY
+
+#ifndef SDF_FXH
+#include <packs\happy.fxh\sdf.fxh>
+#endif
+
+// Paramaters
+float4x4 FN_InvMat : FN_INVMAT;
+Texture3D FN_dVol : FN_DVOL;
+SamplerState FN_Samp : Immutable;
+
+
+float FN_ (float3 p)
+{
+	return fDistVolume(p, FN_dVol, FN_Samp, FN_InvMat);
+}
+// end of the function body
+#endif 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef SF3D
+#define SF3D FN_
+#endif
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+technique11 RemoveMe{}
+

@@ -1,0 +1,42 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		2D SDF Outline Function
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
+// This token will be replaced with function name via RegExpr: "FN_"
+
+// ensures the function is defined only once per instance
+#ifndef FN_BODY 
+#define FN_BODY
+
+#ifndef SDF_FXH
+#include <packs\happy.fxh\sdf.fxh>
+#endif
+
+// Parameters
+float FN_width : FN_WIDTH = 0.01;
+
+// Input SF2D function placeholder
+#ifndef FN_INPUT
+#define FN_INPUT length
+#endif
+
+
+float FN_ (float2 p)
+{
+	return fOpOutline(FN_INPUT(p), FN_width); //
+}
+// end of the function body
+#endif 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef SF2D
+#define SF2D FN_
+#endif
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+technique11 RemoveMe{}
+

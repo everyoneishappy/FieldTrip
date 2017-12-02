@@ -1,0 +1,39 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//		Pre Curl Vortex Function
+//
+////////////////////////////////////////////////////////////////////////////////////////////////
+// This token will be replaced with function name via RegExpr: "FN_"
+
+// ensures the function is defined only once per instance
+#ifndef FN_BODY 
+#define FN_BODY
+
+#ifndef CALC_FXH
+#include <packs\happy.fxh\calc.fxh>
+#endif
+
+// Parameters
+float2 FN_pos : FN_POS;
+float FN_radius : FN_RADIUS = 0.15;
+float FN_strength : FN_STRENGTH = 0.1;
+	
+
+float FN_ (float2 p)
+{
+	return preCurlVortex(p, FN_pos, FN_strength, FN_radius);
+}
+// end of the function body
+#endif 
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+#ifndef SF2D
+#define SF2D FN_
+#endif
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+technique11 RemoveMe{}
+

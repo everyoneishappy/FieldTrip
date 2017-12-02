@@ -1,0 +1,523 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_FractalSum.v4p" scrollx="0" scrolly="0" systemname="FT_FractalSum" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\NODE 17\Noise NODE17 Workshop\Workshop Files\Part 1\FT_FractalSum.v4p">
+   <BOUNDS type="Window" left="945" top="750" width="12855" height="14655">
+   </BOUNDS>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="29">
+   <BOUNDS type="Node" left="45" top="6555" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="45" top="6555" width="11850" height="240">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00580,0.01482,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="30">
+   <BOUNDS type="Node" left="45" top="10395" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="45" top="10395" width="11850" height="240">
+   </BOUNDS>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00580,0.01482,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="35" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="2265" top="1035" width="960" height="1650">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2265" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worley">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Basis">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="36" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="3495" top="1185" width="1365" height="945">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3495" top="1185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Ridge">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Inflection">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   </NODE>
+   <NODE systemname="FBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\FBM (SF2D Function).v4p" nodename="FBM (SF2D Function)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="4320" top="8130" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" visible="1">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1">
+   </PIN>
+   <PIN pinname="Octaves" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Function" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="525" top="1035" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="525" top="1035" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4.37">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Frequency">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="43" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="5145" top="1440" width="1350" height="1560">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5145" top="1440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Minkowski">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="44" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7155" top="1440" width="810" height="1575">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7155" top="1440" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="F2MinusF1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="50" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5595" top="675" width="2055" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5595" top="675" width="2055" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Only used for Worley Noise|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6840" top="6105" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6840" top="6105" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.52">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Persistence">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Persistence">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="58" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10500" top="6255" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10500" top="6255" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.82">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Lacunarity">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Lacunarity">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="59" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3120" top="6165" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3120" top="6165" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Octaves">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Octaves">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="60" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="3015" top="4590" width="4185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3015" top="4590" width="2835" height="1200">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Octaves is how many times we want to &apos;layer&apos; the function|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="61" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="105" top="5400" width="705" height="870">
+   </BOUNDS>
+   <BOUNDS type="Node" left="105" top="5400" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="29">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|0: Basis Only 1: FBM 2: Mulifractal|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="62" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9615" top="4500" width="4185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9615" top="4500" width="3030" height="1395">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Lacunarity controls how widely each octave&apos;s frequency is spaced apart|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="63" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6360" top="4530" width="4185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6360" top="4530" width="3045" height="1410">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Persistence controls how much the amplitude is damped at higher frequencies|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE systemname="MFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\MFBM (SF2D Function).v4p" nodename="MFBM (SF2D Function)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="6435" top="8100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" slicecount="1" visible="1" values="1.03">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1">
+   </PIN>
+   <PIN pinname="Octaves" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Function" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Lacunarity">
+   </LINK>
+   <NODE systemname="IQFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" nodename="IQFBM (SF2D Function)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="6465" top="13065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" visible="1" slicecount="1" values="0.62">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1" slicecount="1" values="1.9">
+   </PIN>
+   <PIN pinname="Octaves" visible="1" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="67" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="7770" top="13065" width="4935" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7770" top="13065" width="5130" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="http://www.iquilezles.org/www/articles/morenoise/morenoise.htm">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="68" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6405" top="12705" width="3300" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6405" top="12705" width="3300" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Other types of fractal sums are also possible|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6480" top="8475" width="5565" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6480" top="8475" width="2940" height="1140">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Mulifractal FBM will weight the signal by the strength of the previous octaves (tend to use higher perseistance values).  Also play with the &apos;center&apos; value on the noise|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="1305" top="3405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" visible="1" values="4.49">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Basis" visible="1">
+   </PIN>
+   <PIN pinname="Inflection" visible="1">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output Enum" dstnodeid="16" dstpinname="Basis">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Output Enum" dstnodeid="16" dstpinname="Inflection">
+   <LINKPOINT x="3646" y="2446">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Frequency">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output Enum" dstnodeid="16" dstpinname="Worley Distance Metric">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output Enum" dstnodeid="16" dstpinname="Worley Function">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Octaves">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="71" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="2640" top="120" width="4185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2640" top="120" width="3435" height="375">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Noise Basis Controls|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="72">
+   <BOUNDS type="Node" left="1590" top="12285" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1590" top="12285" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13680" top="735" width="10095" height="10530">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="1650" top="10020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Switch">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="74">
+   <BOUNDS type="Box" left="1290" top="3870" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1290" top="3870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input SF2D Function">
+   </LINK>
+   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="1605" top="11850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Texture" dstnodeid="72" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="SF2D Function">
+   </LINK>
+   <NODE id="25" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="555" top="1695" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="555" top="1695" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Amplitude">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Amplitude">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7560" top="7650" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7560" top="7650" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.97">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Persistence">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Persistence">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="74" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input Function">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input Function">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="73" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="73" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="73" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="77">
+   <BOUNDS type="Box" left="1230" top="2400" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1230" top="2400" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Center">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Center">
+   </LINK>
+   </PATCH>

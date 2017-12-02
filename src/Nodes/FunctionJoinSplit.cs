@@ -239,6 +239,7 @@ namespace VVVV.DX11.Node
         public void Evaluate(int SpreadMax)
         {
             if (!FInFieldTripFunction.IsChanged || !FEnabled[0]) return;
+            FHLSL[0] = "";
             FOutCustomSemantic.SliceCount = 0;
             FOutResourceSemantic.SliceCount = 0;
             SF2D ftFunc = FInFieldTripFunction[0];
@@ -349,6 +350,7 @@ namespace VVVV.DX11.Node
         public void Evaluate(int SpreadMax)
         {
             if (!FInFieldTripFunction.IsChanged || !FEnabled[0]) return;
+            FHLSL[0] = "";
             FOutCustomSemantic.SliceCount = 0;
             FOutResourceSemantic.SliceCount = 0;
             VF2D ftFunc = FInFieldTripFunction[0];
@@ -459,6 +461,7 @@ namespace VVVV.DX11.Node
         public void Evaluate(int SpreadMax)
         {
             if (!FInFieldTripFunction.IsChanged || !FEnabled[0]) return;
+            FHLSL[0] = "";
             FOutCustomSemantic.SliceCount = 0;
             FOutResourceSemantic.SliceCount = 0;
             SF3D ftFunc = FInFieldTripFunction[0];
@@ -569,6 +572,7 @@ namespace VVVV.DX11.Node
         public void Evaluate(int SpreadMax)
         {
             if (!FInFieldTripFunction.IsChanged || !FEnabled[0]) return;
+            FHLSL[0] = "";
             FOutCustomSemantic.SliceCount = 0;
             FOutResourceSemantic.SliceCount = 0;
             VF3D ftFunc = FInFieldTripFunction[0];
