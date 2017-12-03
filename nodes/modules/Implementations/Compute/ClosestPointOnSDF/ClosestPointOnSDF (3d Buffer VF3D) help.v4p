@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF\ClosestPointOnSDF (3d Buffer VF3D) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (3d Buffer VF3D) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="390" top="1065" width="12195" height="12930">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -639,7 +639,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3915" top="1785" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\Assets\Stanford Dragon.dds|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.dds|">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>

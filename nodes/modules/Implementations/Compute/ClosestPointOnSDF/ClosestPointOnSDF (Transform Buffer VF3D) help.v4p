@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF\ClosestPointOnSDF (Transform Buffer VF3D) help.v4p" scrollx="0" scrolly="0" systemname="ClosestPointOnSDF (Transform Buffer VF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (Transform Buffer VF3D) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (Transform Buffer VF3D) help.v4p" scrollx="0" scrolly="0" systemname="ClosestPointOnSDF (Transform Buffer VF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (Transform Buffer VF3D) help.v4p">
    <BOUNDS type="Window" left="405" top="1005" width="12195" height="12930">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -517,7 +517,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3915" top="1785" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\Assets\Stanford Dragon.dds|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.dds|">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>

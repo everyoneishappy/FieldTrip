@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Operators\CalculusOps\Curl\PreCurlConstrainToSDF (VF3D Function) help.v4p" systemname="PreCurlConstrainToSDF (VF3D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\PreCurlConstrainToSDF (VF3D Function) help.v4p" systemname="PreCurlConstrainToSDF (VF3D Function) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="585" top="1275" width="8775" height="12555">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -81,11 +81,11 @@
    </PIN>
    <PIN pinname="Width Defualt" slicecount="1" values="0.034">
    </PIN>
-   <PIN pinname="Sample Width XYZ" slicecount="3" visible="1" values="1,0.01,1">
+   <PIN pinname="Sample Width XYZ" slicecount="3" visible="1" values="0.25,0,0.25">
    </PIN>
    <PIN pinname="Texture Array" visible="1">
    </PIN>
-   <PIN pinname="Sample CenterXYZ" visible="1" slicecount="3" values="0,0,0">
+   <PIN pinname="Sample CenterXYZ" visible="1" slicecount="3" values="0,-0.22,0">
    </PIN>
    <PIN pinname="Random Sample" slicecount="1" values="1">
    </PIN>
@@ -93,19 +93,21 @@
    </PIN>
    <PIN pinname="Sample Count" visible="1">
    </PIN>
-   <PIN pinname="Step Size" slicecount="1" values="0.006">
+   <PIN pinname="Step Size" slicecount="1" values="0.005">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
-   <PIN pinname="Points Per Seed" slicecount="1" values="16">
+   <PIN pinname="Points Per Seed" slicecount="1" values="32">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Sample Resolution XYZ" slicecount="3" values="24,24,24">
+   <PIN pinname="Sample Resolution XYZ" slicecount="3" values="64,1,64">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" values="RK4">
    </PIN>
    </NODE>
    <NODE systemname="Gradient (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Gradient.tfx" nodename="Gradient (DX11.TextureFX)" componentmode="Hidden" id="152">
@@ -121,11 +123,11 @@
    <LINK srcnodeid="152" srcpinname="Texture Out" dstnodeid="149" dstpinname="Texture Array">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="155" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6720" top="3000" width="795" height="720">
+   <BOUNDS type="Box" left="6435" top="3240" width="795" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="6720" top="3000" width="0" height="0">
+   <BOUNDS type="Node" left="6435" top="3240" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.02,-1.09">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1.37,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -162,6 +164,8 @@
    <PIN pinname="Reset All" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="160">
@@ -219,7 +223,7 @@
    </PIN>
    <PIN pinname="Amplitude XYZ" slicecount="3" values="0.014,0.014,0.014">
    </PIN>
-   <PIN pinname="Frequency XYZ" slicecount="3" values="3.71,3.71,3.71">
+   <PIN pinname="Frequency XYZ" slicecount="3" values="4.25,4.25,4.25">
    </PIN>
    <PIN pinname="Domain Offset XYZ" slicecount="3" visible="1" values="9.81,9.81,9.81">
    </PIN>
@@ -233,7 +237,7 @@
    </BOUNDS>
    <PIN pinname="Position" visible="1" slicecount="3" values="0,0,0">
    </PIN>
-   <PIN pinname="Radius" visible="1" slicecount="1" values="0.16">
+   <PIN pinname="Radius" visible="1" slicecount="1" values="0.09">
    </PIN>
    <PIN pinname="SF3D Class" visible="1">
    </PIN>
@@ -247,7 +251,7 @@
    </PIN>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlConstrainToSDF (VF3D Function).v4p" nodename="PreCurlConstrainToSDF (VF3D Function)" componentmode="Hidden" id="150">
-   <BOUNDS type="Node" left="4890" top="5460" width="100" height="100">
+   <BOUNDS type="Node" left="4845" top="5160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
@@ -257,7 +261,7 @@
    </PIN>
    <PIN pinname="VF3D Class" visible="1">
    </PIN>
-   <PIN pinname="Radius" slicecount="1" values="0.26">
+   <PIN pinname="Radius" slicecount="1" values="-0.34">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
@@ -274,6 +278,8 @@
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="SDF Function " visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Epsilon" slicecount="1" values="0.1">
    </PIN>
    </NODE>
    <NODE systemname="VectorOp (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\VectorOp (VF3D Function).v4p" nodename="VectorOp (VF3D Function)" componentmode="Hidden" id="156">
@@ -309,7 +315,7 @@
    <LINK srcnodeid="161" srcpinname="Position Out" dstnodeid="68" dstpinname="Domain Offset XYZ">
    </LINK>
    <NODE systemname="PreCurlDirection (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\PreCurlDirection (VF3D Function).v4p" nodename="PreCurlDirection (VF3D Function)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="5205" top="4155" width="100" height="100">
+   <BOUNDS type="Node" left="5175" top="4440" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
@@ -333,7 +339,7 @@
    <LINK srcnodeid="156" srcpinname="VF3D Function" dstnodeid="150" dstpinname="PreCurl VF3D Function ">
    </LINK>
    <NODE systemname="Curl (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (VF3D Function).v4p" nodename="Curl (VF3D Function)" componentmode="Hidden" id="166">
-   <BOUNDS type="Node" left="4995" top="6090" width="100" height="100">
+   <BOUNDS type="Node" left="4845" top="5550" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -467,7 +473,7 @@
    </PIN>
    <PIN pinname="SizeXYZ" slicecount="3" values="0.34,0.34,0.34">
    </PIN>
-   <PIN pinname="Random Seed" slicecount="1" values="109">
+   <PIN pinname="Random Seed" slicecount="1" values="134">
    </PIN>
    </NODE>
    <LINK srcnodeid="174" srcpinname="XYZ" dstnodeid="54" dstpinname="Position">
@@ -498,6 +504,20 @@
    </LINK>
    <LINK srcnodeid="175" srcpinname="Output Node" dstnodeid="60" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="166" srcpinname="Output" dstnodeid="149" dstpinname="Input">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="176">
+   <BOUNDS type="Box" left="1845" top="7065" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1845" top="7065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Output Node" dstnodeid="149" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="166" srcpinname="Output" dstnodeid="176" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output Node" dstnodeid="159" dstpinname="Input">
    </LINK>
    </PATCH>

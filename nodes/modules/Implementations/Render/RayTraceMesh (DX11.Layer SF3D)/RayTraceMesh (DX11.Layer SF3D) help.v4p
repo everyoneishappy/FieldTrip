@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceMesh (DX11.Layer SF3D)\RayTraceMesh (DX11.Layer SF3D) help.v4p" systemname="RayTraceMesh (DX11.Layer SF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceMesh (DX11.Layer SF3D) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\RayTraceMesh (DX11.Layer SF3D)\RayTraceMesh (DX11.Layer SF3D) help.v4p" systemname="RayTraceMesh (DX11.Layer SF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceMesh (DX11.Layer SF3D) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="2220" top="1230" width="9450" height="11040">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -205,7 +205,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="990" top="5310" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\Assets\Stanford Dragon.obj|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.obj|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>

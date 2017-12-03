@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture\BakeTexture (DX11.Texture VF3D) help.v4p" scrollx="0" scrolly="0" systemname="BakeTexture (DX11.Texture VF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture (DX11.Texture SF3D)\BakeTexture (DX11.Texture VF3D) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\BakeTexture\BakeTexture (DX11.Texture VF3D) help.v4p" scrollx="0" scrolly="0" systemname="BakeTexture (DX11.Texture VF3D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\BakeTexture (DX11.Texture SF3D)\BakeTexture (DX11.Texture VF3D) help.v4p">
    <BOUNDS type="Window" left="2460" top="1185" width="9405" height="8430">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -79,7 +79,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="405" top="1785" width="3705" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|..\..\..\..\Assets\Stanford Dragon.obj|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.obj|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -158,11 +158,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="7" dstpinname="Geometry">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="28" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="10" dstpinname="Geometry">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="35">
    <BOUNDS type="Node" left="2130" top="7950" width="100" height="100">
@@ -331,5 +327,9 @@
    <LINK srcnodeid="39" srcpinname="Output Node" dstnodeid="10" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="39" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="10" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="7" dstpinname="Geometry">
    </LINK>
    </PATCH>

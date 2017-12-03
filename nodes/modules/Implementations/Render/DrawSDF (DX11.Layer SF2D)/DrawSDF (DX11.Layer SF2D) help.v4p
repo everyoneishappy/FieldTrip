@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" systemname="DrawSDF (DX11.Layer SF2D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" scrollx="0" scrolly="75">
-   <BOUNDS type="Window" left="165" top="2955" width="12360" height="11040">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (DX11.Layer SF2D) help.v4p" systemname="DrawSDF (DX11.Layer SF2D) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\DrawSDF (DX11.Layer SF2D) help.v4p" scrollx="0" scrolly="75">
+   <BOUNDS type="Window" left="0" top="225" width="8655" height="11100">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\Assets\logo inverse.jpg|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\logo inverse.jpg|">
    </PIN>
    </NODE>
    <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="0">
@@ -287,7 +287,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="750" top="8220" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13050" top="1770" width="15285" height="11760">
+   <BOUNDS type="Window" left="8520" top="315" width="11535" height="10020">
    </BOUNDS>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
