@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" systemname="AsTexture (DX11.Texture SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture SF2D).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" systemname="AsTexture (DX11.Texture SF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture SF2D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -209,7 +209,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5445" top="3615" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="1">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|AA Samples per Pixel|">
    </PIN>
@@ -243,7 +243,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4980" top="1890" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="R32_Float">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="R16G16B16A16_Float">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Format|">
    </PIN>
@@ -359,6 +359,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
    </LINK>
@@ -371,5 +373,17 @@
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="53">
+   <BOUNDS type="Box" left="4920" top="735" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4920" top="735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Output Node" dstnodeid="7" dstpinname="Transform In">
    </LINK>
    </PATCH>

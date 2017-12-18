@@ -25,19 +25,11 @@ float FN_persistence : FN_PERSISTENCE = 0.5;
 float FN_lacunarity : FN_LACUNARITY = 2;    
 int FN_octaves: FN_OCTAVES = 4;  
 
-// Persitance Defualt
-#ifndef FN_PERSINPUT
-float pd(float2 p)
-{
-	return FN_persistence;
-}
-#define FN_PERSINPUT pd
-#endif
+
 
 float FN_ (float2 p)
 {
-	float pers = FN_PERSINPUT(p);
-	FBM(FN_noise, FN_INPUT, p, pers, FN_lacunarity, FN_octaves);     
+	FBM(FN_noise, FN_INPUT, p, FN_persistence, FN_lacunarity, FN_octaves);     
 	return FN_noise;
 }
 // end of the function body

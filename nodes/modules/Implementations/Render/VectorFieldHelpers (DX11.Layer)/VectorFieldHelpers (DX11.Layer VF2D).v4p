@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF2D).v4p" systemname="VectorFieldHelpers (DX11.Layer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF2D).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF2D).v4p" systemname="VectorFieldHelpers (DX11.Layer VF2D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF2D).v4p" scrollx="0" scrolly="165">
    <NODE id="26" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -151,7 +151,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8055" top="645" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.58">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -293,7 +293,7 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.01">
+   <PIN pinname="Z" slicecount="1" values="0.01" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="XYZ" dstnodeid="72" dstpinname="DataXYZ">
@@ -409,5 +409,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="77" srcpinname="Compiled" dstnodeid="84" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85">
+   <BOUNDS type="Box" left="13065" top="4215" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13065" top="4215" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Z">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Z">
    </LINK>
    </PATCH>
