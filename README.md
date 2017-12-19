@@ -9,9 +9,13 @@ https://github.com/everoneishappy/happy.fxh
 https://github.com/everoneishappy/InstanceNoodles
 
 
-Feel free to use in your creative & commercial projects, just please make sure to give credit as per license below.  Use in production at your own risk.
-CCBY 2017 http://everyoneishappy.com
+Under MIT as per LICENSE.md- Feel free to use in your creative & commercial projects, please do be aeswome & provide credit as below:
 
-Special thanks to Robert "tmp" Willner (intolight.de) for the string shader node
+2017 Kyle McLean http://everyoneishappy.com
 
-http://creativecommons.org/licenses/by/4.0/
+
+
+
+Special thanks to Julien 'Vux' Vulliet for vvvv DX11 & to Robert "tmp" Willner (intolight.de) for the string shader node
+
+
