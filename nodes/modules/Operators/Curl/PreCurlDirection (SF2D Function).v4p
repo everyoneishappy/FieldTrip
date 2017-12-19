@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\PreCurlDirection (SF2D Function).v4p" systemname="PreCurlDirection (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlDirection (SF2D Function).v4p" scrollx="0" scrolly="15">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\PreCurlDirection (SF2D Function).v4p" systemname="PreCurlDirection (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\PreCurlDirection (SF2D Function).v4p" scrollx="0" scrolly="15">
    <BOUNDS type="Window" left="7080" top="2880" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -89,7 +89,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1275" top="4290" width="1815" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="cPreCurlDirection2D">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fPreCurlDirection2D">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -300,4 +300,6 @@
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="60" dstpinname="Custom Semantic">
    </LINK>
+   <INFO author="" description="" tags="Source">
+   </INFO>
    </PATCH>

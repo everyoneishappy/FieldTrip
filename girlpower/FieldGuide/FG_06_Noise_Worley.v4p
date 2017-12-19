@@ -1,0 +1,801 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_06_Noise_Worley.v4p" bgcolor="12320618" systemname="FG_06_Noise_Worley" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_06_Noise_Worley.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="630" top="255" width="10905" height="13725">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8085" top="15495" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="8250" top="16995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|2D Cursor|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.10-g8ce245eb4e\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="6315" top="15495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Inverse View" visible="1">
+   </PIN>
+   <PIN pinname="Initial Latitude" slicecount="1" values="0.06">
+   </PIN>
+   <PIN pinname="Initial Longitude" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Initial InterestXYZ" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Initial Distance" slicecount="1" values="2.77">
+   </PIN>
+   <BOUNDS type="Box" left="6315" top="15495">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="7215" top="16095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (3d Vector)" nodename="Multiply (3d Vector)" componentmode="Hidden" id="116">
+   <BOUNDS type="Node" left="6945" top="16620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="XYZ" dstnodeid="116" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Inverse View" dstnodeid="116" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="118">
+   <BOUNDS type="Node" left="6945" top="17010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|3D Cursor|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="XYZ Transformed" dstnodeid="118" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="117" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="44" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="5625" top="16230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="View">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="View" dstnodeid="119" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="5925" top="16530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Projection">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Projection" dstnodeid="121" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="131" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="15" top="915" width="21795" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15" top="915" width="6930" height="855">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Probably the most expensive of the included basis functions, but also quite interesting and flexible|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="132" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="300" top="120" width="2655" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="300" top="120" width="5730" height="615">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Worley (aka cellular) Noise|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="20">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="165">
+   <BOUNDS type="Node" left="90" top="11925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="90" top="11925" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11625" top="195" width="7500" height="7470">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.62862,0.86187,0.80098,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="186">
+   <BOUNDS type="Node" left="375" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Basis" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" visible="1" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Amplitude" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="375" top="6060">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="187">
+   <BOUNDS type="Node" left="480" top="7530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R8G8B8A8_UNorm">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="187" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="188">
+   <BOUNDS type="Node" left="225" top="11535" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="11535" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="188" srcpinname="Layer" dstnodeid="165" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Cons (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Texture 2d)" componentmode="Hidden" id="189">
+   <BOUNDS type="Node" left="405" top="10080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="405" top="10080" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="187" srcpinname="Texture" dstnodeid="189" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Output" dstnodeid="188" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="190">
+   <BOUNDS type="Node" left="630" top="7905" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R8G8B8A8_UNorm">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="192">
+   <BOUNDS type="Node" left="840" top="8280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R8G8B8A8_UNorm">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="194">
+   <BOUNDS type="Node" left="990" top="8655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R8G8B8A8_UNorm">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="190" srcpinname="Texture" dstnodeid="189" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="192" srcpinname="Texture" dstnodeid="189" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="194" srcpinname="Texture" dstnodeid="189" dstpinname="Input 4">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="206" hiddenwhenlocked="0" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="8880" top="5580" width="1290" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8880" top="5580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worley">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="sine">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Basis">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="206" srcpinname="Output Enum" dstnodeid="186" dstpinname="Basis" linkstyle="VHV">
+   <LINKPOINT x="8880" y="5940">
+   </LINKPOINT>
+   <LINKPOINT x="1395" y="5940">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="218" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8505" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Pause" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="220" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8025" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="222" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="9315" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="223" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8025" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="223" srcpinname="Output" dstnodeid="220" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="224" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="9315" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="224" srcpinname="Output" dstnodeid="222" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="230" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8835" top="1725" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8835" top="1725" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Select" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="218" srcpinname="Change" dstnodeid="230" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="230" srcpinname="Output" dstnodeid="224" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="230" srcpinname="Output" dstnodeid="223" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="233">
+   <BOUNDS type="Box" left="120" top="3360" width="1560" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="120" top="3360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="233" srcpinname="Output Enum" dstnodeid="186" dstpinname="Worley Distance Metric" linkstyle="Bezier">
+   <LINKPOINT x="180" y="4845">
+   </LINKPOINT>
+   <LINKPOINT x="1650" y="4845">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="234">
+   <BOUNDS type="Box" left="1785" top="5310" width="1395" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1785" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="F2MinusF1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="F1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="234" srcpinname="Output Enum" dstnodeid="186" dstpinname="Worley Function">
+   </LINK>
+   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="245">
+   <BOUNDS type="Node" left="2250" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Basis" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" visible="1" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Amplitude" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2250" top="6060">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="206" srcpinname="Output Enum" dstnodeid="245" dstpinname="Basis" linkstyle="VHV">
+   <LINKPOINT x="8880" y="5940">
+   </LINKPOINT>
+   <LINKPOINT x="3270" y="5940">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="242">
+   <BOUNDS type="Box" left="1995" top="3360" width="1560" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1995" top="3360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Minkowski">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="242" srcpinname="Output Enum" dstnodeid="245" dstpinname="Worley Distance Metric" linkstyle="Bezier">
+   <LINKPOINT x="2055" y="4845">
+   </LINKPOINT>
+   <LINKPOINT x="3525" y="4845">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="241">
+   <BOUNDS type="Box" left="3660" top="5310" width="1395" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3660" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="(nil)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="F1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="241" srcpinname="Output Enum" dstnodeid="245" dstpinname="Worley Function">
+   </LINK>
+   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="251">
+   <BOUNDS type="Node" left="4125" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Basis" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" visible="1" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Amplitude" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4125" top="6060">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="206" srcpinname="Output Enum" dstnodeid="251" dstpinname="Basis" linkstyle="VHV">
+   <LINKPOINT x="8880" y="5940">
+   </LINKPOINT>
+   <LINKPOINT x="5145" y="5940">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="248">
+   <BOUNDS type="Box" left="3870" top="3360" width="1560" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3870" top="3360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Minkowski">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="248" srcpinname="Output Enum" dstnodeid="251" dstpinname="Worley Distance Metric" linkstyle="Bezier">
+   <LINKPOINT x="3930" y="4845">
+   </LINKPOINT>
+   <LINKPOINT x="5400" y="4845">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="247">
+   <BOUNDS type="Box" left="5535" top="5310" width="1395" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5535" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="(nil)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="F1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="247" srcpinname="Output Enum" dstnodeid="251" dstpinname="Worley Function">
+   </LINK>
+   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="257">
+   <BOUNDS type="Node" left="6000" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Basis" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" visible="1" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Amplitude" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="6000" top="6060">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="206" srcpinname="Output Enum" dstnodeid="257" dstpinname="Basis" linkstyle="VHV">
+   <LINKPOINT x="8880" y="5940">
+   </LINKPOINT>
+   <LINKPOINT x="7020" y="5940">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="254">
+   <BOUNDS type="Box" left="5775" top="3360" width="1560" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5775" top="3360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Chebyshev">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Distance Metric|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="254" srcpinname="Output Enum" dstnodeid="257" dstpinname="Worley Distance Metric" linkstyle="Bezier">
+   <LINKPOINT x="5835" y="4845">
+   </LINKPOINT>
+   <LINKPOINT x="7275" y="4845">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="253">
+   <BOUNDS type="Box" left="7410" top="5310" width="1395" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7410" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="(nil)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="F1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Worley Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="253" srcpinname="Output Enum" dstnodeid="257" dstpinname="Worley Function">
+   </LINK>
+   <LINK srcnodeid="245" srcpinname="Output" dstnodeid="190" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="251" srcpinname="Output" dstnodeid="192" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="257" srcpinname="Output" dstnodeid="194" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="258">
+   <BOUNDS type="Box" left="8505" top="915" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8505" top="915" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="258" srcpinname="Y Output Value" dstnodeid="218" dstpinname="Period">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="259">
+   <BOUNDS type="Box" left="8625" top="315" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8625" top="315" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Pause">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="Y Output Value" dstnodeid="218" dstpinname="Pause" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="261" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="345" top="10890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="TranslateXY" visible="1" slicecount="8" values="-0.5,0.5,0.5,0.5,-0.5,-0.5,0.5,-0.5">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1" slicecount="8" values="1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="261" srcpinname="Transform Out" dstnodeid="188" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="262" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="120" top="2550" width="5730" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="2550" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="220" srcpinname="Output" dstnodeid="262" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Unzip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Value)" componentmode="Hidden" id="263" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1785" top="4575" width="5715" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1785" top="4575" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="222" srcpinname="Output" dstnodeid="263" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="265" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1785" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="264" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="120" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="262" srcpinname="Output 1" dstnodeid="264" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output 1" dstnodeid="265" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="264" srcpinname="Enum" dstnodeid="233" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="265" srcpinname="Enum" dstnodeid="234" dstpinname="Input Enum">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="267" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3675" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="266" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="2010" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="266" srcpinname="Enum" dstnodeid="242" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="267" srcpinname="Enum" dstnodeid="241" dstpinname="Input Enum">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="269" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5535" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="268" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3885" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="268" srcpinname="Enum" dstnodeid="248" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="269" srcpinname="Enum" dstnodeid="247" dstpinname="Input Enum">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="271" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="7440" top="4950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="270" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5790" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" slicecount="1" visible="1" values="6">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="270" srcpinname="Enum" dstnodeid="254" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="271" srcpinname="Enum" dstnodeid="253" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="262" srcpinname="Output 2" dstnodeid="266" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="262" srcpinname="Output 3" dstnodeid="268" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="262" srcpinname="Output 4" dstnodeid="270" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output 4" dstnodeid="271" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output 3" dstnodeid="269" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="263" srcpinname="Output 2" dstnodeid="267" dstpinname="Ord Value">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="272">
+   <BOUNDS type="Node" left="4560" top="7875" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4560" top="7875" width="3615" height="240">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="https://en.wikipedia.org/wiki/Worley_noise">
+   </PIN>
+   </NODE>
+   </PATCH>

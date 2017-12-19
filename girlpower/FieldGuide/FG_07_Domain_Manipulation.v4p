@@ -1,0 +1,559 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_07_Domain_Manipulation.v4p" bgcolor="12320618" systemname="FG_07_Domain_Manipulation" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_07_Domain_Manipulation.v4p" scrollx="15" scrolly="0">
+   <BOUNDS type="Window" left="0" top="540" width="9780" height="12210">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8085" top="15495" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="8250" top="16995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|2D Cursor|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.10-g8ce245eb4e\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="6315" top="15495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Inverse View" visible="1">
+   </PIN>
+   <PIN pinname="Initial Latitude" slicecount="1" values="0.06">
+   </PIN>
+   <PIN pinname="Initial Longitude" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Initial InterestXYZ" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Initial Distance" slicecount="1" values="2.77">
+   </PIN>
+   <BOUNDS type="Box" left="6315" top="15495">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="7215" top="16095" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (3d Vector)" nodename="Multiply (3d Vector)" componentmode="Hidden" id="116">
+   <BOUNDS type="Node" left="6945" top="16620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="XYZ UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="XYZ" dstnodeid="116" dstpinname="XYZ UnTransformed">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Inverse View" dstnodeid="116" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="118">
+   <BOUNDS type="Node" left="6945" top="17010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|3D Cursor|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="XYZ Transformed" dstnodeid="118" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="117" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="44" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="5625" top="16230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="View">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="View" dstnodeid="119" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="5925" top="16530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="Projection">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Projection" dstnodeid="121" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="131" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="255" top="795" width="21795" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="255" top="795" width="6330" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Domain manipulation is the useful technique of ‘warping’ the space that a field function uses|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="132" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="300" top="120" width="2655" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="300" top="120" width="5940" height="585">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Domain Manipulation|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="20">
+   </PIN>
+   </NODE>
+   <NODE systemname="DomainRepeat (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF3D Function).v4p" nodename="DomainRepeat (SF3D Function)" componentmode="Hidden" id="224">
+   <BOUNDS type="Node" left="2535" top="6045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="1440" top="6870" width="19440" height="13425">
+   </BOUNDS>
+   <PIN pinname="Repetition Operation" slicecount="1" visible="1" values="|Ploar XZ|">
+   </PIN>
+   <PIN pinname="Size XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="223" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4095" top="5430" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4095" top="5430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="8,1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="223" srcpinname="Y Output Value" dstnodeid="224" dstpinname="Size XYZ">
+   </LINK>
+   <NODE systemname="HexPrismSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\HexPrismSDF (SF3D Function).v4p" nodename="HexPrismSDF (SF3D Function)" componentmode="Hidden" id="222">
+   <BOUNDS type="Node" left="1005" top="2940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" slicecount="3" visible="1" values="0.49,0,0">
+   </PIN>
+   <PIN pinname="Rotate XYZ" slicecount="3" values="0.25,-0.25,0">
+   </PIN>
+   <PIN pinname="Size XY" slicecount="2" visible="1" values="0.06,0.42">
+   </PIN>
+   </NODE>
+   <NODE systemname="DomainRepeat (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF3D Function).v4p" nodename="DomainRepeat (SF3D Function)" componentmode="Hidden" id="221">
+   <BOUNDS type="Node" left="4575" top="6855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Window" left="1440" top="6870" width="19440" height="13425">
+   </BOUNDS>
+   <PIN pinname="Repetition Operation" slicecount="1" visible="1" values="|Wrap XZ|">
+   </PIN>
+   <PIN pinname="Size XYZ" visible="1" slicecount="3" values="0.62,0.62,0.62">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="224" srcpinname="Output" dstnodeid="221" dstpinname="Input">
+   </LINK>
+   <NODE systemname="DomainDistortion (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainDistortion (SF3D Function).v4p" nodename="DomainDistortion (SF3D Function)" componentmode="Hidden" id="220">
+   <BOUNDS type="Node" left="6765" top="8520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Distortion Strength" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="221" srcpinname="Output" dstnodeid="220" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Noise (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (VF3D Function).v4p" nodename="Noise (VF3D Function)" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="7440" top="7560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Frequency XYZ" slicecount="3" values="0.41,0.41,0.41">
+   </PIN>
+   <PIN pinname="Amplitude XYZ" slicecount="3" values="1.29,1.29,1.29">
+   </PIN>
+   <PIN pinname="Domain Offset XYZ" slicecount="3" values="-13.58,-13.58,-13.58">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="218">
+   <BOUNDS type="Node" left="15" top="9630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15" top="9630" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9660" top="645" width="5100" height="5595">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.35834,0.40403,0.36035,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|(A) Base Shape|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.10-g8ce245eb4e\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="217">
+   <BOUNDS type="Node" left="3555" top="8220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Initial Longitude" slicecount="1" values="-0.05">
+   </PIN>
+   <PIN pinname="Initial Latitude" slicecount="1" values="0.16">
+   </PIN>
+   <PIN pinname="Initial Distance" slicecount="1" values="2.2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="View" dstnodeid="218" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="217" srcpinname="Projection" dstnodeid="218" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="216">
+   <BOUNDS type="Node" left="210" top="9300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="210" top="9300">
+   </BOUNDS>
+   <PIN pinname="March Max Distance" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="March Max Iterations" slicecount="1" values="80">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="216" srcpinname="Layer" dstnodeid="218" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="215">
+   <BOUNDS type="Node" left="2295" top="9630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2295" top="9630" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14610" top="660" width="5100" height="5595">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.35834,0.40403,0.36035,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|(B) Polar Repeat|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="View" dstnodeid="215" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="217" srcpinname="Projection" dstnodeid="215" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="214">
+   <BOUNDS type="Node" left="2490" top="9300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2490" top="9300">
+   </BOUNDS>
+   <PIN pinname="March Max Distance" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="March Max Iterations" slicecount="1" values="80">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="214" srcpinname="Layer" dstnodeid="215" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="224" srcpinname="Output" dstnodeid="214" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="213">
+   <BOUNDS type="Node" left="4575" top="9630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4575" top="9630" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9675" top="6180" width="5100" height="5595">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.35834,0.40403,0.36035,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|(C) Grid Repeat|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="View" dstnodeid="213" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="217" srcpinname="Projection" dstnodeid="213" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="212">
+   <BOUNDS type="Node" left="4770" top="9300" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4770" top="9300">
+   </BOUNDS>
+   <PIN pinname="March Max Distance" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="March Max Iterations" slicecount="1" values="80">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Layer" dstnodeid="213" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="211">
+   <BOUNDS type="Node" left="6810" top="9630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6810" top="9630" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14625" top="6195" width="5100" height="5595">
+   </BOUNDS>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.35834,0.40403,0.36035,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|(D) Noise|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="217" srcpinname="View" dstnodeid="211" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="217" srcpinname="Projection" dstnodeid="211" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="210">
+   <BOUNDS type="Node" left="7005" top="9300" width="1800" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7005" top="9300">
+   </BOUNDS>
+   <PIN pinname="March Max Distance" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="March Max Iterations" slicecount="1" values="80">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   <PIN pinname="March Step Length" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="210" srcpinname="Layer" dstnodeid="211" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="209" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="2670" top="5730" width="975" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2670" top="5730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Polar XZ|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|Wrap X|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="209" srcpinname="Output Enum" dstnodeid="224" dstpinname="Repetition Operation">
+   </LINK>
+   <LINK srcnodeid="221" srcpinname="Output" dstnodeid="212" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="208" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4800" top="6540" width="1080" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4800" top="6540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Wrap XZ|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|Wrap X|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Output Enum" dstnodeid="221" dstpinname="Repetition Operation">
+   </LINK>
+   <LINK srcnodeid="220" srcpinname="Output" dstnodeid="210" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="207" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="180" top="5280" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="180" top="5280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="207" srcpinname="Output Node" dstnodeid="216" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="207" srcpinname="Output Node" dstnodeid="224" dstpinname="Input">
+   </LINK>
+   <NODE systemname="PolyhedronSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PolyhedronSDF (SF3D Function).v4p" nodename="PolyhedronSDF (SF3D Function)" componentmode="Hidden" id="206">
+   <BOUNDS type="Node" left="1770" top="3690" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1" slicecount="3" values="0.3,0,0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Octahedron">
+   </PIN>
+   <PIN pinname="Rotate XYZ" visible="1" slicecount="3" values="0,0,0.18">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.16">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="205">
+   <BOUNDS type="Node" left="195" top="4830" width="1650" height="270">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="204" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="210" top="3990" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="210" top="3990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Switch Base Shape|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="205" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="222" srcpinname="Output" dstnodeid="205" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Output" dstnodeid="205" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="205" srcpinname="Output" dstnodeid="207" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="225">
+   <BOUNDS type="Node" left="3390" top="3075" width="13590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3390" top="3075" width="5025" height="1800">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|In this example we use a single 3D SDF primitive, and using nothing but domain manipulation we create a distorted mesh grid from the shape.  Each step is individually raymached to illustrate|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="226">
+   <BOUNDS type="Node" left="7215" top="6795" width="5190" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7215" top="6795" width="2010" height="735">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Note that we are using the 3D vector valued version of the noise node here|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="227">
+   <BOUNDS type="Box" left="7455" top="7920" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7455" top="7920" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="227" srcpinname="Output Node" dstnodeid="220" dstpinname="Distortion Function">
+   </LINK>
+   <LINK srcnodeid="219" srcpinname="Output" dstnodeid="227" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

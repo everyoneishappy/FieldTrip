@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Curl (VF3D Function).v4p" systemname="Curl (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Classes\Curl (VF3D Function).v4p" scrollx="15" scrolly="15">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\Curl (VF3D Function).v4p" systemname="Curl (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Classes\Curl (VF3D Function).v4p" scrollx="15" scrolly="15">
    <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -442,4 +442,6 @@
    </LINK>
    <LINK srcnodeid="77" srcpinname="Resource Semantics" dstnodeid="75" dstpinname="Resource Semantic">
    </LINK>
+   <INFO author="" description="" tags="Operator">
+   </INFO>
    </PATCH>

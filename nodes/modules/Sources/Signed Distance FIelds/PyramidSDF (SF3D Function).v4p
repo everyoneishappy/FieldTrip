@@ -614,4 +614,6 @@
    </NODE>
    <LINK srcnodeid="76" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
+   <INFO author="" description="" tags="Source">
+   </INFO>
    </PATCH>

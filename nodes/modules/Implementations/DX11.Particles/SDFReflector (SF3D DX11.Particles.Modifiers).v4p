@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Miscellaneous\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p" scrollx="15" scrolly="0" systemname="SDFReflector (SF3D DX11.Particles.Modifiers)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p" scrollx="15" scrolly="0" systemname="SDFReflector (SF3D DX11.Particles.Modifiers)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\DX11.Particles\SDFReflector (SF3D DX11.Particles.Modifiers).v4p">
    <BOUNDS type="Window" left="1320" top="1485" width="15585" height="12900">
    </BOUNDS>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
@@ -224,7 +224,7 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <INFO author="tmp" description="Gives particles a color" tags="">
+   <INFO author="tmp" description="Gives particles a color" tags="Implementation">
    </INFO>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>

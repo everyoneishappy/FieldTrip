@@ -17,8 +17,12 @@ float4x4 FN_InvMat : FN_INVMAT =  { 1, 0, 0,  0,
  									0, 0, 1,  0, 
   									0, 0, 0,  1  };
 Texture2D FN_vfTex : FN_VFTEX;
-SamplerState FN_Samp : Immutable;
-
+SamplerState FN_Samp : Immutable
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap;
+    AddressV = Wrap;
+};
 
 float FN_ (float2 p)
 {

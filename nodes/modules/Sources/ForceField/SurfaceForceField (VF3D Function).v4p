@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\SurfaceForceField (VF3D Function).v4p" systemname="SurfaceForceField (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\SurfaceForceField (VF3D Function).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\ForceField\SurfaceForceField (VF3D Function).v4p" systemname="SurfaceForceField (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\SurfaceForceField (VF3D Function).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -562,4 +562,6 @@
    </LINK>
    <LINK srcnodeid="87" srcpinname="Resource Semantics" dstnodeid="85" dstpinname="Resource Semantic">
    </LINK>
+   <INFO author="" description="" tags="Source">
+   </INFO>
    </PATCH>

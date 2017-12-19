@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Formula\Formula (SF3D Function).v4p" scrollx="0" scrolly="0" systemname="Formula (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\Formula\Formula (SF3D Function).v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (SF3D Function).v4p" scrollx="0" scrolly="0" systemname="Formula (SF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\Patches\! Shaders\FieldTripResearch\Formula\Formula (SF3D Function).v4p">
    <BOUNDS type="Window" left="14040" top="2160" width="13155" height="11715">
    </BOUNDS>
    <NODE systemname="Join (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF3D)" componentmode="Hidden" id="0">
@@ -212,4 +212,6 @@
    </LINK>
    <LINK srcnodeid="14" srcpinname="Output String" dstnodeid="0" dstpinname="HLSL">
    </LINK>
+   <INFO author="" description="" tags="Source">
+   </INFO>
    </PATCH>

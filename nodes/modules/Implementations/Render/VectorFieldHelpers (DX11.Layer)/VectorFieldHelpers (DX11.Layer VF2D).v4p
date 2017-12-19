@@ -293,7 +293,7 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.01" visible="1">
+   <PIN pinname="Z" slicecount="1" visible="1" values="0.01">
    </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="XYZ" dstnodeid="72" dstpinname="DataXYZ">
@@ -426,4 +426,6 @@
    </NODE>
    <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Z">
    </LINK>
+   <INFO author="" description="" tags="Implementation">
+   </INFO>
    </PATCH>

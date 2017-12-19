@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\ScalarOp (VF3D Function).v4p" systemname="ScalarOp (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\ScalarOp (VF3D Function).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="33180" top="2205" width="14670" height="12255">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (VF3D Function).v4p" systemname="ScalarOp (VF3D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\ScalarOp (VF3D Function).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="8475" top="585" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -758,4 +758,6 @@
    </LINK>
    <LINK srcnodeid="120" srcpinname="Output" dstnodeid="115" dstpinname="Resource Semantic">
    </LINK>
+   <INFO author="" description="" tags="Operator">
+   </INFO>
    </PATCH>

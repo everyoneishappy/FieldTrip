@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" bgcolor="12320618" scrollx="0" scrolly="0" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p">
-   <BOUNDS type="Window" left="0" top="0" width="22470" height="12060">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" bgcolor="12320618" scrollx="0" scrolly="-360" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p">
+   <BOUNDS type="Window" left="195" top="1110" width="22470" height="12060">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="76" systemname="IOBox (String)">
    <BOUNDS type="Node" left="14250" top="3450" width="975" height="270">
@@ -141,6 +141,8 @@
    </BOUNDS>
    <BOUNDS type="Box" left="13935" top="6570">
    </BOUNDS>
+   <BOUNDS type="Window" left="1020" top="2955" width="12750" height="11100">
+   </BOUNDS>
    </NODE>
    <NODE systemname="FieldViz (DX11.Layer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\FieldViz (DX11.Layer VF2D).v4p" nodename="FieldViz (DX11.Layer VF2D)" componentmode="Hidden" id="57">
    <BOUNDS type="Node" left="18000" top="5280" width="100" height="100">
@@ -229,9 +231,9 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE systemname="FieldSample (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (2D Buffer VF2D).v4p" nodename="FieldSample (2d Buffer VF2D)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="15390" top="4650" width="100" height="100">
+   <BOUNDS type="Node" left="27930" top="5880" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="15390" top="4650">
+   <BOUNDS type="Box" left="27930" top="5880">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (Value Buffer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (Value Buffer SF2D).v4p" nodename="FieldSample (Value Buffer SF2D)" componentmode="Hidden" id="87">
@@ -399,9 +401,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="1740" top="8940" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="9375" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="8940">
+   <BOUNDS type="Box" left="1635" top="9375">
    </BOUNDS>
    <BOUNDS type="Window" left="4710" top="1230" width="22065" height="12255">
    </BOUNDS>
@@ -413,11 +415,11 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\OutlineSDF (SF2D Function).v4p" nodename="OutlineSDF (SF2D Function)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="1740" top="8205" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="8640" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="690" top="3030" width="14670" height="12255">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="8205">
+   <BOUNDS type="Box" left="1635" top="8640">
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\OutlineSDF (SF3D Function).v4p" nodename="OutlineSDF (SF3D Function)" componentmode="Hidden" id="35">
@@ -433,15 +435,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="CircleSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CircleSDF (SF2D Function).v4p" nodename="CircleSDF (SF2D Function)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="465" top="8625" width="100" height="100">
+   <BOUNDS type="Node" left="360" top="9060" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="465" top="8625">
+   <BOUNDS type="Box" left="360" top="9060">
    </BOUNDS>
    </NODE>
    <NODE systemname="TextureSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TextureSDF (SF2D Function).v4p" nodename="TextureSDF (SF2D Function)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="465" top="9015" width="100" height="100">
+   <BOUNDS type="Node" left="360" top="9450" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="465" top="9015">
+   <BOUNDS type="Box" left="360" top="9450">
    </BOUNDS>
    </NODE>
    <NODE systemname="VolumeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\VolumeSDF (SF3D Function).v4p" nodename="VolumeSDF (SF3D Function)" componentmode="Hidden" id="21">
@@ -490,6 +492,8 @@
    <BOUNDS type="Node" left="6225" top="4935" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="6225" top="4935">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8475" top="585" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Cross (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Cross\Cross (VF3D Function).v4p" nodename="Cross (VF3D Function)" componentmode="Hidden" id="49">
@@ -615,9 +619,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="TrianlgeSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TrianlgeSDF (SF2D Function).v4p" nodename="TrianlgeSDF (SF2D Function)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="465" top="9405" width="100" height="100">
+   <BOUNDS type="Node" left="360" top="9840" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="465" top="9405">
+   <BOUNDS type="Box" left="360" top="9840">
    </BOUNDS>
    </NODE>
    <NODE systemname="SphereSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\SphereSDF (SF3D Function).v4p" nodename="SphereSDF (SF3D Function)" componentmode="Hidden" id="106">
@@ -627,9 +631,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="LineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\LineSDF (SF2D Function).v4p" nodename="LineSDF (SF2D Function)" componentmode="Hidden" id="107">
-   <BOUNDS type="Node" left="465" top="9780" width="100" height="100">
+   <BOUNDS type="Node" left="360" top="10215" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="465" top="9780">
+   <BOUNDS type="Box" left="360" top="10215">
    </BOUNDS>
    </NODE>
    <NODE systemname="HeightFieldSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\HeightFieldSDF (SF3D Function).v4p" nodename="HeightFieldSDF (SF3D Function)" componentmode="Hidden" id="109">
@@ -637,17 +641,19 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3045" top="6915">
    </BOUNDS>
+   <BOUNDS type="Window" left="9045" top="4080" width="11640" height="11055">
+   </BOUNDS>
    </NODE>
    <NODE systemname="BoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BoxSDF (SF2D Function).v4p" nodename="BoxSDF (SF2D Function)" componentmode="Hidden" id="111">
-   <BOUNDS type="Node" left="465" top="8235" width="100" height="100">
+   <BOUNDS type="Node" left="360" top="8670" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="465" top="8235">
+   <BOUNDS type="Box" left="360" top="8670">
    </BOUNDS>
    </NODE>
    <NODE systemname="BezierSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BezierSDF (SF2D Function).v4p" nodename="BezierSDF (SF2D Function)" componentmode="Hidden" id="112">
-   <BOUNDS type="Node" left="1740" top="9855" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="10290" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="9855">
+   <BOUNDS type="Box" left="1635" top="10290">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainRepeat (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF2D Function).v4p" nodename="DomainRepeat (SF2D Function)" componentmode="Hidden" id="113">
@@ -683,15 +689,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="GridSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\GridSDF (SF2D Function).v4p" nodename="GridSDF (SF2D Function)" componentmode="Hidden" id="108">
-   <BOUNDS type="Node" left="1740" top="9240" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="9675" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="9240">
+   <BOUNDS type="Box" left="1635" top="9675">
    </BOUNDS>
    </NODE>
    <NODE systemname="TruchetSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D Function).v4p" nodename="TruchetSDF (SF2D Function)" componentmode="Hidden" id="130">
-   <BOUNDS type="Node" left="1740" top="9540" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="9975" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="9540">
+   <BOUNDS type="Box" left="1635" top="9975">
    </BOUNDS>
    </NODE>
    <PACK Name="dx11" Version="1.0.2">
@@ -709,7 +715,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="8745" top="5610">
    </BOUNDS>
-   <BOUNDS type="Window" left="28800" top="3030" width="14670" height="12255">
+   <BOUNDS type="Window" left="8745" top="945" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DJoin (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DJoin (VF3D Function).v4p" nodename="Vector3DJoin (VF3D Function)" componentmode="Hidden" id="134">
@@ -797,9 +803,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="166" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="435" top="7650" width="975" height="270">
+   <BOUNDS type="Node" left="330" top="8085" width="975" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="435" top="7650" width="1530" height="315">
+   <BOUNDS type="Box" left="330" top="8085" width="1530" height="315">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|2D SDF|">
    </PIN>
@@ -815,9 +821,9 @@
    </PIN>
    </NODE>
    <NODE systemname="RoundBoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\RoundBoxSDF (SF2D Function).v4p" nodename="RoundBoxSDF (SF2D Function)" componentmode="Hidden" id="167">
-   <BOUNDS type="Node" left="1740" top="8580" width="100" height="100">
+   <BOUNDS type="Node" left="1635" top="9015" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1740" top="8580">
+   <BOUNDS type="Box" left="1635" top="9015">
    </BOUNDS>
    </NODE>
    <NODE systemname="BoxSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BoxSDF (SF3D Function).v4p" nodename="BoxSDF (SF3D Function)" componentmode="Hidden" id="168">
@@ -1055,9 +1061,25 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainMirror (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainMirror (SF3D Function).v4p" nodename="DomainMirror (SF3D Function)" componentmode="Hidden" id="202">
-   <BOUNDS type="Node" left="9015" top="8535" width="100" height="100">
+   <BOUNDS type="Node" left="9045" top="8895" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9015" top="8535">
+   <BOUNDS type="Box" left="9045" top="8895">
+   </BOUNDS>
+   </NODE>
+   <INFO author="" description="" tags="">
+   </INFO>
+   <NODE systemname="PlaneSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PlaneSDF (SF3D Function).v4p" nodename="PlaneSDF (SF3D Function)" componentmode="Hidden" id="203">
+   <BOUNDS type="Node" left="1605" top="7305" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="TrianlgeSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TrianlgeSDF (SF3D Function).v4p" nodename="TrianlgeSDF (SF3D Function)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="330" top="7305" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DomainLookUp (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainLookUp (SF3D Function).v4p" nodename="DomainLookUp (SF3D Function)" componentmode="Hidden" id="205">
+   <BOUNDS type="Node" left="9045" top="9285" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9045" top="9285">
    </BOUNDS>
    </NODE>
    </PATCH>

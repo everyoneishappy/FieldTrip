@@ -372,20 +372,6 @@
    </LINK>
    <LINK srcnodeid="166" srcpinname="Layer Out" dstnodeid="165" dstpinname="Layers">
    </LINK>
-   <NODE systemname="GridSplit (Transform)" filename="%VVVV%\packs\mp.essentials\nodes\modules\transform\GridSplit (Transform).v4p" nodename="GridSplit (Transform)" componentmode="Hidden" id="167" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="7200" top="6585" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Columns" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="7200" top="6585">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="168">
    <BOUNDS type="Node" left="750" top="8220" width="100" height="100">
    </BOUNDS>
@@ -397,28 +383,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="162" srcpinname="Output Enum" dstnodeid="157" dstpinname="Combination Operation">
-   </LINK>
-   <NODE systemname="Unzip (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Transform)" componentmode="Hidden" id="171" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="7200" top="6975" width="600" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7200" top="6975" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   <PIN pinname="Output Count" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Output 3" visible="1">
-   </PIN>
-   <PIN pinname="Output 4" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="167" srcpinname="Transform Out" dstnodeid="171" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="171" srcpinname="Output 1" dstnodeid="160" dstpinname="Transform" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="173">
    <BOUNDS type="Node" left="1725" top="4680" width="100" height="100">
@@ -474,8 +438,6 @@
    <PIN pinname="Color" slicecount="1" values="|0.39863,1.00000,0.13811,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="171" srcpinname="Output 2" dstnodeid="174" dstpinname="Transform" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="174" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="173" srcpinname="Output" dstnodeid="174" dstpinname="Input">
@@ -592,10 +554,6 @@
    </NODE>
    <LINK srcnodeid="180" srcpinname="Output" dstnodeid="178" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="171" srcpinname="Output 3" dstnodeid="175" dstpinname="Transform" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="171" srcpinname="Output 4" dstnodeid="178" dstpinname="Transform" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="178" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 4">
@@ -698,14 +656,42 @@
    </LINK>
    <LINK srcnodeid="183" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
-   <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="185" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="7200" top="6240" width="100" height="100">
+   <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="186" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8010" top="6660" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
+   <PIN pinname="TranslateXY" visible="1" slicecount="8" values="-0.5,0.5,0.5,0.5,-0.5,-0.5,0.5,-0.5">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1" slicecount="8" values="1,1,1,1,1,1,1,1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="185" srcpinname="Transform Out" dstnodeid="167" dstpinname="Transform In">
+   <NODE systemname="Unzip (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Unzip (Transform)" componentmode="Hidden" id="187" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="8010" top="6960" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8010" top="6960" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 2" visible="1">
+   </PIN>
+   <PIN pinname="Output 3" visible="1">
+   </PIN>
+   <PIN pinname="Output 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="186" srcpinname="Transform Out" dstnodeid="187" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 1" dstnodeid="160" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 2" dstnodeid="174" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 3" dstnodeid="175" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 4" dstnodeid="178" dstpinname="Transform" hiddenwhenlocked="1">
    </LINK>
    </PATCH>

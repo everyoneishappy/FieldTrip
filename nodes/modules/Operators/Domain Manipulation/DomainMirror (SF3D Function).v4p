@@ -550,4 +550,6 @@
    </LINK>
    <LINK srcnodeid="74" srcpinname="NormalizedXYZ" dstnodeid="72" dstpinname="InputXYZ">
    </LINK>
+   <INFO author="" description="" tags="Operator">
+   </INFO>
    </PATCH>

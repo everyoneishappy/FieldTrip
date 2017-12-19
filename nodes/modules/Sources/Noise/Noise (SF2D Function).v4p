@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="2430" scrolly="0">
-   <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" systemname="Noise (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise (SF2D Function).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="3255" top="3195" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -315,10 +315,10 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.47">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
    </NODE>
-   <INFO author="Everyoneishappy" description="" tags="FieldTrip, noise.fxh">
+   <INFO author="" description="" tags="Source">
    </INFO>
    <NODE systemname="Noise_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise_SF2D.fx" nodename="Noise_SF2D (DX11.Effect)" componentmode="Hidden" id="97">
    <BOUNDS type="Node" left="75" top="2910" width="100" height="100">
@@ -401,13 +401,17 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6150" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.71">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Shape">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 4">

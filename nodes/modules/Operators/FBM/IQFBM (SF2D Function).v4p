@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" systemname="IQFBM (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" scrollx="450" scrolly="0">
-   <BOUNDS type="Window" left="7605" top="1875" width="13335" height="12030">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\FBM\IQFBM (SF2D Function).v4p" systemname="IQFBM (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" scrollx="450" scrolly="0">
+   <BOUNDS type="Window" left="11655" top="2130" width="13335" height="12030">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -63,7 +63,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="4">
+   <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
    </PIN>
@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6240" top="4335" width="1125" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="cFBMNoiseS2D">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fIQFBMNoiseS2D">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -353,15 +353,15 @@
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="110">
    <BOUNDS type="Node" left="1800" top="8760" width="4980" height="270">
    </BOUNDS>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="CarriageReturnLineFeed">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="|#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Scalar FBM Fractal Sum&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;cFBMNoiseS2D_0_&quot;&cr;&lf;#ifndef SF2D&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef cFBMNoiseS2D_0_INPUT&cr;&lf;#define cFBMNoiseS2D_0_INPUT placeHolderS2&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define FBMS2(f, p, persistence, lacunarity, octaves)          &tab;&tab;&tab;&tab;\&cr;&lf;    float sum##f = 0.0;                                                  &tab;\&cr;&lf;    float amp##f = 1.0;                                                     \&cr;&lf;    float totalAmp##f = 0.0;  &tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;\&cr;&lf;&tab;float freq##f = 1.0;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;&tab;\&cr;&lf;    for(int i##f=0; i##f &lt;= octaves; i##f++)                                \&cr;&lf;    {                                                                       \&cr;&lf;        float basis##f = f((p+i##f*27.3) * freq##f) * amp##f;               \&cr;&lf;        sum##f += basis##f;                                                 \&cr;&lf;        totalAmp##f += abs(amp##f);                                         \&cr;&lf;        amp##f *= persistence;                                              \&cr;&lf;        freq##f *= lacunarity;                                           &tab;\&cr;&lf;    }                                                                       \&cr;&lf;    float cFBMNoiseS2D_0_fbm = sum##f/totalAmp##f&cr;&lf;&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float cFBMNoiseS2D_0_persistence : cFBMNoiseS2D_0_PERSISTENCE = 0.5;  &cr;&lf;float cFBMNoiseS2D_0_lacunarity : cFBMNoiseS2D_0_LACUNARITY = 2;    &cr;&lf;int cFBMNoiseS2D_0_octaves: cFBMNoiseS2D_0_OCTAVES = 4;  &cr;&lf;&cr;&lf;float cFBMNoiseS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;FBMS2(cFBMNoiseS2D_0_INPUT, p, cFBMNoiseS2D_0_persistence, cFBMNoiseS2D_0_lacunarity, cFBMNoiseS2D_0_octaves);&cr;&lf;&tab;float freq = 1.0;&cr;&lf;&tab;float amp = 1.0;&tab;&cr;&lf;&tab;float sum = 0.0;&cr;&lf;&tab;float totalAmp = 0.0;&cr;&lf;&tab; for(int i=0; i &lt;= cFBMNoiseS2D_0_octaves; i++)                                &cr;&lf;&tab;    {                                                                       &cr;&lf;&tab;        float basis = cFBMNoiseS2D_0_INPUT((p+i*27.3) * freq) * amp;               &cr;&lf;&tab;        sum += basis;                                                 &cr;&lf;&tab;        totalAmp += abs(amp);                                         &cr;&lf;&tab;        amp *= cFBMNoiseS2D_0_persistence;                                              &cr;&lf;&tab;        freq *= cFBMNoiseS2D_0_lacunarity;                                           &tab;&cr;&lf;&tab;    }                     &cr;&lf;&tab;return sum / totalAmp;&cr;&lf;}&cr;&lf;&cr;&lf;#define SF2D cFBMNoiseS2D_0_&cr;&lf;&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Scalar IQ FBM Fractal Sum&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fIQFBMNoiseS2D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fIQFBMNoiseS2D_0_BODY &cr;&lf;#define fIQFBMNoiseS2D_0_BODY&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input SF2D function placeholder&cr;&lf;#ifndef fIQFBMNoiseS2D_0_INPUT&cr;&lf;#define fIQFBMNoiseS2D_0_INPUT placeHolderS2&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;// parameters&cr;&lf;float fIQFBMNoiseS2D_0_persistence : fIQFBMNoiseS2D_0_PERSISTENCE = 0.5;  &cr;&lf;float fIQFBMNoiseS2D_0_lacunarity : fIQFBMNoiseS2D_0_LACUNARITY = 2;    &cr;&lf;int fIQFBMNoiseS2D_0_octaves: fIQFBMNoiseS2D_0_OCTAVES = 4;  &cr;&lf;&cr;&lf;// Persitance Defualt&cr;&lf;#ifndef fIQFBMNoiseS2D_0_PERSINPUT&cr;&lf;float pd(float2 p)&cr;&lf;{&cr;&lf;&tab;return fIQFBMNoiseS2D_0_persistence;&cr;&lf;}&cr;&lf;#define fIQFBMNoiseS2D_0_PERSINPUT pd&cr;&lf;#endif&cr;&lf;&cr;&lf;float fIQFBMNoiseS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;IQFBM2D(fIQFBMNoiseS2D_0_noise, fIQFBMNoiseS2D_0_INPUT, p, fIQFBMNoiseS2D_0_persistence, fIQFBMNoiseS2D_0_lacunarity, fIQFBMNoiseS2D_0_octaves);     &cr;&lf;&tab;return fIQFBMNoiseS2D_0_noise;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D fIQFBMNoiseS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -466,89 +466,7 @@
    </NODE>
    <LINK srcnodeid="114" srcpinname="Output String" dstnodeid="94" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="110" dstpinname="Input 3">
-   </LINK>
-   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="118">
-   <BOUNDS type="Node" left="3060" top="7650" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="To" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="3060" top="7650">
-   </BOUNDS>
-   <PIN pinname="Case Sensitive Match" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="117" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3405" top="6060" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3405" top="6060" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="(SF2D)">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="117" srcpinname="Output String" dstnodeid="118" dstpinname="Regular Expression">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="116" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="3930" top="6735" width="1095" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3930" top="6735" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="PERSINPUT">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="SEMANTIC">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE id="115" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="3495" top="7215" width="330" height="270">
-   </BOUNDS>
-   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
-   </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="cNoiseDFV_0__NOISEOFFSET">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="116" srcpinname="Output String" dstnodeid="115" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="115" srcpinname="Output" dstnodeid="118" dstpinname="To">
-   </LINK>
-   <LINK srcnodeid="82" srcpinname="Output String" dstnodeid="115" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="118" srcpinname="Output" dstnodeid="110" dstpinname="Input 2">
-   </LINK>
-   <INFO author="Everyoneishappy" description="" tags="FieldTrip, noise.fxh">
+   <INFO author="" description="" tags="Operator">
    </INFO>
    <NODE systemname="IQFBM_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM_SF2D.fx" nodename="IQFBM_SF2D (DX11.Effect)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="4860" top="3495" width="100" height="100">
@@ -558,16 +476,6 @@
    </NODE>
    <LINK srcnodeid="96" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
-   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="122">
-   <BOUNDS type="Node" left="4440" top="360" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4440" top="360" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Persistence Function|">
-   </PIN>
-   <PIN pinname="Output Node" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="121">
    <BOUNDS type="Node" left="2490" top="360" width="100" height="100">
    </BOUNDS>
@@ -584,18 +492,6 @@
    <BOUNDS type="Node" left="4065" top="10605" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
-   </PIN>
-   </NODE>
-   <NODE systemname="Cons (DX11.ResourceSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.ResourceSemantic)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="6000" top="9615" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6000" top="9615" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <PACK Name="dx11" Version="1.0.2">
@@ -616,33 +512,9 @@
    </NODE>
    <LINK srcnodeid="121" srcpinname="Output Node" dstnodeid="123" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="123" srcpinname="Resource Semantics" dstnodeid="124" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="123" srcpinname="Custom Semantics" dstnodeid="52" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="123" srcpinname="HLSL" dstnodeid="111" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Split (SF2D)" nodename="Split (SF2D)" componentmode="Hidden" id="120" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll">
-   <BOUNDS type="Node" left="4410" top="930" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="4410" top="930">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="122" srcpinname="Output Node" dstnodeid="120" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="120" srcpinname="Resource Semantics" dstnodeid="124" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="120" srcpinname="Custom Semantics" dstnodeid="52" dstpinname="Input 4">
-   </LINK>
-   <LINK srcnodeid="120" srcpinname="HLSL" dstnodeid="118" dstpinname="Input">
    </LINK>
    <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\DX11.DynamicShader.dll" nodename="Join (SF2D)" componentmode="Hidden" id="126">
    <BOUNDS type="Node" left="4080" top="10035" width="100" height="100">
@@ -660,10 +532,12 @@
    </NODE>
    <LINK srcnodeid="126" srcpinname="Output" dstnodeid="125" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Output" dstnodeid="126" dstpinname="Resource Semantic">
-   </LINK>
    <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="126" dstpinname="HLSL">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="126" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="110" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="123" srcpinname="Resource Semantics" dstnodeid="126" dstpinname="Resource Semantic">
    </LINK>
    </PATCH>

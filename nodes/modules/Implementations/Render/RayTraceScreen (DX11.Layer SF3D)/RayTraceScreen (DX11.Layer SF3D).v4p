@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceScreen (DX11.Layer SF3D)\RayTraceScreen (DX11.Layer SF3D).v4p" systemname="RayTraceScreen (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceScreen (DX11.Layer SF3D).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\RayTraceScreen (DX11.Layer SF3D)\RayTraceScreen (DX11.Layer SF3D).v4p" systemname="RayTraceScreen (DX11.Layer SF3D)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Render\RayTraceScreen (DX11.Layer SF3D).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3060" top="7125" width="18585" height="10905">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -474,4 +474,6 @@
    </LINK>
    <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="7" dstpinname="maxSamples">
    </LINK>
+   <INFO author="" description="" tags="Implementation">
+   </INFO>
    </PATCH>

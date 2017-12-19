@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\FBM\FBM (SF2D Function).v4p" systemname="FBM (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Field Functions\FBM (SF2D Function).v4p" scrollx="405" scrolly="0">
-   <BOUNDS type="Window" left="2175" top="1575" width="13335" height="12120">
+   <BOUNDS type="Window" left="6450" top="1770" width="13335" height="12120">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -446,7 +446,7 @@
    </NODE>
    <LINK srcnodeid="114" srcpinname="Output String" dstnodeid="94" dstpinname="Input 2">
    </LINK>
-   <INFO author="Everyoneishappy" description="" tags="FieldTrip. noise.fxh">
+   <INFO author="" description="" tags="Operator">
    </INFO>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="120">
    <BOUNDS type="Box" left="4635" top="10890" width="795" height="240">

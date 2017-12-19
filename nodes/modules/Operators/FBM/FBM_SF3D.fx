@@ -24,14 +24,6 @@ float FN_persistence : FN_PERSISTENCE = 0.5;
 float FN_lacunarity : FN_LACUNARITY = 2;    
 int FN_octaves: FN_OCTAVES = 4;  
 
-// Persitance Defualt
-#ifndef FN_PERSINPUT
-float PERSDEFUALT(float3 p)
-{
-	return FN_persistence;
-}
-#define FN_PERSINPUT PERSDEFUALT
-#endif
 
 float FN_ (float3 p)
 {

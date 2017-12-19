@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\GridSDF (SF2D Function).v4p" systemname="GridSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\Modules\Field Functions\Signed Distance FIelds\GridSDF (SF2D Function).v4p" scrollx="360" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\GridSDF (SF2D Function).v4p" systemname="GridSDF (SF2D Function)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\Modules\Field Functions\Signed Distance FIelds\GridSDF (SF2D Function).v4p" scrollx="360" scrolly="0">
    <BOUNDS type="Window" left="1860" top="2190" width="13440" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -554,4 +554,6 @@
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output Node" dstnodeid="115" dstpinname="Custom Semantic">
    </LINK>
+   <INFO author="" description="" tags="Source">
+   </INFO>
    </PATCH>
