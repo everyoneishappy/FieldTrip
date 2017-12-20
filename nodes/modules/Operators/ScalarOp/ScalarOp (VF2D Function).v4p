@@ -521,9 +521,9 @@
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="60" dstpinname="Semantic">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="12810" top="3885" width="795" height="240">
+   <BOUNDS type="Box" left="5910" top="1410" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="12810" top="3885" width="0" height="0">
+   <BOUNDS type="Node" left="5910" top="1410" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>

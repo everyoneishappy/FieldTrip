@@ -527,7 +527,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Defualt XYZ|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Default XYZ|">
    </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="60" dstpinname="InputXYZ">

@@ -503,7 +503,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Defualt Value|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Default Value|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>

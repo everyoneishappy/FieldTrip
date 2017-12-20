@@ -223,7 +223,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Class Index|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Instance Index|">
    </PIN>
    <PIN pinname="Pin Visibility" slicecount="1" values="False">
    </PIN>
@@ -433,7 +433,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Blend Defualt|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Blend Default|">
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Input">

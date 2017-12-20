@@ -467,9 +467,9 @@
    <LINK srcnodeid="34" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7575" top="1215" width="795" height="480">
+   <BOUNDS type="Box" left="5940" top="1125" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7575" top="1215" width="0" height="0">
+   <BOUNDS type="Node" left="5940" top="1125" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
    </PIN>
@@ -481,7 +481,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Defualt XY|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2 Default XY|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
