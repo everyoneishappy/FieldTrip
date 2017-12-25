@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" bgcolor="12320618" systemname="FG_03_SDF_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" scrollx="15" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" bgcolor="16777215" systemname="FG_03_SDF_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="315" top="0" width="9780" height="12210">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.2">
@@ -10,14 +10,6 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="120" top="10365" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
    </BOUNDS>
@@ -113,9 +105,9 @@
    <LINK srcnodeid="51" srcpinname="Projection" dstnodeid="121" dstpinname="Input Value">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="131" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="255" top="795" width="21795" height="270">
+   <BOUNDS type="Node" left="180" top="750" width="21795" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="255" top="795" width="7365" height="1080">
+   <BOUNDS type="Box" left="180" top="750" width="9165" height="705">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|A signed distance field is a scalar field that describes a surface.  For each point in space the distance to the closest point on the surface is given.|">
    </PIN>
@@ -145,11 +137,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="146" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3990" top="2610" width="5640" height="270">
+   <BOUNDS type="Node" left="3210" top="3465" width="5640" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3990" top="2610" width="4185" height="570">
+   <BOUNDS type="Box" left="3210" top="3465" width="5565" height="675">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Example of SDF primitives|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Example of SDF primitives.  Note they are of the category (SF2D.Sources)|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -161,9 +153,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="147" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3540" top="2445" width="255" height="270">
+   <BOUNDS type="Node" left="2760" top="3300" width="255" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3540" top="2445" width="465" height="645">
+   <BOUNDS type="Box" left="2760" top="3300" width="465" height="645">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="&lt;">
    </PIN>
@@ -177,9 +169,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="151" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="600" top="3075" width="795" height="240">
+   <BOUNDS type="Box" left="60" top="3960" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="600" top="3075" width="0" height="0">
+   <BOUNDS type="Node" left="60" top="3960" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -187,9 +179,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="152" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2220" top="3075" width="795" height="240">
+   <BOUNDS type="Box" left="1680" top="3960" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2220" top="3075" width="0" height="0">
+   <BOUNDS type="Node" left="1680" top="3960" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -228,66 +220,10 @@
    <PIN pinname="Size" slicecount="1" values="12">
    </PIN>
    </NODE>
-   <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="157">
-   <BOUNDS type="Node" left="90" top="4680" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Combination Operation" visible="1">
-   </PIN>
-   <PIN pinname="Input 1 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="90" top="4680">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="CircleSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CircleSDF (SF2D Function).v4p" nodename="CircleSDF (SF2D Function)" componentmode="Hidden" id="158">
-   <BOUNDS type="Node" left="630" top="2610" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Radius" slicecount="1" values="0.23">
-   </PIN>
-   <PIN pinname="Position" slicecount="2" values="0,0">
-   </PIN>
-   <BOUNDS type="Box" left="630" top="2610">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="151" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="BoxSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BoxSDF (SF2D Function).v4p" nodename="BoxSDF (SF2D Function)" componentmode="Hidden" id="159">
-   <BOUNDS type="Node" left="2250" top="2610" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Position" slicecount="2" values="0.19,0.19">
-   </PIN>
-   <PIN pinname="Size XY" slicecount="2" values="0.2,0.2">
-   </PIN>
-   <BOUNDS type="Box" left="2250" top="2610">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="159" srcpinname="Output" dstnodeid="152" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="160">
-   <BOUNDS type="Node" left="75" top="7230" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Box" left="75" top="7230">
-   </BOUNDS>
-   </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="162">
-   <BOUNDS type="Box" left="675" top="4230" width="1110" height="240">
+   <BOUNDS type="Box" left="675" top="4350" width="1110" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="675" top="4230" width="0" height="0">
+   <BOUNDS type="Node" left="675" top="4350" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Union">
    </PIN>
@@ -300,12 +236,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="157" dstpinname="Input 1 SDF">
-   </LINK>
-   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="157" dstpinname="Input 2 SDF">
-   </LINK>
-   <LINK srcnodeid="157" srcpinname="Output" dstnodeid="160" dstpinname="Input">
-   </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="163">
    <BOUNDS type="Node" left="90" top="11160" width="100" height="100">
    </BOUNDS>
@@ -321,23 +251,23 @@
    <NODE systemname="ColorWaveShaper (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\ColorWaveShaper.tfx" nodename="ColorWaveShaper (DX11.TextureFX)" componentmode="Hidden" id="164">
    <BOUNDS type="Node" left="135" top="10815" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="FrequencyXYZW" slicecount="4" values="1,2,16,1">
+   <PIN pinname="FrequencyXYZW" slicecount="4" values="0.61,1.56,16,1">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="Sine">
    </PIN>
    <PIN pinname="Grayscale" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="PhaseXYZW" slicecount="4" values="0,-2.2,0,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="164" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="165">
-   <BOUNDS type="Node" left="600" top="9105" width="100" height="100">
+   <BOUNDS type="Node" left="390" top="8910" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="600" top="9105" width="6000" height="4500">
+   <BOUNDS type="Box" left="390" top="8910" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="9900" top="0" width="7500" height="7470">
    </BOUNDS>
@@ -349,59 +279,41 @@
    <LINK srcnodeid="164" srcpinname="Texture Out" dstnodeid="163" dstpinname="Texture In">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="166">
-   <BOUNDS type="Node" left="795" top="8640" width="100" height="100">
+   <BOUNDS type="Node" left="390" top="8445" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="795" top="8640" width="3000" height="3000">
+   <BOUNDS type="Box" left="390" top="8445" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
    <PIN pinname="Render State" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 4" visible="1">
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="160" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="166" srcpinname="Layer Out" dstnodeid="165" dstpinname="Layers">
    </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="168">
-   <BOUNDS type="Node" left="750" top="8220" width="100" height="100">
+   <BOUNDS type="Node" left="390" top="8025" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="750" top="8220" width="3000" height="3000">
+   <BOUNDS type="Box" left="390" top="8025" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="162" srcpinname="Output Enum" dstnodeid="157" dstpinname="Combination Operation">
-   </LINK>
-   <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="173">
-   <BOUNDS type="Node" left="1725" top="4680" width="100" height="100">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="172" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="2310" top="4350" width="1110" height="240">
    </BOUNDS>
-   <PIN pinname="Combination Operation" visible="1">
-   </PIN>
-   <PIN pinname="Input 1 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="1725" top="4680">
-   </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="172">
-   <BOUNDS type="Box" left="2310" top="4230" width="1110" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2310" top="4230" width="0" height="0">
+   <BOUNDS type="Node" left="2310" top="4350" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Intersect">
    </PIN>
@@ -414,52 +326,12 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="173" dstpinname="Input 1 SDF">
-   </LINK>
-   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="173" dstpinname="Input 2 SDF">
-   </LINK>
-   <LINK srcnodeid="172" srcpinname="Output Enum" dstnodeid="173" dstpinname="Combination Operation">
-   </LINK>
    <LINK srcnodeid="168" srcpinname="Render State" dstnodeid="166" dstpinname="Render State">
    </LINK>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="174">
-   <BOUNDS type="Node" left="1710" top="7230" width="100" height="100">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="176" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="3990" top="4350" width="1110" height="240">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Box" left="1710" top="7230">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.39863,1.00000,0.13811,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="174" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="174" dstpinname="Input">
-   </LINK>
-   <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="177">
-   <BOUNDS type="Node" left="3405" top="4635" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Combination Operation" visible="1">
-   </PIN>
-   <PIN pinname="Input 1 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="3405" top="4635">
-   </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="176">
-   <BOUNDS type="Box" left="3990" top="4185" width="1110" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3990" top="4185" width="0" height="0">
+   <BOUNDS type="Node" left="3990" top="4350" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Difference">
    </PIN>
@@ -472,52 +344,10 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="177" dstpinname="Input 1 SDF">
-   </LINK>
-   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="177" dstpinname="Input 2 SDF">
-   </LINK>
-   <LINK srcnodeid="176" srcpinname="Output Enum" dstnodeid="177" dstpinname="Combination Operation">
-   </LINK>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="175">
-   <BOUNDS type="Node" left="3390" top="7230" width="100" height="100">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="179" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="5715" top="4350" width="1110" height="240">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Box" left="3390" top="7230">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.13682,0.54353,0.99073,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="177" srcpinname="Output" dstnodeid="175" dstpinname="Input">
-   </LINK>
-   <NODE systemname="CombineSDF (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D Function).v4p" nodename="CombineSDF (SF2D Function)" componentmode="Hidden" id="180">
-   <BOUNDS type="Node" left="5130" top="4650" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Combination Operation" visible="1">
-   </PIN>
-   <PIN pinname="Input 1 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Input 2 SDF" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="5130" top="4650">
-   </BOUNDS>
-   <PIN pinname="Combination Parameter 1" slicecount="1" visible="1" values="0.03">
-   </PIN>
-   <PIN pinname="Combination Parameter 2" slicecount="1" values="0.14">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="179">
-   <BOUNDS type="Box" left="5715" top="4200" width="1110" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5715" top="4200" width="0" height="0">
+   <BOUNDS type="Node" left="5715" top="4350" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="UnionRound">
    </PIN>
@@ -530,35 +360,7 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="180" dstpinname="Input 1 SDF">
-   </LINK>
-   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="180" dstpinname="Input 2 SDF">
-   </LINK>
-   <LINK srcnodeid="179" srcpinname="Output Enum" dstnodeid="180" dstpinname="Combination Operation">
-   </LINK>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="178">
-   <BOUNDS type="Node" left="5115" top="7230" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Box" left="5115" top="7230">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.98143,0.73327,0.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="178" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 3">
-   </LINK>
-   <LINK srcnodeid="178" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 4">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="181">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="181" hiddenwhenlocked="1">
    <BOUNDS type="Box" left="6870" top="4215" width="735" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="6870" top="4215" width="0" height="0">
@@ -570,8 +372,6 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="180" dstpinname="Combination Parameter 1">
-   </LINK>
    <NODE id="153" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
    <BOUNDS type="Node" left="690" top="4980" width="255" height="270">
    </BOUNDS>
@@ -588,7 +388,7 @@
    <PIN pinname="Size" slicecount="1" values="20">
    </PIN>
    </NODE>
-   <NODE id="182" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <NODE id="182" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="3405" top="7530" width="255" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="3405" top="7530" width="420" height="525">
@@ -609,27 +409,19 @@
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="157" srcpinname="Output" dstnodeid="183" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="183" dstpinname="Input 2" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="177" srcpinname="Output" dstnodeid="183" dstpinname="Input 3" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="183" dstpinname="Input 4" hiddenwhenlocked="1">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="184">
    <BOUNDS type="Box" left="4905" top="10620" width="720" height="465">
    </BOUNDS>
@@ -653,8 +445,6 @@
    </LINKPOINT>
    <LINKPOINT x="165" y="10690">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="186" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="8010" top="6660" width="100" height="100">
@@ -686,12 +476,254 @@
    </NODE>
    <LINK srcnodeid="186" srcpinname="Transform Out" dstnodeid="187" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="187" srcpinname="Output 1" dstnodeid="160" dstpinname="Transform" hiddenwhenlocked="1">
+   <NODE systemname="CircleSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\CircleSDF (SF2D.Sources).v4p" nodename="CircleSDF (SF2D.Sources)" componentmode="Hidden" id="158">
+   <BOUNDS type="Node" left="90" top="3495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.23">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="0,0">
+   </PIN>
+   <BOUNDS type="Box" left="90" top="3495">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="151" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="187" srcpinname="Output 2" dstnodeid="174" dstpinname="Transform" hiddenwhenlocked="1">
+   <NODE systemname="BoxSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\BoxSDF (SF2D.Sources).v4p" nodename="BoxSDF (SF2D.Sources)" componentmode="Hidden" id="159">
+   <BOUNDS type="Node" left="1710" top="3495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="0.19,0.19">
+   </PIN>
+   <PIN pinname="Size XY" slicecount="2" values="0.2,0.2">
+   </PIN>
+   <BOUNDS type="Box" left="1710" top="3495">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="Output" dstnodeid="152" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="187" srcpinname="Output 3" dstnodeid="175" dstpinname="Transform" hiddenwhenlocked="1">
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="157">
+   <BOUNDS type="Node" left="90" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Combination Operation" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="90" top="4680">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="157" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="157" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Output Enum" dstnodeid="157" dstpinname="Combination Operation">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Output" dstnodeid="183" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="173" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1725" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Combination Operation" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1725" top="4680">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="173" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="173" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="172" srcpinname="Output Enum" dstnodeid="173" dstpinname="Combination Operation">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="183" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="177" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3405" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Combination Operation" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3405" top="4680">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="177" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="177" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Output Enum" dstnodeid="177" dstpinname="Combination Operation">
+   </LINK>
+   <LINK srcnodeid="177" srcpinname="Output" dstnodeid="183" dstpinname="Input 3" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="180" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5130" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Combination Operation" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="5130" top="4680">
+   </BOUNDS>
+   <PIN pinname="Combination Parameter 1" slicecount="1" visible="1" values="0.03">
+   </PIN>
+   <PIN pinname="Combination Parameter 2" slicecount="1" values="0.14">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="180" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Output Node" dstnodeid="180" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="179" srcpinname="Output Enum" dstnodeid="180" dstpinname="Combination Operation" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="180" dstpinname="Combination Parameter 1" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="183" dstpinname="Input 4" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="178" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5115" top="7230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="5115" top="7230">
+   </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|0.98143,0.73327,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="178" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 4">
    </LINK>
    <LINK srcnodeid="187" srcpinname="Output 4" dstnodeid="178" dstpinname="Transform" hiddenwhenlocked="1">
    </LINK>
+   <LINK srcnodeid="180" srcpinname="Output" dstnodeid="178" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="175" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="3390" top="7230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="3390" top="7230">
+   </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|0.13682,0.54353,0.99073,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 3" dstnodeid="175" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="177" srcpinname="Output" dstnodeid="175" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="174" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="1710" top="7230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="1710" top="7230">
+   </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|0.39863,1.00000,0.13811,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="174" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 2" dstnodeid="174" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="174" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="160">
+   <BOUNDS type="Node" left="75" top="7230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="75" top="7230">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="160" srcpinname="Layer" dstnodeid="166" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Output 1" dstnodeid="160" dstpinname="Transform" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Output" dstnodeid="160" dstpinname="Input">
+   </LINK>
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="120" top="10365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="164" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="190" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="225" top="1665" width="21795" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="1665" width="7905" height="1665">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Both 2D &amp; 3D signed distance fields are scalar field usually interpreted as an implicit geometry where the zero crossing point in the is the surface.  As you get further away, the distance value increase, and as you go ‘inside’ it goes in to negative|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="191">
+   <BOUNDS type="Node" left="6405" top="4680" width="4230" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6405" top="4680" width="1650" height="1185">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;Just repeating to show different combination operations|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

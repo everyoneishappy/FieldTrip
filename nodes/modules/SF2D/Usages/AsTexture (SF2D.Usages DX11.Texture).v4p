@@ -1,0 +1,391 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
+   </BOUNDS>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1725" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" slicecount="2" values="2,2">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="675" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="675" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2625" top="3000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="3180" top="1830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
+   </PIN>
+   <PIN pinname="Shader Content" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Shader Content" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10365" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10365" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2460" top="3705" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2460" top="3705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Render State|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   </NODE>
+   <NODE id="25" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="705" top="1935" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="705" top="1935" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="24" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1005" top="2430" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1005" top="2430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Resource Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output Node" dstnodeid="2" dstpinname="Custom Semantics">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="2" dstpinname="Resource Semantics">
+   </LINK>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="8430" top="5265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Query Save" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8430" top="4590" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8430" top="4590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Query Save">
+   </LINK>
+   <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="1680" top="5550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" visible="1" values="R32_Float">
+   </PIN>
+   <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="400,300">
+   </PIN>
+   <PIN pinname="Background Color" visible="1">
+   </PIN>
+   <PIN pinname="AA Samples per Pixel" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="41" dstpinname="Layer">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="42" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3015" top="6555" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3015" top="6555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Buffers" dstnodeid="42" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="43" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="5430" top="2760" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5430" top="2760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Background Color|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Color Output" dstnodeid="41" dstpinname="Background Color">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="44" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="5445" top="3615" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5445" top="3615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|AA Samples per Pixel|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Output Enum" dstnodeid="41" dstpinname="AA Samples per Pixel">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7230" top="3570" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7230" top="3570" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="400,300">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture SizeXY|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Texture SizeXY">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Enabled">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="47" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4980" top="1890" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4980" top="1890" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="R16G16B16A16_Float">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Format|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Output Enum" dstnodeid="41" dstpinname="Target Format">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="48" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="645" top="150" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="645" top="150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsTexture_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture_SF2D.fx" nodename="AsTexture_SF2D (DX11.Effect)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2280" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="AsTexture">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Shader Path" dstnodeid="9" dstpinname="File Path">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6990" top="6360" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6990" top="6360" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF2D)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="630" top="465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="630" top="465" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output Node" dstnodeid="49" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Shader (DX11.Effect Fieldtrip String)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Shader (DX11.Effect Fieldtrip String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="2040" top="4245" width="5040" height="270">
+   </BOUNDS>
+   <PIN pinname="ShaderCode" visible="1">
+   </PIN>
+   <PIN pinname="ConfigShader" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ConfigDefines" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" visible="1" values="AsTexture">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="March Step Length" visible="1">
+   </PIN>
+   <PIN pinname="March Min Distance" visible="1">
+   </PIN>
+   <PIN pinname="March Max Distance" visible="1">
+   </PIN>
+   <PIN pinname="March Max Iterations" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Defines" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="softness" slicecount="1" visible="1" values="0.01">
+   </PIN>
+   <PIN pinname="xAspect" visible="1">
+   </PIN>
+   <PIN pinname="apsectRatioXY" visible="1" slicecount="2" values="0.673154354095459,0.5">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.84152,0.84152,0.84152,1.00000|">
+   </PIN>
+   <PIN pinname="drawCol" slicecount="1" values="|0.70146,0.96664,0.85429,1.00000|">
+   </PIN>
+   <PIN pinname="drawColXYZW" slicecount="4" visible="1" values="0,0,0,1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="7" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="53" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="4920" top="735" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4920" top="735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Output Node" dstnodeid="7" dstpinname="Transform In">
+   </LINK>
+   <INFO author="" description="Renders a texture from a 2D scalar field" tags="">
+   </INFO>
+   </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" bgcolor="12320618" systemname="FG_01_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" scrollx="0" scrolly="915">
-   <BOUNDS type="Window" left="315" top="0" width="13260" height="15345">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" bgcolor="16777215" systemname="FG_01_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="315" top="0" width="12090" height="15210">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
@@ -10,44 +10,6 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
-   <NODE systemname="FieldSample (Value Buffer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (Value Buffer SF2D).v4p" nodename="FieldSample (Value Buffer SF2D)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2685" top="5400" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Sample Position 2D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="795" top="4380" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Center" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Basis" slicecount="1" values="simplex">
-   </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="1.22">
-   </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Shape" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Inflection" slicecount="1" values="None">
-   </PIN>
-   </NODE>
-   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="780" top="5505" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
    </BOUNDS>
@@ -66,14 +28,12 @@
    <PIN pinname="Buffer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Buffer" dstnodeid="0" dstpinname="Sample Position 2D Buffer">
-   </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="11">
    <BOUNDS type="Node" left="315" top="7800" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="315" top="7800" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13350" top="0" width="6045" height="5925">
+   <BOUNDS type="Window" left="12240" top="150" width="6045" height="5925">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -97,31 +57,19 @@
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="13">
    <BOUNDS type="Node" left="375" top="7020" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="13" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="13" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="Noise (VF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (VF2D Function).v4p" nodename="Noise (VF2D Function)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="6540" top="4440" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Amplitude XY" slicecount="2" values="1,1">
-   </PIN>
-   <PIN pinname="Center XY" slicecount="2" values="0,0">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="24">
    <BOUNDS type="Node" left="7155" top="7515" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7155" top="7515" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="22215" top="0" width="6045" height="5925">
+   <BOUNDS type="Window" left="18105" top="165" width="6045" height="5925">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -135,7 +83,7 @@
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -150,8 +98,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="27">
    <BOUNDS type="Box" left="795" top="4860" width="795" height="240">
    </BOUNDS>
@@ -162,42 +108,18 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="2" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="27" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="0" dstpinname="Input">
-   </LINK>
-   <NODE systemname="FieldSample (2d Buffer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (2D Buffer VF2D).v4p" nodename="FieldSample (2d Buffer VF2D)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="9600" top="5505" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="2D Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="30" dstpinname="Input">
-   </LINK>
    <NODE systemname="ReadBack (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="ReadBack (DX11.Buffer 2d)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="9525" top="5850" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="9525" top="5850" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="OutputXY" visible="1">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="30" srcpinname="2D Buffer" dstnodeid="31" dstpinname="Input">
-   </LINK>
    <NODE systemname="Sprite (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\Sprite (DX11.Layer).v4p" nodename="Sprite (DX11.Layer)" componentmode="Hidden" id="33">
    <BOUNDS type="Node" left="1845" top="7005" width="100" height="100">
    </BOUNDS>
@@ -219,13 +141,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2685" top="5745" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Value Buffer" dstnodeid="32" dstpinname="Input">
-   </LINK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="2040" top="6495" width="100" height="100">
    </BOUNDS>
@@ -348,30 +268,14 @@
    </NODE>
    <LINK srcnodeid="46" srcpinname="Input Value" dstnodeid="47" dstpinname="DataXY">
    </LINK>
-   <LINK srcnodeid="47" srcpinname="Buffer" dstnodeid="30" dstpinname="Sample Position 2D Buffer">
-   </LINK>
    <LINK srcnodeid="46" srcpinname="Input Value" dstnodeid="41" dstpinname="TranslateXY">
    </LINK>
-   <NODE systemname="Noise (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF3D Function).v4p" nodename="Noise (SF3D Function)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="975" top="9405" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Center" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="5.51">
-   </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="1.37">
-   </PIN>
-   <PIN pinname="Domain Offset" slicecount="3" values="0.29,0.29,0.29">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="49">
    <BOUNDS type="Node" left="255" top="14115" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="255" top="14115" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13365" top="5880" width="6045" height="6150">
+   <BOUNDS type="Window" left="12225" top="6000" width="6045" height="6150">
    </BOUNDS>
    <PIN pinname="View" visible="1">
    </PIN>
@@ -436,26 +340,6 @@
    <PIN pinname="DataXYZ" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="FieldSample (Value Buffer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (Value Buffer SF3D).v4p" nodename="FieldSample (Value Buffer SF3D)" componentmode="Hidden" id="63">
-   <BOUNDS type="Node" left="4560" top="11160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="2D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Sample Position 3D Buffer" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="4560" top="11160">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="61" srcpinname="Buffer" dstnodeid="63" dstpinname="Sample Position 2D Buffer">
-   </LINK>
    <NODE systemname="ReadBack (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="ReadBack (DX11.Buffer Value)" componentmode="Hidden" id="62">
    <BOUNDS type="Node" left="4560" top="11505" width="100" height="100">
    </BOUNDS>
@@ -470,10 +354,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="Value Buffer" dstnodeid="62" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="61" srcpinname="Buffer" dstnodeid="63" dstpinname="Sample Position 3D Buffer">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66">
    <BOUNDS type="Box" left="3990" top="9585" width="795" height="720">
    </BOUNDS>
@@ -552,10 +432,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="70" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="70" srcpinname="Output Node" dstnodeid="63" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="68" srcpinname="Output" dstnodeid="69" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="AxisAndGrid (DX11)" filename="%VVVV%\packs\dx11\nodes\modules\AxisAndGrid\AxisAndGrid (DX11).v4p" nodename="AxisAndGrid (DX11)" componentmode="Hidden" id="71">
@@ -588,26 +464,6 @@
    <PIN pinname="DataXYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
-   <NODE systemname="FieldSample (Value Buffer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (Value Buffer SF3D).v4p" nodename="FieldSample (Value Buffer SF3D)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="1125" top="11880" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="2D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Sample Position 3D Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="73" dstpinname="Sample Position 2D Buffer">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="73" dstpinname="Sample Position 3D Buffer">
-   </LINK>
    <LINK srcnodeid="72" srcpinname="XYZ" dstnodeid="74" dstpinname="DataXYZ">
    </LINK>
    <NODE systemname="Multiply (Value Spectral)" nodename="Multiply (Value Spectral)" componentmode="Hidden" id="75">
@@ -620,14 +476,10 @@
    <PIN pinname="Bin Size" slicecount="1" values="3">
    </PIN>
    </NODE>
-   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Spread Count">
-   </LINK>
-   <LINK srcnodeid="70" srcpinname="Output Node" dstnodeid="73" dstpinname="Input">
-   </LINK>
    <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="77">
    <BOUNDS type="Node" left="465" top="12390" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Size Buffer" visible="1">
+   <PIN pinname="Size Buffer" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Position 3D Buffer" visible="1">
    </PIN>
@@ -642,8 +494,6 @@
    <PIN pinname="Color Default" slicecount="1" values="|0.29939,0.29939,0.29939,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="73" srcpinname="Value Buffer" dstnodeid="77" dstpinname="Size Buffer">
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="77" dstpinname="Position 3D Buffer">
    </LINK>
    <LINK srcnodeid="77" srcpinname="Layer" dstnodeid="54" dstpinname="Layer 3">
@@ -662,24 +512,12 @@
    </NODE>
    <LINK srcnodeid="78" srcpinname="Render State" dstnodeid="77" dstpinname="Render State">
    </LINK>
-   <NODE systemname="VectorFieldHelpers (DX11.Layer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF3D).v4p" nodename="VectorFieldHelpers (DX11.Layer VF3D)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="6975" top="12660" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Grid Size XYZ" slicecount="3" values="2,2,2">
-   </PIN>
-   <PIN pinname="scale" slicecount="1" values="0.2">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="102">
    <BOUNDS type="Node" left="7425" top="14190" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7425" top="14190" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="22215" top="5820" width="6045" height="6150">
+   <BOUNDS type="Window" left="18075" top="5985" width="6045" height="6150">
    </BOUNDS>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
@@ -764,46 +602,6 @@
    </NODE>
    <LINK srcnodeid="87" srcpinname="Layer" dstnodeid="101" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="Noise (VF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (VF3D Function).v4p" nodename="Noise (VF3D Function)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="8400" top="9615" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Center" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Amplitude" slicecount="1" values="5.51">
-   </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="1.37">
-   </PIN>
-   <PIN pinname="Domain Offset" slicecount="3" values="0.29,0.29,0.29">
-   </PIN>
-   <PIN pinname="Frequency XYZ" slicecount="3" values="1.76,1.76,1.76">
-   </PIN>
-   </NODE>
-   <NODE systemname="FieldSample (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (3D Buffer VF3D).v4p" nodename="FieldSample (3d Buffer VF3D)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="9690" top="11595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="2D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Sample Position 3D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="3D Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="96" srcpinname="Buffer" dstnodeid="95" dstpinname="Sample Position 2D Buffer">
-   </LINK>
-   <LINK srcnodeid="96" srcpinname="Buffer" dstnodeid="95" dstpinname="Sample Position 3D Buffer">
-   </LINK>
-   <LINK srcnodeid="88" srcpinname="Output Node" dstnodeid="95" dstpinname="Input">
-   </LINK>
    <NODE systemname="ReadBack (DX11.Buffer 3d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="ReadBack (DX11.Buffer 3d)" componentmode="Hidden" id="94">
    <BOUNDS type="Node" left="9675" top="11985" width="100" height="100">
    </BOUNDS>
@@ -852,17 +650,9 @@
    </LINK>
    <LINK srcnodeid="92" srcpinname="Y Output Value" dstnodeid="106" dstpinname="XYZ">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="3D Buffer" dstnodeid="94" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="108" srcpinname="Layer" dstnodeid="101" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="94" srcpinname="OutputXYZ" dstnodeid="108" dstpinname="Direction">
-   </LINK>
-   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="88" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Layer" dstnodeid="101" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="88" srcpinname="Output Node" dstnodeid="79" dstpinname="Input">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="113">
    <BOUNDS type="Node" left="2880" top="10395" width="100" height="100">
@@ -879,22 +669,6 @@
    <LINK srcnodeid="113" srcpinname="Y Output Value" dstnodeid="72" dstpinname="ResolutionXYZ">
    </LINK>
    <LINK srcnodeid="113" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input">
-   </LINK>
-   <NODE systemname="VectorFieldHelpers (DX11.Layer VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\VectorFieldHelpers (DX11.Layer)\VectorFieldHelpers (DX11.Layer VF2D).v4p" nodename="VectorFieldHelpers (DX11.Layer VF2D)" componentmode="Hidden" id="115">
-   <BOUNDS type="Node" left="6450" top="6645" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="scale" slicecount="1" values="0.2">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="115" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="115" srcpinname="Layer" dstnodeid="23" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="117">
    <BOUNDS type="Node" left="7215" top="16095" width="100" height="100">
@@ -1053,9 +827,9 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="132">
    <BOUNDS type="Node" left="300" top="120" width="2655" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="300" top="120" width="8445" height="480">
+   <BOUNDS type="Box" left="300" top="120" width="10485" height="660">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|scalar &amp; vector fields, new data types|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|2D &amp; 3D scalar &amp; vector fields: 4 new data types|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1144,4 +918,230 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="795" top="4380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Basis" slicecount="1" values="simplex">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="1.22">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Inflection" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="27" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="780" top="5505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="13" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FieldSample (SF2D.Usages Value Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\FieldSample (SF2D.Usages Value Buffer).v4p" nodename="FieldSample (SF2D.Usages Value Buffer)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2685" top="5400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Buffer" dstnodeid="0" dstpinname="Sample Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Value Buffer" dstnodeid="32" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Noise (VF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Sources\Noise (VF2D.Sources).v4p" nodename="Noise (VF2D.Sources)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="6540" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Amplitude XY" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Center XY" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="FieldSample (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\FieldSample (VF2D.Usages 2D Buffer).v4p" nodename="FieldSample (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="9600" top="5505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Buffer" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="30" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="2D Buffer" dstnodeid="31" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Buffer" dstnodeid="30" dstpinname="Sample Position 2D Buffer">
+   </LINK>
+   <NODE systemname="VectorFieldArrows (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\VectorFieldArrows (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="6450" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="scale" slicecount="1" values="0.2">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="115" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="Layer" dstnodeid="23" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="VectorFieldArrows (VF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\VectorFieldArrows (VF3D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF3D.Usages DX11.Layer)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="6975" top="12660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Grid Size XYZ" slicecount="3" values="2,2,2">
+   </PIN>
+   <PIN pinname="scale" slicecount="1" values="0.2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Layer" dstnodeid="101" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output Node" dstnodeid="79" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Noise (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\Noise (VF3D.Sources).v4p" nodename="Noise (VF3D.Sources)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="8400" top="9615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="5.51">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="1.37">
+   </PIN>
+   <PIN pinname="Domain Offset" slicecount="3" values="0.29,0.29,0.29">
+   </PIN>
+   <PIN pinname="Frequency XYZ" slicecount="3" values="1.76,1.76,1.76">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="88" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="FieldSample (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\FieldSample (VF3D.Usages 3D Buffer).v4p" nodename="FieldSample (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="9690" top="11595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Buffer" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Sample Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="Buffer" dstnodeid="95" dstpinname="Sample Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Buffer" dstnodeid="95" dstpinname="Sample Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output Node" dstnodeid="95" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="3D Buffer" dstnodeid="94" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FieldSample (SF3D.Usages Value Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\FieldSample (SF3D.Usages Value Buffer).v4p" nodename="FieldSample (SF3D.Usages Value Buffer)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="4560" top="11160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Buffer" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Sample Position 3D Buffer" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4560" top="11160">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Buffer" dstnodeid="63" dstpinname="Sample Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Value Buffer" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Buffer" dstnodeid="63" dstpinname="Sample Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output Node" dstnodeid="63" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FieldSample (SF3D.Usages Value Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\FieldSample (SF3D.Usages Value Buffer).v4p" nodename="FieldSample (SF3D.Usages Value Buffer)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="1125" top="11880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value Buffer" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Sample Position 3D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="73" dstpinname="Sample Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="73" dstpinname="Sample Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output Node" dstnodeid="73" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Value Buffer" dstnodeid="77" dstpinname="Size Buffer">
+   </LINK>
+   <NODE systemname="Noise (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\Noise (SF3D.Sources).v4p" nodename="Noise (SF3D.Sources)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="975" top="9405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="5.51">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="1.37">
+   </PIN>
+   <PIN pinname="Domain Offset" slicecount="3" values="0.29,0.29,0.29">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="70" dstpinname="Input Node">
+   </LINK>
    </PATCH>

@@ -1,0 +1,347 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Length\Length (VF2D.Operators).v4p" systemname="Length (VF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Length\Length (VF2D.Operators).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="-27165" top="2610" width="14670" height="12255">
+   </BOUNDS>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="1095" top="7500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1095" top="7500">
+   </BOUNDS>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="1035" top="8475" width="4980" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|&tab;#ifndef FIELDS_FXH&cr;&lf;&tab;#include &lt;packs\happy.fxh\fields.fxh&gt;&cr;&lf;&tab;#endif&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Vector Field Basic Ops Class + - * /&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with class name: cDot_0_&cr;&lf;#ifndef cDot_0_CLASS&cr;&lf;#define cDot_0_CLASS&cr;&lf;&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float3 cDot_0_Default : cDot_0_DEFAULT;&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef cDot_0_INPUT1_INSTANCE&cr;&lf;#define cDot_0_INPUT1_INSTANCE&cr;&lf;cVectorField3D cDot_0_INPUT1;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef cDot_0_INPUT2_INSTANCE&cr;&lf;#define cDot_0_INPUT2_INSTANCE&cr;&lf;class cDot_0_SingleValue : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return cDot_0_Default; // if a second input class is not provided defualt to vector semantic&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;cDot_0_SingleValue cDot_0_INPUT2;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;// Class&cr;&lf;class cDot_0_ : iScalarField3D &cr;&lf;{&cr;&lf;&tab;float Value (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return dot(cDot_0_INPUT1.Vector(p), cDot_0_INPUT2.Vector(p)); //&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;#endif&cr;&lf;&cr;&lf;// Instance&cr;&lf;#ifndef SF3D_INSTANCE&cr;&lf;#define SF3D_INSTANCE&cr;&lf;cDot_0_ SF3D;&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1275" top="5970" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1275" top="5970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(VF2D)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="5985" top="5760" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
+   </PIN>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Shader Content" visible="1">
+   </PIN>
+   <PIN pinname="Substitute To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Substitute From" slicecount="1" visible="1" values="|// DEFINES|">
+   </PIN>
+   </NODE>
+   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="5955" top="6525" width="1455" height="270">
+   </BOUNDS>
+   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="(CL_)">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|#ifndef MYCLASS_CLASS&cr;&lf;#define MYCLASS_CLASS&cr;&lf;&cr;&lf;float MYCLASS_Foo : MYCLASS_FOO = 1;&cr;&lf;float MYCLASS_Bar : MYCLASS_BARR = 2;&cr;&lf;class MYCLASS : iVectorfield3D&cr;&lf;{&cr;&lf;...&cr;&lf;}&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef VF3D_INSTANCE&cr;&lf;#define VF3D_INSTANCE&cr;&lf;MYCLASS VF3D;&cr;&lf;#endif&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6855" top="4395" width="1530" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6855" top="4395" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="MYCLASS2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="42" dstpinname="To">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="40">
+   <BOUNDS type="Node" left="6465" top="3660" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6465" top="3660" width="1125" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fLengthV2D">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Name|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="7860" top="3855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="6870" top="4065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Output String" dstnodeid="38" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="38" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="41" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="37" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7815" top="3375" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7815" top="3375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Instance index|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="7800" top="3000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID in ParentPatch" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Outlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Inlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Is Changed" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Caption" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Filename" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Node Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Instance index" dstnodeid="37" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Shader Content" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="35" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6435" top="6210" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6435" top="6210" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(FN_)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output String" dstnodeid="42" dstpinname="Regular Expression">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="25" dstpinname="Regular Expression">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1800" top="6645" width="660" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1800" top="6645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="INPUT">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="SEMANTIC">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="44" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1530" top="7065" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="cNoiseDFV_0__NOISEOFFSET">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output String" dstnodeid="44" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="44" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="25" dstpinname="To">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="59" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6600" top="5295" width="1200" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6600" top="5295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|// DEFINES|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="43" dstpinname="Substitute From">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="67" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2535" top="9885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2535" top="9885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="70">
+   <BOUNDS type="Node" left="2595" top="1200" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2595" top="1200" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="Split (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF2D)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="2580" top="1605" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2580" top="1605" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output Node" dstnodeid="69" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="2550" top="9315" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2550" top="9315" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Output" dstnodeid="67" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="68" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Custom Semantics" dstnodeid="68" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Resource Semantics" dstnodeid="68" dstpinname="Resource Semantic">
+   </LINK>
+   <INFO author="" description="Returns the magnitude of a 2D vector field as a 2D scalar field" tags="">
+   </INFO>
+   <NODE systemname="Length_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Length\Length_VF2D.fx" nodename="Length_VF2D (DX11.Effect)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="5025" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
+   </PATCH>

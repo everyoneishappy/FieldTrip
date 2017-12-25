@@ -1,0 +1,609 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchTriPlane (DX11.Layer SF3D)\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchTriPlane (DX11.Layer SF3D)\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="1305" top="4305" width="15870" height="11295">
+   </BOUNDS>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2055" top="5655" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2055" top="5655" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer Out" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1725" top="3030" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" slicecount="2" values="2,2">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="480" top="1965" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="480" top="1965" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SF3D Function|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2625" top="3000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="3180" top="1830" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="File Path" visible="1" slicecount="1" values="..\Helpers\sdfTemplate.fx">
+   </PIN>
+   <PIN pinname="Shader Content" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Shader Content" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3495" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3495" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|March Step Length|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5040" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5040" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.200000002980232">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|March Min Distance|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6195" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6195" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="12">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|March Max Distance|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7215" top="945" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7215" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="120">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|March Max Iterations|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12840" top="840" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12840" top="840" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2460" top="3705" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2460" top="3705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Render State|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="Hidden">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5610" top="6855" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5610" top="6855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="25" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="510" top="2955" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="510" top="2955" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Parameter Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="24" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="810" top="3450" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="810" top="3450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Resource Semantics|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output Node" dstnodeid="2" dstpinname="Custom Semantics">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="2" dstpinname="Resource Semantics">
+   </LINK>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="7785" top="5205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Query Save" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7830" top="4590" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7830" top="4590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Query Save">
+   </LINK>
+   <NODE systemname="RaymarchTriPlane_SF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchTriPlane (DX11.Layer SF3D)\RaymarchTriPlane_SF3D.fx" nodename="RaymarchTriPlane_SF3D (DX11.Effect)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="2055" top="1335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Shader Path" dstnodeid="9" dstpinname="File Path">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5910" top="2640" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5910" top="2640" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.82">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Shine">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="31" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5835" top="3135" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5835" top="3135" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.6">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Gloss">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5760" top="3570" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5760" top="3570" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.81">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FresnalBias">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6675" top="3075" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6675" top="3075" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.13">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FresnalPower">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7995" top="3450" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7995" top="3450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="9.53">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Scale|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="35" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9195" top="2280" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9195" top="2280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="DNS_Textures">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="36" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9600" top="2805" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9600" top="2805" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Diffuse Cubemap|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="37" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="10005" top="3180" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10005" top="3180" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Reflection Cubemap|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7620" top="1815" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7620" top="1815" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|AO Scale|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="39" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7815" top="2205" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7815" top="2205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.33">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|AO Bias|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5550" top="1980" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5550" top="1980" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="11100" top="1890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="WRITEDEPTH=">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="11220" top="1380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11220" top="600" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11220" top="600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Write Depth|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="43" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="45">
+   <BOUNDS type="Node" left="855" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="855" top="540" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF3D)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="870" top="915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="870" top="915" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output Node" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="HLSL" dstnodeid="5" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Custom Semantics" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Resource Semantics" dstnodeid="24" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Shader (DX11.Effect Fieldtrip String)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Shader (DX11.Effect Fieldtrip String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="2235" top="4110" width="5040" height="270">
+   </BOUNDS>
+   <PIN pinname="ShaderCode" visible="1">
+   </PIN>
+   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;#define AO&cr;&lf;//#define SHADOW&cr;&lf;//#define SSS&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;#define RAYMARCHER&cr;&lf;&cr;&lf;#ifndef RAYMARCH_FXH&cr;&lf;#include&lt;packs\happy.fxh\raymarch.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef UV_FXH&cr;&lf;#include&lt;packs\happy.fxh\uv.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef WRITEDEPTH&cr;&lf;#define WRITEDEPTH 1&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;Texture2D DNS_Textures[3];&cr;&lf;SamplerState sTex &lt;string uiname=&quot;Sampler State&quot;;&gt;&cr;&lf;{&cr;&lf;    Filter = MIN_MAG_MIP_LINEAR;&cr;&lf;    AddressU = Wrap;&cr;&lf;    AddressV = Wrap;&cr;&lf;};&cr;&lf;&cr;&lf;TextureCube Dcube &lt;string uiname=&quot;Diffuse Cubemap&quot;;&gt;;&cr;&lf;TextureCube Rcube &lt;string uiname=&quot;Reflection Cubemap&quot;;&gt;;&cr;&lf;SamplerState SampCube&cr;&lf;{&cr;&lf;    Filter = MIN_MAG_MIP_LINEAR;&cr;&lf;    AddressU = Clamp;&cr;&lf;    AddressV = Clamp;&cr;&lf;};&cr;&lf;&cr;&lf;float Shine = 0.2;&cr;&lf;float Gloss =0.5;&cr;&lf;&cr;&lf;float FresnalBias = 0.2;&cr;&lf;float FresnalPower = 0.5;&cr;&lf;&cr;&lf;float alpha = 1;&cr;&lf;&cr;&lf;&cr;&lf;// approximate Fresnel function&cr;&lf;float fresnel(float NdotV, float bias, float power)&cr;&lf;{&cr;&lf;&tab;return bias + (1.0-bias)*pow(1.0 - max(NdotV, 0), power);&cr;&lf;}&cr;&lf;float4 IblGrad(float3 N, float3 V, float4 cDiff, float4 cSpec)&cr;&lf;{&cr;&lf;&tab;//calculate reflection &cr;&lf;&tab;float3 ReflectUVW=reflect(V,N);&cr;&lf;&tab;&cr;&lf;&tab;float FresnelTerm = fresnel(dot(N, V), FresnalBias, FresnalPower);&cr;&lf;&tab;&cr;&lf;&tab;float4 SpecCubeShiny =  Rcube.SampleGrad(SampCube, ReflectUVW, ddx(ReflectUVW), ddy(ReflectUVW));&cr;&lf;&tab;float4 SpecCubeRough =  Dcube.SampleGrad(SampCube, ReflectUVW, ddx(ReflectUVW), ddy(ReflectUVW));&cr;&lf;&tab;float4 DiffuseCube = Dcube.SampleGrad(SampCube, N, ddx(N), ddy(N));&cr;&lf;&tab;&cr;&lf;&tab;float4 Spec = cSpec * lerp(SpecCubeShiny, SpecCubeRough,saturate(1-Gloss));&cr;&lf;&tab;&cr;&lf;&tab;//calculate Diffuse&cr;&lf;&tab;float4 Diffuse = cDiff * DiffuseCube;&cr;&lf;&tab;&cr;&lf;&tab;float4 FinalCol = lerp(Diffuse, Diffuse+Spec, saturate(Shine-1 + cSpec*FresnelTerm));&cr;&lf;&tab;&cr;&lf;&tab;FinalCol.a = cDiff.a;&cr;&lf;&tab;return FinalCol;&cr;&lf;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;cbuffer cbControls:register(b0)&cr;&lf;{&cr;&lf;&tab;float4x4 tVP:VIEWPROJECTION;&cr;&lf;};&cr;&lf;&cr;&lf;struct VS_IN{float4 PosO:POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;struct VS_OUT{float4 PosWVP:SV_POSITION;float4 TexCd:TEXCOORD0;};&cr;&lf;VS_OUT VS(VS_IN In){VS_OUT Out=(VS_OUT)0;Out.TexCd=In.TexCd;Out.PosWVP=float4(In.PosO.xy,0,1);return Out;}&cr;&lf;&cr;&lf;struct PS_OUT&cr;&lf;{&cr;&lf;&tab;float4 Color:SV_TARGET;&cr;&lf;&tab;#if WRITEDEPTH == 1&cr;&lf;&tab;float Depth:SV_DEPTH;&cr;&lf;&tab;#endif&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;float texScale &lt;string uiname=&quot;Texture Scale&quot;;&gt; = 0.2;&cr;&lf;&cr;&lf;PS_OUT PS_IBL(VS_OUT In)&cr;&lf;{&cr;&lf;&tab;// Raymarcher &cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&tab;float2 uv = In.TexCd.xy; // Takes uv as input&cr;&lf;&tab;float3 rd, p, n;   &tab;float z; // Outputs surface posistion(p) &amp; normals(n), ray direction(rd) &amp; length(z) &cr;&lf;&tab;rayMarcher(uv, p, n, rd, z);&cr;&lf;&tab;////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&tab;float4 c=1;&cr;&lf;&cr;&lf;&tab;float4 DiffuseMap = triPlane(DNS_Textures[0], sTex, p, n, texScale, 2);&cr;&lf;&tab;float3 norm = triPlaneNormal(DNS_Textures[1], sTex, p, n, texScale, 2);&cr;&lf;&tab;float4 SpecMap = triPlane(DNS_Textures[2], sTex, p, n, texScale, 2);&cr;&lf;&cr;&lf;&tab;c =  IblGrad(norm, -rd, DiffuseMap, SpecMap);&cr;&lf;&tab;c.a = alpha;&cr;&lf;&tab;//c = DiffuseMap;&cr;&lf;&tab;&cr;&lf;&tab;//c = DNS_Textures[0].Sample(sTex, p.xz );&cr;&lf;&cr;&lf;&tab;#ifdef AO&cr;&lf;&tab;float ao = calcAO(p,norm);&cr;&lf;&tab;c.rgb *= ao;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;#ifdef SHADOW&cr;&lf;&tab;float shadow = calcShadow(p);&cr;&lf;&tab;c.rgb *= shadow;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;PS_OUT Out;&cr;&lf;&tab;Out.Color=c;&cr;&lf;&tab;&cr;&lf;&tab;#if WRITEDEPTH == 1&cr;&lf;&tab;float4 PosWVP=mul(float4(p.xyz,1),tVP);&cr;&lf;&tab;Out.Depth=PosWVP.z/PosWVP.w;&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;return Out;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 RayMarchIBL&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS_IBL()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="ConfigDefines" slicecount="1" values="WRITEDEPTH=1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchIBL">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="March Step Length" visible="1" slicecount="1" values="0.75">
+   </PIN>
+   <PIN pinname="March Min Distance" visible="1" slicecount="1" values="0.100000001490116">
+   </PIN>
+   <PIN pinname="March Max Distance" visible="1" slicecount="1" values="200">
+   </PIN>
+   <PIN pinname="March Max Iterations" visible="1" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Defines" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="alpha" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Shine" visible="1" slicecount="1" values="0.200000002980232">
+   </PIN>
+   <PIN pinname="Gloss" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="FresnalBias" visible="1" slicecount="1" values="0.200000002980232">
+   </PIN>
+   <PIN pinname="FresnalPower" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Texture Scale" visible="1" slicecount="1" values="0.200000002980232">
+   </PIN>
+   <PIN pinname="DNS_Textures" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Diffuse Cubemap" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Reflection Cubemap" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="AO Scale" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="AO Bias" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="7" dstpinname="March Step Length">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="7" dstpinname="March Min Distance">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="7" dstpinname="March Max Distance">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="7" dstpinname="March Max Iterations">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="7" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="7" dstpinname="ShaderCode">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Shine">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Gloss">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="7" dstpinname="FresnalBias">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="7" dstpinname="FresnalPower">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Texture Scale">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output Node" dstnodeid="7" dstpinname="DNS_Textures">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="7" dstpinname="Diffuse Cubemap">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="7" dstpinname="Reflection Cubemap">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="7" dstpinname="AO Scale">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="7" dstpinname="AO Bias">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="7" dstpinname="alpha">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="7" dstpinname="Defines">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Compiled" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
+   <INFO author="" description="Raymarches 3D signed distance fields to color &amp; optionally depth.  Uses diffuse, normal, spec &amp; environment textures for shading" tags="">
+   </INFO>
+   </PATCH>

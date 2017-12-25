@@ -1,0 +1,453 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\UnaryOp (VF3D.Operations).v4p" systemname="UnaryOp (VF3D.Operations)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\UnaryOp (VF3D.Operations).v4p" scrollx="0" scrolly="15">
+   <BOUNDS type="Window" left="12210" top="1665" width="14670" height="12255">
+   </BOUNDS>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="1095" top="7500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1095" top="7500">
+   </BOUNDS>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="1185" top="8580" width="1605" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="CarriageReturnLineFeed">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Scalar Field Basic Ops Functions + - * /&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fScalarOpS2D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fScalarOpS2D_0_BODY &cr;&lf;#define fScalarOpS2D_0_BODY&cr;&lf;&cr;&lf;#define fScalarOpS2D_0_OP fScalarOpS2D_0_INPUT1(p) + fScalarOpS2D_0_INPUT2(p) // preprocessor options from patch inserted here&cr;&lf;&cr;&lf;#ifndef fScalarOpS2D_0_OP&cr;&lf;#define fScalarOpS2D_0_OP fScalarOpS2D_0_INPUT1(p) + fScalarOpS2D_0_INPUT2(p); &cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;float fScalarOpS2D_0_Default : fScalarOpS2D_0_DEFAULT;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fScalarOpS2D_0_INPUT1&cr;&lf;#define fScalarOpS2D_0_INPUT1 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input 2 Defualt option&cr;&lf;#ifndef fScalarOpS2D_0_INPUT2&cr;&lf;float fScalarOpS2D_0_singleValue (float2 p)&cr;&lf;{&cr;&lf;&tab;return fScalarOpS2D_0_Default; // if a second input is not provided defualt to semantic&cr;&lf;}&cr;&lf;#define fScalarOpS2D_0_INPUT2 fScalarOpS2D_0_singleValue&cr;&lf;#endif&cr;&lf;&cr;&lf;float fScalarOpS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return fScalarOpS2D_0_OP; &cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D fScalarOpS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1275" top="5970" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1275" top="5970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(VF3D)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="3030" top="5775" width="1290" height="270">
+   </BOUNDS>
+   <PIN pinname="File Path" visible="1" slicecount="1" values="UnaryOp_SF3D.fx">
+   </PIN>
+   <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Shader Content" visible="1">
+   </PIN>
+   <PIN pinname="Substitute To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Substitute From" slicecount="1" visible="1" values="|// DEFINES|">
+   </PIN>
+   </NODE>
+   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="3075" top="7620" width="1455" height="270">
+   </BOUNDS>
+   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="(CL_)">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|#ifndef MYCLASS_CLASS&cr;&lf;#define MYCLASS_CLASS&cr;&lf;&cr;&lf;float MYCLASS_Foo : MYCLASS_FOO = 1;&cr;&lf;float MYCLASS_Bar : MYCLASS_BARR = 2;&cr;&lf;class MYCLASS : iVectorfield3D&cr;&lf;{&cr;&lf;...&cr;&lf;}&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef VF3D_INSTANCE&cr;&lf;#define VF3D_INSTANCE&cr;&lf;MYCLASS VF3D;&cr;&lf;#endif&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Case Sensitive Match" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3900" top="4410" width="1530" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3900" top="4410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="MYCLASS2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="42" dstpinname="To">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="40">
+   <BOUNDS type="Node" left="3510" top="3675" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3510" top="3675" width="1230" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fUnaryOpV3D">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Name|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="4905" top="3885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="3915" top="4080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Output String" dstnodeid="38" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="38" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="41" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="37" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4860" top="3390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="3390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Instance index|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="4845" top="3015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID in ParentPatch" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Outlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Inlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Is Changed" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Caption" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Filename" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Node Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Instance index" dstnodeid="37" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Shader Content" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="35" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3555" top="7305" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3555" top="7305" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(FN_)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output String" dstnodeid="42" dstpinname="Regular Expression">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="25" dstpinname="Regular Expression">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="45" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1800" top="6645" width="660" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1800" top="6645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="INPUT">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="SEMANTIC">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="44" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="1530" top="7065" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="cNoiseDFV_0__NOISEOFFSET">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Output String" dstnodeid="44" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="44" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="25" dstpinname="To">
+   </LINK>
+   <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="9075" top="5325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Strings" visible="1">
+   </PIN>
+   <PIN pinname="Enum Name" slicecount="1" values="MonadicOp">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="52" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="9045" top="1605" width="1035" height="3630">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9045" top="1605" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="19" visible="1" values="sqrt,rsqrt,saturate,abs,sign,log,frac,ceil,floor,round,trunc,sin,cos,tan,sinh,cosh,tanh,exp,exp2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="String">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="19">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="51" dstpinname="Strings">
+   </LINK>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="53">
+   <BOUNDS type="Node" left="6420" top="1230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
+   </PIN>
+   <PIN pinname="Enum" visible="1" slicecount="1" values="MonadicOp">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="54" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="6855" top="735" width="960" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6855" top="735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="+">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Operation">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Output Enum" dstnodeid="53" dstpinname="Receive">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="59" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3645" top="5310" width="1200" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3645" top="5310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|// DEFINES|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output String" dstnodeid="43" dstpinname="Substitute From">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="84" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="450" top="975" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="450" top="975" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="87" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1515" top="10335" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="10335" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <INFO author="" description="Apply a unary operation on a 3D scalar field. Wraps most of the HLSL single operand intrinsic functions" tags="">
+   </INFO>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="97" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6795" top="5880" width="4365" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6795" top="5880" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="6780" top="5535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|#define FN_OP |">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Output String" dstnodeid="43" dstpinname="Substitute To" linkstyle="Bezier">
+   <LINKPOINT x="6140" y="8025">
+   </LINKPOINT>
+   <LINKPOINT x="5005" y="4485">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="97" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Enum2String (Enumerations)" nodename="Enum2String (Enumerations)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="6915" top="5175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Output Enum" dstnodeid="102" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="String Value" dstnodeid="98" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="UnaryOp_VF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\ScalarOp\UnaryOp_VF3D.fx" nodename="UnaryOp_VF3D (DX11.Effect)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="1980" top="3240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
+   <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF3D)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="435" top="1635" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="435" top="1635" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="83" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Output Node" dstnodeid="83" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Join (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (VF3D)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="1500" top="9510" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1500" top="9510" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="85" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="87" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Custom Semantics" dstnodeid="85" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Resource Semantics" dstnodeid="85" dstpinname="Resource Semantic">
+   </LINK>
+   </PATCH>

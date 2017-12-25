@@ -1,0 +1,543 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\PreCurlConstrainToSDF (VF3D.Operators) help.v4p">
+   <BOUNDS type="Window" left="450" top="450" width="7560" height="11490">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|PreCurlConstrainToSDF (VF3D.Operators)|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Makes sure the resulting curl of a 3D vector field will respect the boundaries of a 3D signed distance field|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="26" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="225" top="6600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="1305" top="4305" width="12060" height="11295">
+   </BOUNDS>
+   <PIN pinname="SF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="RayMarchGradient">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="March Step Length" slicecount="1" visible="1" values="0.75">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="0.88">
+   </PIN>
+   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="25" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="360" top="6045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Render State" dstnodeid="26" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="FieldViz (DX11.Layer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\FieldViz (DX11.Layer VF3D).v4p" nodename="FieldViz (DX11.Layer VF3D)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="2070" top="6615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Width Defualt" slicecount="1" values="0.034">
+   </PIN>
+   <PIN pinname="Sample Width XYZ" slicecount="3" visible="1" values="0.25,0,0.25">
+   </PIN>
+   <PIN pinname="Texture Array" visible="1">
+   </PIN>
+   <PIN pinname="Sample CenterXYZ" visible="1" slicecount="3" values="0,-0.22,0">
+   </PIN>
+   <PIN pinname="Random Sample" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Sample 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Sample Count" visible="1">
+   </PIN>
+   <PIN pinname="Step Size" slicecount="1" values="0.005">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Points Per Seed" slicecount="1" values="32">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Resolution XYZ" slicecount="3" values="64,1,64">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" values="RK4">
+   </PIN>
+   </NODE>
+   <NODE systemname="Gradient (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Gradient.tfx" nodename="Gradient (DX11.TextureFX)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="3480" top="6075" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Color1" slicecount="1" values="|0.62624,0.67707,0.94253,1.00000|">
+   </PIN>
+   <PIN pinname="Color2" slicecount="1" values="|0.64780,0.90699,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Texture Out" dstnodeid="24" dstpinname="Texture Array">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5340" top="2790" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5340" top="2790" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1.37,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="SimpleAgent (3d Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\SimpleAgent (3D Buffer VF3D).v4p" nodename="SimpleAgent (3d Buffer VF3D)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="2910" top="7155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Seed Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Step Size" slicecount="1" values="0.0003">
+   </PIN>
+   <PIN pinname="Maximum Distance from Seed Position" slicecount="1" values="0.63">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" values="RK4">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Reset All" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="2625" top="7680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Size Default" slicecount="1" values="0.001">
+   </PIN>
+   <PIN pinname="Color Default" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Sample 3D Buffer" dstnodeid="21" dstpinname="Seed Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Sample Count" dstnodeid="21" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Sample Count" dstnodeid="20" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="3D Buffer" dstnodeid="20" dstpinname="Position 3D Buffer">
+   </LINK>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="4170" top="1710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" values="0.02">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="12">
+   <BOUNDS type="Node" left="945" top="9735" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="945" top="9735" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8070" top="450" width="13980" height="10305">
+   </BOUNDS>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Depth Buffer Mode" slicecount="1" values="Standard">
+   </PIN>
+   <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
+   </PIN>
+   <PIN pinname="AA Samples per Pixel" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Background Color" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="1065" top="9360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Alignment" slicecount="1" values="FitOut">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="1755" top="8520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Layer Out" dstnodeid="11" dstpinname="Layer In">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="15" top="8310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="10" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="210" top="7875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Texture Out" dstnodeid="9" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Layer Out" dstnodeid="12" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Camera (Transform Orbit Legacy)" filename="%VVVV%\addonpack\lib\nodes\modules\Transform\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="2340" top="9180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View Projection" visible="1">
+   </PIN>
+   <PIN pinname="Initial Yaw" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Initial Distance" slicecount="1" visible="1" values="0.62">
+   </PIN>
+   <PIN pinname="Distortion" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Far Plane" slicecount="1" values="1000">
+   </PIN>
+   <PIN pinname="Target Initial Position" slicecount="3" values="0,-0.05,0">
+   </PIN>
+   <PIN pinname="Initial Pitch" slicecount="1" values="0.13">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Projection" dstnodeid="12" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="View" dstnodeid="12" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="10" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Layer" dstnodeid="10" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="10" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="RandomSpread (Spreads 3d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 3d).v4p" nodename="RandomSpread (Spreads 3d)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1650" top="2670" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="SizeXYZ" slicecount="3" values="0.34,0.34,0.34">
+   </PIN>
+   <PIN pinname="Random Seed" slicecount="1" values="134">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="5">
+   <BOUNDS type="Box" left="1620" top="3570" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1620" top="3570" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|SDF Function |">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="26" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="2100" top="6000" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2100" top="6000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SphereSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\SphereSDF (SF3D.Sources).v4p" nodename="SphereSDF (SF3D.Sources)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="1620" top="3165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   <PIN pinname="Radius" visible="1" slicecount="1" values="0.09">
+   </PIN>
+   <PIN pinname="SF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="SF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="XYZ" dstnodeid="17" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="DivergenceFreeNoise (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources).v4p" nodename="DivergenceFreeNoise (VF3D.Sources)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="3705" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Noise Basis" slicecount="1" values="simplex">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="2.08">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="0.0075">
+   </PIN>
+   <PIN pinname="Offset" slicecount="3" visible="1" values="3.59,3.59,3.59">
+   </PIN>
+   <BOUNDS type="Box" left="3705" top="2175">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-26130" top="2265" width="13335" height="11055">
+   </BOUNDS>
+   <PIN pinname="Worley Distance Metric" slicecount="1" values="EuclideanSquared">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Amplitude XYZ" slicecount="3" values="0.014,0.014,0.014">
+   </PIN>
+   <PIN pinname="Frequency XYZ" slicecount="3" values="4.25,4.25,4.25">
+   </PIN>
+   <PIN pinname="Domain Offset XYZ" slicecount="3" visible="1" values="9.81,9.81,9.81">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Position Out" dstnodeid="18" dstpinname="Offset">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Position Out" dstnodeid="18" dstpinname="Domain Offset XYZ">
+   </LINK>
+   <NODE systemname="PreCurlDirection (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\PreCurlDirection (VF3D.Sources).v4p" nodename="PreCurlDirection (VF3D.Sources)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="4080" top="3990" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="SF2D Class" visible="1">
+   </PIN>
+   <PIN pinname="Direction" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Direction">
+   </LINK>
+   <NODE systemname="VectorOp (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\VectorOp (VF3D.Operators).v4p" nodename="VectorOp (VF3D.Operators)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3735" top="4365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2 VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="VF3D Class" dstnodeid="15" dstpinname="Input 1 VF3D Class">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="VF3D Function" dstnodeid="15" dstpinname="Input 1 VF3D Function">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="15" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="VF3D Class" dstnodeid="15" dstpinname="Input 2 VF3D Class">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="VF3D Function" dstnodeid="15" dstpinname="Input 2 VF3D Function">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="15" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="PreCurlConstrainToSDF (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\PreCurlConstrainToSDF (VF3D.Operators).v4p" nodename="PreCurlConstrainToSDF (VF3D.Operators)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="3750" top="4710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="SDF SF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="PreCurl FIeld VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" visible="1" values="-0.34">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="PreCurl FIeld VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="SDF SF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="PreCurl VF3D Function " visible="1">
+   </PIN>
+   <PIN pinname="SDF SF3D Function " visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SDF Function " visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Epsilon" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="16" dstpinname="SDF Function ">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="VF3D Class" dstnodeid="16" dstpinname="PreCurl FIeld VF3D Class">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="VF3D Function" dstnodeid="16" dstpinname="PreCurl FIeld VF3D Function">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="VF3D Function" dstnodeid="16" dstpinname="PreCurl VF3D Function ">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Curl (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Curl (VF3D.Operators).v4p" nodename="Curl (VF3D.Operators)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3750" top="5100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="VF3D Class" dstnodeid="24" dstpinname="VF3D Class">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="VF3D Class" dstnodeid="21" dstpinname="VF3D Class">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="VF3D Class" dstnodeid="13" dstpinname="Input VF3D Class">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="VF3D Function" dstnodeid="13" dstpinname="Input VF3D Function">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="13" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
+   <BOUNDS type="Box" left="6225" top="4020" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6225" top="4020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Radius">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   </PATCH>

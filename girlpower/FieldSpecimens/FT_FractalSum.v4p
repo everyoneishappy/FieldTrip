@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_FractalSum.v4p" scrollx="0" scrolly="0" systemname="FT_FractalSum" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\NODE 17\Noise NODE17 Workshop\Workshop Files\Part 1\FT_FractalSum.v4p">
-   <BOUNDS type="Window" left="945" top="750" width="12855" height="14655">
+   <BOUNDS type="Window" left="390" top="0" width="12045" height="12960">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -30,32 +30,12 @@
    <PIN pinname="Color Input" slicecount="1" values="|0.00000,0.00580,0.01482,1.00000|">
    </PIN>
    </NODE>
-   <NODE systemname="FBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\FBM (SF2D Function).v4p" nodename="FBM (SF2D Function)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="4320" top="8130" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Persistence" visible="1">
-   </PIN>
-   <PIN pinname="Lacunarity" visible="1">
-   </PIN>
-   <PIN pinname="Octaves" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Function" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6840" top="6105" width="795" height="240">
+   <BOUNDS type="Box" left="6105" top="6105" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6840" top="6105" width="0" height="0">
+   <BOUNDS type="Node" left="6105" top="6105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.91">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.51">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -66,14 +46,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Persistence">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="58" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10500" top="6105" width="795" height="240">
+   <BOUNDS type="Box" left="8745" top="6105" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10500" top="6105" width="0" height="0">
+   <BOUNDS type="Node" left="8745" top="6105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.9">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.85">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -84,14 +62,12 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Lacunarity">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="59" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3120" top="6105" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="3120" top="6105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="6">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -104,12 +80,10 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Octaves">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="60" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="3015" top="4590" width="4185" height="270">
+   <BOUNDS type="Node" left="3015" top="4350" width="4185" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3015" top="4590" width="2835" height="1200">
+   <BOUNDS type="Box" left="3015" top="4350" width="2835" height="1200">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Octaves is how many times we want to &apos;layer&apos; the function|">
    </PIN>
@@ -143,9 +117,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="62" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="9615" top="4500" width="4185" height="270">
+   <BOUNDS type="Node" left="8880" top="4350" width="4185" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="9615" top="4500" width="3030" height="1395">
+   <BOUNDS type="Box" left="8880" top="4350" width="3030" height="1395">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Lacunarity controls how widely each octave&apos;s frequency is spaced apart|">
    </PIN>
@@ -159,9 +133,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="63" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6360" top="4530" width="4185" height="270">
+   <BOUNDS type="Node" left="5625" top="4350" width="4185" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6360" top="4530" width="3045" height="1410">
+   <BOUNDS type="Box" left="5625" top="4350" width="3045" height="1410">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Persistence controls how much the amplitude is damped at higher frequencies|">
    </PIN>
@@ -172,42 +146,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="12">
-   </PIN>
-   </NODE>
-   <NODE systemname="MFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\MFBM (SF2D Function).v4p" nodename="MFBM (SF2D Function)" componentmode="Hidden" id="64">
-   <BOUNDS type="Node" left="6435" top="8100" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Persistence" slicecount="1" visible="1" values="1.03">
-   </PIN>
-   <PIN pinname="Lacunarity" visible="1">
-   </PIN>
-   <PIN pinname="Octaves" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Function" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Lacunarity">
-   </LINK>
-   <NODE systemname="IQFBM (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\IQFBM (SF2D Function).v4p" nodename="IQFBM (SF2D Function)" componentmode="Hidden" id="65">
-   <BOUNDS type="Node" left="4875" top="11835" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Persistence" visible="1" slicecount="1" values="0.62">
-   </PIN>
-   <PIN pinname="Lacunarity" visible="1" slicecount="1" values="1.9">
-   </PIN>
-   <PIN pinname="Octaves" visible="1" slicecount="1" values="5">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="67" systemname="IOBox (String)">
@@ -239,9 +177,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6480" top="8475" width="5565" height="270">
+   <BOUNDS type="Node" left="5970" top="7650" width="5565" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6480" top="8475" width="2940" height="1140">
+   <BOUNDS type="Box" left="5970" top="7650" width="2940" height="1140">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Mulifractal FBM will weight the signal by the strength of the previous octaves (tend to use higher perseistance values).  Also play with the &apos;center&apos; value on the noise|">
    </PIN>
@@ -252,50 +190,18 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Noise (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Noise\Noise (SF2D Function).v4p" nodename="Noise (SF2D Function)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="5010" top="2130" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Center" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
-   </PIN>
-   <PIN pinname="Frequency" slicecount="1" visible="1" values="4.37">
-   </PIN>
-   <PIN pinname="Amplitude" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
-   </PIN>
-   <PIN pinname="Basis" visible="1" slicecount="1" values="worley">
-   </PIN>
-   <PIN pinname="Inflection" visible="1" slicecount="1" values="Ridge">
-   </PIN>
-   <PIN pinname="Worley Distance Metric" visible="1" slicecount="1" values="Minkowski">
-   </PIN>
-   <PIN pinname="Worley Function" visible="1" slicecount="1" values="F2MinusF1">
-   </PIN>
-   <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Octaves">
-   </LINK>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="72">
-   <BOUNDS type="Node" left="1590" top="12285" width="100" height="100">
+   <BOUNDS type="Node" left="930" top="11430" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1590" top="12285" width="6000" height="4500">
+   <BOUNDS type="Box" left="930" top="11430" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13680" top="735" width="10095" height="10530">
+   <BOUNDS type="Window" left="12345" top="0" width="10095" height="10530">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="1650" top="10020" width="100" height="100">
+   <BOUNDS type="Node" left="945" top="10020" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -307,57 +213,31 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Switch" linkstyle="VHV">
-   <LINKPOINT x="255" y="5963">
+   <LINKPOINT x="20" y="5963">
    </LINKPOINT>
-   <LINKPOINT x="1665" y="5963">
+   <LINKPOINT x="1195" y="5963">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="74">
-   <BOUNDS type="Box" left="1890" top="4290" width="795" height="240">
+   <BOUNDS type="Box" left="1110" top="4290" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1890" top="4290" width="0" height="0">
+   <BOUNDS type="Node" left="1110" top="4290" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input SF2D Function">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input SF2D Function">
-   </LINK>
-   <NODE systemname="AsTexture (DX11.Texture SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\AsTexture (DX11.Texture SF2D).v4p" nodename="AsTexture (DX11.Texture SF2D)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="1605" top="11850" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SF2D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="17" srcpinname="Texture" dstnodeid="72" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="SF2D Function">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7560" top="7650" width="795" height="240">
+   <BOUNDS type="Box" left="4815" top="7590" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7560" top="7650" width="0" height="0">
+   <BOUNDS type="Node" left="4815" top="7590" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.97">
    </PIN>
@@ -370,70 +250,44 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Persistence">
-   </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
-   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input Function">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input Function">
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="73" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="73" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="73" dstpinname="Input 3">
-   </LINK>
-   <NODE systemname="AsScalarFIeld (DX11.Texture SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarFIeld (DX11.Texture SF2D Function).v4p" nodename="AsScalarFIeld (DX11.Texture SF2D Function)" componentmode="InAWindow" id="78">
-   <BOUNDS type="Node" left="8175" top="2115" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Scalar FIeld Texture" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="8175" top="1575" width="100" height="100">
+   <BOUNDS type="Node" left="7410" top="2670" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8175" top="1575" width="3000" height="3000">
+   <BOUNDS type="Box" left="7410" top="2670" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="1" values="|..\..\assets\logo inverse.jpg|">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="79" srcpinname="Texture Out" dstnodeid="78" dstpinname="Scalar FIeld Texture">
-   </LINK>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="80">
-   <BOUNDS type="Node" left="9420" top="1725" width="100" height="100">
+   <BOUNDS type="Node" left="8655" top="2670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XYZ" slicecount="3" values="2,2,2">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="Transform Out" dstnodeid="78" dstpinname="Transform">
-   </LINK>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="1875" top="3960" width="6360" height="270">
+   <BOUNDS type="Node" left="1110" top="3900" width="6360" height="270">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1875" top="2820" width="705" height="870">
+   <BOUNDS type="Box" left="1110" top="2760" width="705" height="870">
    </BOUNDS>
-   <BOUNDS type="Node" left="1875" top="2820" width="0" height="0">
+   <BOUNDS type="Node" left="1110" top="2760" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -454,20 +308,12 @@
    </NODE>
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="82" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="82" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="82" srcpinname="Output" dstnodeid="74" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="82" dstpinname="Input 2" linkstyle="VHV">
-   <LINKPOINT x="8205" y="3173">
-   </LINKPOINT>
-   <LINKPOINT x="8205" y="3173">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="84">
-   <BOUNDS type="Node" left="2880" top="2955" width="4455" height="270">
+   <BOUNDS type="Node" left="2115" top="2895" width="4455" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2880" top="2955" width="1935" height="720">
+   <BOUNDS type="Box" left="2115" top="2895" width="1935" height="720">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Although traditionally used with noise, you can FBM anything!|">
    </PIN>
@@ -490,6 +336,168 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="4245" top="3210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" visible="1" values="4.37">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" visible="1" values="0.89">
+   </PIN>
+   <PIN pinname="Domain Offset" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Basis" visible="1" slicecount="1" values="worley">
+   </PIN>
+   <PIN pinname="Inflection" visible="1" slicecount="1" values="Ridge">
+   </PIN>
+   <PIN pinname="Worley Distance Metric" visible="1" slicecount="1" values="Minkowski">
+   </PIN>
+   <PIN pinname="Worley Function" visible="1" slicecount="1" values="F2MinusF1">
+   </PIN>
+   <BOUNDS type="Window" left="6630" top="2745" width="13335" height="11055">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4245" top="3210">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="82" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="AsScalarField (SF2D.Sources DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\AsScalarField (SF2D.Sources DX11.Texture).v4p" nodename="AsScalarField (SF2D.Sources DX11.Texture)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="7410" top="3210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Scalar FIeld Texture" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7410" top="3210">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Texture Out" dstnodeid="78" dstpinname="Scalar FIeld Texture">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Transform Out" dstnodeid="78" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="82" dstpinname="Input 2" linkstyle="VHV">
+   <LINKPOINT x="7440" y="3883">
+   </LINKPOINT>
+   <LINKPOINT x="7440" y="3498">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="FBM (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\FBM (SF2D.Operators).v4p" nodename="FBM (SF2D.Operators)" componentmode="Hidden" id="39">
+   <BOUNDS type="Node" left="2475" top="7965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" visible="1">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1">
+   </PIN>
+   <PIN pinname="Octaves" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2475" top="7965">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Persistence">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Lacunarity">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Octaves">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="39" dstpinname="Input Function">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="73" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="MFBM (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\MFBM (SF2D.Operators).v4p" nodename="MFBM (SF2D.Operators)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="4590" top="7965" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" slicecount="1" visible="1" values="1.03">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1">
+   </PIN>
+   <PIN pinname="Octaves" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Function" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4590" top="7965">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Lacunarity">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Octaves">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Persistence">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output Node" dstnodeid="64" dstpinname="Input Function">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Output" dstnodeid="73" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="945" top="10995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Texture" dstnodeid="72" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="SF2D Function">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IQFBM (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\IQFBM (SF2D.Operators).v4p" nodename="IQFBM (SF2D.Operators)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="4875" top="11835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" visible="1" slicecount="1" values="0.62">
+   </PIN>
+   <PIN pinname="Lacunarity" visible="1" slicecount="1" values="1.9">
+   </PIN>
+   <PIN pinname="Octaves" visible="1" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
    </NODE>
    </PATCH>
