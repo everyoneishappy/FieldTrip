@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" bgcolor="16777215" systemname="FG_03_SDF_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_03_SDF_Intro.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="315" top="0" width="9780" height="12210">
+   <BOUNDS type="Window" left="315" top="0" width="9780" height="12705">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
@@ -236,10 +236,10 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="163">
-   <BOUNDS type="Node" left="90" top="11160" width="100" height="100">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="163" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="15" top="11760" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="90" top="11160" width="6000" height="4500">
+   <BOUNDS type="Box" left="15" top="11760" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="9930" top="7455" width="4260" height="4080">
    </BOUNDS>
@@ -247,21 +247,23 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Distance Field|">
    </PIN>
+   <PIN pinname="Show Alpha" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <NODE systemname="ColorWaveShaper (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\ColorWaveShaper.tfx" nodename="ColorWaveShaper (DX11.TextureFX)" componentmode="Hidden" id="164">
-   <BOUNDS type="Node" left="135" top="10815" width="100" height="100">
+   <NODE systemname="ColorWaveShaper (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\ColorWaveShaper.tfx" nodename="ColorWaveShaper (DX11.TextureFX)" componentmode="Hidden" id="164" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="60" top="11415" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="FrequencyXYZW" slicecount="4" values="0.61,1.56,16,1">
+   <PIN pinname="FrequencyXYZW" slicecount="4" values="0.85,2.08,16,0.88">
    </PIN>
    <PIN pinname="Technique" slicecount="1" values="Sine">
    </PIN>
    <PIN pinname="Grayscale" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="PhaseXYZW" slicecount="4" values="0,-2.2,0,0">
+   <PIN pinname="PhaseXYZW" slicecount="4" values="0.83,-1.64,0,0">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="165">
@@ -404,7 +406,7 @@
    <PIN pinname="Size" slicecount="1" values="20">
    </PIN>
    </NODE>
-   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="183">
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="183" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="135" top="10005" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="4">
@@ -423,9 +425,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="184">
-   <BOUNDS type="Box" left="4905" top="10620" width="720" height="465">
+   <BOUNDS type="Box" left="4560" top="9885" width="720" height="465">
    </BOUNDS>
-   <BOUNDS type="Node" left="4905" top="10620" width="0" height="0">
+   <BOUNDS type="Node" left="4560" top="9885" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -441,9 +443,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="184" srcpinname="Y Output Value" dstnodeid="183" dstpinname="Switch" linkstyle="VHV">
-   <LINKPOINT x="4935" y="11540">
+   <LINKPOINT x="4705" y="9305">
    </LINKPOINT>
-   <LINKPOINT x="165" y="10690">
+   <LINKPOINT x="50" y="9550">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="186" hiddenwhenlocked="1">
@@ -684,24 +686,26 @@
    </LINK>
    <LINK srcnodeid="157" srcpinname="Output" dstnodeid="160" dstpinname="Input">
    </LINK>
-   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="120" top="10365" width="100" height="100">
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="2" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="45" top="11070" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
+   </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="164" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="190" systemname="IOBox (String)">
    <BOUNDS type="Node" left="225" top="1665" width="21795" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="225" top="1665" width="7905" height="1665">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Both 2D &amp; 3D signed distance fields are scalar field usually interpreted as an implicit geometry where the zero crossing point in the is the surface.  As you get further away, the distance value increase, and as you go ‘inside’ it goes in to negative|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Both 2D &amp; 3D signed distance fields are usually interpreted as an implicit geometry where the zero crossing point is the surface.  As you get further away, the distance value increases, and as you go ‘inside’ the shape the value is negative|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -726,4 +730,34 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="UnaryOp (SF2D.Operations)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\UnaryOp (SF2D.Operations).v4p" nodename="UnaryOp (SF2D.Operations)" componentmode="Hidden" id="192" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="255" top="10380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operation" slicecount="1" values="sign">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="192" dstpinname="Input">
+   </LINK>
+   <NODE systemname="ScalarOp (SF2D.Operations)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\ScalarOp (SF2D.Operations).v4p" nodename="ScalarOp (SF2D.Operations)" componentmode="Hidden" id="193" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="60" top="10710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Operation" slicecount="1" values="min">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="192" srcpinname="Output" dstnodeid="193" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="193" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="193" srcpinname="Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
    </PATCH>
