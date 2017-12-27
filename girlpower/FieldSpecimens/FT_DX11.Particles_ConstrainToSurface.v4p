@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_DX11.Particles_ConstrainToSurface.v4p" systemname="FT_DX11.Particles_ConstrainToSurface" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_DX11.Particles_ConstrainToSurface.v4p" scrollx="0" scrolly="0" bgcolor="9920807">
-   <BOUNDS height="15015" left="210" top="390" type="Window" width="10905">
+   <BOUNDS height="14400" left="0" top="0" type="Window" width="10155">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -195,11 +195,13 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4950" top="2925" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Cuase the particles to travel in a direction|">
    </PIN>
    </NODE>
    <LINK srcnodeid="323" srcpinname="Y Output Value" dstnodeid="321" dstpinname="X">
@@ -513,7 +515,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="210" top="13110" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="12135" top="390" width="11385" height="8970">
+   <BOUNDS type="Window" left="9945" top="0" width="11385" height="8970">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -769,7 +771,7 @@
    <LINK srcnodeid="310" srcpinname="Output" dstnodeid="317" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Gradient (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Gradient (SF3D.Operators).v4p" nodename="Gradient (SF3D.Operators)" componentmode="Hidden" id="301">
-   <BOUNDS type="Node" left="2580" top="3990" width="100" height="100">
+   <BOUNDS type="Node" left="2340" top="3300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
@@ -779,7 +781,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="2580" top="3990">
+   <BOUNDS type="Box" left="2340" top="3300">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="301" dstpinname="Input SF3D Function">
@@ -787,7 +789,7 @@
    <LINK srcnodeid="362" srcpinname="Output Node" dstnodeid="301" dstpinname="Input">
    </LINK>
    <NODE systemname="Cross (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Cross (VF3D.Operators).v4p" nodename="Cross (VF3D.Operators)" componentmode="Hidden" id="303">
-   <BOUNDS type="Node" left="3285" top="4440" width="100" height="100">
+   <BOUNDS type="Node" left="3210" top="4500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1 VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
@@ -811,7 +813,7 @@
    <LINK srcnodeid="301" srcpinname="Output" dstnodeid="303" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Normalize (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Normalize (VF3D.Operators).v4p" nodename="Normalize (VF3D.Operators)" componentmode="Hidden" id="309">
-   <BOUNDS type="Node" left="3300" top="4890" width="100" height="100">
+   <BOUNDS type="Node" left="3225" top="4950" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input VF3D Function" visible="1">
    </PIN>

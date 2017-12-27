@@ -35,7 +35,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6105" top="6105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.51">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.52">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8745" top="6105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.85">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.8">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -101,7 +101,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="225" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -239,7 +239,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4815" top="7590" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.97">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.94">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -500,4 +500,22 @@
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="86">
+   <BOUNDS type="Box" left="4620" top="1290" width="975" height="1455">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4620" top="1290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worley">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="sine">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="Output Enum" dstnodeid="16" dstpinname="Basis">
+   </LINK>
    </PATCH>

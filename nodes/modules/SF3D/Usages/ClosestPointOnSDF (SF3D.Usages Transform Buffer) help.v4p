@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF3D.Usages Transform Buffer) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages Transform Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="255" top="405" width="12060" height="11775">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -22,36 +22,6 @@
    <PIN pinname="Input String" slicecount="1" visible="0" values="|Finds the closest point on an SDF surface from a given sample point.  This version builds a transformation matrix there|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="1875" top="8430" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="9030" top="3255" width="12060" height="11295">
-   </BOUNDS>
-   <PIN pinname="SF3D Class" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchNormals">
-   </PIN>
-   <PIN pinname="Technique Valid" visible="1">
-   </PIN>
-   <PIN pinname="March Step Length" slicecount="1" visible="1" values="0.75">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Write Depth" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Compiled" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" hiddenwhenlocked="1" systemname="IOBox (Value Advanced)">
@@ -270,8 +240,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="41" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5565" top="5985" width="480" height="480">
    </BOUNDS>
@@ -477,9 +445,9 @@
    <LINK srcnodeid="7" srcpinname="IID" dstnodeid="8" dstpinname="IID">
    </LINK>
    <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="8175" top="6435" width="100" height="100">
+   <BOUNDS type="Node" left="8250" top="6825" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8175" top="6435" width="3000" height="3000">
+   <BOUNDS type="Box" left="8250" top="6825" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -488,46 +456,12 @@
    </NODE>
    <LINK srcnodeid="6" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry In">
    </LINK>
-   <NODE systemname="ClosestPointOnSDF (Transform Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Compute\ClosestPointOnSDF (Transform Buffer VF3D).v4p" nodename="ClosestPointOnSDF (Transform Buffer VF3D)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="4020" top="5595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Sample Position 3D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1">
-   </PIN>
-   <PIN pinname="3D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Compiled" visible="1">
-   </PIN>
-   <PIN pinname="Iterations" visible="1">
-   </PIN>
-   <PIN pinname="offset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Transform Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Offset" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Spread Count" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="5" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Compiled" dstnodeid="22" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="5" dstpinname="Sample Position 3D Buffer">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Iterations">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="offset">
-   </LINK>
    <NODE systemname="GetMatrixPos (3d Buffer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\GetMatrixPos (3D Buffer)\GetMatrixPos (3D Buffer).v4p" nodename="GetMatrixPos (3d Buffer)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="3870" top="7050" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
-   <PIN pinname="Transform Buffer" visible="1">
+   <PIN pinname="Transform Buffer" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="3D Buffer" visible="1">
    </PIN>
@@ -539,8 +473,6 @@
    <LINK srcnodeid="4" srcpinname="3D Buffer" dstnodeid="24" dstpinname="To 3D Buffer">
    </LINK>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Instance Count">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Offset">
    </LINK>
    <NODE systemname="SphereSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\SphereSDF (SF3D.Sources).v4p" nodename="SphereSDF (SF3D.Sources)" componentmode="Hidden" id="39" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1020" top="1860" width="100" height="100">
@@ -588,8 +520,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Transform Buffer" dstnodeid="44" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="44" srcpinname="Output Node" dstnodeid="4" dstpinname="Transform Buffer">
    </LINK>
    <LINK srcnodeid="44" srcpinname="Output Node" dstnodeid="8" dstpinname="Transform Buffer">
@@ -646,8 +576,6 @@
    </LINK>
    <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="34" dstpinname="Layer 3">
    </LINK>
-   <LINK srcnodeid="41" srcpinname="Layer" dstnodeid="34" dstpinname="Layer 2">
-   </LINK>
    <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="34" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="34" srcpinname="Layer Out" dstnodeid="35" dstpinname="Layer In">
@@ -660,4 +588,76 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages Transform Buffer).v4p" nodename="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="4020" top="5595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Position 3D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Iterations" visible="1">
+   </PIN>
+   <PIN pinname="offset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Transform Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Offset" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Spread Count" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Compiled" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="5" dstpinname="Sample Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Iterations">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="offset">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Offset">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Transform Buffer" dstnodeid="44" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="RaymarchBasic (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchBasic (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchBasic (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="1875" top="8430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="9030" top="3255" width="12060" height="11295">
+   </BOUNDS>
+   <PIN pinname="SF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchGradient">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="March Step Length" slicecount="1" visible="1" values="0.75">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Write Depth" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="41" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Layer" dstnodeid="34" dstpinname="Layer 2">
+   </LINK>
    </PATCH>

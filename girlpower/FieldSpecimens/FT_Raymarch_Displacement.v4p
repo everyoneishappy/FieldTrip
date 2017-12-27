@@ -21,7 +21,7 @@
    </PIN>
    <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.21032,0.44664,0.37601,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.47095,0.54000,0.62268,1.00000|">
    </PIN>
    </NODE>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -349,7 +349,7 @@
    </PIN>
    <PIN pinname="March Step Length" visible="1">
    </PIN>
-   <PIN pinname="Default Color" slicecount="1" values="|0.46317,0.95925,0.78627,1.00000|">
+   <PIN pinname="Default Color" slicecount="1" values="|0.47917,0.77034,0.99257,1.00000|">
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
