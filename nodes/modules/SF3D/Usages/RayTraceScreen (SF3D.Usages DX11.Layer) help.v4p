@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Render\RayTraceScreen (DX11.Layer SF3D)\RayTraceScreen (SF3D.Usages DX11.Layer) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\RayTraceScreen (SF3D.Usages DX11.Layer) help.v4p">
    <BOUNDS type="Window" left="1275" top="1215" width="9000" height="10905">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -214,36 +214,6 @@
    </NODE>
    <LINK srcnodeid="12" srcpinname="Color Output" dstnodeid="13" dstpinname="Data">
    </LINK>
-   <NODE systemname="RayTraceScreen (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RayTraceScreen (DX11.Layer SF3D).v4p" componentmode="Hidden" id="11" nodename="RayTraceScreen (DX11.Layer SF3D)">
-   <BOUNDS type="Node" left="4605" top="6840" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4605" top="6840" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="3060" top="7125" width="18585" height="10905">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transfer Function Texture" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="stepSize" slicecount="1" values="0.01">
-   </PIN>
-   <PIN pinname="Transfer Function End" slicecount="1" visible="1" values="0.25">
-   </PIN>
-   <PIN pinname="Render State" visible="1">
-   </PIN>
-   <PIN pinname="stepFactor" slicecount="1" values="0.011">
-   </PIN>
-   <PIN pinname="Transfer Function Start" visible="1">
-   </PIN>
-   <PIN pinname="Master Alpha" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="13" srcpinname="Texture Out" dstnodeid="11" dstpinname="Transfer Function Texture">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 3">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="10" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2820" top="5910" width="795" height="240">
    </BOUNDS>
@@ -254,8 +224,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4815" top="3795" width="795" height="240">
    </BOUNDS>
@@ -282,8 +250,6 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Render State" dstnodeid="11" dstpinname="Render State">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6045" top="4800" width="795" height="240">
    </BOUNDS>
@@ -298,8 +264,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transfer Function Start|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Transfer Function Start">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6450" top="5385" width="795" height="240">
    </BOUNDS>
@@ -314,8 +278,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transfer Function End|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Transfer Function End">
-   </LINK>
    <NODE systemname="SphereSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\SphereSDF (SF3D.Sources).v4p" nodename="SphereSDF (SF3D.Sources)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="2805" top="4245" width="100" height="100">
    </BOUNDS>
@@ -392,4 +354,42 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="RayTraceScreen (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RayTraceScreen (SF3D.Usages DX11.Layer).v4p" componentmode="Hidden" id="11" nodename="RayTraceScreen (SF3D.Usages DX11.Layer)">
+   <BOUNDS type="Node" left="4605" top="6840" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4605" top="6840" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3060" top="7125" width="18585" height="10905">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transfer Function Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="stepSize" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="Transfer Function End" slicecount="1" visible="1" values="0.25">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="stepFactor" slicecount="1" values="0.011">
+   </PIN>
+   <PIN pinname="Transfer Function Start" visible="1">
+   </PIN>
+   <PIN pinname="Master Alpha" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Texture Out" dstnodeid="11" dstpinname="Transfer Function Texture">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Render State" dstnodeid="11" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Transfer Function Start">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Transfer Function End">
+   </LINK>
    </PATCH>

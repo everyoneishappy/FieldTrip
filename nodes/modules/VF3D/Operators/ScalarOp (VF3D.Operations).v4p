@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (VF3D.Operations).v4p" systemname="ScalarOp (VF3D.Operations)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (VF3D.Operations).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="8475" top="585" width="14670" height="12255">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\ScalarOp (VF3D.Operations).v4p" systemname="ScalarOp (VF3D.Operations)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (VF3D.Operations).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="6960" top="1125" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -350,98 +350,6 @@
    </LINK>
    <LINK srcnodeid="104" srcpinname="Output" dstnodeid="108" dstpinname="Input 3">
    </LINK>
-   <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="10035" top="2700" width="960" height="270">
-   </BOUNDS>
-   <PIN pinname="Strings" visible="1">
-   </PIN>
-   <PIN pinname="Enum Name" slicecount="1" values="Op">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="91" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="10035" top="1440" width="330" height="1020">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10035" top="1440" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="4" visible="1" values="+,-,*,/">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="String">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="91" srcpinname="Output String" dstnodeid="92" dstpinname="Strings">
-   </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="9450" top="2715" width="525" height="270">
-   </BOUNDS>
-   <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
-   </PIN>
-   <PIN pinname="Enum" visible="1" slicecount="1" values="Op">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="89" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="9525" top="945" width="555" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9525" top="945" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="+">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Operation">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="89" srcpinname="Output Enum" dstnodeid="90" dstpinname="Receive">
-   </LINK>
-   <NODE systemname="Enum2String (Enumerations)" nodename="Enum2String (Enumerations)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="8190" top="1830" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   <PIN pinname="String Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="89" srcpinname="Output Enum" dstnodeid="88" dstpinname="Enum">
-   </LINK>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="8055" top="2535" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="86" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="7935" top="2160" width="1305" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7935" top="2160" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|#define FN_OP |">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="86" srcpinname="Output String" dstnodeid="87" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="88" srcpinname="String Value" dstnodeid="87" dstpinname="Input 2">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="85" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6165" top="5835" width="1200" height="240">
    </BOUNDS>
@@ -459,7 +367,7 @@
    <LINK srcnodeid="85" srcpinname="Output String" dstnodeid="105" dstpinname="Substitute From">
    </LINK>
    <NODE id="84" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="11280" top="7380" width="330" height="270">
+   <BOUNDS type="Node" left="7575" top="7935" width="330" height="270">
    </BOUNDS>
    <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
    </PIN>
@@ -475,9 +383,9 @@
    <LINK srcnodeid="103" srcpinname="Output String" dstnodeid="84" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="83" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="11475" top="6240" width="1650" height="780">
+   <BOUNDS type="Box" left="7845" top="7680" width="1080" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11475" top="6240" width="0" height="0">
+   <BOUNDS type="Node" left="7845" top="7680" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="DEFAULT">
    </PIN>
@@ -507,7 +415,7 @@
    </PIN>
    </NODE>
    <NODE systemname="RenderSemantic (DX11.Layer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Value)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="10740" top="7770" width="100" height="100">
+   <BOUNDS type="Node" left="7035" top="8325" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Semantic" visible="1">
    </PIN>
@@ -539,86 +447,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10230" top="3555" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10230" top="3555" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Reverse Order|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="10230" top="4065" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="10980" top="4035" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="75" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="10995" top="3690" width="1935" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10995" top="3690" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|#define FN_REVERSE |">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="75" srcpinname="Output String" dstnodeid="76" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="76" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="10245" top="4620" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="74" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="74" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="105" dstpinname="Substitute To">
    </LINK>
    <NODE systemname="ScalarOp_VF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp_VF3D.fx" nodename="ScalarOp_VF3D (DX11.Effect)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="4500" top="3765" width="100" height="100">
@@ -760,4 +588,238 @@
    </LINK>
    <INFO author="" description="Provides basic dyadic ops such as +, -, *, /, % and others on an input 3D vector field and a 3D scalar operand" tags="+, -, *, /">
    </INFO>
+   <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="10530" top="5835" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Strings" visible="1">
+   </PIN>
+   <PIN pinname="Enum Name" slicecount="1" values="Op">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="135" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="10500" top="2115" width="1035" height="3630">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10500" top="2115" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="14" visible="1" values="+,-,*,/,%,&lt;,&lt;=,==,!=,&amp;&amp;,||||||,pow,min,max">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="String">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="14">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="135" srcpinname="Output String" dstnodeid="136" dstpinname="Strings">
+   </LINK>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="134">
+   <BOUNDS type="Node" left="9600" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
+   </PIN>
+   <PIN pinname="Enum" visible="1" slicecount="1" values="Op">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="133" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="10020" top="960" width="555" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10020" top="960" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="+">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Operation">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="133" srcpinname="Output Enum" dstnodeid="134" dstpinname="Receive">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="132" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10860" top="870" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10860" top="870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Reverse Order|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="131" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="11835" top="2115" width="1185" height="3630">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11835" top="2115" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="14" visible="1" values="|{0} + {1}|,|{0} - {1}|,|{0} * {1}|,|{0} / {1}|,|{0} % {1}|,|{0} &lt; {1}|,|{0} &lt;= {1}|,|{0} == {1}|,|{0} != {1}|,|{0} &amp;&amp; {1}|,|{0} |||| {1}|,|pow({0}, {1})|,|min({0}, {1})|,|max({0}, {1})|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="String">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="14">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="10710" top="6285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="133" srcpinname="Output Enum" dstnodeid="130" dstpinname="Enum">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="129">
+   <BOUNDS type="Node" left="10110" top="6690" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="131" srcpinname="Output String" dstnodeid="129" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Ord Value" dstnodeid="129" dstpinname="Index">
+   </LINK>
+   <NODE systemname="Format (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Format (String)" componentmode="Hidden" id="128">
+   <BOUNDS type="Node" left="9975" top="7620" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9975" top="7620" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Argument 1" visible="1">
+   </PIN>
+   <PIN pinname="Argument 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="127">
+   <BOUNDS type="Node" left="11355" top="7245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="fScalarOpS2D_0_INPUT2">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="132" srcpinname="Y Output Value" dstnodeid="127" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Switch (String Input)" nodename="Switch (String Input)" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="10680" top="7245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="fScalarOpS2D_0_INPUT2">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="132" srcpinname="Y Output Value" dstnodeid="126" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Output" dstnodeid="128" dstpinname="Argument 1">
+   </LINK>
+   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="128" dstpinname="Argument 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="125">
+   <BOUNDS type="Box" left="10005" top="8010" width="4365" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10005" top="8010" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="125" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="124">
+   <BOUNDS type="Node" left="9960" top="7245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|#define FN_OP |">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="129" srcpinname="Output" dstnodeid="124" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output" dstnodeid="128" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="123">
+   <BOUNDS type="Node" left="10935" top="6690" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10935" top="6690" width="1080" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="FN_INPUT1(p)">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="123" srcpinname="Output String" dstnodeid="126" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="123" srcpinname="Output String" dstnodeid="127" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="122">
+   <BOUNDS type="Node" left="12090" top="6690" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12090" top="6690" width="1110" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="FN_INPUT2(p)">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="122" srcpinname="Output String" dstnodeid="126" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Output String" dstnodeid="127" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="125" srcpinname="Output String" dstnodeid="105" dstpinname="Substitute To">
+   </LINK>
    </PATCH>

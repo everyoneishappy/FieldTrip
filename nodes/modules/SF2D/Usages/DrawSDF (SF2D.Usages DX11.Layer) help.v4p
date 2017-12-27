@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (SF2D.Usages DX11.Layer) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer) help.v4p">
    <BOUNDS type="Window" left="435" top="255" width="8235" height="11670">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -65,7 +65,7 @@
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\logo inverse.jpg|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\assets\logo inverse.jpg|">
    </PIN>
    </NODE>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="23">
@@ -377,7 +377,7 @@
    </PIN>
    <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Technique" slicecount="1" values="RawDistance" visible="1">
+   <PIN pinname="Technique" slicecount="1" visible="1" values="RawDistance">
    </PIN>
    <PIN pinname="Technique Valid" visible="1">
    </PIN>
@@ -387,7 +387,7 @@
    </PIN>
    <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="softness" slicecount="1" values="0.01" visible="1">
+   <PIN pinname="softness" slicecount="1" visible="1" values="0.01">
    </PIN>
    <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
    </PIN>

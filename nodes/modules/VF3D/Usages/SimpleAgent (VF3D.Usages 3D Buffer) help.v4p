@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\SimpleAgent\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="765" top="255" width="9045" height="12885">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -302,52 +302,6 @@
    </NODE>
    <LINK srcnodeid="13" srcpinname="Position Out" dstnodeid="20" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="SimpleAgent (3D Buffer VF3D)" filename="%VVVV%\packs\FieldTrip\Nodes\modules\Compute\SimpleAgent\SimpleAgent (3D Buffer VF3D).v4p" nodename="SimpleAgent (3D Buffer VF3D)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="255" top="7635" width="7395" height="270">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1275" top="2445" width="12750" height="11100">
-   </BOUNDS>
-   <PIN pinname="3D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Seed Position 3D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Spread Count" visible="1">
-   </PIN>
-   <PIN pinname="VF3D Class" visible="1">
-   </PIN>
-   <PIN pinname="Technique Valid" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Reset All" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Step Size" visible="1">
-   </PIN>
-   <PIN pinname="Maximum Distance from Seed Position" slicecount="1" visible="1" values="4">
-   </PIN>
-   <PIN pinname="Function Integration Mode" slicecount="1" values="RK2">
-   </PIN>
-   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input VF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Compiled" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="12" srcpinname="3D Buffer" dstnodeid="26" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Spread Count">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Reset All">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="12" dstpinname="Seed Position 3D Buffer">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Step Size">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Maximum Distance from Seed Position">
-   </LINK>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="9" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1320" top="11310" width="100" height="100">
    </BOUNDS>
@@ -418,8 +372,6 @@
    <PIN pinname="Target Initial Position" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="12" srcpinname="Compiled" dstnodeid="24" dstpinname="Y Input Value">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="4">
    <BOUNDS type="Box" left="6195" top="8055" width="2250" height="480">
    </BOUNDS>
@@ -490,8 +442,6 @@
    <PIN pinname="Input 2 Default XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="VF3D Function" dstnodeid="12" dstpinname="Input VF3D Function">
-   </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input 2 Defualt XYZ">
    </LINK>
    <LINK srcnodeid="10" srcpinname="VF3D Function" dstnodeid="11" dstpinname="Input 1 VF3D Function">
@@ -509,8 +459,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="31" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="12" dstpinname="Input">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="32" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1245" top="11700" width="100" height="100">
@@ -540,4 +488,56 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="SimpleAgent (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer).v4p" nodename="SimpleAgent (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="255" top="7635" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1275" top="2445" width="12750" height="11100">
+   </BOUNDS>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Seed Position 3D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Reset All" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Step Size" visible="1">
+   </PIN>
+   <PIN pinname="Maximum Distance from Seed Position" slicecount="1" visible="1" values="4">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" values="RK2">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="3D Buffer" dstnodeid="26" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Reset All">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="12" dstpinname="Seed Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Step Size">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Maximum Distance from Seed Position">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Compiled" dstnodeid="24" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="VF3D Function" dstnodeid="12" dstpinname="Input VF3D Function">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="12" dstpinname="Input">
+   </LINK>
    </PATCH>

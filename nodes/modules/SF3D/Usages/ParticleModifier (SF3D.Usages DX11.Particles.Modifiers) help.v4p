@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p">
    <BOUNDS type="Window" left="480" top="405" width="8760" height="11820">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -380,65 +380,9 @@
    </NODE>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Reset">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="12" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="3525" top="3180" width="1170" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3525" top="3180" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|float3 velocity;|">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="|float3 position;|">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Target Attribute|">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="31" srcpinname="Projection" dstnodeid="30" dstpinname="Projection">
    </LINK>
    <LINK srcnodeid="31" srcpinname="View" dstnodeid="30" dstpinname="View">
-   </LINK>
-   <NODE nodename="ParticleModifier (SF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="11" systemname="ParticleModifier (SF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D DX11.Particles.Modifiers).v4p">
-   <BOUNDS type="Node" left="5055" top="3735" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5055" top="3735" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Modifier Out" visible="1">
-   </PIN>
-   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" visible="1" values="Set">
-   </PIN>
-   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
-   </BOUNDS>
-   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 scale;|">
-   </PIN>
-   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE systemname="ParticleModifier (VF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (VF3D DX11.Particles.Modifiers).v4p" nodename="ParticleModifier (VF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="2700" top="3720" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Modifier Out" visible="1">
-   </PIN>
-   <PIN pinname="Target Attribute" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Modifier Out" dstnodeid="24" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Output Enum" dstnodeid="10" dstpinname="Target Attribute">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Modifier Out" dstnodeid="24" dstpinname="Layer 3">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="5250" top="3435" width="795" height="240">
@@ -448,8 +392,6 @@
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="7" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="5940" top="2505" width="1185" height="240">
    </BOUNDS>
@@ -466,8 +408,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Attribute|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="11" dstpinname="Target Attribute">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="6" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="5730" top="1980" width="1590" height="270">
    </BOUNDS>
@@ -482,8 +422,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Output Enum" dstnodeid="11" dstpinname="Technique">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
    <BOUNDS type="Node" left="6615" top="3075" width="7185" height="270">
    </BOUNDS>
@@ -498,38 +436,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="4" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2625" top="3240" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2625" top="3240" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="10" dstpinname="Input">
-   </LINK>
-   <NODE systemname="DivergenceFreeNoise (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources).v4p" nodename="DivergenceFreeNoise (VF3D.Sources)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="2640" top="2565" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="VF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Frequency XYZ" slicecount="3" values="0.93,0.93,0.93">
-   </PIN>
-   <PIN pinname="Noise Basis" slicecount="1" values="perlin">
-   </PIN>
-   <PIN pinname="Amplitude XYZ" slicecount="3" values="0.08,0.08,0.08">
-   </PIN>
-   <PIN pinname="Domain Offset XYZ" slicecount="3" values="2.85,2.85,2.85">
-   </PIN>
-   <BOUNDS type="Box" left="2640" top="2565">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="20" srcpinname="Output" dstnodeid="4" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Noise (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\Noise (SF3D.Sources).v4p" nodename="Noise (SF3D.Sources)" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="5220" top="3045" width="100" height="100">
    </BOUNDS>
@@ -552,4 +458,44 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE nodename="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="11" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers).v4p">
+   <BOUNDS type="Node" left="5055" top="3735" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5055" top="3735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Modifier Out" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" visible="1" values="Set">
+   </PIN>
+   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
+   </BOUNDS>
+   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 scale;|">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Modifier Out" dstnodeid="24" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="11" dstpinname="Target Attribute">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output Enum" dstnodeid="11" dstpinname="Technique">
+   </LINK>
+   <NODE systemname="Turbulence (DX11.Particles.Modifiers)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Modifiers\Turbulence (DX11.Particles.Modifiers).v4p" nodename="Turbulence (DX11.Particles.Modifiers)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="3150" top="3735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="noiseAmountXYZ" slicecount="3" values="0.07,0.07,0.07">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Layer" dstnodeid="24" dstpinname="Layer 2">
+   </LINK>
    </PATCH>

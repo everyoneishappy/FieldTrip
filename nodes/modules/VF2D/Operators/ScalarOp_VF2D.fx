@@ -12,7 +12,7 @@
 
 // DEFINES
 #ifndef FN_OP
-#define FN_OP +
+#define FN_OP FN_INPUT1(p) + FN_INPUT2(p); 
 #endif
 
 // Parameters
@@ -35,11 +35,7 @@ float FN_singleValue (float2 p)
 
 float2 FN_ (float2 p)
 {
-	#if(FN_REVERSE==1) 
-	return FN_INPUT2(p) FN_OP FN_INPUT1(p);
-	#else
-	return FN_INPUT1(p) FN_OP FN_INPUT2(p); 
-	#endif
+	return FN_OP; 
 }
 // end of the function body
 #endif 

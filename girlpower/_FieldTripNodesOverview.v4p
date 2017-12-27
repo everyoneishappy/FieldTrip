@@ -149,39 +149,45 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="8">
-   <BOUNDS type="Node" left="150" top="8145" width="100" height="100">
+   <BOUNDS type="Node" left="210" top="8145" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="150" top="8145" width="27030" height="240">
+   <BOUNDS type="Box" left="210" top="8145" width="27030" height="240">
    </BOUNDS>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="9">
-   <BOUNDS type="Node" left="315" top="11460" width="100" height="100">
+   <BOUNDS type="Node" left="375" top="11460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="315" top="11460" width="27030" height="240">
+   <BOUNDS type="Box" left="375" top="11460" width="27030" height="240">
    </BOUNDS>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="10">
-   <BOUNDS type="Node" left="315" top="14805" width="100" height="100">
+   <BOUNDS type="Node" left="165" top="14820" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="315" top="14805" width="27090" height="240">
+   <BOUNDS type="Box" left="165" top="14820" width="27330" height="240">
    </BOUNDS>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="11">
@@ -193,7 +199,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="12">
@@ -217,19 +225,23 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="14">
-   <BOUNDS type="Node" left="27135" top="15" width="100" height="100">
+   <BOUNDS type="Node" left="27195" top="15" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="27135" top="15" width="285" height="14985">
+   <BOUNDS type="Box" left="27195" top="15" width="285" height="14985">
    </BOUNDS>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="15">
@@ -241,7 +253,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="16">
@@ -253,7 +267,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="AsScalarField (SF2D.Sources DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarField (SF2D.Sources DX11.Texture).v4p" nodename="AsScalarField (SF2D.Sources DX11.Texture)" componentmode="Hidden" id="17">
@@ -365,15 +381,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="14685" top="2370" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="2490" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="2370">
+   <BOUNDS type="Box" left="14685" top="2490">
    </BOUNDS>
    </NODE>
    <NODE systemname="ExtrudeSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" nodename="ExtrudeSDF (SF2D.Operators)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="14685" top="3435" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="3555" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="3435">
+   <BOUNDS type="Box" left="14685" top="3555">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (SF2D.Operators).v4p" nodename="InputMorph (SF2D.Operators)" componentmode="Hidden" id="44">
@@ -383,15 +399,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\OutlineSDF (SF2D.Operators).v4p" nodename="OutlineSDF (SF2D.Operators)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="14685" top="2790" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="2910" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="2790">
+   <BOUNDS type="Box" left="14685" top="2910">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainLookUp (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainLookUp (SF2D.Operators).v4p" nodename="DomainLookUp (SF2D.Operators)" componentmode="Hidden" id="46">
-   <BOUNDS type="Node" left="18120" top="3585" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="3510" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="3585">
+   <BOUNDS type="Box" left="18120" top="3510">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainRepeat (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF2D.Operators).v4p" nodename="DomainRepeat (SF2D.Operators)" componentmode="Hidden" id="47">
@@ -413,9 +429,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Curl\PreCurlConstrainToSDF (SF2D.Operators).v4p" nodename="PreCurlConstrainToSDF (SF2D.Operators)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="14685" top="3105" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="3225" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="3105">
+   <BOUNDS type="Box" left="14685" top="3225">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="52">
@@ -705,9 +721,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Gradient (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Gradient\Gradient (SF3D.Operators).v4p" nodename="Gradient (SF3D.Operators)" componentmode="Hidden" id="112">
-   <BOUNDS type="Node" left="13290" top="6585" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="6585" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="6585">
+   <BOUNDS type="Box" left="13140" top="6585">
    </BOUNDS>
    </NODE>
    <NODE systemname="ScalarOp (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF3D.Operators).v4p" nodename="ScalarOp (SF3D.Operators)" componentmode="Hidden" id="113">
@@ -719,33 +735,33 @@
    </PIN>
    </NODE>
    <NODE systemname="Curvature (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Curvature\Curvature (SF3D.Operators).v4p" nodename="Curvature (SF3D.Operators)" componentmode="Hidden" id="115">
-   <BOUNDS type="Node" left="13290" top="7560" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="7560" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="7560">
+   <BOUNDS type="Box" left="13140" top="7560">
    </BOUNDS>
    </NODE>
    <NODE systemname="CombineSDF (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" nodename="CombineSDF (SF3D.Operators)" componentmode="Hidden" id="117">
-   <BOUNDS type="Node" left="14910" top="5910" width="100" height="100">
+   <BOUNDS type="Node" left="14820" top="6210" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14910" top="5910">
+   <BOUNDS type="Box" left="14820" top="6210">
    </BOUNDS>
    </NODE>
    <NODE systemname="Divergence (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF3D.Operators).v4p" nodename="Divergence (SF3D.Operators)" componentmode="Hidden" id="119">
-   <BOUNDS type="Node" left="13290" top="6915" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="6915" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="6915">
+   <BOUNDS type="Box" left="13140" top="6915">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (SF3D.Operators).v4p" nodename="InputMorph (SF3D.Operators)" componentmode="Hidden" id="120">
-   <BOUNDS type="Node" left="13290" top="5400" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="5400" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="5400">
+   <BOUNDS type="Box" left="13140" top="5400">
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\OutlineSDF (SF3D.Operators).v4p" nodename="OutlineSDF (SF3D.Operators)" componentmode="Hidden" id="121">
-   <BOUNDS type="Node" left="14910" top="6210" width="100" height="100">
+   <BOUNDS type="Node" left="14820" top="6510" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14910" top="6210">
+   <BOUNDS type="Box" left="14820" top="6510">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainTransform (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainTransform (SF3D.Operators).v4p" nodename="DomainTransform (SF3D.Operators)" componentmode="Hidden" id="122">
@@ -761,9 +777,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainDistortion (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainDistortion (SF3D.Operators).v4p" nodename="DomainDistortion (SF3D.Operators)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="18120" top="6345" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="6300" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="6345">
+   <BOUNDS type="Box" left="18120" top="6300">
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DSplit (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DSplit (VF3D.Operators).v4p" nodename="Vector3DSplit (VF3D.Operators)" componentmode="Hidden" id="126">
@@ -813,9 +829,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainLookUp (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainLookUp (VF2D.Operators).v4p" nodename="DomainLookUp (VF2D.Operators)" componentmode="Hidden" id="136">
-   <BOUNDS type="Node" left="18060" top="10230" width="100" height="100">
+   <BOUNDS type="Node" left="18060" top="10170" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18060" top="10230">
+   <BOUNDS type="Box" left="18060" top="10170">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainTransform (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainTransform (VF3D.Operators).v4p" nodename="DomainTransform (VF3D.Operators)" componentmode="Hidden" id="140">
@@ -953,9 +969,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DJoin (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DJoin (SF3D.Operators).v4p" nodename="Vector3DJoin (SF3D.Operators)" componentmode="Hidden" id="164">
-   <BOUNDS type="Node" left="13290" top="5745" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="5745" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="5745">
+   <BOUNDS type="Box" left="13140" top="5745">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="165">
@@ -967,7 +983,9 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Input" slicecount="1" values="|0.01524,0.00000,0.01668,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.01524,0.00000,0.01668,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="Kalle (VVVV)" nodename="Kalle (VVVV)" componentmode="Hidden" id="166">
@@ -1301,9 +1319,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainMirror (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainMirror (SF3D.Operators).v4p" nodename="DomainMirror (SF3D.Operators)" componentmode="Hidden" id="227">
-   <BOUNDS type="Node" left="18120" top="7005" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="6960" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="7005">
+   <BOUNDS type="Box" left="18120" top="6960">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="234">
@@ -1311,11 +1329,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="705" top="7350" width="2460" height="240">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.18316,0.36889,0.78128,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Output" visible="1">
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="235">
@@ -1323,11 +1341,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="765" top="10395" width="2445" height="240">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.97706,0.16681,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.97706,0.16681,1.00000|">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Output" visible="1">
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="236">
@@ -1335,9 +1353,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="930" top="13605" width="2280" height="240">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.30585,0.24194,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.30585,0.24194,1.00000|">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="237">
@@ -1345,11 +1365,11 @@
    </BOUNDS>
    <BOUNDS type="Box" left="660" top="4020" width="2505" height="240">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" values="|0.60284,0.79702,0.53406,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.60284,0.79702,0.53406,1.00000|">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color Output" visible="1">
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    <NODE systemname="UnaryOp (VF2D.Operations)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\ScalarOp\UnaryOp (VF2D.Operations).v4p" nodename="UnaryOp (VF2D.Operations)" componentmode="Hidden" id="239">
@@ -1607,9 +1627,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="HeightFieldSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\HeightFieldSDF (SF2D.Operators).v4p" nodename="HeightFieldSDF (SF2D.Operators)" componentmode="Hidden" id="118">
-   <BOUNDS type="Node" left="14685" top="3780" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="3900" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="3780">
+   <BOUNDS type="Box" left="14685" top="3900">
    </BOUNDS>
    </NODE>
    <NODE systemname="MFBM (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\MFBM (SF2D.Operators).v4p" nodename="MFBM (SF2D.Operators)" componentmode="Hidden" id="34">
@@ -1639,15 +1659,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainLookUp (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\DomainLookUp (SF3D.Operators).v4p" nodename="DomainLookUp (SF3D.Operators)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="18120" top="6675" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="6630" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="6675">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="SurfaceForceField (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\SurfaceForceField (SF3D.Operators).v4p" nodename="SurfaceForceField (SF3D.Operators)" componentmode="Hidden" id="152">
-   <BOUNDS type="Node" left="8310" top="7845" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8310" top="7845">
+   <BOUNDS type="Box" left="18120" top="6630">
    </BOUNDS>
    </NODE>
    <NODE systemname="JuliaSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\JuliaSDF (SF3D.Sources).v4p" nodename="JuliaSDF (SF3D.Sources)" componentmode="Hidden" id="93">
@@ -1693,9 +1707,9 @@
    <LINK srcnodeid="249" srcpinname="Output Enum" dstnodeid="147" dstpinname="Basis">
    </LINK>
    <NODE systemname="Laplacian (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Laplacian (SF3D.Operators).v4p" nodename="Laplacian (SF3D.Operators)" componentmode="Hidden" id="116">
-   <BOUNDS type="Node" left="13290" top="7230" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="7230" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13290" top="7230">
+   <BOUNDS type="Box" left="13140" top="7230">
    </BOUNDS>
    </NODE>
    <NODE id="48" systemname="Vector2DSplit (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Vector2DSplit (VF2D.Operators).v4p" nodename="Vector2DSplit (VF2D.Operators)" componentmode="Hidden">
@@ -1735,5 +1749,179 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20730" top="10485">
    </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="251">
+   <BOUNDS type="Node" left="14400" top="8880" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14400" top="8880" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.60284,0.79702,0.53406,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="253">
+   <BOUNDS type="Node" left="15555" top="9015" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15555" top="9015" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.60284,0.79702,0.53406,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="254">
+   <BOUNDS type="Node" left="15720" top="9315" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15720" top="9315" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.60284,0.79702,0.53406,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="255">
+   <BOUNDS type="Node" left="15795" top="3570" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15795" top="3570" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="257">
+   <BOUNDS type="Node" left="16035" top="3915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16035" top="3915" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="258">
+   <BOUNDS type="Node" left="15555" top="12030" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15555" top="12030" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="261">
+   <BOUNDS type="Node" left="15735" top="12330" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15735" top="12330" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="263">
+   <BOUNDS type="Node" left="14385" top="12180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14385" top="12180" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="264">
+   <BOUNDS type="Node" left="14370" top="5745" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14370" top="5745" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.30585,0.24194,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="266">
+   <BOUNDS type="Node" left="14025" top="6585" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14025" top="6585" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.30585,0.24194,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="267">
+   <BOUNDS type="Node" left="14400" top="2190" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14400" top="2190" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.97706,0.16681,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="268">
+   <BOUNDS type="Node" left="14040" top="2985" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14040" top="2985" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.97706,0.16681,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="269">
+   <BOUNDS type="Node" left="13770" top="3945" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13770" top="3945" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.97706,0.16681,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="SurfaceForceField (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\SurfaceForceField (SF3D.Operators).v4p" nodename="SurfaceForceField (SF3D.Operators)" componentmode="Hidden" id="271">
+   <BOUNDS type="Node" left="14805" top="6975" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14805" top="6975">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="270">
+   <BOUNDS type="Node" left="16320" top="6975" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16320" top="6975" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|1.00000,0.30585,0.24194,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
    </NODE>
    </PATCH>

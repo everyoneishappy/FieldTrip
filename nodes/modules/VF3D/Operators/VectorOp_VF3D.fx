@@ -13,8 +13,9 @@
 
 // DEFINES
 #ifndef FN_OP
-#define FN_OP +
+#define FN_OP FN_INPUT1(p) + FN_INPUT2(p); 
 #endif
+
 
 // Parameters
 float3 FN_Default : FN_DEFAULT;
@@ -37,11 +38,7 @@ float3 FN_singleVector (float3 p)
 
 float3 FN_ (float3 p)
 {
-	#if(FN_REVERSE==1) 
-	return FN_INPUT2(p) FN_OP FN_INPUT1(p);
-	#else
-	return FN_INPUT1(p) FN_OP FN_INPUT2(p); 
-	#endif
+	return FN_OP; 
 }
 // end of the function body
 #endif 

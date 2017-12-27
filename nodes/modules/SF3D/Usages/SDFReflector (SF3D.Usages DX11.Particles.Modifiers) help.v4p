@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\SDFReflector (SF3D.Usages DX11.Particles.Modifiers) help.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\SDFReflector (SF3D.Usages DX11.Particles.Modifiers) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="615" top="300" width="7320" height="11565">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -22,28 +22,6 @@
    <PIN pinname="Input String" slicecount="1" visible="0" values="|Cause particles from a DX11.Particles system to bounce off a signed distance field surface|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="SDFReflector (SF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="2760" top="3645" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2760" top="3645" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="|&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D box Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fBox3DSDF_0_&quot;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;// Paramaters&cr;&lf;StructuredBuffer&lt;float4x4&gt; fBox3DSDF_0_invTransform : fBox3DSDF_0_INVTRANSFORM;&cr;&lf;StructuredBuffer&lt;float3&gt; fBox3DSDF_0_size : fBox3DSDF_0_SIZE;&cr;&lf;&cr;&lf;int fBox3DSDF_0_count : fBox3DSDF_0_COUNT;&cr;&lf;&cr;&lf;float fBox3DSDF_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fBox3DSDF_0_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 tp = mul(float4(p, 1), fBox3DSDF_0_invTransform[i]).xyz;&cr;&lf;&tab;&tab;d = min (d, fBox(tp, fBox3DSDF_0_size[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D fBox3DSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Modifier Out" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="1320" top="1485" width="15585" height="12900">
-   </BOUNDS>
-   <PIN pinname="damping" slicecount="1" values="0.4">
-   </PIN>
-   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" id="32" hiddenwhenlocked="1">
@@ -302,8 +280,6 @@
    <LINKPOINT x="1050" y="7965">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="33" srcpinname="Modifier Out" dstnodeid="22" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="RandomSpread (Spreads 3d)" nodename="RandomSpread (Spreads 3d)" componentmode="Hidden" id="18" hiddenwhenlocked="1" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 3d).v4p">
    <BOUNDS type="Node" left="525" top="3420" width="100" height="100">
    </BOUNDS>
@@ -560,8 +536,6 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="XYZ" dstnodeid="4" dstpinname="Size XYZ">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="33" dstpinname="Input">
-   </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -570,4 +544,30 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE nodename="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="33" systemname="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\SDFReflector (SF3D.Usages DX11.Particles.Modifiers).v4p">
+   <BOUNDS type="Node" left="2760" top="3645" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2760" top="3645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="|&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D box Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fBox3DSDF_0_&quot;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;// Paramaters&cr;&lf;StructuredBuffer&lt;float4x4&gt; fBox3DSDF_0_invTransform : fBox3DSDF_0_INVTRANSFORM;&cr;&lf;StructuredBuffer&lt;float3&gt; fBox3DSDF_0_size : fBox3DSDF_0_SIZE;&cr;&lf;&cr;&lf;int fBox3DSDF_0_count : fBox3DSDF_0_COUNT;&cr;&lf;&cr;&lf;float fBox3DSDF_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fBox3DSDF_0_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 tp = mul(float4(p, 1), fBox3DSDF_0_invTransform[i]).xyz;&cr;&lf;&tab;&tab;d = min (d, fBox(tp, fBox3DSDF_0_size[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;&cr;&lf;#define SF3D fBox3DSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Modifier Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="1320" top="1485" width="15585" height="12900">
+   </BOUNDS>
+   <PIN pinname="damping" slicecount="1" values="0.4">
+   </PIN>
+   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Modifier Out" dstnodeid="22" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="33" dstpinname="Input">
+   </LINK>
    </PATCH>

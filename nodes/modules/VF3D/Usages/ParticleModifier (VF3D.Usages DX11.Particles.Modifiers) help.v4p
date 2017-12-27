@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers) help.v4p">
    <BOUNDS type="Window" left="930" top="0" width="8070" height="10905">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -294,54 +294,6 @@
    <LINKPOINT x="3240" y="6150">
    </LINKPOINT>
    </LINK>
-   <NODE nodename="ParticleModifier (VF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="16" systemname="ParticleModifier (VF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Helpers\DX11.Particles\ParticleModifier (VF3D DX11.Particles.Modifiers).v4p">
-   <BOUNDS type="Node" left="3885" top="3030" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3885" top="3030" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Modifier Out" visible="1">
-   </PIN>
-   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="Set">
-   </PIN>
-   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
-   </BOUNDS>
-   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 velocity;|">
-   </PIN>
-   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="16" srcpinname="Modifier Out" dstnodeid="20" dstpinname="Layer 2">
-   </LINK>
-   <NODE nodename="ParticleModifier (VF3D DX11.Particles.Modifiers)" componentmode="Hidden" id="15" systemname="ParticleModifier (VF3D DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Helpers\DX11.Particles\ParticleModifier (VF3D DX11.Particles.Modifiers).v4p">
-   <BOUNDS type="Node" left="5805" top="3045" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5805" top="3045" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Modifier Out" visible="1">
-   </PIN>
-   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="Set">
-   </PIN>
-   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
-   </BOUNDS>
-   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 scale;|">
-   </PIN>
-   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Modifier Out" dstnodeid="20" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Heading (DX11.Particles.Modifiers)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Modifiers\Heading (DX11.Particles.Modifiers).v4p" nodename="Heading (DX11.Particles.Modifiers)" componentmode="Hidden" id="14" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="5145" top="4110" width="100" height="100">
    </BOUNDS>
@@ -444,8 +396,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Attribute|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="16" dstpinname="Target Attribute">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="6">
    <BOUNDS type="Box" left="5790" top="2655" width="1590" height="270">
    </BOUNDS>
@@ -462,8 +412,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Target Attribute|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Output Enum" dstnodeid="15" dstpinname="Target Attribute">
-   </LINK>
    <LINK srcnodeid="27" srcpinname="Projection" dstnodeid="26" dstpinname="Projection">
    </LINK>
    <LINK srcnodeid="27" srcpinname="View" dstnodeid="26" dstpinname="View">
@@ -490,12 +438,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Function Parameter Semantics" dstnodeid="15" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="VF3D Function" dstnodeid="15" dstpinname="Input VF3D Function">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="15" dstpinname="Input">
-   </LINK>
    <NODE systemname="DivergenceFreeNoise (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources).v4p" nodename="DivergenceFreeNoise (VF3D.Sources)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="4065" top="2055" width="100" height="100">
    </BOUNDS>
@@ -516,12 +458,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Function Parameter Semantics" dstnodeid="16" dstpinname="Function Parameter Semantics">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="VF3D Function" dstnodeid="16" dstpinname="Input VF3D Function">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="16" dstpinname="Input">
-   </LINK>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -530,4 +466,68 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE nodename="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="16" systemname="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers).v4p">
+   <BOUNDS type="Node" left="3885" top="3030" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3885" top="3030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Modifier Out" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Set">
+   </PIN>
+   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
+   </BOUNDS>
+   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 velocity;|">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Modifier Out" dstnodeid="20" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="16" dstpinname="Target Attribute">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Function Parameter Semantics" dstnodeid="16" dstpinname="Function Parameter Semantics">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="VF3D Function" dstnodeid="16" dstpinname="Input VF3D Function">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE nodename="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="15" systemname="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers).v4p">
+   <BOUNDS type="Node" left="5805" top="3045" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5805" top="3045" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Modifier Out" visible="1">
+   </PIN>
+   <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="Set">
+   </PIN>
+   <BOUNDS type="Window" left="1965" top="4485" width="15585" height="12900">
+   </BOUNDS>
+   <PIN pinname="Target Attribute" slicecount="1" visible="1" values="|float3 scale;|">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Modifier Out" dstnodeid="20" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output Enum" dstnodeid="15" dstpinname="Target Attribute">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Function Parameter Semantics" dstnodeid="15" dstpinname="Function Parameter Semantics">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="VF3D Function" dstnodeid="15" dstpinname="Input VF3D Function">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
    </PATCH>

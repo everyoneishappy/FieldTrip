@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D.Sources) help.v4p">
-   <BOUNDS type="Window" left="375" top="0" width="11835" height="12915">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources) help.v4p">
+   <BOUNDS type="Window" left="375" top="0" width="9645" height="12915">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
    <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
@@ -347,7 +347,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="375" top="10005" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="12060" top="0" width="7410" height="8010">
+   <BOUNDS type="Window" left="9885" top="0" width="7665" height="7920">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -416,6 +416,8 @@
    <PIN pinname="Target Format" slicecount="1" values="R32G32B32A32_Float">
    </PIN>
    <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Texture" dstnodeid="6" dstpinname="Texture In">

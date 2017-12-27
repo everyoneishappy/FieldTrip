@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PolyhedronSDF (SF3D.Sources) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Sources\PolyhedronSDF (SF3D.Sources) help.v4p">
    <BOUNDS type="Window" left="270" top="525" width="6720" height="8805">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -39,37 +39,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Compiled">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="RaymarchBasic (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\RaymarchBasic (DX11.Layer SF3D).v4p" nodename="RaymarchBasic (DX11.Layer SF3D)" componentmode="Hidden" id="15">
-   <BOUNDS type="Node" left="2085" top="4680" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="9030" top="3255" width="12060" height="11295">
-   </BOUNDS>
-   <PIN pinname="SF3D Class" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchNormals">
-   </PIN>
-   <PIN pinname="Technique Valid" visible="1">
-   </PIN>
-   <PIN pinname="March Step Length" slicecount="1" visible="1" values="0.75">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Write Depth" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Compiled" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="14">
@@ -146,8 +116,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Layer Out" dstnodeid="14" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.55.10-g8ce245eb4e\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="9">
    <BOUNDS type="Node" left="3030" top="6285" width="100" height="100">
    </BOUNDS>
@@ -169,8 +137,6 @@
    <LINK srcnodeid="9" srcpinname="View" dstnodeid="14" dstpinname="View">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Projection" dstnodeid="14" dstpinname="Projection">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Compiled" dstnodeid="16" dstpinname="Y Input Value">
    </LINK>
    <NODE id="8" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Box" left="1470" top="2295" width="795" height="720">
@@ -402,7 +368,17 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE id="4" systemname="PolyhedronSDF (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Signed Distance FIelds\PolyhedronSDF (SF3D Function).v4p" nodename="PolyhedronSDF (SF3D Function)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.0.2">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE id="4" systemname="PolyhedronSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\PolyhedronSDF (SF3D.Sources).v4p" nodename="PolyhedronSDF (SF3D.Sources)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="2085" top="3345" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
@@ -440,16 +416,40 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output Enum" dstnodeid="4" dstpinname="Shape">
    </LINK>
+   <NODE systemname="RaymarchBasic (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchBasic (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchBasic (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="2085" top="4680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="9030" top="3255" width="12060" height="11295">
+   </BOUNDS>
+   <PIN pinname="SF3D Class" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" visible="1" values="RayMarchNormals">
+   </PIN>
+   <PIN pinname="Technique Valid" visible="1">
+   </PIN>
+   <PIN pinname="March Step Length" slicecount="1" visible="1" values="0.75">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Write Depth" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Compiled" dstnodeid="16" dstpinname="Y Input Value">
+   </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="15" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.2">
-   </PACK>
-   <PACK Name="vvvv-Message" Version="2.9.0">
-   </PACK>
-   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
-   </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
-   </PACK>
    </PATCH>

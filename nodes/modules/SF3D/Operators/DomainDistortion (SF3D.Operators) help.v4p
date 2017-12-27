@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\DomainDistortion (SF3D.Operators) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\DomainDistortion (SF3D.Operators) help.v4p">
    <BOUNDS type="Window" left="480" top="255" width="7875" height="13230">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -228,26 +228,6 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Spread Count">
    </LINK>
-   <NODE systemname="DomainDistortion (SF3D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Domain Manipulation\DomainDistortion (SF3D Function).v4p" nodename="DomainDistortion (SF3D Function)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="2115" top="7740" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Distortion VF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input VF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SF3D Function" visible="1">
-   </PIN>
-   <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Distortion Strength" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="10">
    <BOUNDS type="Box" left="3465" top="5220" width="795" height="240">
    </BOUNDS>
@@ -260,8 +240,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Distortion VF3D Function">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="9">
    <BOUNDS type="Box" left="585" top="5220" width="795" height="240">
    </BOUNDS>
@@ -274,12 +252,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="11" dstpinname="Input SF3D Function">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Distortion Function">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
    <BOUNDS type="Box" left="4170" top="7545" width="795" height="240">
    </BOUNDS>
@@ -294,8 +266,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Distortion Strength|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Distortion Strength">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7">
    <BOUNDS type="Node" left="585" top="3960" width="3030" height="270">
    </BOUNDS>
@@ -331,8 +301,6 @@
    <LINK srcnodeid="14" srcpinname="XYZ" dstnodeid="6" dstpinname="Position">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="6" dstpinname="Radius">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="SF3D Function" dstnodeid="11" dstpinname="Input VF3D Function">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="9" dstpinname="Input Node">
    </LINK>
@@ -413,16 +381,12 @@
    </PIN>
    <PIN pinname="Default Color" slicecount="1" values="|0.46317,0.95925,0.78627,1.00000|">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="20" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="4" dstpinname="March Step Length">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="SF3D Function" dstnodeid="4" dstpinname="SF3D Function">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="4" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Function Resource Semantics" dstnodeid="4" dstpinname="Function Resource Semantics" hiddenwhenlocked="1">
    </LINK>
@@ -434,4 +398,40 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="DomainDistortion (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\DomainDistortion (SF3D.Operators).v4p" nodename="DomainDistortion (SF3D.Operators)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="2115" top="7740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Distortion VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input VF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Input SF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SF3D Function" visible="1">
+   </PIN>
+   <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Distortion Strength" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Distortion VF3D Function">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="11" dstpinname="Input SF3D Function">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="11" dstpinname="Distortion Function">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Output Node" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Distortion Strength">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="SF3D Function" dstnodeid="11" dstpinname="Input VF3D Function">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="SF3D Function" dstnodeid="4" dstpinname="SF3D Function">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
    </PATCH>

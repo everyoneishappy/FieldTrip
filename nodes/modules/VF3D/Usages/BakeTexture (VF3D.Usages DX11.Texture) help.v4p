@@ -31,7 +31,7 @@
    </PIN>
    <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
@@ -75,7 +75,7 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="WithinProjection (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="WithinProjection (DX11.Layer)" componentmode="Hidden" id="24" hiddenwhenlocked="1">
@@ -270,60 +270,12 @@
    </NODE>
    <LINK srcnodeid="21" srcpinname="Output Node" dstnodeid="28" dstpinname="Geometry">
    </LINK>
-   <NODE systemname="ColorChannelJoin (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Mixer\ColorChannelJoin.tfx" nodename="ColorChannelJoin (DX11.TextureFX)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="4980" top="5475" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Technique" slicecount="1" visible="1" values="HSVA">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="Green">
-   </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="Blue">
-   </PIN>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Texture In 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture In 3" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture In 4" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Texture Out" dstnodeid="28" dstpinname="Texture">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="11" dstpinname="Texture In 2">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="11" dstpinname="Texture In 3">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="11" dstpinname="Texture In 4">
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="11" dstpinname="Texture In">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="10">
-   <BOUNDS type="Box" left="6240" top="5235" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6240" top="5235" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="HSVA">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="RGBA">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Output Enum" dstnodeid="11" dstpinname="Technique">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Texture Out" dstnodeid="25" dstpinname="Texture">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="9">
-   <BOUNDS type="Node" left="6840" top="5475" width="1815" height="270">
+   <BOUNDS type="Node" left="2850" top="3345" width="1815" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6840" top="5475" width="1815" height="270">
+   <BOUNDS type="Box" left="2850" top="3345" width="1980" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Switch from RGB to HSV|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Convert from HSL to RGB|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -357,7 +309,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4890" top="1710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.19,1.02,0.91">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.19,1.02,0.33">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -412,8 +364,6 @@
    <PIN pinname="Persistence" slicecount="1" values="0.66">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="12" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input Function">
    </LINK>
    <NODE systemname="BakeTexture (VF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\BakeTexture (VF3D.Usages DX11.Texture).v4p" nodename="BakeTexture (VF3D.Usages DX11.Texture)" componentmode="Hidden" id="4">
@@ -452,4 +402,20 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="HSLToRGB (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\HSLToRGB (VF3D.Operators).v4p" nodename="HSLToRGB (VF3D.Operators)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="4875" top="3345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="12" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="28" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output Node" dstnodeid="25" dstpinname="Texture">
+   </LINK>
    </PATCH>

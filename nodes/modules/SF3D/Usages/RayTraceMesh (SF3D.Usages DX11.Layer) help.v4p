@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Render\RayTraceMesh (DX11.Layer SF3D)\RayTraceMesh (SF3D.Usages DX11.Layer) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\RayTraceMesh (SF3D.Usages DX11.Layer) help.v4p">
    <BOUNDS type="Window" left="915" top="1275" width="8550" height="13110">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -176,69 +176,17 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="RayTraceMesh (DX11.Layer SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\BakeTexture\RayTraceMesh (DX11.Layer SF3D).v4p" nodename="RayTraceMesh (DX11.Layer SF3D)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="2025" top="8820" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2025" top="8820">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-225" top="2025" width="13995" height="11445">
-   </BOUNDS>
-   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Transfer Function Texture" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Render State" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transfer Function End" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Transfer Function Start" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Compiled" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Master Alpha" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Step Size" slicecount="1" visible="1" values="0.0015">
-   </PIN>
-   <PIN pinname="Max Samples" slicecount="1" visible="1" values="256">
-   </PIN>
-   </NODE>
    <NODE systemname="GeometryFile (DX11.Geometry Assimp)" filename="%VVVV%\packs\dx11\nodes\plugins\assimp\VVVV.DX11.Nodes.Assimp.dll" nodename="GeometryFile (DX11.Geometry Assimp)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="990" top="7065" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="990" top="7065" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.obj|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\assets\Stanford Dragon.obj|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="View" dstnodeid="21" dstpinname="View" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="7515" y="9955">
-   </LINKPOINT>
-   <LINKPOINT x="4770" y="7010">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Projection" dstnodeid="21" dstpinname="Projection" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="8295" y="7765">
-   </LINKPOINT>
-   <LINKPOINT x="3450" y="7175">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="22" srcpinname="Render State" dstnodeid="21" dstpinname="Render State">
-   </LINK>
    <LINK srcnodeid="28" srcpinname="Layer" dstnodeid="29" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Compiled" dstnodeid="31" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
    <BOUNDS type="Box" left="3165" top="1935" width="795" height="240">
@@ -254,8 +202,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transfer Function Start|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Transfer Function Start">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="16">
    <BOUNDS type="Box" left="4950" top="5250" width="795" height="240">
    </BOUNDS>
@@ -266,8 +212,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transfer Function Texture|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="21" dstpinname="Transfer Function Texture">
-   </LINK>
    <LINK srcnodeid="25" srcpinname="Texture Out" dstnodeid="16" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15">
@@ -284,8 +228,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transfer Function End|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Transfer Function End">
-   </LINK>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="14" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="5070" top="11895" width="100" height="100">
    </BOUNDS>
@@ -332,14 +274,6 @@
    </LINK>
    <LINK srcnodeid="29" srcpinname="Layer Out" dstnodeid="30" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="21" dstpinname="Aspect Ratio" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="8805" y="13325">
-   </LINKPOINT>
-   <LINKPOINT x="6090" y="7615">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Layer Out" dstnodeid="29" dstpinname="Layer 3">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="11">
    <BOUNDS type="Box" left="1455" top="7635" width="795" height="240">
    </BOUNDS>
@@ -350,8 +284,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Geometry">
    </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="21" dstpinname="Geometry">
-   </LINK>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="11" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="10">
@@ -384,8 +316,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Master Alpha|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Master Alpha">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
    <BOUNDS type="Box" left="1620" top="5355" width="795" height="240">
    </BOUNDS>
@@ -402,8 +332,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Max Samples|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Max Samples">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="7">
    <BOUNDS type="Box" left="135" top="6165" width="795" height="240">
    </BOUNDS>
@@ -414,8 +342,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="21" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6">
    <BOUNDS type="Box" left="1635" top="5820" width="795" height="240">
    </BOUNDS>
@@ -432,8 +358,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Step Size">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="5">
    <BOUNDS type="Node" left="15" top="3180" width="25275" height="270">
    </BOUNDS>
@@ -474,4 +398,80 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="RayTraceMesh (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RayTraceMesh (SF3D.Usages DX11.Layer).v4p" nodename="RayTraceMesh (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="2025" top="8820" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2025" top="8820">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-225" top="2025" width="13995" height="11445">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Transfer Function Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transfer Function End" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Transfer Function Start" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Compiled" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Master Alpha" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Step Size" slicecount="1" visible="1" values="0.0015">
+   </PIN>
+   <PIN pinname="Max Samples" slicecount="1" visible="1" values="256">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="View" dstnodeid="21" dstpinname="View" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="7515" y="9955">
+   </LINKPOINT>
+   <LINKPOINT x="4770" y="7010">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Projection" dstnodeid="21" dstpinname="Projection" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="8295" y="7765">
+   </LINKPOINT>
+   <LINKPOINT x="3450" y="7175">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Render State" dstnodeid="21" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Compiled" dstnodeid="31" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Transfer Function Start">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="21" dstpinname="Transfer Function Texture">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Transfer Function End">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="21" dstpinname="Aspect Ratio" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="8805" y="13325">
+   </LINKPOINT>
+   <LINKPOINT x="6090" y="7615">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Layer Out" dstnodeid="29" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output Node" dstnodeid="21" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Master Alpha">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Max Samples">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output Node" dstnodeid="21" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Step Size">
+   </LINK>
    </PATCH>

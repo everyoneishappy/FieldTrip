@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Render\RaymarchMatCap (DX11.Layer SF3D)\RaymarchMatCap (SF3D.Usages DX11.Layer) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchMatCap (SF3D.Usages DX11.Layer) help.v4p">
    <BOUNDS type="Window" left="435" top="330" width="9045" height="10050">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -25,11 +25,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2760" top="4860" width="795" height="240">
+   <BOUNDS type="Box" left="2475" top="4920" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2760" top="4860" width="0" height="0">
+   <BOUNDS type="Node" left="2475" top="4920" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.6">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.8">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -245,7 +245,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4695" top="1395" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="..\..\..\..\..\assets\MatCapSample01.png,..\..\..\..\..\assets\MatCapSample02.png">
+   <PIN pinname="Input String" slicecount="2" visible="1" values="..\..\..\..\assets\MatCapSample01.png,..\..\..\..\assets\MatCapSample02.png">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -267,7 +267,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6990" top="1380" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -279,7 +279,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Change Material|">
    </PIN>
@@ -411,7 +411,7 @@
    </PIN>
    <PIN pinname="Center XY" slicecount="2" values="0,0">
    </PIN>
-   <PIN pinname="Time" slicecount="1" values="-2.86">
+   <PIN pinname="Time" slicecount="1" values="0.1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="VF2D Function" dstnodeid="5" dstpinname="Distortion VF2D Function">

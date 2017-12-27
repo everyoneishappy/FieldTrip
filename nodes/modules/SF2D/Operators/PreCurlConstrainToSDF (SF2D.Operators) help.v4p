@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\PreCurlConstrainToSDF (SF2D.Operators) help.v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\PreCurlConstrainToSDF (SF2D.Operators) help.v4p">
    <BOUNDS type="Window" left="750" top="1665" width="9000" height="9855">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -24,20 +24,6 @@
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="26">
-   <BOUNDS type="Node" left="4860" top="6405" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" visible="1" values="|0.17440,0.58563,0.36089,1.00000|">
-   </PIN>
-   <PIN pinname="Render State" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="22">
    <BOUNDS type="Node" left="1215" top="7365" width="100" height="100">
    </BOUNDS>
@@ -59,11 +45,11 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Layer Out" dstnodeid="22" dstpinname="Layers">
@@ -78,8 +64,6 @@
    <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="21" dstpinname="Layer 2">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="15">
    <BOUNDS type="Box" left="5355" top="3540" width="795" height="240">
    </BOUNDS>
@@ -92,8 +76,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="26" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="14" hiddenwhenlocked="1">
    <BOUNDS type="Box" left="6585" top="2100" width="1170" height="240">
    </BOUNDS>
@@ -118,8 +100,6 @@
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="26" dstpinname="Color">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="10" hiddenwhenlocked="1">
    <BOUNDS type="Box" left="6630" top="3120" width="855" height="240">
    </BOUNDS>
@@ -148,20 +128,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Radius">
    </PIN>
    </NODE>
-   <NODE systemname="DrawSDF (DX11.Layer SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Render\DrawSDF (DX11.Layer SF2D).v4p" nodename="DrawSDF (DX11.Layer SF2D)" componentmode="Hidden" id="8" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="6750" top="6540" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Render State" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="6" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="7545" top="5400" width="100" height="100">
    </BOUNDS>
@@ -172,8 +138,6 @@
    <PIN pinname="TranslateXY" slicecount="2" values="0.809,0.809">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="21" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="5" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="6945" top="6195" width="100" height="100">
    </BOUNDS>
@@ -184,8 +148,6 @@
    <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Render State" dstnodeid="8" dstpinname="Render State">
-   </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="5025" top="6090" width="100" height="100">
    </BOUNDS>
@@ -196,8 +158,6 @@
    <PIN pinname="Mode" slicecount="1" values="Blend">
    </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Render State" dstnodeid="26" dstpinname="Render State">
-   </LINK>
    <NODE systemname="PreCurlConstrainToSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\PreCurlConstrainToSDF (SF2D.Operators).v4p" nodename="PreCurlConstrainToSDF (SF2D.Operators)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="825" top="4350" width="100" height="100">
    </BOUNDS>
@@ -326,8 +286,6 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="7" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
    <NODE systemname="VectorFieldLines (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\Render\FieldViz\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldLines (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="18">
@@ -364,4 +322,46 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="4860" top="6405" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.17440,0.58563,0.36089,1.00000|">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="21" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="26" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="26" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Render State" dstnodeid="26" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="8" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6750" top="6540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="21" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Render State" dstnodeid="8" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   </LINK>
    </PATCH>

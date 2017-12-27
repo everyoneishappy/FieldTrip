@@ -31,8 +31,6 @@ float2 FN_singleVector (float2 p)
 #define FN_INPUT2 FN_singleVector
 #endif
 
-
-
 float2 FN_ (float2 p)
 {
 	return FN_OP; 

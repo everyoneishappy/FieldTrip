@@ -214,24 +214,6 @@
    </LINK>
    <LINK srcnodeid="28" srcpinname="XY" dstnodeid="32" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Curl (SF2D Function)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Field Functions\Curl (SF2D Function).v4p" nodename="Curl (SF2D Function)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="3495" top="6285" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Function Parameter Semantics" visible="1">
-   </PIN>
-   <PIN pinname="VF2D Function" visible="1">
-   </PIN>
-   <PIN pinname="Epsilon" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="10245" top="3345" width="14670" height="12255">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="23" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2415" top="6705" width="4395" height="270">
    </BOUNDS>
@@ -260,8 +242,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Epsilon">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Epsilon">
-   </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="3375" top="8940" width="100" height="100">
    </BOUNDS>
@@ -304,10 +284,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="24" dstpinname="Input SF2D Function">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="24" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" hiddenwhenlocked="1">
    <BOUNDS type="Box" left="8025" top="2745" width="795" height="240">
    </BOUNDS>
@@ -462,8 +438,6 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="12" dstpinname="Pause">
    </LINK>
-   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="18" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="7" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="2430" top="4425" width="100" height="100">
    </BOUNDS>
@@ -590,4 +564,30 @@
    </PACK>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
+   <NODE systemname="Curl (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Curl (SF2D.Operators).v4p" nodename="Curl (SF2D.Operators)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="3495" top="6285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input SF2D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Parameter Semantics" visible="1">
+   </PIN>
+   <PIN pinname="VF2D Function" visible="1">
+   </PIN>
+   <PIN pinname="Epsilon" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="10245" top="3345" width="14670" height="12255">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Epsilon">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="24" dstpinname="Input SF2D Function">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="18" dstpinname="Input Node">
+   </LINK>
    </PATCH>
