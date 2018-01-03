@@ -34,8 +34,10 @@ For more frequent updates, bug fixes and issue reporting: https://github.com/eve
 
 
 
-MIT License- feel free to use in your creative & commercial projects.  If used in production a credit is very appreciated: 
-[Kyle McLean] / [everyoneishappy.com]
+MIT License- feel free to use in your creative & commercial projects.  If used in production a credit is very appreciated:
+
+[Kyle McLean] / [http://everyoneishappy.com]
+
 I’m also very happy if you are doing something interesting and want to employ me on a project basis.
 
 Special thanks to Julien 'Vux' Vulliet for vvvv DX11 & to Robert "tmp" Willner (intolight.de) for the string shader node
