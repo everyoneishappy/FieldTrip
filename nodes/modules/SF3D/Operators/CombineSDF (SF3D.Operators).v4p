@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" systemname="CombineSDF (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\CombineSDF (SF3D.Operators).v4p" systemname="CombineSDF (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="5115" top="3990" width="24060" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -742,6 +742,6 @@
    </LINK>
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="93" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Combine two 3D signed distance fields.  Includes options for Union, Subtraction, Intersection and many more" tags="Operator">
+   <INFO author="" description="Combine two 3D signed distance fields.  Includes options for Union, Subtraction, Intersection and many more" tags="">
    </INFO>
    </PATCH>
