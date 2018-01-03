@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\Curl (SF2D.Operators).v4p" systemname="Curl (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\Curl (SF2D.Operators).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Curl (SF2D.Operators).v4p" systemname="Curl (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Curl\Curl (SF2D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10245" top="3345" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -444,6 +444,6 @@
    </LINK>
    <LINK srcnodeid="75" srcpinname="Resource Semantics" dstnodeid="78" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Returns a 2D vector field perpendicular to the gradient of a 2D scalar field" tags="Operator">
+   <INFO author="" description="Returns a 2D vector field perpendicular to the gradient of a 2D scalar field" tags="">
    </INFO>
    </PATCH>

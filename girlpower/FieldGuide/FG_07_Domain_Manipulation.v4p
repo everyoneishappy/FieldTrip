@@ -165,7 +165,7 @@
    </PIN>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.50958,0.57455,0.55673,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|(A) Base Shape|">
    </PIN>
@@ -211,7 +211,7 @@
    </PIN>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.50958,0.57455,0.55673,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|(B) Polar Repeat|">
    </PIN>
@@ -241,7 +241,7 @@
    </PIN>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.50958,0.57455,0.55673,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|(C) Grid Repeat|">
    </PIN>
@@ -271,7 +271,7 @@
    </PIN>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.50958,0.57455,0.55673,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|(D) Noise|">
    </PIN>
@@ -409,7 +409,7 @@
    </PIN>
    <PIN pinname="Rotate XYZ" slicecount="3" values="0.25,-0.25,0">
    </PIN>
-   <PIN pinname="Size XY" slicecount="2" visible="1" values="0.06,0.42">
+   <PIN pinname="Size XY" slicecount="2" visible="1" values="0.05,0.42">
    </PIN>
    </NODE>
    <LINK srcnodeid="222" srcpinname="Output" dstnodeid="205" dstpinname="Input 1">
@@ -501,7 +501,7 @@
    </PIN>
    <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Distortion Strength" slicecount="1" values="1" visible="1">
+   <PIN pinname="Distortion Strength" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="227" srcpinname="Output Node" dstnodeid="220" dstpinname="Distortion Function">
@@ -607,7 +607,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3975" top="5040" width="1800" height="510">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;Just the first value is used is polar mode|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;Just the first value is used in polar mode|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>

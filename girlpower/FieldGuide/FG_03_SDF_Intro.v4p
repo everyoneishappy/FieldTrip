@@ -249,6 +249,8 @@
    </PIN>
    <PIN pinname="Show Alpha" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
    </NODE>
    <NODE systemname="ColorWaveShaper (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\ColorWaveShaper.tfx" nodename="ColorWaveShaper (DX11.TextureFX)" componentmode="Hidden" id="164" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="60" top="11415" width="100" height="100">
@@ -275,7 +277,7 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.62862,0.86187,0.80098,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="164" srcpinname="Texture Out" dstnodeid="163" dstpinname="Texture In">
@@ -760,4 +762,36 @@
    </LINK>
    <LINK srcnodeid="193" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="195" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5895" top="10095" width="5640" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5895" top="10095" width="2445" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Look over your fields, like a farmer|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="194" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5445" top="9930" width="255" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5445" top="9930" width="465" height="645">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="&lt;">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="20">
+   </PIN>
+   </NODE>
    </PATCH>

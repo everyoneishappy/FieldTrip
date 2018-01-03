@@ -21,7 +21,7 @@
    </PIN>
    <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.47095,0.54000,0.62268,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <PACK Name="vvvv-Message" Version="2.9.0">

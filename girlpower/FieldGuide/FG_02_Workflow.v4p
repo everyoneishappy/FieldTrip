@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="420" top="795" width="6315" height="840">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Basic workflow.  Here we are using a SF2D type, but it&apos;s works the same with the others too.|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Basic workflow.  Here we are using a SF2D type, but it&apos;s the same with the other field types too.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -167,9 +167,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="143">
-   <BOUNDS type="Box" left="1695" top="10035" width="7320" height="600">
+   <BOUNDS type="Box" left="2445" top="9900" width="7320" height="600">
    </BOUNDS>
-   <BOUNDS type="Node" left="1695" top="10035" width="0" height="0">
+   <BOUNDS type="Node" left="2445" top="9900" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -185,11 +185,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="144">
-   <BOUNDS type="Node" left="2100" top="8205" width="5640" height="270">
+   <BOUNDS type="Node" left="2265" top="8490" width="5640" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2100" top="8205" width="5850" height="1695">
+   <BOUNDS type="Box" left="2265" top="8490" width="7125" height="1215">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|To see the nodes organised into Sources, Operators &amp; Usages look here:|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|To see the nodes organised into Sources, Operators &amp; Usages:|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -281,9 +281,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="154">
-   <BOUNDS type="Node" left="2625" top="4320" width="5640" height="270">
+   <BOUNDS type="Node" left="2325" top="4635" width="5640" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2625" top="4320" width="4605" height="960">
+   <BOUNDS type="Box" left="2325" top="4635" width="4605" height="960">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Operator nodes take a function and modify it in some way (much like a texture filter) |">
    </PIN>
@@ -297,9 +297,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="153">
-   <BOUNDS type="Node" left="2085" top="4320" width="255" height="270">
+   <BOUNDS type="Node" left="1785" top="4635" width="255" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2085" top="4320" width="465" height="645">
+   <BOUNDS type="Box" left="1785" top="4635" width="465" height="645">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="&lt;">
    </PIN>
@@ -317,7 +317,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2505" top="6255" width="7365" height="1755">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Usage nodes take the function you have composed and give you something useful back to plug in to use.  These include Layers, Compute Buffers, Textures, Volumes &amp; even some DX11 Particle adapters.  In this case we are just sampling from our function to make a texture.|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Usage nodes take the abstract function you have composed and give you something useful back.  These include Layers, Compute Buffers, Textures, Volumes &amp; even some DX11 Particle adapters.  In this case we are just sampling from our function to make a texture.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -351,7 +351,7 @@
    </PIN>
    <PIN pinname="Center" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Basis" slicecount="1" values="simplex">
+   <PIN pinname="Basis" slicecount="1" values="simplex" visible="1">
    </PIN>
    <PIN pinname="Frequency" slicecount="1" values="1.58">
    </PIN>
@@ -375,7 +375,7 @@
    </PIN>
    <PIN pinname="Center" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Basis" slicecount="1" values="worley">
+   <PIN pinname="Basis" slicecount="1" values="worley" visible="1">
    </PIN>
    <PIN pinname="Frequency" slicecount="1" values="4.16">
    </PIN>
@@ -435,7 +435,7 @@
    <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="150" dstpinname="Input Node">
    </LINK>
    <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="158">
-   <BOUNDS type="Node" left="1305" top="2010" width="100" height="100">
+   <BOUNDS type="Node" left="1290" top="1620" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
@@ -467,9 +467,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="161">
-   <BOUNDS type="Node" left="8490" top="4155" width="255" height="270">
+   <BOUNDS type="Node" left="6915" top="11865" width="255" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="8490" top="4155" width="1170" height="600">
+   <BOUNDS type="Box" left="6915" top="11865" width="3105" height="1500">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="&gt;&gt;&gt;">
    </PIN>
@@ -479,7 +479,7 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   <PIN pinname="Size" slicecount="1" values="20">
+   <PIN pinname="Size" slicecount="1" values="60">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="162">
@@ -553,9 +553,9 @@
    <LINK srcnodeid="166" srcpinname="Output Enum" dstnodeid="165" dstpinname="Operation">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="167">
-   <BOUNDS type="Node" left="7935" top="3720" width="3735" height="270">
+   <BOUNDS type="Node" left="6435" top="11220" width="3735" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="7935" top="3720" width="2010" height="675">
+   <BOUNDS type="Box" left="6435" top="11220" width="3540" height="690">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Scroll over here to see the &apos;swiss army knife&apos; op nodes|">
    </PIN>
@@ -564,6 +564,8 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
    </PIN>
    </NODE>
    <NODE systemname="VectorOp (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\VectorOp (VF2D.Operators).v4p" nodename="VectorOp (VF2D.Operators)" componentmode="Hidden" id="170">
@@ -720,4 +722,36 @@
    <BOUNDS type="Box" left="14790" top="9870">
    </BOUNDS>
    </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="186">
+   <BOUNDS type="Box" left="3225" top="2025" width="960" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3225" top="2025" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="worley">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="sine">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="186" srcpinname="Output Enum" dstnodeid="145" dstpinname="Basis">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="187">
+   <BOUNDS type="Box" left="1590" top="2025" width="1170" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1590" top="2025" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="simplex">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="sine">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="187" srcpinname="Output Enum" dstnodeid="1" dstpinname="Basis">
+   </LINK>
    </PATCH>

@@ -37,7 +37,7 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|2D Scalar Field|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|2D Scalar Field &apos;SF2D&apos;|">
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="12">
@@ -73,7 +73,7 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|2D Vector Field|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|2D Vector Field &apos;VF2D&apos;|">
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="23">
@@ -132,6 +132,10 @@
    <PIN pinname="XYZ" visible="1">
    </PIN>
    <PIN pinname="Size" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 2">
@@ -281,7 +285,7 @@
    </PIN>
    <PIN pinname="Projection" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|3D Scalar Field|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|3D Scalar Field &apos;SF3D&apos;|">
    </PIN>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -377,7 +381,7 @@
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="61" dstpinname="DataXYZ" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="Sprite (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\Sprite (DX11.Layer).v4p" nodename="Sprite (DX11.Layer)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="3765" top="12885" width="100" height="100">
+   <BOUNDS type="Node" left="2940" top="13320" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -388,6 +392,10 @@
    <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Size" visible="1" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="67" dstpinname="XYZ">
@@ -421,8 +429,6 @@
    <LINK srcnodeid="62" srcpinname="Output" dstnodeid="68" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="69" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Size">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Layer" dstnodeid="54" dstpinname="Layer 2">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="70">
    <BOUNDS type="Box" left="945" top="9825" width="795" height="240">
@@ -496,8 +502,6 @@
    </NODE>
    <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="77" dstpinname="Position 3D Buffer">
    </LINK>
-   <LINK srcnodeid="77" srcpinname="Layer" dstnodeid="54" dstpinname="Layer 3">
-   </LINK>
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="77" dstpinname="Spread Count">
    </LINK>
    <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="78">
@@ -523,7 +527,7 @@
    </PIN>
    <PIN pinname="Projection" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|3D Vector Field|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|3D Vector Field &apos;VF3D&apos;|">
    </PIN>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -825,11 +829,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="132">
-   <BOUNDS type="Node" left="300" top="120" width="2655" height="270">
+   <BOUNDS type="Node" left="435" top="150" width="2655" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="300" top="120" width="10485" height="660">
+   <BOUNDS type="Box" left="435" top="150" width="6540" height="585">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|2D &amp; 3D scalar &amp; vector fields: 4 new data types|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|2D &amp; 3D scalar &amp; vector fields|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -905,9 +909,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="137">
-   <BOUNDS type="Node" left="2790" top="2340" width="5340" height="270">
+   <BOUNDS type="Node" left="2790" top="3075" width="5340" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2790" top="2340" width="5340" height="270">
+   <BOUNDS type="Box" left="2790" top="3075" width="5340" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Don&apos;t worry too much about the details, this patch is just for the concept|">
    </PIN>
@@ -976,6 +980,8 @@
    <PIN pinname="Amplitude XY" slicecount="2" values="1,1">
    </PIN>
    <PIN pinname="Center XY" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="Frequency XY" slicecount="2" values="2,2">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
@@ -1144,4 +1150,100 @@
    </NODE>
    <LINK srcnodeid="48" srcpinname="Output" dstnodeid="70" dstpinname="Input Node">
    </LINK>
+   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="138">
+   <BOUNDS type="Node" left="4185" top="6765" width="900" height="270">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Color1" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
+   </PIN>
+   <PIN pinname="Gamma" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Transform" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="MaxColor" visible="-1" pintype="Input" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Control" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" visible="-1" pintype="Input" slicecount="1" values="Linear">
+   </PIN>
+   <PIN pinname="Texture In" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Use Default Size" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="1" pintype="Input" slicecount="2" values="256,256">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Texture Out" dstnodeid="33" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="139">
+   <BOUNDS type="Node" left="3585" top="6750" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3585" top="6750" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="139" srcpinname="Render State" dstnodeid="33" dstpinname="Render State">
+   </LINK>
+   <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="141">
+   <BOUNDS type="Node" left="4965" top="13050" width="900" height="270">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Color1" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
+   </PIN>
+   <PIN pinname="Gamma" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Transform" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="MaxColor" visible="-1" pintype="Input" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Control" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" visible="-1" pintype="Input" slicecount="1" values="Linear">
+   </PIN>
+   <PIN pinname="Texture In" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Use Default Size" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="1" pintype="Input" slicecount="2" values="256,256">
+   </PIN>
+   </NODE>
+   <NODE systemname="Blend (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Blend (DX11.RenderState)" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="4365" top="13035" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4365" top="13035" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Blend">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Render State" dstnodeid="67" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Texture Out" dstnodeid="67" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Layer" dstnodeid="54" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Layer" dstnodeid="54" dstpinname="Layer 3">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="142">
+   <BOUNDS type="Node" left="3240" top="2385" width="2655" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3240" top="2385" width="4605" height="705">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|4 new data types:|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="24">
+   </PIN>
+   </NODE>
    </PATCH>

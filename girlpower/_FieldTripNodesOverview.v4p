@@ -393,9 +393,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (SF2D.Operators).v4p" nodename="InputMorph (SF2D.Operators)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="13170" top="1860" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="1860" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13170" top="1860">
+   <BOUNDS type="Box" left="13140" top="1860">
    </BOUNDS>
    </NODE>
    <NODE systemname="OutlineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\OutlineSDF (SF2D.Operators).v4p" nodename="OutlineSDF (SF2D.Operators)" componentmode="Hidden" id="45">
@@ -859,9 +859,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Normalize (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Normalize\Normalize (VF2D.Operators).v4p" nodename="Normalize (VF2D.Operators)" componentmode="Hidden" id="141">
-   <BOUNDS type="Node" left="14955" top="9645" width="100" height="100">
+   <BOUNDS type="Node" left="14940" top="9645" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14955" top="9645">
+   <BOUNDS type="Box" left="14940" top="9645">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (VF2D.Operators).v4p" nodename="InputMorph (VF2D.Operators)" componentmode="Hidden" id="142">
@@ -871,9 +871,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector2DJoin (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector2DJoin (SF2D.Operators).v4p" nodename="Vector2DJoin (SF2D.Operators)" componentmode="Hidden" id="143">
-   <BOUNDS type="Node" left="13170" top="2175" width="100" height="100">
+   <BOUNDS type="Node" left="13140" top="2175" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13170" top="2175">
+   <BOUNDS type="Box" left="13140" top="2175">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -935,9 +935,9 @@
    </PIN>
    </NODE>
    <NODE systemname="InputMorph (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (VF3D.Operators).v4p" nodename="InputMorph (VF3D.Operators)" componentmode="Hidden" id="156">
-   <BOUNDS type="Node" left="13140" top="11850" width="100" height="100">
+   <BOUNDS type="Node" left="13155" top="11850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13140" top="11850">
+   <BOUNDS type="Box" left="13155" top="11850">
    </BOUNDS>
    </NODE>
    <NODE systemname="PreCurlConstrainToSDF (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Curl\PreCurlConstrainToSDF (VF3D.Operators).v4p" nodename="PreCurlConstrainToSDF (VF3D.Operators)" componentmode="Hidden" id="157">
@@ -953,13 +953,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Normalize (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Normalize\Normalize (VF3D.Operators).v4p" nodename="Normalize (VF3D.Operators)" componentmode="Hidden" id="159">
-   <BOUNDS type="Node" left="14940" top="12615" width="100" height="100">
+   <BOUNDS type="Node" left="14955" top="12615" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14940" top="12615">
+   <BOUNDS type="Box" left="14955" top="12615">
    </BOUNDS>
    </NODE>
    <NODE systemname="Cross (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Cross\Cross (VF3D.Operators).v4p" nodename="Cross (VF3D.Operators)" componentmode="Hidden" id="161">
-   <BOUNDS type="Node" left="14940" top="13305" width="100" height="100">
+   <BOUNDS type="Node" left="14955" top="13305" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14955" top="13305">
    </BOUNDS>
    </NODE>
    <NODE systemname="FBM (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\FBM\FBM (VF3D.Operators).v4p" nodename="FBM (VF3D.Operators)" componentmode="Hidden" id="163">
@@ -1713,23 +1715,23 @@
    </BOUNDS>
    </NODE>
    <NODE id="48" systemname="Vector2DSplit (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Vector2DSplit (VF2D.Operators).v4p" nodename="Vector2DSplit (VF2D.Operators)" componentmode="Hidden">
-   <BOUNDS type="Node" left="13170" top="8865" width="100" height="100">
+   <BOUNDS type="Node" left="13155" top="8865" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="13170" top="8865">
+   <BOUNDS type="Box" left="13155" top="8865">
    </BOUNDS>
    <BOUNDS type="Window" left="4200" top="2235" width="14670" height="12255">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Laplacian (VF2D.Operators).v4p" nodename="Laplacian (VF2D.Operators)" componentmode="Hidden" id="131">
-   <BOUNDS type="Node" left="14955" top="10005" width="100" height="100">
+   <BOUNDS type="Node" left="14940" top="10005" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14955" top="10005">
+   <BOUNDS type="Box" left="14940" top="10005">
    </BOUNDS>
    </NODE>
    <NODE systemname="Laplacian (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Laplacian (VF3D.Operators).v4p" nodename="Laplacian (VF3D.Operators)" componentmode="Hidden" id="160">
-   <BOUNDS type="Node" left="14940" top="12945" width="100" height="100">
+   <BOUNDS type="Node" left="14955" top="12945" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14940" top="12945">
+   <BOUNDS type="Box" left="14955" top="12945">
    </BOUNDS>
    </NODE>
    <NODE systemname="Curl (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Curl (VF3D.Operators).v4p" nodename="Curl (VF3D.Operators)" componentmode="Hidden" id="162">
@@ -1907,9 +1909,9 @@
    </PIN>
    </NODE>
    <NODE systemname="SurfaceForceField (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\SurfaceForceField (SF3D.Operators).v4p" nodename="SurfaceForceField (SF3D.Operators)" componentmode="Hidden" id="271">
-   <BOUNDS type="Node" left="14805" top="6975" width="100" height="100">
+   <BOUNDS type="Node" left="14820" top="6975" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14805" top="6975">
+   <BOUNDS type="Box" left="14820" top="6975">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="270">
@@ -1923,5 +1925,51 @@
    </PIN>
    <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
+   </NODE>
+   <NODE systemname="Formula (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Formula (SF2D.Operators).v4p" nodename="Formula (SF2D.Operators)" componentmode="Hidden" id="272">
+   <BOUNDS type="Node" left="14685" top="4245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14685" top="4245">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Formula (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Formula (SF3D.Operators).v4p" nodename="Formula (SF3D.Operators)" componentmode="Hidden" id="273">
+   <BOUNDS type="Node" left="14820" top="7320" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14820" top="7320">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Formula (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Formula (VF2D.Operators).v4p" nodename="Formula (VF2D.Operators)" componentmode="Hidden" id="274">
+   <BOUNDS type="Node" left="14940" top="10350" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14940" top="10350">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Formula (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Formula (VF3D.Operators).v4p" nodename="Formula (VF3D.Operators)" componentmode="Hidden" id="275">
+   <BOUNDS type="Node" left="14235" top="13995" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Map (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Map (SF2D.Operators).v4p" nodename="Map (SF2D.Operators)" componentmode="Hidden" id="276">
+   <BOUNDS type="Node" left="13140" top="2520" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13140" top="2520">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Map (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Map (SF3D.Operators).v4p" nodename="Map (SF3D.Operators)" componentmode="Hidden" id="277">
+   <BOUNDS type="Node" left="13140" top="6090" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13140" top="6090">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Map (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Map (VF2D.Operators).v4p" nodename="Map (VF2D.Operators)" componentmode="Hidden" id="278">
+   <BOUNDS type="Node" left="13155" top="9255" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13155" top="9255">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Map (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Map (VF3D.Operators).v4p" nodename="Map (VF3D.Operators)" componentmode="Hidden" id="279">
+   <BOUNDS type="Node" left="13155" top="12540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13155" top="12540">
+   </BOUNDS>
    </NODE>
    </PATCH>
