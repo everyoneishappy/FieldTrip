@@ -1972,4 +1972,36 @@
    <BOUNDS type="Box" left="13155" top="12540">
    </BOUNDS>
    </NODE>
+   <NODE systemname="Bias (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Bias (SF2D.Operators).v4p" nodename="Bias (SF2D.Operators)" componentmode="Hidden" id="280">
+   <BOUNDS type="Node" left="16800" top="4020" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Gain (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Gain (SF2D.Operators).v4p" nodename="Gain (SF2D.Operators)" componentmode="Hidden" id="281">
+   <BOUNDS type="Node" left="16800" top="4320" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Bias (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Bias (SF3D.Operators).v4p" nodename="Bias (SF3D.Operators)" componentmode="Hidden" id="283">
+   <BOUNDS type="Node" left="16800" top="7050" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Gain (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Gain (SF3D.Operators).v4p" nodename="Gain (SF3D.Operators)" componentmode="Hidden" id="282">
+   <BOUNDS type="Node" left="16800" top="7350" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Bias (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Bias (VF2D.Operators).v4p" nodename="Bias (VF2D.Operators)" componentmode="Hidden" id="285">
+   <BOUNDS type="Node" left="16755" top="9945" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Gain (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Gain (VF2D.Operators).v4p" nodename="Gain (VF2D.Operators)" componentmode="Hidden" id="284">
+   <BOUNDS type="Node" left="16755" top="10245" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Bias (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Bias (VF3D.Operators).v4p" nodename="Bias (VF3D.Operators)" componentmode="Hidden" id="287">
+   <BOUNDS type="Node" left="16830" top="13065" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Gain (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Gain (VF3D.Operators).v4p" nodename="Gain (VF3D.Operators)" componentmode="Hidden" id="286">
+   <BOUNDS type="Node" left="16830" top="13365" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
