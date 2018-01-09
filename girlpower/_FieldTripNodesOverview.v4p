@@ -128,7 +128,7 @@
    <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -491,7 +491,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers).v4p" nodename="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="22530" top="12255" width="100" height="100">
+   <BOUNDS type="Node" left="22845" top="12420" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="22845" top="12420">
    </BOUNDS>
    </NODE>
    <NODE systemname="PathLine (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\PathLine\PathLine (VF3D.Usages 3D Buffer).v4p" nodename="PathLine (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="62">
@@ -1017,17 +1019,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="24795" top="11880" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Compute" visible="-1" pintype="Input">
-   </PIN>
-   <PIN pinname="Output String" visible="-1" pintype="Output">
-   </PIN>
-   </NODE>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="196">
-   <BOUNDS type="Node" left="22500" top="11880" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="22500" top="11880" width="1425" height="240">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="DX11.Particles" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
@@ -1037,7 +1029,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20715" top="12525" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Texture" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
@@ -1047,7 +1039,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20715" top="11880" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Volume" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Volume">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
@@ -1057,7 +1049,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20715" top="13395" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Layer" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
@@ -1067,7 +1059,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="23970" top="8985" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Compute" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1079,7 +1071,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20715" top="8985" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Texture" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1091,7 +1083,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20730" top="10215" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Layer" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
@@ -1101,7 +1093,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20580" top="5490" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Texture" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1113,19 +1105,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="22335" top="5490" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Layer" visible="-1" pintype="Input">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Output String" visible="-1" pintype="Output">
-   </PIN>
-   </NODE>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="205">
-   <BOUNDS type="Node" left="20595" top="6855" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="20595" top="6855" width="1425" height="240">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="DX11.Particles" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1137,7 +1117,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="25245" top="5490" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Compute" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1149,7 +1129,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="20805" top="3105" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Texture" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1161,7 +1141,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="22785" top="3105" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Layer" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -1173,7 +1153,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="25020" top="3105" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="Compute" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
@@ -2035,15 +2015,35 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="Deform (VF3D.Usages DX11.GeomFX)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\Deform (VF3D.Usages DX11.GeomFX).v4p" nodename="Deform (VF3D.Usages DX11.GeomFX)" componentmode="Hidden" id="288">
-   <BOUNDS type="Node" left="22515" top="13095" width="100" height="100">
+   <BOUNDS type="Node" left="22830" top="13215" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="289">
-   <BOUNDS type="Node" left="22515" top="12810" width="100" height="100">
+   <BOUNDS type="Node" left="22830" top="12930" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22515" top="12810" width="1425" height="240">
+   <BOUNDS type="Box" left="22830" top="12930" width="1425" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="DX11.GeomFX">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="290">
+   <BOUNDS type="Node" left="20565" top="6630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="20565" top="6630" width="1320" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|DX11.Particles (requires pack)|">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="291">
+   <BOUNDS type="Node" left="22845" top="11865" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="22845" top="11865" width="1320" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|DX11.Particles (requires pack)|">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    </PATCH>

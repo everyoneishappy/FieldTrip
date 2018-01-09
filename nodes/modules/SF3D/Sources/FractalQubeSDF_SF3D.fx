@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Mandelbox Fractal Distance Field
+//		Fractal Qube 3D distance field ported from Fragmentarium 'BioCube' example by Darkbeam 
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -15,17 +15,18 @@
 #endif
 
 // Parameters
-float FN_MinRad2 : FN_MINRAD2;
-float FN_Scale : FN_SCALE;
-float3 FN_Trans : FN_TRANS; 
-float3 FN_Julia : FN_JULIA; 
-float3 FN_PYR : FN_ROT;
-int FN_iter : FN_ITER;
+
+float3 FN_Offset : FN_OFFSET  = float3(0, 1, 1); 
+float3 FN_Offset2 : FN_OFFSET2 = float3(1,-0.3,-0.3);
+float3 FN_Rot : FN_ROT;
+float FN_Scale : FN_SCALE = 1.5; 
+float FN_Qube : FN_QUBE = 0.1;
+int FN_Iterations : FN_ITER= 12; 
 
 
 float FN_(float3 p)
 {
-	return fMandelbox(p, FN_MinRad2, FN_Scale, FN_Trans, FN_Julia, FN_PYR, FN_iter);
+	return fFractalQube(p, FN_Scale, FN_Offset, FN_Offset2, FN_Rot, FN_Qube, FN_Iterations);
 }
 // end of the function body
 #endif 

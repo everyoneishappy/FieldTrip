@@ -89,7 +89,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2625" top="6135" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="8115" top="540" width="9915" height="7590">
+   <BOUNDS type="Window" left="9600" top="2325" width="9915" height="7590">
    </BOUNDS>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
@@ -209,6 +209,10 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="March Max Iterations" slicecount="1" values="150">
+   </PIN>
+   <PIN pinname="March Min Distance" slicecount="1" values="0.8">
+   </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="13" dstpinname="Layer 2">
    </LINK>
@@ -242,7 +246,7 @@
    </NODE>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -343,9 +347,9 @@
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Minimum Radius">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23">
-   <BOUNDS type="Box" left="8115" top="2310" width="795" height="240">
+   <BOUNDS type="Box" left="8115" top="1860" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8115" top="2310" width="0" height="0">
+   <BOUNDS type="Node" left="8115" top="1860" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="16">
    </PIN>
