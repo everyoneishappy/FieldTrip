@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Cause particles from a DX11.Particles system to bounce off a signed distance field surface|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Cause particles from a DX11.Particles system to bounce off a signed distance field surface.   Requires DX11.Particles pack|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -536,7 +536,7 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="XYZ" dstnodeid="4" dstpinname="Size XYZ">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>

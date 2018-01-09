@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Modify an attribute of a DX11.Particles system by a 3D vector field|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Modify an attribute of a DX11.Particles system by a 3D vector field.   Requires DX11.Particles pack|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -450,7 +450,7 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>

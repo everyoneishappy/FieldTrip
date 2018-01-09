@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers) help.v4p">
-   <BOUNDS type="Window" left="930" top="0" width="8070" height="10905">
+   <BOUNDS type="Window" left="930" top="0" width="8160" height="10905">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
-   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   <BOUNDS type="Node" left="0" top="225" width="5100" height="450">
    </BOUNDS>
-   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   <BOUNDS type="Box" left="0" top="225" width="7995" height="375">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)|">
    </PIN>
@@ -15,11 +15,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2">
-   <BOUNDS type="Node" left="225" top="600" width="5100" height="600">
+   <BOUNDS type="Node" left="0" top="600" width="5100" height="600">
    </BOUNDS>
-   <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
+   <BOUNDS type="Box" left="0" top="600" width="5100" height="600">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Modify an attribute of a DX11.Particles system by a 3D vector field|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Modify an attribute of a DX11.Particles system by a 3D vector field.  Requires DX11.Particles pack|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -93,7 +93,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1920" top="8205" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="8865" top="150" width="12915" height="12345">
+   <BOUNDS type="Window" left="8910" top="0" width="12915" height="12345">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -458,7 +458,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
