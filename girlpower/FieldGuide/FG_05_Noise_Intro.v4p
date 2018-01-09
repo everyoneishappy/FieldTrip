@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_05_Noise_Intro.v4p" bgcolor="16777215" systemname="FG_05_Noise_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_05_Noise_Intro.v4p" scrollx="0" scrolly="810">
-   <BOUNDS type="Window" left="0" top="0" width="10905" height="13725">
+   <BOUNDS type="Window" left="165" top="165" width="10905" height="13725">
    </BOUNDS>
    <PACK Name="dx11" Version="1.0.2">
    </PACK>
@@ -148,30 +148,6 @@
    <PIN pinname="Background Color" slicecount="1" values="|0.62862,0.86187,0.80098,1.00000|">
    </PIN>
    </NODE>
-   <NODE systemname="GridSplit (Transform)" filename="%VVVV%\packs\mp.essentials\nodes\modules\transform\GridSplit (Transform).v4p" nodename="GridSplit (Transform)" componentmode="Hidden" id="167" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="405" top="11790" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Columns" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="405" top="11790">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="185" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="405" top="11445" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="185" srcpinname="Transform Out" dstnodeid="167" dstpinname="Transform In">
-   </LINK>
    <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="188">
    <BOUNDS type="Node" left="255" top="12270" width="100" height="100">
    </BOUNDS>
@@ -185,8 +161,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="188" srcpinname="Layer" dstnodeid="165" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="167" srcpinname="Transform Out" dstnodeid="188" dstpinname="Transform">
    </LINK>
    <NODE systemname="Cons (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Texture 2d)" componentmode="Hidden" id="189">
    <BOUNDS type="Node" left="630" top="10950" width="100" height="100">
@@ -760,4 +734,16 @@
    <PIN pinname="Input String" slicecount="1" values="FG_06_Noise_Worley.v4p">
    </PIN>
    </NODE>
+   <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="219" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="420" top="11700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="TranslateXY" visible="1" slicecount="8" values="-0.5,0.5,0.5,0.5,-0.5,-0.5,0.5,-0.5">
+   </PIN>
+   <PIN pinname="ScaleXY" visible="1" slicecount="8" values="1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="219" srcpinname="Transform Out" dstnodeid="188" dstpinname="Transform">
+   </LINK>
    </PATCH>
