@@ -625,87 +625,87 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="BoxSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BoxSDF (SF3D.Sources).v4p" nodename="BoxSDF (SF3D.Sources)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="5445" top="5985" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="5850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="5985">
+   <BOUNDS type="Box" left="5445" top="5850">
    </BOUNDS>
    </NODE>
    <NODE systemname="ConeSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ConeSDF (SF3D.Sources).v4p" nodename="ConeSDF (SF3D.Sources)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="5445" top="6390" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="6255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="6390">
+   <BOUNDS type="Box" left="5445" top="6255">
    </BOUNDS>
    </NODE>
    <NODE systemname="PlaneSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PlaneSDF (SF3D.Sources).v4p" nodename="PlaneSDF (SF3D.Sources)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="5445" top="5595" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="5460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="5595">
+   <BOUNDS type="Box" left="5445" top="5460">
    </BOUNDS>
    </NODE>
    <NODE systemname="TorusSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TorusSDF (SF3D.Sources).v4p" nodename="TorusSDF (SF3D.Sources)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="6495" top="5595" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="7035" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6495" top="5595">
+   <BOUNDS type="Box" left="5445" top="7035">
    </BOUNDS>
    </NODE>
    <NODE systemname="BezierSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BezierSDF (SF3D.Sources).v4p" nodename="BezierSDF (SF3D.Sources)" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="7905" top="5985" width="100" height="100">
+   <BOUNDS type="Node" left="7905" top="5850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7905" top="5985">
+   <BOUNDS type="Box" left="7905" top="5850">
    </BOUNDS>
    </NODE>
    <NODE systemname="SphereSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\SphereSDF (SF3D.Sources).v4p" nodename="SphereSDF (SF3D.Sources)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="7905" top="6390" width="100" height="100">
+   <BOUNDS type="Node" left="7905" top="6255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7905" top="6390">
+   <BOUNDS type="Box" left="7905" top="6255">
    </BOUNDS>
    </NODE>
    <NODE systemname="VolumeSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\VolumeSDF (SF3D.Sources).v4p" nodename="VolumeSDF (SF3D.Sources)" componentmode="Hidden" id="98">
-   <BOUNDS type="Node" left="7905" top="6795" width="100" height="100">
+   <BOUNDS type="Node" left="7905" top="6660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7905" top="6795">
+   <BOUNDS type="Box" left="7905" top="6660">
    </BOUNDS>
    </NODE>
    <NODE systemname="PyramidSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PyramidSDF (SF3D.Sources).v4p" nodename="PyramidSDF (SF3D.Sources)" componentmode="Hidden" id="99">
-   <BOUNDS type="Node" left="7905" top="7155" width="100" height="100">
+   <BOUNDS type="Node" left="6555" top="7020" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7905" top="7155">
+   <BOUNDS type="Box" left="6555" top="7020">
    </BOUNDS>
    </NODE>
    <NODE systemname="CylinderSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CylinderSDF (SF3D.Sources).v4p" nodename="CylinderSDF (SF3D.Sources)" componentmode="Hidden" id="100">
-   <BOUNDS type="Node" left="6495" top="5985" width="100" height="100">
+   <BOUNDS type="Node" left="6555" top="5850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6495" top="5985">
+   <BOUNDS type="Box" left="6555" top="5850">
    </BOUNDS>
    </NODE>
    <NODE systemname="HexPrismSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\HexPrismSDF (SF3D.Sources).v4p" nodename="HexPrismSDF (SF3D.Sources)" componentmode="Hidden" id="101">
-   <BOUNDS type="Node" left="6495" top="6390" width="100" height="100">
+   <BOUNDS type="Node" left="6555" top="6255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6495" top="6390">
+   <BOUNDS type="Box" left="6555" top="6255">
    </BOUNDS>
    </NODE>
    <NODE systemname="RoundBoxSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\RoundBoxSDF (SF3D.Sources).v4p" nodename="RoundBoxSDF (SF3D.Sources)" componentmode="Hidden" id="102">
-   <BOUNDS type="Node" left="6495" top="6795" width="100" height="100">
+   <BOUNDS type="Node" left="6555" top="6660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6495" top="6795">
+   <BOUNDS type="Box" left="6555" top="6660">
    </BOUNDS>
    </NODE>
    <NODE systemname="TrianlgeSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TrianlgeSDF (SF3D.Sources).v4p" nodename="TrianlgeSDF (SF3D.Sources)" componentmode="Hidden" id="103">
-   <BOUNDS type="Node" left="7905" top="5595" width="100" height="100">
+   <BOUNDS type="Node" left="7905" top="5460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7905" top="5595">
+   <BOUNDS type="Box" left="7905" top="5460">
    </BOUNDS>
    </NODE>
    <NODE systemname="TriPrismSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TriPrismSDF (SF3D.Sources).v4p" nodename="TriPrismSDF (SF3D.Sources)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="6495" top="7155" width="100" height="100">
+   <BOUNDS type="Node" left="6555" top="5460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6495" top="7155">
+   <BOUNDS type="Box" left="6555" top="5460">
    </BOUNDS>
    </NODE>
    <NODE systemname="PolyhedronSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\PolyhedronSDF (SF3D.Sources).v4p" nodename="PolyhedronSDF (SF3D.Sources)" componentmode="Hidden" id="105">
-   <BOUNDS type="Node" left="9105" top="7155" width="100" height="100">
+   <BOUNDS type="Node" left="7905" top="7020" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9105" top="7155">
+   <BOUNDS type="Box" left="7905" top="7020">
    </BOUNDS>
    <PIN pinname="Shape" visible="1">
    </PIN>
@@ -1505,9 +1505,9 @@
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="245" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="9075" top="5625" width="1680" height="1200">
+   <BOUNDS type="Box" left="9105" top="5490" width="1680" height="1200">
    </BOUNDS>
-   <BOUNDS type="Node" left="9075" top="5625" width="0" height="0">
+   <BOUNDS type="Node" left="9105" top="5490" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Octahedron">
    </PIN>
@@ -1677,15 +1677,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="JuliaSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\JuliaSDF (SF3D.Sources).v4p" nodename="JuliaSDF (SF3D.Sources)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="5445" top="7155" width="100" height="100">
+   <BOUNDS type="Node" left="8580" top="7785" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="7155">
+   <BOUNDS type="Box" left="8580" top="7785">
    </BOUNDS>
    </NODE>
    <NODE systemname="LineSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\LineSDF (SF3D.Sources).v4p" nodename="LineSDF (SF3D.Sources)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="5445" top="6795" width="100" height="100">
+   <BOUNDS type="Node" left="5445" top="6660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5445" top="6795">
+   <BOUNDS type="Box" left="5445" top="6660">
    </BOUNDS>
    </NODE>
    <NODE systemname="Noise (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\Noise (SF3D.Sources).v4p" nodename="Noise (SF3D.Sources)" componentmode="Hidden" id="89">
@@ -2042,6 +2042,60 @@
    <BOUNDS type="Box" left="22845" top="11865" width="1320" height="495">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|DX11.Particles (requires pack)|">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="FractalQubeSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\FractalQubeSDF (SF3D.Sources).v4p" nodename="FractalQubeSDF (SF3D.Sources)" componentmode="Hidden" id="292">
+   <BOUNDS type="Node" left="5430" top="7785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5430" top="7785">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="MandelboxSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\MandelboxSDF (SF3D.Sources).v4p" nodename="MandelboxSDF (SF3D.Sources)" componentmode="Hidden" id="293">
+   <BOUNDS type="Node" left="4020" top="7785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4020" top="7785">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="PolyhedronFoldSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\PolyhedronFoldSDF (SF3D.Sources).v4p" nodename="PolyhedronFoldSDF (SF3D.Sources)" componentmode="Hidden" id="294">
+   <BOUNDS type="Node" left="6900" top="7785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6900" top="7785">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="295">
+   <BOUNDS type="Node" left="9555" top="7785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9555" top="7785" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Fractals">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="296">
+   <BOUNDS type="Node" left="6615" top="1905" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6615" top="1905" width="2070" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|2D Signed Distance Fields|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="297">
+   <BOUNDS type="Node" left="6150" top="5115" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6150" top="5115" width="2070" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|3D Signed Distance Fields|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
    </PIN>
