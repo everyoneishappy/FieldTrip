@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Divergence (SF2D.Operators).v4p" systemname="Divergence (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF2D.Operators).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\Divergence (VF2D.Operators).v4p" systemname="Divergence (VF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\Divergence (VF2D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -65,7 +65,7 @@
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="43">
    <BOUNDS type="Node" left="6135" top="7080" width="1290" height="270">
    </BOUNDS>
-   <PIN pinname="File Path" visible="1" slicecount="1" values="..\Helpers\sdfTemplate.fx">
+   <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
    </PIN>
    <PIN pinname="Content" visible="1">
    </PIN>
@@ -254,14 +254,6 @@
    </LINK>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="Divergence_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence_SF2D.fx" nodename="Divergence_SF2D (DX11.Effect)" componentmode="Hidden" id="68">
-   <BOUNDS type="Node" left="4965" top="4170" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shader Path" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
-   </LINK>
    <LINK srcnodeid="36" srcpinname="Instance index" dstnodeid="37" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Input">
@@ -330,7 +322,7 @@
    </NODE>
    <LINK srcnodeid="73" srcpinname="Output String" dstnodeid="70" dstpinname="Input 2">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="75">
    <BOUNDS type="Node" left="2610" top="1335" width="100" height="100">
@@ -406,6 +398,14 @@
    </LINK>
    <LINK srcnodeid="74" srcpinname="Resource Semantics" dstnodeid="77" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Returns the divergence of a 2D scalar field" tags="">
+   <INFO author="" description="Returns the divergence of a 2D vector field as a 2D scalar field" tags="">
    </INFO>
+   <NODE systemname="Divergence_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Divergence_VF2D.fx" nodename="Divergence_VF2D (DX11.Effect)" componentmode="Hidden" id="68">
+   <BOUNDS type="Node" left="4965" top="4170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
    </PATCH>

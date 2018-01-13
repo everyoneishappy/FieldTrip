@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF3D.Operators).v4p" systemname="Divergence (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF3D.Operators).v4p" scrollx="0" scrolly="15">
-   <BOUNDS type="Window" left="8625" top="1920" width="14670" height="12255">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\Divergence (VF3D.Operators).v4p" systemname="Divergence (VF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\Divergence (VF3D.Operators).v4p" scrollx="0" scrolly="15">
+   <BOUNDS type="Window" left="12360" top="1515" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -65,7 +65,7 @@
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="43">
    <BOUNDS type="Node" left="6135" top="7080" width="1290" height="270">
    </BOUNDS>
-   <PIN pinname="File Path" visible="1" slicecount="1" values="..\Helpers\sdfTemplate.fx">
+   <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
    </PIN>
    <PIN pinname="Content" visible="1">
    </PIN>
@@ -256,14 +256,6 @@
    </LINK>
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="Divergence_SF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence_SF3D.fx" nodename="Divergence_SF3D (DX11.Effect)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="4995" top="3915" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shader Path" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="69" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
-   </LINK>
    <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Input">
    </LINK>
    <NODE systemname="RenderSemantic (DX11.Layer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Value)" componentmode="Hidden" id="74">
@@ -330,7 +322,7 @@
    </NODE>
    <LINK srcnodeid="70" srcpinname="Output String" dstnodeid="73" dstpinname="Input 2">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="76">
    <BOUNDS type="Node" left="1155" top="1410" width="100" height="100">
@@ -406,6 +398,14 @@
    </LINK>
    <LINK srcnodeid="75" srcpinname="Resource Semantics" dstnodeid="78" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Returns the divergence of a 3D scalar field" tags="">
+   <INFO author="" description="Returns the divergence of a 3D vector field as a 3D scalar field" tags="">
    </INFO>
+   <NODE systemname="Divergence_VF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Divergence_VF3D.fx" nodename="Divergence_VF3D (DX11.Effect)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="4995" top="3915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
    </PATCH>

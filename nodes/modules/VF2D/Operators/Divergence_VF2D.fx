@@ -15,7 +15,7 @@
 #endif
 
 
-// Input VF3D function placeholder
+// Input VF2D function placeholder
 #ifndef FN_INPUT
 #define FN_INPUT normalize
 #endif

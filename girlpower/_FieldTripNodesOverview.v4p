@@ -374,12 +374,6 @@
    <BOUNDS type="Box" left="11115" top="4575">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Divergence (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF2D.Operators).v4p" nodename="Divergence (SF2D.Operators)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="13140" top="3285" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="13140" top="3285">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="42">
    <BOUNDS type="Node" left="14685" top="2490" width="100" height="100">
    </BOUNDS>
@@ -746,12 +740,6 @@
    <BOUNDS type="Node" left="14820" top="6210" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="14820" top="6210">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Divergence (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Divergence\Divergence (SF3D.Operators).v4p" nodename="Divergence (SF3D.Operators)" componentmode="Hidden" id="119">
-   <BOUNDS type="Node" left="13140" top="6915" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="13140" top="6915">
    </BOUNDS>
    </NODE>
    <NODE systemname="InputMorph (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (SF3D.Operators).v4p" nodename="InputMorph (SF3D.Operators)" componentmode="Hidden" id="120">
@@ -2098,6 +2086,42 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="Divergence (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\Divergence (VF2D.Operators).v4p" nodename="Divergence (VF2D.Operators)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="14955" top="10695" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14955" top="10695">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Divergence (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Operators\Divergence (VF3D.Operators).v4p" nodename="Divergence (VF3D.Operators)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="15240" top="13965" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15240" top="13965">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="298">
+   <BOUNDS type="Node" left="16050" top="10710" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16050" top="10710" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.60284,0.79702,0.53406,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="299">
+   <BOUNDS type="Node" left="16305" top="13980" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="16305" top="13980" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
    </NODE>
    </PATCH>
