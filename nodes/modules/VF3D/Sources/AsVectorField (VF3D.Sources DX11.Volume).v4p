@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\AsScalarField (SF2D.Sources DX11.Texture).v4p" systemname="AsScalarField (SF2D.Sources DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarField (SF2D.Sources DX11.Texture).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="6495" top="2625" width="12630" height="9840">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" systemname="AsVectorField (VF3D.Sources DX11.Volume)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="9990" top="3000" width="12630" height="9150">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -23,9 +23,9 @@
    </PIN>
    </NODE>
    <NODE id="17" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="7965" top="5985" width="795" height="240">
+   <BOUNDS type="Box" left="7200" top="5865" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7965" top="5985" width="0" height="0">
+   <BOUNDS type="Node" left="7200" top="5865" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -49,11 +49,11 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|SF2D Function|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|VF2D Function|">
    </PIN>
    </NODE>
    <NODE systemname="RenderSemantic (DX11.Layer Transform)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Transform)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="7965" top="5520" width="100" height="100">
+   <BOUNDS type="Node" left="7200" top="5400" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -63,7 +63,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="7965" top="4710" width="100" height="100">
+   <BOUNDS type="Node" left="7200" top="4590" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -71,9 +71,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="73" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="8505" top="1155" width="795" height="240">
+   <BOUNDS type="Box" left="7740" top="1035" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8505" top="1155" width="0" height="0">
+   <BOUNDS type="Node" left="7740" top="1035" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -83,21 +83,21 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="77" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="5280" top="1155" width="795" height="240">
+   <BOUNDS type="Box" left="4485" top="1035" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5280" top="1155" width="0" height="0">
+   <BOUNDS type="Node" left="4485" top="1035" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Scalar FIeld Texture|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Vector FIeld Texture|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <NODE id="80" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="5235" top="5880" width="795" height="240">
+   <BOUNDS type="Box" left="4440" top="5925" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5235" top="5880" width="0" height="0">
+   <BOUNDS type="Node" left="4440" top="5925" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -109,7 +109,7 @@
    <LINK srcnodeid="71" srcpinname="Output" dstnodeid="17" dstpinname="Input Node">
    </LINK>
    <NODE id="83" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="5775" top="4845" width="330" height="270">
+   <BOUNDS type="Node" left="4980" top="4890" width="330" height="270">
    </BOUNDS>
    <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
    </PIN>
@@ -123,9 +123,9 @@
    </PIN>
    </NODE>
    <NODE id="82" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6030" top="4530" width="765" height="240">
+   <BOUNDS type="Box" left="5235" top="4575" width="765" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6030" top="4530" width="0" height="0">
+   <BOUNDS type="Node" left="5235" top="4575" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="VFTEX">
    </PIN>
@@ -199,7 +199,7 @@
    </PIN>
    </NODE>
    <NODE id="88" systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="2445" top="2685" width="100" height="100">
+   <BOUNDS type="Node" left="2415" top="2715" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
    </PIN>
@@ -213,7 +213,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1140" top="2490" width="1125" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="fTexSF2">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fTexVF3">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -283,7 +283,7 @@
    <LINK srcnodeid="86" srcpinname="Output String" dstnodeid="83" dstpinname="Input 1">
    </LINK>
    <NODE id="93" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="8550" top="5100" width="330" height="270">
+   <BOUNDS type="Node" left="7785" top="4980" width="330" height="270">
    </BOUNDS>
    <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
    </PIN>
@@ -297,9 +297,9 @@
    </PIN>
    </NODE>
    <NODE id="92" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="8805" top="4770" width="765" height="240">
+   <BOUNDS type="Box" left="8040" top="4650" width="765" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8805" top="4770" width="0" height="0">
+   <BOUNDS type="Node" left="8040" top="4650" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="INVMAT">
    </PIN>
@@ -323,7 +323,7 @@
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="8" dstpinname="Input String">
    </LINK>
    <NODE systemname="RenderSemantic (DX11.Layer Texture2D)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Texture2D)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="5220" top="5220" width="100" height="100">
+   <BOUNDS type="Node" left="4425" top="5265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -345,27 +345,29 @@
    <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="96" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2775" top="7710" width="795" height="240">
+   <BOUNDS type="Box" left="3525" top="7830" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2775" top="7710" width="0" height="0">
+   <BOUNDS type="Node" left="3525" top="7830" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
    <PACK Name="dx11" Version="1.0.3">
    </PACK>
-   <NODE systemname="AsScalarField_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarField_SF2D.fx" nodename="AsScalarFIeld_SF2D (DX11.Effect)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="1260" top="720" width="100" height="100">
+   <INFO author="" description="Converts a volume texture to a 3D vector field" tags="">
+   </INFO>
+   <NODE systemname="AsVectorField_VF3D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField_VF3D.fx" nodename="AsVectorField_VF3D (DX11.Effect)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="570" top="660" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shader Path" visible="1" pintype="Output">
    </PIN>
    </NODE>
-   <LINK srcnodeid="95" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
+   <LINK srcnodeid="98" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
-   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="2790" top="7140" width="100" height="100">
+   <NODE systemname="Join (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (VF3D)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="3540" top="7260" width="450" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="2790" top="7140" width="3000" height="3000">
+   <BOUNDS type="Box" left="3540" top="7260" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
    </PIN>
@@ -384,6 +386,4 @@
    </LINK>
    <LINK srcnodeid="80" srcpinname="Output Node" dstnodeid="97" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Converts a texture to a 2D scalar field" tags="">
-   </INFO>
    </PATCH>

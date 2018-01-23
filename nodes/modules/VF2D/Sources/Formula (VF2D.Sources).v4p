@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="780" top="480" width="1890" height="2370">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|#ifndef FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;&cr;&lf;float2 {0} (float2 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF2D&cr;&lf;#define VF2D  {0}&cr;&lf;#endif|">
+   <PIN pinname="Input String" slicecount="1" values="|#ifndef {0}BODY &cr;&lf;#define {0}BODY&cr;&lf;&cr;&lf;float2 {0} (float2 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF2D&cr;&lf;#define VF2D  {0}&cr;&lf;#endif|">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
@@ -152,7 +152,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>

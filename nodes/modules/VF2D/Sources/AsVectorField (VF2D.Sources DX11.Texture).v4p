@@ -352,7 +352,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <NODE systemname="AsVectorField_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsVectorField_VF2D.fx" nodename="AsVectorField_VF2D (DX11.Effect)" componentmode="Hidden" id="95">
    <BOUNDS type="Node" left="1260" top="720" width="100" height="100">
@@ -384,6 +384,6 @@
    </LINK>
    <LINK srcnodeid="80" srcpinname="Output Node" dstnodeid="97" dstpinname="Resource Semantic">
    </LINK>
-   <INFO author="" description="Converts a texture to a 2D scalar field" tags="">
+   <INFO author="" description="Converts a texture to a 2D vector field" tags="">
    </INFO>
    </PATCH>

@@ -875,9 +875,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVectorField (VF2D.Sources DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsVectorField (VF2D.Sources DX11.Texture).v4p" nodename="AsVectorField (VF2D.Sources DX11.Texture)" componentmode="Hidden" id="146">
-   <BOUNDS type="Node" left="4080" top="10395" width="100" height="100">
+   <BOUNDS type="Node" left="4080" top="10650" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4080" top="10395">
+   <BOUNDS type="Box" left="4080" top="10650">
    </BOUNDS>
    </NODE>
    <NODE systemname="Formula (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p" nodename="Formula (VF3D.Sources)" componentmode="Hidden" id="148">
@@ -2123,5 +2123,33 @@
    </PIN>
    <PIN pinname="Color Output" visible="-1" pintype="Output">
    </PIN>
+   </NODE>
+   <NODE systemname="UniformValue (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\UniformValue (SF2D.Sources).v4p" nodename="UniformValue (SF2D.Sources)" componentmode="Hidden" id="300">
+   <BOUNDS type="Node" left="5100" top="4305" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="UniformValue (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\UniformValue (SF3D.Sources).v4p" nodename="UniformValue (SF3D.Sources)" componentmode="Hidden" id="301">
+   <BOUNDS type="Node" left="4020" top="7080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4020" top="7080">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="UniformVector (VF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Sources\UniformVector (VF2D.Sources).v4p" nodename="UniformVector (VF2D.Sources)" componentmode="Hidden" id="302">
+   <BOUNDS type="Node" left="4080" top="10320" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4080" top="10320">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="UniformVector (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p" nodename="UniformVector (VF3D.Sources)" componentmode="Hidden" id="303">
+   <BOUNDS type="Node" left="4185" top="14145" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4185" top="14145">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsVectorField (VF3D.Sources DX11.Volume)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" nodename="AsVectorField (VF3D.Sources DX11.Volume)" componentmode="Hidden" id="304">
+   <BOUNDS type="Node" left="5550" top="14145" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5550" top="14145">
+   </BOUNDS>
    </NODE>
    </PATCH>

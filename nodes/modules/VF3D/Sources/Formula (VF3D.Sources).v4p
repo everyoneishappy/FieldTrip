@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p" scrollx="0" scrolly="0" systemname="Formula (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\Formula (VF3D.Sources).v4p" scrollx="0" scrolly="0" systemname="Formula (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p">
    <BOUNDS type="Window" left="14040" top="2160" width="13155" height="11715">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="780" top="480" width="1890" height="2370">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|#ifndef FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;&cr;&lf;float {0} (float2 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D {0}&cr;&lf;#endif|">
+   <PIN pinname="Input String" slicecount="1" values="|#ifndef {0}BODY &cr;&lf;#define {0}BODY&cr;&lf;&cr;&lf;float {0} (float2 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D {0}&cr;&lf;#endif|">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
@@ -152,7 +152,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.3">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>

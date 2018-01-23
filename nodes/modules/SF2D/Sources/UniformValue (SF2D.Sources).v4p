@@ -1,0 +1,239 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\UniformValue (SF2D.Sources).v4p" scrollx="75" scrolly="30" systemname="UniformValue (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\UniformValue (SF2D.Sources).v4p">
+   <BOUNDS type="Window" left="3495" top="4350" width="13155" height="11715">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1455" top="8940" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1455" top="8940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="3135" top="3375" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3135" top="3375" width="1125" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fUniformS2D">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Function Name|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4410" top="3240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="3150" top="3900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output String" dstnodeid="7" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4365" top="2745" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4365" top="2745" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Instance index|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="4350" top="2370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID in ParentPatch" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Outlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Inlets" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Is Changed" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Caption" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Filename" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Node Count" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Instance index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Instance index" dstnodeid="6" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="225" top="315" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="315" width="2535" height="3195">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|#ifndef  FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;&cr;&lf;float FN_value : FN_VALUE;&cr;&lf;&cr;&lf;float FN_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return FN_value;&cr;&lf;}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D  FN_&cr;&lf;#endif|">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.0.3">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="14" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1935" top="5385" width="7200" height="3045">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1935" top="5385" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="1" values="|#ifndef FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;float value : VALUE;&cr;&lf;&cr;&lf;float fUniformS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;return sin(p.x) + cos(p.y);&cr;&lf;}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D  fUniformS2D_0_&cr;&lf;#endif|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1455" top="8475" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1455" top="8475" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="|#ifndef FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;&cr;&lf;float fUniformS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;return sin(p.x) + cos(p.y);&cr;&lf;}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D  fUniformS2D_0_&cr;&lf;#endif|">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <INFO author="" description="Generate a 2D scalar field from a unifrom value" tags="">
+   </INFO>
+   <NODE systemname="RenderSemantic (DX11.Layer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Value)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="7365" top="4500" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7365" top="4500" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Semantic" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17">
+   <BOUNDS type="Box" left="7410" top="2310" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7410" top="2310" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="7515" top="3930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="18" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="19">
+   <BOUNDS type="Box" left="7785" top="3375" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7785" top="3375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="VALUE">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output String" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="16" dstpinname="Semantic">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="0" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output String" dstnodeid="0" dstpinname="HLSL">
+   </LINK>
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="1170" top="4260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="From" slicecount="1" values="FN_">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="|#ifndef  FN_BODY &cr;&lf;#define FN_BODY&cr;&lf;&cr;&lf;float value : VALUE;&cr;&lf;&cr;&lf;float FN_ (float2 p)&cr;&lf;{&cr;&lf;&tab;return value;&cr;&lf;}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D  FN_&cr;&lf;#endif|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="22" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="14" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="22" dstpinname="Input">
+   </LINK>
+   </PATCH>
