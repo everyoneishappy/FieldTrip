@@ -128,7 +128,7 @@
    <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.0.4">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -2150,6 +2150,10 @@
    <BOUNDS type="Node" left="5550" top="14145" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="5550" top="14145">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="SDFToBump (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\SDFToBump (SF2D.Operators).v4p" nodename="SDFToBump (SF2D.Operators)" componentmode="Hidden" id="305">
+   <BOUNDS type="Node" left="18090" top="4080" width="100" height="100">
    </BOUNDS>
    </NODE>
    </PATCH>

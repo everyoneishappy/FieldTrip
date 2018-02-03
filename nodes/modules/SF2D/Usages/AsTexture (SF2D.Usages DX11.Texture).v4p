@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -233,6 +233,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture SizeXY|">
    </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
    </NODE>
    <LINK srcnodeid="45" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Texture SizeXY">
    </LINK>
@@ -250,7 +252,7 @@
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output Enum" dstnodeid="41" dstpinname="Target Format">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.4">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="48" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="645" top="150" width="795" height="240">
