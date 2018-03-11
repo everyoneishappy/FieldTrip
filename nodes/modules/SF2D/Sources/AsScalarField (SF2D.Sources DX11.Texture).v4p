@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
    <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\AsScalarField (SF2D.Sources DX11.Texture).v4p" systemname="AsScalarField (SF2D.Sources DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarField (SF2D.Sources DX11.Texture).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="6495" top="2625" width="12630" height="9840">
+   <BOUNDS type="Window" left="3135" top="3060" width="12630" height="9840">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -11,7 +11,7 @@
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE id="12" systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden">
-   <BOUNDS type="Node" left="1125" top="1200" width="100" height="100">
+   <BOUNDS type="Node" left="1140" top="4080" width="100" height="100">
    </BOUNDS>
    <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
    </PIN>
@@ -20,6 +20,8 @@
    <BOUNDS type="Window" left="2265" top="1005" width="16350" height="9390">
    </BOUNDS>
    <PIN pinname="Shader Content" visible="1">
+   </PIN>
+   <PIN pinname="Substitute To" visible="1">
    </PIN>
    </NODE>
    <NODE id="17" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)">
@@ -239,7 +241,7 @@
    </PIN>
    </NODE>
    <NODE id="85" systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden">
-   <BOUNDS type="Node" left="1125" top="4110" width="675" height="270">
+   <BOUNDS type="Node" left="1140" top="4740" width="675" height="270">
    </BOUNDS>
    <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
    </PIN>
@@ -263,9 +265,9 @@
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="89" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="84" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="1320" top="3735" width="540" height="240">
+   <BOUNDS type="Box" left="1335" top="4365" width="540" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1320" top="3735" width="0" height="0">
+   <BOUNDS type="Node" left="1335" top="4365" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="(FN_)">
    </PIN>
@@ -352,7 +354,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.0.4">
    </PACK>
    <NODE systemname="AsScalarField_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Texture\AsScalarField_SF2D.fx" nodename="AsScalarFIeld_SF2D (DX11.Effect)" componentmode="Hidden" id="95">
    <BOUNDS type="Node" left="1260" top="720" width="100" height="100">
@@ -386,4 +388,78 @@
    </LINK>
    <INFO author="" description="Converts a texture to a 2D scalar field" tags="">
    </INFO>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="98">
+   <BOUNDS type="Node" left="9540" top="1245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9540" top="1245" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|No Tile|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="99">
+   <BOUNDS type="Node" left="9525" top="2520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="98" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Input">
+   </LINK>
+   <NODE id="101" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="3540" top="3315" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|#define |">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="100" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3795" top="2775" width="765" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3795" top="2775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|NOTILE |">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="SEMANTIC">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Output" dstnodeid="101" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output String" dstnodeid="101" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output String" dstnodeid="101" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="12" dstpinname="Substitute To">
+   </LINK>
    </PATCH>

@@ -15,7 +15,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 // returns height bevel from a distance function
-float ridgeBump(float dist, float depth = 1.0, float bevelWidth = 0.1, float2 bevelControl = 0.0)
+float FN_ridgeBump(float dist, float depth = 1.0, float bevelWidth = 0.1, float2 bevelControl = 0.0)
 {
 	float mu = saturate(dist / bevelWidth); 
 	float mu2 = mu * mu;
@@ -46,7 +46,7 @@ float4 FN_dwb : FN_DWB; // depth, width, bevel controls XY
 float FN_ (float2 p)
 {
 	float d = FN_INPUT(p);
-	return ridgeBump(d, FN_dwb.x, FN_dwb.y, FN_dwb.zw); //
+	return FN_ridgeBump(d, FN_dwb.x, FN_dwb.y, FN_dwb.zw); //
 }
 // end of the function body
 #endif 

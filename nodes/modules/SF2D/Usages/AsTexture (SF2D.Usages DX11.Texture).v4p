@@ -173,7 +173,7 @@
    </PIN>
    <PIN pinname="Background Color" visible="1">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" visible="1">
+   <PIN pinname="AA Samples per Pixel" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -203,18 +203,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="43" srcpinname="Color Output" dstnodeid="41" dstpinname="Background Color">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="44" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="5445" top="3615" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5445" top="3615" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="2">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|AA Samples per Pixel|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Output Enum" dstnodeid="41" dstpinname="AA Samples per Pixel">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7230" top="3570" width="795" height="480">
