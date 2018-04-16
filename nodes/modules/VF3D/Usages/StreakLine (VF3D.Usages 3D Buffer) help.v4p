@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\StreakLine\StreakLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\StreakLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="570" top="195" width="8730" height="14100">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -217,13 +217,15 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4545" top="6600" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.015">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size Defualt|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (String)" componentmode="InABox" id="27">
@@ -691,6 +693,10 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
+   </PIN>
+   <PIN pinname="Reset Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Reset All">
    </LINK>
@@ -710,12 +716,14 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="5" dstpinname="Input">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Step Size Defualt">
+   </LINK>
    </PATCH>

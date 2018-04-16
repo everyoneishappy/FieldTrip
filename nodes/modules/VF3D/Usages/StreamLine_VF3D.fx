@@ -2,6 +2,11 @@
 #include <packs\happy.fxh\calc.fxh>
 #endif
 
+#ifndef SBUFFER_FXH
+#include <packs\happy.fxh\sbuffer.fxh>
+#endif
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // Input placeholder
 #ifndef VF3D
@@ -24,7 +29,9 @@ StructuredBuffer<float3> bPos <string uiname="Seed Position 3D Buffer";>;
 
 RWStructuredBuffer<float3> Output : BACKBUFFER;
 uint stepCount = 12;
-float stepSize = 0.01666;
+
+float stepSizeDefault <string uiname="Step Size Defualt";> = 0.01666;
+StructuredBuffer<float> stepSizeBuffer <string uiname="Step Size Buffer";>;
 
 //GROUPSIZE
 [numthreads(64, 1, 1)]
@@ -35,6 +42,7 @@ void CS_StreamLine( uint3 dtid : SV_DispatchThreadID )
 
 	Output[dtid.x] = bPos[dtid.x];
 	float3 p = bPos[dtid.x];
+	float stepSize = sbLoad(stepSizeBuffer, stepSizeDefault, dtid.x);
 	for (uint i = 0; i < stepCount; i++)
 	{
 		uint index = dtid.x * stepCount + i;

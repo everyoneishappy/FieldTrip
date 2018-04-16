@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="765" top="255" width="9045" height="12885">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -480,13 +480,13 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="View" dstnodeid="32" dstpinname="View">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="SimpleAgent (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer).v4p" nodename="SimpleAgent (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="255" top="7635" width="100" height="100">
@@ -521,6 +521,8 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="3D Buffer" dstnodeid="26" dstpinname="Input Node">
    </LINK>
@@ -530,7 +532,7 @@
    </LINK>
    <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="12" dstpinname="Seed Position 3D Buffer">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Step Size">
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Step Size Default">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Maximum Distance from Seed Position">
    </LINK>

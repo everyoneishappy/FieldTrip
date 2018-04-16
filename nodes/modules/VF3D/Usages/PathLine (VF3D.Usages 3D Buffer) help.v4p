@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\PathLine\PathLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\PathLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="180" top="345" width="8520" height="13995">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -183,7 +183,9 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size Defualt|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
@@ -557,6 +559,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Domain Offset XYZ" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="35" srcpinname="Output Enum" dstnodeid="14" dstpinname="Noise Basis">
    </LINK>
@@ -636,13 +640,13 @@
    <PIN pinname="Input String" slicecount="1" values="|https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="PathLine (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\Compute\PathLine\PathLine (VF3D.Usages 3D Buffer).v4p" nodename="PathLine (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="1125" top="7140" width="100" height="100">
@@ -679,6 +683,8 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Reset All">
    </LINK>
@@ -703,5 +709,17 @@
    <LINK srcnodeid="12" srcpinname="Compiled" dstnodeid="36" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Step Size Defualt">
+   </LINK>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="1395" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" values="-0.01">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Position Out" dstnodeid="14" dstpinname="Domain Offset XYZ">
    </LINK>
    </PATCH>

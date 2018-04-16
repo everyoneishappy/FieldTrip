@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\StreamLine\StreamLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\StreamLine (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="0" top="495" width="10065" height="13080">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -235,17 +235,19 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5385" top="5730" width="795" height="240">
+   <BOUNDS type="Box" left="5115" top="5490" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5385" top="5730" width="0" height="0">
+   <BOUNDS type="Node" left="5115" top="5490" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.34">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="31" systemname="IOBox (Node)">
@@ -315,7 +317,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2235" top="3645" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.11,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.99,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -391,7 +393,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="735" top="2325" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.13">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.76">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -539,7 +541,7 @@
    </PIN>
    <PIN pinname="Step Count" visible="1">
    </PIN>
-   <PIN pinname="Step Size" visible="1">
+   <PIN pinname="Step Size" visible="1" slicecount="1" values="0.34">
    </PIN>
    <PIN pinname="3D Buffer" visible="1">
    </PIN>
@@ -559,6 +561,8 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Output Enum" dstnodeid="15" dstpinname="Function Integration Mode">
    </LINK>
@@ -567,8 +571,6 @@
    <LINK srcnodeid="15" srcpinname="Spread Count" dstnodeid="30" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="15" srcpinname="3D Buffer" dstnodeid="31" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Step Size">
    </LINK>
    <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Step Count">
    </LINK>
@@ -678,12 +680,14 @@
    <PIN pinname="Input String" slicecount="1" values="|https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Step Size Defualt">
+   </LINK>
    </PATCH>
