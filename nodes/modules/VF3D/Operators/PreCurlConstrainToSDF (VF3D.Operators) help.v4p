@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\PreCurlConstrainToSDF (VF3D.Operators) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\PreCurlConstrainToSDF (VF3D.Operators) help.v4p">
    <BOUNDS type="Window" left="450" top="450" width="7560" height="11490">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -47,7 +47,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5340" top="2790" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1.37,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.34,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -247,7 +247,7 @@
    </PIN>
    <PIN pinname="Function Parameter Semantics" visible="1">
    </PIN>
-   <PIN pinname="Noise Basis" slicecount="1" values="simplex">
+   <PIN pinname="Noise Basis" slicecount="1" values="perlin">
    </PIN>
    <PIN pinname="Frequency" slicecount="1" values="2.08">
    </PIN>
@@ -263,7 +263,7 @@
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>
-   <PIN pinname="Amplitude XYZ" slicecount="3" values="0.014,0.014,0.014">
+   <PIN pinname="Amplitude XYZ" slicecount="3" values="0.02,0.02,0.02">
    </PIN>
    <PIN pinname="Frequency XYZ" slicecount="3" values="4.25,4.25,4.25">
    </PIN>
@@ -400,13 +400,13 @@
    </NODE>
    <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Radius">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="SimpleAgent (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer).v4p" nodename="SimpleAgent (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="2910" top="7155" width="100" height="100">
@@ -469,7 +469,7 @@
    </PIN>
    <PIN pinname="Sample Count" visible="1">
    </PIN>
-   <PIN pinname="Step Size" slicecount="1" values="0.005">
+   <PIN pinname="Step Size" slicecount="1" values="0.001">
    </PIN>
    <PIN pinname="VF3D Function" visible="1">
    </PIN>

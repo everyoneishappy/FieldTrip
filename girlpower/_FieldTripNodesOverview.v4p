@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" scrollx="0" scrolly="0" bgcolor="16777215">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" scrollx="0" scrolly="0" bgcolor="16777215">
    <BOUNDS type="Window" left="0" top="0" width="27855" height="15990">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
@@ -128,13 +128,13 @@
    <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.4">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="7">
    <BOUNDS type="Node" left="150" top="4860" width="100" height="100">
@@ -2154,6 +2154,10 @@
    </NODE>
    <NODE systemname="SDFToBump (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\SDFToBump (SF2D.Operators).v4p" nodename="SDFToBump (SF2D.Operators)" componentmode="Hidden" id="305">
    <BOUNDS type="Node" left="18090" top="4080" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ClosestPointOnSDF (SF2D.Usages Transform Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages Transform Buffer).v4p" nodename="ClosestPointOnSDF (SF2D.Usages Transform Buffer)" componentmode="Hidden" id="306">
+   <BOUNDS type="Node" left="25035" top="4050" width="100" height="100">
    </BOUNDS>
    </NODE>
    </PATCH>

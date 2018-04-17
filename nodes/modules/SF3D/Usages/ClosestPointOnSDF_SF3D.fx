@@ -25,8 +25,8 @@ void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )
 	{
 		float3 g;
 		g = calcNormS3(SF3D, p, 0.001);
-		float v = SF3D(p)+offset;
-		p += g * v;
+		float v = SF3D(p)-offset;
+		p -= g * v;
 	}
 	
     Output[dtid.x] = p; 

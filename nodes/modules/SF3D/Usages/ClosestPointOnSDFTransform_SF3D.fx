@@ -44,9 +44,8 @@ void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )
 	float3 g;
 	for (uint i = 0; i < iterations; i++)
 	{	g = calcNormS3(SF3D, p, 0.001);
-		float v = SF3D(p)+offset;;
-		//g = -normalize(g);
-		p += g * v;
+		float v = SF3D(p) - offset;
+		p -= g * v;
 	}
 	
 	float4x4 m = identity4x4();

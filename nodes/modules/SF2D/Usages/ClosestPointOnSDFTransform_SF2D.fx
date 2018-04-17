@@ -27,8 +27,8 @@ void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )
 	for (uint i = 0; i < iterations; i++)
 	{
 		g = calcNormS2(SF2D, p, 0.001);
-		float v = SF2D(p)+offset;
-		p += g * v;
+		float v = SF2D(p) + offset;
+		p -= g * v;
 	}
 	float4x4 m = identity4x4();
 	m = translateM (float3(p, 0), m);

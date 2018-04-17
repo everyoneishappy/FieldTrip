@@ -183,7 +183,7 @@
    </PIN>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
-   <PIN pinname="Random Seed" slicecount="1" values="8">
+   <PIN pinname="Random Seed" slicecount="1" values="14">
    </PIN>
    <PIN pinname="SizeXYZ" slicecount="3" values="0.82,0.82,0.82">
    </PIN>
@@ -325,7 +325,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8760" top="5460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -387,7 +387,7 @@
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.01">
+   <PIN pinname="Input 2" slicecount="1" values="0.01">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>

@@ -82,7 +82,7 @@ PS_OUT PS_Grad(VS_OUT In)
 	////////////////////////////////////////////////////////////////
 	
 	float4 c=1;
-	float g = saturate(dot(rd,n));
+	float g = saturate(dot(rd,-n));
 	c.rgb = g;
 	c.rgb *= INPUTRGB(p);
 	c.a = alpha;

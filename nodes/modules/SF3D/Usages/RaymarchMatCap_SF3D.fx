@@ -78,7 +78,7 @@ PS_OUT PS_MatCap(VS_OUT In)
 	
 	float4 c=1;
 	float3 vn = mul(float4(n, 0), tV).xyz;
-	c = matCap(vn);
+	//c = matCap(vn);
 	c = matCapGrad(vn, ppdx, ppdy);
 	#ifdef AO
 	float ao = calcAO(p,n);

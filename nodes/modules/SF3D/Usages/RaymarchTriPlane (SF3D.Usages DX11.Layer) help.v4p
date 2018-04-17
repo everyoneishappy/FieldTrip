@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer) help.v4p">
    <BOUNDS type="Window" left="180" top="540" width="10185" height="9420">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -291,9 +291,11 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Size XYZ" slicecount="3" values="0.49,0.49,0.49">
+   <PIN pinname="Size XYZ" slicecount="3" values="0.49,0.49,0.49" visible="1">
    </PIN>
    <PIN pinname="Round" slicecount="1" values="0.08">
+   </PIN>
+   <PIN pinname="PositionXYZ" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="33">
@@ -306,15 +308,15 @@
    </NODE>
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="19" dstpinname="Initial Longitude">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchTriPlane (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="25">
+   <NODE systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchTriPlane (SF3D.Usages DX11.Layer)" componentmode="InAWindow" id="25">
    <BOUNDS type="Node" left="2040" top="5385" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -391,5 +393,107 @@
    <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="25" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   <NODE id="38" nodename="LFO (Animation)" systemname="LFO (Animation)" hiddenwhenlocked="1">
+   <BOUNDS height="0" left="2040" top="1380" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Period" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Change" visible="1">
+   </PIN>
+   <PIN pinname="Pause" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="36" nodename="Damper (Animation)" systemname="Damper (Animation)" hiddenwhenlocked="1">
+   <BOUNDS height="0" left="2040" top="2430" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="-0.367331186542287">
+   </PIN>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="35" nodename="Random (Value)" systemname="Random (Value)" hiddenwhenlocked="1">
+   <BOUNDS height="0" left="2040" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="10000">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="35" dstpinname="Enabled" srcnodeid="38" srcpinname="Change">
+   </LINK>
+   <NODE id="37" nodename="RandomSpread (Spreads 3d)" systemname="RandomSpread (Spreads 3d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 3d).v4p" componentmode="Hidden" hiddenwhenlocked="1">
+   <BOUNDS height="100" left="2040" top="2070" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Random Seed" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Width" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="SizeXYZ" slicecount="3" values="0.6,0.6,0.6">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Random Seed" linkstyle="Bezier" srcnodeid="35" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="XYZ" dstnodeid="36" dstpinname="Go To Position">
+   </LINK>
+   <NODE id="39" nodename="RandomSpread (Spreads 3d)" systemname="RandomSpread (Spreads 3d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 3d).v4p" componentmode="Hidden" hiddenwhenlocked="1">
+   <BOUNDS height="100" left="2775" top="2430" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Random Seed" visible="1" slicecount="1" values="68">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Width" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="CenterXYZ" slicecount="3" values="0.4,0.4,0.4">
+   </PIN>
+   <PIN pinname="SizeXYZ" slicecount="3" values="0.4,0.4,0.4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Position Out" dstnodeid="31" dstpinname="PositionXYZ">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" hiddenwhenlocked="1">
+   <BOUNDS type="Box" left="3600" top="1800" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3600" top="1800" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="XYZ" dstnodeid="31" dstpinname="Size XYZ">
    </LINK>
    </PATCH>

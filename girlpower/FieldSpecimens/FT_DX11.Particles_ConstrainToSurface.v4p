@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_DX11.Particles_ConstrainToSurface.v4p" systemname="FT_DX11.Particles_ConstrainToSurface" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_DX11.Particles_ConstrainToSurface.v4p" scrollx="0" scrolly="0" bgcolor="9920807">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_DX11.Particles_ConstrainToSurface.v4p" systemname="FT_DX11.Particles_ConstrainToSurface" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FT_DX11.Particles_ConstrainToSurface.v4p" scrollx="0" scrolly="0" bgcolor="9920807">
    <BOUNDS height="14400" left="0" top="0" type="Window" width="10155">
    </BOUNDS>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <PACK Name="vvvv.packs_" Version="0.2.0">
    </PACK>
@@ -84,7 +84,7 @@
    </NODE>
    <LINK srcnodeid="105" srcpinname="fps" dstnodeid="106" dstpinname="Y Input Value">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE systemname="DynamicBuffer (DX11.Buffer 3d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 3d)" componentmode="Hidden" id="295">
    <BOUNDS type="Node" left="7935" top="5400" width="100" height="100">
@@ -713,7 +713,7 @@
    </PIN>
    <PIN pinname="SF3D Function" visible="1">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="0.1">
+   <PIN pinname="Frequency" slicecount="1" values="0.15">
    </PIN>
    <PIN pinname="Basis" slicecount="1" values="perlin">
    </PIN>
@@ -909,7 +909,7 @@
    </PIN>
    <PIN pinname="3D Buffer" visible="1">
    </PIN>
-   <PIN pinname="offset" slicecount="1" values="-0.15">
+   <PIN pinname="offset" slicecount="1" values="0.1">
    </PIN>
    <PIN pinname="Function Resource Semantics" visible="1" slicecount="1" values="||">
    </PIN>

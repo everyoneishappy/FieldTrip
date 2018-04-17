@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\Compute\ProjectPointOnSDF\ProjectPointOnSDF (SF3D.Usages TransformBuffer) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ProjectPointOnSDF (SF3D.Usages TransformBuffer) help.v4p">
    <BOUNDS type="Window" left="0" top="0" width="11280" height="14025">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -349,7 +349,7 @@
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.01">
+   <PIN pinname="Input 2" slicecount="1" values="0.01">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -734,12 +734,12 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Transform Buffer" dstnodeid="9" dstpinname="Transform Buffer">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    </PATCH>

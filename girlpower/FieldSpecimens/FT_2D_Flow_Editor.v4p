@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_2D_Flow_Editor.v4p" systemname="_MorphEdit" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_MorphEdit.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\girlpower\FieldSpecimens\FT_2D_Flow_Editor.v4p" systemname="_MorphEdit" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35_x64\packs\FieldTrip\Nodes\modules\Render\_MorphEdit.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="480" top="420" width="12660" height="12660">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="50">
    <BOUNDS type="Node" left="210" top="10755" width="7215" height="270">
@@ -146,6 +146,8 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="106" systemname="IOBox (Enumerations)">
@@ -318,7 +320,7 @@
    </LINK>
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="129" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="235">
+   <NODE systemname="ASPECTRATIO (TRANSFORM)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="235">
    <BOUNDS type="Node" left="45" top="2535" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Aspect Height" visible="1">
@@ -326,6 +328,8 @@
    <PIN pinname="Aspect Width" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="FitIn">
    </PIN>
    </NODE>
    <LINK srcnodeid="235" srcpinname="Transform Out" dstnodeid="206" dstpinname="Transform In" hiddenwhenlocked="1">
@@ -526,7 +530,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Show Vectors|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="253">
    <BOUNDS type="Node" left="45" top="11415" width="100" height="100">
@@ -547,7 +551,7 @@
    </BOUNDS>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   <PIN pinname="Input String" slicecount="1" values="|Left Click Paint&cr;&lf;Right Click Erase&cr;&lf;Middle Double Click: Reset&cr;&lf;Mouse Wheel: Brush Size&cr;&lf;Middle Mouse + Wheel: Brush Strength|" visible="-1" pintype="Input">
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|Left Click Paint&cr;&lf;Right Click Erase&cr;&lf;Middle Double Click: Reset&cr;&lf;Mouse Wheel: Brush Size&cr;&lf;Middle Mouse + Wheel: Brush Strength|">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="14">
    </PIN>
@@ -773,6 +777,8 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="259" dstpinname="Spread Count" hiddenwhenlocked="1">
    </LINK>
@@ -796,6 +802,8 @@
    <BOUNDS type="Box" left="4905" top="8550">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="258" srcpinname="2D Buffer" dstnodeid="149" dstpinname="uvBuffer">
@@ -851,5 +859,9 @@
    <LINK srcnodeid="246" srcpinname="Layer" dstnodeid="50" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="266" srcpinname="Output Node" dstnodeid="246" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="258" dstpinname="Step Size Defualt">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="259" dstpinname="Step Size Defualt">
    </LINK>
    </PATCH>
