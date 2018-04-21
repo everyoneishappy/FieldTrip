@@ -60,7 +60,7 @@ void CS_PathLine( uint3 dtid : SV_DispatchThreadID )
 		Output[dtid.x] = bPos[seedIndex];
 		else 
 		{
-			float stepSize = sbLoad(stepSizeBuffer, stepSizeDefault, dtid.x);
+			float stepSize = sbLoad(stepSizeBuffer, stepSizeDefault, seedIndex);
 			integrate(VF3D, Output[dtid.x], stepSize);
 		}
 	}
