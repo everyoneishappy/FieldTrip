@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" systemname="AsVectorField (VF3D.Sources DX11.Volume)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" systemname="AsVectorField (VF3D.Sources DX11.Volume)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\AsVectorField (VF3D.Sources DX11.Volume).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="9990" top="3000" width="12630" height="9150">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE id="12" systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden">
    <BOUNDS type="Node" left="1125" top="1200" width="100" height="100">
@@ -322,22 +322,6 @@
    </LINK>
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="8" dstpinname="Input String">
    </LINK>
-   <NODE systemname="RenderSemantic (DX11.Layer Texture2D)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Texture2D)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="4425" top="5265" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Semantic" visible="1" slicecount="1" values="cSampleVolDist_0_DVOL">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="77" srcpinname="Output Node" dstnodeid="76" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="80" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="76" dstpinname="Semantic">
-   </LINK>
    <LINK srcnodeid="73" srcpinname="Output Node" dstnodeid="72" dstpinname="Source">
    </LINK>
    <LINK srcnodeid="72" srcpinname="Transform Out" dstnodeid="71" dstpinname="Input">
@@ -352,7 +336,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <INFO author="" description="Converts a volume texture to a 3D vector field" tags="">
    </INFO>
@@ -375,7 +359,7 @@
    </PIN>
    <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Resource Semantic" visible="1">
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="97" srcpinname="Output" dstnodeid="96" dstpinname="Input Node">
@@ -385,5 +369,21 @@
    <LINK srcnodeid="17" srcpinname="Output Node" dstnodeid="97" dstpinname="Custom Semantic">
    </LINK>
    <LINK srcnodeid="80" srcpinname="Output Node" dstnodeid="97" dstpinname="Resource Semantic">
+   </LINK>
+   <NODE systemname="RenderSemantic (DX11 Texture3D)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 Texture3D)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="4425" top="5265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Semantic" visible="1" slicecount="1" values="cSampleVolDist_0_DVOL">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output Node" dstnodeid="76" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="80" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="76" dstpinname="Semantic">
    </LINK>
    </PATCH>

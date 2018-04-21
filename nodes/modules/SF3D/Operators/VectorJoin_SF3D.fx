@@ -14,22 +14,22 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-float defualt(float3 p)
+float FN_defualt(float3 p)
 {
 	return 0.0;
 }
 
 // Input Function placeholders
 #ifndef FN_INPUT_X
-#define FN_INPUT_X defualt
+#define FN_INPUT_X FN_defualt
 #endif
 
 #ifndef FN_INPUT_Y
-#define FN_INPUT_Y defualt
+#define FN_INPUT_Y FN_defualt
 #endif
 
 #ifndef FN_INPUT_Z
-#define FN_INPUT_Z defualt
+#define FN_INPUT_Z FN_defualt
 #endif
 
 float3 FN_ (float3 p)
