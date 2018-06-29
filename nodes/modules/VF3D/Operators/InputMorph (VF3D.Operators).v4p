@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (VF3D.Operators).v4p" systemname="InputMorph (VF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (VF3D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\InputMorph (VF3D.Operators).v4p" systemname="InputMorph (VF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\InputMorph\InputMorph (VF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1065" top="9465" width="795" height="240">
@@ -91,7 +91,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3780" top="5970" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|(VF3D )|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(VF3D)">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1275" top="5970" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|(VF3D )|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(VF3D)">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -427,7 +427,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6315" top="975" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -608,7 +608,7 @@
    </LINK>
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="65" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF3D)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="1800" top="2250" width="100" height="100">

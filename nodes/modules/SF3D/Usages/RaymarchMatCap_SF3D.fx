@@ -45,7 +45,7 @@ float4 matCapGrad(float3 vn, float3 gx, float3 gy)
 {
 	vn.y = -vn.y;
 	vn.xy = vn.xy * .5 + .5;
-	return matCapTex.SampleGrad(sMatCap, vn, gx, gy);
+	return matCapTex.SampleGrad(sMatCap, vn.xy, gx.xy, gy.xy);
 }
 
 
@@ -78,7 +78,7 @@ PS_OUT PS_MatCap(VS_OUT In)
 	
 	float4 c=1;
 	float3 vn = mul(float4(n, 0), tV).xyz;
-	//c = matCap(vn);
+	c = matCap(vn);
 	c = matCapGrad(vn, ppdx, ppdy);
 	#ifdef AO
 	float ao = calcAO(p,n);

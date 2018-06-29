@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" systemname="VectorFieldLines (VF2D.Usages DX11.Layer)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" scrollx="2805" scrolly="0">
-   <BOUNDS type="Window" left="14070" top="1170" width="9000" height="9945">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Usages\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" systemname="VectorFieldLines (VF2D.Usages DX11.Layer)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" scrollx="0" scrolly="1515">
+   <BOUNDS type="Window" left="3270" top="3780" width="9000" height="8430">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="19" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="1545" top="2175" width="705" height="240">
@@ -22,40 +22,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Vector2DSplit (Value Buffer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\Value Buffer\Vector2DSplit (Value Buffer)\Vector2DSplit (Value Buffer).v4p" nodename="Vector2DSplit (Value Buffer)" componentmode="Hidden" id="17" hiddenwhenlocked="0">
-   <BOUNDS type="Node" left="1395" top="5790" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="131072">
-   </PIN>
-   <PIN pinname="X Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Y Buffer" visible="1">
-   </PIN>
-   <PIN pinname="2D Buffer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enabled XY" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Vector3DJoin (3d Buffer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\Vector3DJoin (3D Buffer)\Vector3DJoin (3D Buffer).v4p" nodename="Vector3DJoin (3d Buffer)" componentmode="Hidden" id="16" hiddenwhenlocked="0">
-   <BOUNDS type="Node" left="1425" top="6195" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="64">
-   </PIN>
-   <PIN pinname="X Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Y Value Buffer" visible="1">
-   </PIN>
-   <PIN pinname="3D Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Z Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="17" srcpinname="X Buffer" dstnodeid="16" dstpinname="X Value Buffer">
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Y Buffer" dstnodeid="16" dstpinname="Y Value Buffer">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2805" top="3045" width="795" height="240">
    </BOUNDS>
@@ -109,7 +75,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1950" top="2940" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.15">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.005">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -167,7 +133,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4260" top="4845" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.169">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -240,8 +206,6 @@
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="1" dstpinname="Input Bin Size">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="3D Buffer" dstnodeid="1" dstpinname="Position Buffer">
-   </LINK>
    <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Alpha">
    </LINK>
    <NODE systemname="RandomSpread (Spreads 2d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 2d).v4p" nodename="RandomSpread (Spreads 2d)" componentmode="Hidden" id="0">
@@ -285,7 +249,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3045" top="3795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.3">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -351,7 +315,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6990" top="1170" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2.06,2.06">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1.58,1.58">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -413,7 +377,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5565" top="5430" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.86283,0.86283,0.86283,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
@@ -479,14 +443,14 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
+   </PIN>
+   <PIN pinname="Step Size Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Points Per Seed">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Reset All">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Spread Count" dstnodeid="17" dstpinname="Spread Count">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Spread Count" dstnodeid="16" dstpinname="Spread Count">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Step Size">
    </LINK>
@@ -530,8 +494,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Enabled XY">
-   </LINK>
    <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Enabled">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="37" systemname="IOBox (Node)">
@@ -566,12 +528,8 @@
    </NODE>
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Enabled">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
-   </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
-   <LINK srcnodeid="16" srcpinname="3D Buffer" dstnodeid="1" dstpinname="Position 3D Buffer">
-   </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="42">
    <BOUNDS type="Node" left="675" top="420" width="100" height="100">
    </BOUNDS>
@@ -583,9 +541,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4755" top="7440" width="480" height="480">
+   <BOUNDS type="Box" left="4995" top="7380" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4755" top="7440" width="0" height="0">
+   <BOUNDS type="Node" left="4995" top="7380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -606,8 +564,6 @@
    </LINK>
    <INFO author="" description="Helper to visualize an area of a 2D vector field with streaklines " tags="">
    </INFO>
-   <LINK srcnodeid="18" srcpinname="2D Buffer" dstnodeid="17" dstpinname="2D Buffer">
-   </LINK>
    <LINK srcnodeid="18" srcpinname="Compiled" dstnodeid="45" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="47">
@@ -633,5 +589,47 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Query Save">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Step Size Defualt">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="48">
+   <BOUNDS type="Box" left="2055" top="3405" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2055" top="3405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size Buffer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output Node" dstnodeid="18" dstpinname="Step Size Buffer">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="2D Buffer" dstnodeid="1" dstpinname="Position 3D Buffer">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="49">
+   <BOUNDS type="Box" left="2775" top="7260" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2775" top="7260" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|2D Buffer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="2D Buffer" dstnodeid="49" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50">
+   <BOUNDS type="Box" left="3900" top="7395" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3900" top="7395" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Spread Count|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Spread Count" dstnodeid="50" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

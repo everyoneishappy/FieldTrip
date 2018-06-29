@@ -23,7 +23,8 @@ RWStructuredBuffer<float3> Output : BACKBUFFER;
 
 float stepSizeDefault = 0.01666;
 StructuredBuffer<float> stepSizeBuffer;
-float maxDist <string uiname="Maximum Distance from Seed Position";> = 5;
+float maxDistDefualt <string uiname="Maximum Distance from Seed Position";> = 5;
+StructuredBuffer<float> maxDistBuffer;
 float resetAll;
 StructuredBuffer<float> resetBuffer;
 
@@ -35,6 +36,7 @@ void CS_SimpleAgent( uint3 dtid : SV_DispatchThreadID )
 	
 	float reset = max(resetAll, resetBuffer[dtid.x % sbSize(resetBuffer)]);
 
+	float maxDist = sbLoad(maxDistBuffer, maxDistDefualt, dtid.x);
 	if (reset || maxDist < distance(Output[dtid.x], bPos[dtid.x])) 
 	{ Output[dtid.x] = bPos[dtid.x]; }
 	

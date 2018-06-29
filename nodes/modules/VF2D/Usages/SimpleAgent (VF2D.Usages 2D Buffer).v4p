@@ -439,7 +439,9 @@
    </PIN>
    <PIN pinname="Step Size Defualt" visible="1">
    </PIN>
-   <PIN pinname="Reset Buffer" visible="1">
+   <PIN pinname="Reset Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Step Size Buffer" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="15" dstpinname="Layer In">
@@ -487,5 +489,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Output Node" dstnodeid="0" dstpinname="Reset Buffer">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="64">
+   <BOUNDS type="Box" left="8370" top="1275" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8370" top="1275" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size Buffer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Output Node" dstnodeid="0" dstpinname="Step Size Buffer">
    </LINK>
    </PATCH>
