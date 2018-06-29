@@ -435,15 +435,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVolume (SF3D.Usages DX11.Volume)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsVolume\AsVolume (SF3D.Usages DX11.Volume).v4p" nodename="AsVolume (SF3D.Usages DX11.Volume)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="20625" top="5820" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="5790" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20625" top="5820">
+   <BOUNDS type="Box" left="20580" top="5790">
    </BOUNDS>
    </NODE>
    <NODE systemname="BakeTexture (SF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\BakeTexture\BakeTexture (SF3D.Usages DX11.Texture).v4p" nodename="BakeTexture (SF3D.Usages DX11.Texture)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="20625" top="6195" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="6135" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20625" top="6195">
+   <BOUNDS type="Box" left="20580" top="6135">
    </BOUNDS>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF2D.Usages 2D Buffer).v4p" nodename="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" componentmode="Hidden" id="55">
@@ -577,9 +577,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\SDFReflector (SF3D.Usages DX11.Particles.Modifiers).v4p" nodename="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="20595" top="7560" width="100" height="100">
+   <BOUNDS type="Node" left="20595" top="7740" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20595" top="7560">
+   <BOUNDS type="Box" left="20595" top="7740">
    </BOUNDS>
    </NODE>
    <NODE systemname="RayTraceMesh (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RayTraceMesh (DX11.Layer SF3D)\RayTraceMesh (SF3D.Usages DX11.Layer).v4p" nodename="RayTraceMesh (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="83">
@@ -1033,9 +1033,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="199">
-   <BOUNDS type="Node" left="20715" top="13395" width="100" height="100">
+   <BOUNDS type="Node" left="20715" top="13665" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20715" top="13395" width="795" height="240">
+   <BOUNDS type="Box" left="20715" top="13665" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
@@ -1389,9 +1389,9 @@
    <LINK srcnodeid="221" srcpinname="Output Enum" dstnodeid="240" dstpinname="Operation">
    </LINK>
    <NODE id="63" systemname="VectorFieldLines (VF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF3D.Usages DX11.Layer).v4p" nodename="VectorFieldLines (VF3D.Usages DX11.Layer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="20715" top="14025" width="100" height="100">
+   <BOUNDS type="Node" left="20715" top="14295" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20715" top="14025" width="4800" height="3600">
+   <BOUNDS type="Box" left="20715" top="14295" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="3315" top="1860" width="10785" height="10395">
    </BOUNDS>
@@ -1581,9 +1581,9 @@
    </PIN>
    </NODE>
    <NODE systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers).v4p" nodename="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="20595" top="7200" width="100" height="100">
+   <BOUNDS type="Node" left="20595" top="7380" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20595" top="7200">
+   <BOUNDS type="Box" left="20595" top="7380">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="250">
@@ -1739,9 +1739,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="VectorFieldArrows (VF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\VectorFieldArrows (VF3D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF3D.Usages DX11.Layer)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="20715" top="13695" width="100" height="100">
+   <BOUNDS type="Node" left="20715" top="13965" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20715" top="13695">
+   <BOUNDS type="Box" left="20715" top="13965">
    </BOUNDS>
    </NODE>
    <NODE systemname="VectorFieldArrows (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\VectorFieldArrows (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="78">
@@ -2015,9 +2015,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="290">
-   <BOUNDS type="Node" left="20565" top="6630" width="100" height="100">
+   <BOUNDS type="Node" left="20565" top="6810" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20565" top="6630" width="1320" height="495">
+   <BOUNDS type="Box" left="20565" top="6810" width="1395" height="465">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|DX11.Particles (requires pack)|">
    </PIN>
@@ -2158,6 +2158,22 @@
    </NODE>
    <NODE systemname="ClosestPointOnSDF (SF2D.Usages Transform Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages Transform Buffer).v4p" nodename="ClosestPointOnSDF (SF2D.Usages Transform Buffer)" componentmode="Hidden" id="306">
    <BOUNDS type="Node" left="25035" top="4050" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DeferredTexture (SF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\DeferredTexture (SF3D.Usages DX11.Texture).v4p" nodename="DeferredTexture (SF3D.Usages DX11.Texture)" componentmode="Hidden" id="307">
+   <BOUNDS type="Node" left="20580" top="6450" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="20580" top="6450">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DeferredTexture (VF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\DeferredTexture (VF3D.Usages DX11.Texture).v4p" nodename="DeferredTexture (VF3D.Usages DX11.Texture)" componentmode="Hidden" id="308">
+   <BOUNDS type="Node" left="20715" top="13245" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="20715" top="13245">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="SurfaceForceField (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\SurfaceForceField (SF2D.Operators).v4p" nodename="SurfaceForceField (SF2D.Operators)" componentmode="Hidden" id="309">
+   <BOUNDS type="Node" left="18120" top="4425" width="100" height="100">
    </BOUNDS>
    </NODE>
    </PATCH>
