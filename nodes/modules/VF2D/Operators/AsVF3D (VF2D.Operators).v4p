@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\AsSF3D (SF2D.Operators).v4p" systemname="AsSF3D (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\AsSF3D (SF2D.Operators).v4p" scrollx="105" scrolly="15">
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" systemname="AsVF3D (VF2D.Operators)" filename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" scrollx="105" scrolly="15">
    <BOUNDS type="Window" left="13605" top="1620" width="15195" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -73,7 +73,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1275" top="5970" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="(SF2D)">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(VF2D)">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -135,7 +135,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6465" top="3660" width="1125" height="240">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="fAsS3D2D">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fAsV3D2D">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -330,36 +330,8 @@
    </LINK>
    <PACK Name="dx11" Version="1.0.5">
    </PACK>
-   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF2D)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="1500" top="1830" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1500" top="1830" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="HLSL" visible="1">
-   </PIN>
-   <PIN pinname="Resource Semantics" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantics" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="72" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="72" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="72" srcpinname="Custom Semantics" dstnodeid="73" dstpinname="Input 1">
-   </LINK>
    <INFO author="" description="Convert a 2D scalar field to a 3D scalar field" tags="">
    </INFO>
-   <NODE systemname="AsSF3D_SF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\AsSF3D_SF2D.fx" nodename="AsSF3D_SF2D (DX11.Effect)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="4785" top="2595" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Shader Path" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="67" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
-   </LINK>
    <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="78">
    <BOUNDS type="Node" left="12630" top="4545" width="100" height="100">
    </BOUNDS>
@@ -402,7 +374,7 @@
    <PIN pinname="Receive" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="82">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="82" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="10320" top="990" width="1215" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="10320" top="990" width="0" height="0">
@@ -436,7 +408,7 @@
    </NODE>
    <LINK srcnodeid="80" srcpinname="String Value" dstnodeid="83" dstpinname="Input 2">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8505" top="885" width="480" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="8505" top="885" width="0" height="0">
@@ -518,7 +490,7 @@
    </LINK>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="85" dstpinname="Semantic">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="89">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="89" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="9225" top="1590" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="9225" top="1590" width="0" height="0">
@@ -530,7 +502,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="92">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="92" systemname="IOBox (String)">
    <BOUNDS type="Box" left="11475" top="5640" width="1905" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="11475" top="5640" width="0" height="0">
@@ -584,29 +556,7 @@
    </LINK>
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="73" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="Join (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF3D)" componentmode="Hidden" id="70">
-   <BOUNDS type="Node" left="3450" top="10215" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3450" top="10215" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Resource Semantic" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="69" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="65" srcpinname="Output Node" dstnodeid="70" dstpinname="Custom Semantic">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="70" dstpinname="HLSL">
-   </LINK>
-   <LINK srcnodeid="72" srcpinname="Resource Semantics" dstnodeid="70" dstpinname="Resource Semantic">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="96">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="96" systemname="IOBox (String)">
    <BOUNDS type="Box" left="10485" top="4365" width="1710" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="10485" top="4365" width="0" height="0">
@@ -625,7 +575,7 @@
    <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="97">
    <BOUNDS type="Node" left="9735" top="2520" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Source" visible="1">
+   <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -633,5 +583,55 @@
    <LINK srcnodeid="89" srcpinname="Output Node" dstnodeid="97" dstpinname="Source">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Transform Out" dstnodeid="85" dstpinname="Input">
+   </LINK>
+   <NODE systemname="AsVF3D_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D_VF2D.fx" nodename="AsVF3D_VF2D (DX11.Effect)" componentmode="Hidden" id="67">
+   <BOUNDS type="Node" left="4785" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Shader Path" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
+   <NODE systemname="Split (VF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF2D)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="1500" top="1830" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1500" top="1830" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="72" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="HLSL" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Custom Semantics" dstnodeid="73" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Join (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (VF3D)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="3450" top="10215" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3450" top="10215" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="HLSL" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Resource Semantic" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="69" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Output Node" dstnodeid="70" dstpinname="Custom Semantic">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="70" dstpinname="HLSL">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Resource Semantics" dstnodeid="70" dstpinname="Resource Semantic">
    </LINK>
    </PATCH>

@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		2D Scalar Field to 3D Scalar Field
+//		2D Vector Field to 3D Vector Field
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -19,31 +19,33 @@
 #endif
 
 
-#if FN_USEMAT
+#if FN_USEMAT==1
 float4x4 FN_Mat : FN_MAT;
 #endif
 
 
-// Input SF2D function placeholder
+// Input VF2D function placeholder
 #ifndef FN_INPUT
-#define FN_INPUT length
+#define FN_INPUT normalize
 #endif
 
-float FN_ (float3 p)
+float3 FN_ (float3 p)
 {
 	#if FN_USEMAT==1
 	p = mul(float4(p, 1), FN_Mat).xyz;
 	#endif
 	
-	float input = FN_INPUT(p.FN_Swizzle);
-	return input; //
+	float2 input = FN_INPUT(p.FN_Swizzle);
+	float3 result = 0;
+	result.FN_Swizzle = input;
+	return result; 
 }
 // end of the function body
 #endif 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef SF3D
-#define SF3D FN_
+#ifndef VF3D
+#define VF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
