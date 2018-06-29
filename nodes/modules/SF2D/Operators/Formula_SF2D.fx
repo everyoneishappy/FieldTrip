@@ -15,6 +15,8 @@
 #define FN_INPUT length
 #endif
 
+float FN_time : FN_TIME;
+
 // DEFINES
 #ifndef FN_FORMULA
 #define FN_FORMULA return FN_INPUT(sin(p));
