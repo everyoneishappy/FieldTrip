@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D.Sources).v4p" systemname="TruchetSDF (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D.Sources).v4p" scrollx="105" scrolly="120">
-   <BOUNDS type="Window" left="11460" top="3525" width="13440" height="11055">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\TruchetSDF (SF2D.Sources).v4p" systemname="TruchetSDF (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D.Sources).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="12255" top="2685" width="13440" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE id="64" systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden">
    <BOUNDS type="Node" left="3180" top="2700" width="100" height="100">
@@ -107,7 +107,7 @@
    </PIN>
    </NODE>
    <NODE id="63" systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden">
-   <BOUNDS type="Node" left="1665" top="5175" width="675" height="270">
+   <BOUNDS type="Node" left="2580" top="5355" width="675" height="270">
    </BOUNDS>
    <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
    </PIN>
@@ -259,6 +259,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="95" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5400" top="1185" width="795" height="240">
@@ -354,8 +358,8 @@
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="92" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="8715" top="1320" width="100" height="100">
+   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="9465" top="1335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive" slicecount="1" visible="1" values="|Cell Distance Metric|">
    </PIN>
@@ -363,9 +367,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="108" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="8730" top="900" width="1590" height="270">
+   <BOUNDS type="Box" left="9480" top="915" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="8730" top="900" width="0" height="0">
+   <BOUNDS type="Node" left="9480" top="915" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="GridType">
    </PIN>
@@ -373,11 +377,11 @@
    <LINK srcnodeid="108" srcpinname="Output Enum" dstnodeid="109" dstpinname="Enum">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="107" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="9015" top="450" width="1590" height="270">
+   <BOUNDS type="Box" left="9765" top="465" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="9015" top="450" width="0" height="0">
+   <BOUNDS type="Node" left="9765" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Octogon">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Line">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -391,13 +395,13 @@
    </BOUNDS>
    <BOUNDS type="Box" left="10290" top="1410" width="1650" height="2880">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="3">
+   <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="3" values="Line,Circle,Octogon">
+   <PIN pinname="Input String" slicecount="4" values="Line,Circle,Octogon,Custom">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -439,7 +443,7 @@
    <LINK srcnodeid="111" srcpinname="Output String" dstnodeid="110" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="106">
-   <BOUNDS type="Node" left="8895" top="2370" width="100" height="100">
+   <BOUNDS type="Node" left="3375" top="675" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enum" visible="1" slicecount="1" values="(nil)">
    </PIN>
@@ -455,13 +459,13 @@
    </BOUNDS>
    <BOUNDS type="Box" left="11985" top="1395" width="1650" height="2880">
    </BOUNDS>
-   <PIN pinname="Rows" slicecount="1" values="3">
+   <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input String" slicecount="3" values="fLineTruchet,fCircleTruchet,fOctoTruchet">
+   <PIN pinname="Input String" slicecount="4" values="fLineTruchet,fCircleTruchet,fOctoTruchet,FN_Custom">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -500,7 +504,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="115">
    <BOUNDS type="Node" left="3660" top="8250" width="100" height="100">
@@ -513,13 +517,145 @@
    </PIN>
    <PIN pinname="Custom Semantic" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Resource Semantic" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="114" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="115" dstpinname="HLSL">
    </LINK>
    <LINK srcnodeid="96" srcpinname="Output" dstnodeid="115" dstpinname="Custom Semantic">
    </LINK>
    <INFO author="" description="Creates a 2D signed distance field of various Truchet tilings" tags="">
    </INFO>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="117" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="8370" top="960" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8370" top="960" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Custom SDF|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF2D)" componentmode="Hidden" id="116">
+   <BOUNDS type="Node" left="360" top="4740" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="360" top="4740" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="HLSL" visible="1">
+   </PIN>
+   <PIN pinname="Custom Semantics" visible="1">
+   </PIN>
+   <PIN pinname="Resource Semantics" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="Output Node" dstnodeid="116" dstpinname="Input">
+   </LINK>
+   <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="121">
+   <BOUNDS type="Node" left="345" top="6960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Regular Expression" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="To" visible="1" slicecount="1" values="cDomainDistortionS3D_0_INPUT">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="345" top="6960">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="120" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="525" top="5430" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="525" top="5430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="(SF2D)">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Output String" dstnodeid="121" dstpinname="Regular Expression">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="119" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1050" top="6090" width="1140" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1050" top="6090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="INPUT">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="118" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="765" top="6495" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="cSampleVolDist_0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Output String" dstnodeid="118" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="118" srcpinname="Output" dstnodeid="121" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="118" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Custom Semantics" dstnodeid="96" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Resource Semantics" dstnodeid="115" dstpinname="Resource Semantic">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="HLSL" dstnodeid="121" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="122">
+   <BOUNDS type="Node" left="2070" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="CarriageReturnLineFeed">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="122" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="122" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="123">
+   <BOUNDS type="Box" left="7650" top="8265" width="10455" height="10485">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7650" top="8265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="123" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="115" dstpinname="HLSL">
+   </LINK>
    </PATCH>
