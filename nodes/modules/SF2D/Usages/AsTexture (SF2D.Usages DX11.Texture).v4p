@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
@@ -209,7 +209,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7230" top="3570" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="400,300">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="256,256">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -240,7 +240,7 @@
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output Enum" dstnodeid="41" dstpinname="Target Format">
    </LINK>
-   <PACK Name="dx11" Version="1.0.4">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="48" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="645" top="150" width="795" height="240">

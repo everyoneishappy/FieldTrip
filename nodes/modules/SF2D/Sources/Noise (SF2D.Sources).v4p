@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" systemname="Noise (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D.Sources).v4p" scrollx="3975" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" systemname="Noise (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (SF2D.Sources).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="2910" top="2445" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6345" top="1695" width="795" height="720">
@@ -61,7 +61,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3030" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.32">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -395,7 +395,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6150" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.79">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -417,7 +417,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9135" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Billow">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="None">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Inflection">
    </PIN>
@@ -478,7 +478,7 @@
    </NODE>
    <LINK srcnodeid="108" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 5">
    </LINK>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="110" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2445" top="8595" width="795" height="240">

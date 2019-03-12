@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Pre Curl Vortex Function
+//		Polar Coordiantes from a 3D Vector Field Function
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -10,25 +10,38 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-#ifndef CALC_FXH
-#include <packs\happy.fxh\calc.fxh>
+// Input VF3D Function placeholder
+#ifndef FN_INPUT
+#define FN_INPUT normalize
 #endif
 
-// Parameters
-StructuredBuffer<float3> FN_pointPosBuffer : FN_POINTPOSBUFFER;
-StructuredBuffer<float3> FN_controlDirBuffer : FN_CONTROLDIRBUFFER; 
-StructuredBuffer<float> FN_radiusBuffer : FN_RADIUSBUFFER; 
-int FN_pointCount : FN_POINTCOUNT;
-	
+
 float3 FN_ (float3 p)
 {
-	float3 force = 0;
-	for (uint i = 0; i < FN_pointCount; i++)
-	{
-		force += preCurlVortex(p, FN_pointPosBuffer[i], FN_controlDirBuffer[i], FN_radiusBuffer[i]);
-	}
+	float3 v = FN_INPUT(p);
+	float3 result;
+	float r;
+	//r = length(v);
+	r = v.x * v.x + v.y * v.y + v.z * v.z;
 	
-	return force;
+	if (r > 0)
+	{
+		r = sqrt(r);
+		float p, y;
+		p = asin(v.y/r) / 6.28318531;
+		y = 0;
+		if (v.z != 0) y = atan2(-v.x, -v.z);
+		else if (v.x > 0) y = -3.14159265 / 2;
+        else y = 3.14159265 / 2;
+		y /=  6.28318531;
+		result = float3(p,y,r);		
+	}
+	else
+	{
+		result = 0;
+	}
+	return result;
+	
 }
 // end of the function body
 #endif 
@@ -38,6 +51,7 @@ float3 FN_ (float3 p)
 #define VF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 technique11 RemoveMe{}

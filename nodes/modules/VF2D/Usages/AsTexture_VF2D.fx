@@ -28,7 +28,7 @@ struct psInput
 psInput VS(vsInput input)
 {
 	psInput output;
-	output.posScreen = mul(input.posObject,mul(tW,tVP));
+	output.posScreen = mul(input.posObject, tVP);
 	output.uv = input.uv;
 	return output;
 }
@@ -38,6 +38,7 @@ float2 PS(psInput input): SV_Target
 	float2 p = input.uv.xy;
 	p = p*2-1;
 	p.y *=-1;
+	p = mul(float4(p,0,1), tW).xy;
 	return VF2D(p);
 }
 

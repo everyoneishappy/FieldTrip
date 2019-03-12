@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (VF2D.Usages DX11.Texture).v4p" systemname="AsTexture (VF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (VF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Dropbox (Quayola Studio)\_Q-Production\0524_Painting-Tool\VectorGenTests\vvvv_50beta37_x64\packs\FieldTrip\nodes\modules\VF2D\Usages\AsTexture (VF2D.Usages DX11.Texture).v4p" systemname="AsTexture (VF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (VF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="14880" top="2610" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
@@ -237,7 +237,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7575" top="2415" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="400,300">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,1024">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -268,7 +268,7 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="46" dstpinname="Enabled">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="47" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="810" top="270" width="795" height="240">
@@ -361,6 +361,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
    </LINK>
@@ -376,4 +378,16 @@
    </LINK>
    <INFO author="" description="Renders a texture from a 2D vector field" tags="">
    </INFO>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="49">
+   <BOUNDS type="Box" left="4644" top="132" width="792" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4644" top="132" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Output Node" dstnodeid="7" dstpinname="Transform In">
+   </LINK>
    </PATCH>

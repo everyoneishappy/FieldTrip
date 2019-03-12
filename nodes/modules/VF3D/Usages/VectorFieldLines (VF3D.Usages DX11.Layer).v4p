@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF3D.Usages DX11.Layer).v4p" systemname="VectorFieldLines" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines( VF3D.Usages DX11.Layer).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\VectorFieldLines (VF3D.Usages DX11.Layer).v4p" systemname="VectorFieldLines" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines( VF3D.Usages DX11.Layer).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3315" top="1860" width="10785" height="10395">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,14 +8,14 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="19" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="1545" top="2175" width="705" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="1545" top="2175" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK2">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Function Integration Mode|">
    </PIN>
@@ -27,7 +27,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="3045" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="23">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="64">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -75,7 +75,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1950" top="2940" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.007">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.0017">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -161,6 +161,8 @@
    </PIN>
    <PIN pinname="Color Defaut" visible="1">
    </PIN>
+   <PIN pinname="Transform Defualt" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="1" dstpinname="Input Bin Size">
    </LINK>
@@ -193,7 +195,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3045" top="3795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -257,7 +259,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7455" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,0,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -309,9 +311,9 @@
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Switch">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="31" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="3195" top="5295" width="2250" height="480">
+   <BOUNDS type="Box" left="3195" top="5160" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3195" top="5295" width="0" height="0">
+   <BOUNDS type="Node" left="3195" top="5160" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.27533,0.27533,0.27533,1.00000|">
    </PIN>
@@ -495,9 +497,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="37" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="3675" top="1440" width="795" height="240">
+   <BOUNDS type="Box" left="3900" top="810" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3675" top="1440" width="0" height="0">
+   <BOUNDS type="Node" left="3900" top="810" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -510,7 +512,7 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="Output Node" dstnodeid="1" dstpinname="Texture Transform">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.0.5">
    </PACK>
    <NODE systemname="StreakLine (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\StreakLine\StreakLine (VF3D.Usages 3D Buffer).v4p" nodename="StreakLine (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="1230" top="5160" width="100" height="100">
@@ -550,6 +552,8 @@
    <PIN pinname="VF3D Function" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Input VF3D Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Step Size Defualt" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Points Per Seed">
@@ -613,5 +617,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Query Save">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Step Size Defualt">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="1" dstpinname="Transform Defualt">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="42">
+   <BOUNDS type="Box" left="3405" top="5925" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3405" top="5925" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Render State|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output Node" dstnodeid="1" dstpinname="Render State">
    </LINK>
    </PATCH>

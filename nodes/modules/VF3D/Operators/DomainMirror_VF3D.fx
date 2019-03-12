@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Pre Curl Vortex Function
+//		3D Vector Domain Reflection Function
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -10,25 +10,23 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-#ifndef CALC_FXH
-#include <packs\happy.fxh\calc.fxh>
+#ifndef SDF_FXH
+#include <packs\happy.fxh\sdf.fxh>
+#endif
+
+// Input VF3D function placeholder
+#ifndef FN_INPUT
+#define FN_INPUT normalize
 #endif
 
 // Parameters
-StructuredBuffer<float3> FN_pointPosBuffer : FN_POINTPOSBUFFER;
-StructuredBuffer<float3> FN_controlDirBuffer : FN_CONTROLDIRBUFFER; 
-StructuredBuffer<float> FN_radiusBuffer : FN_RADIUSBUFFER; 
-int FN_pointCount : FN_POINTCOUNT;
-	
+float FN_offset : FN_OFFSET;
+float3 FN_normal : FN_NORMAL = float3(1,0,0);
+
 float3 FN_ (float3 p)
 {
-	float3 force = 0;
-	for (uint i = 0; i < FN_pointCount; i++)
-	{
-		force += preCurlVortex(p, FN_pointPosBuffer[i], FN_controlDirBuffer[i], FN_radiusBuffer[i]);
-	}
-	
-	return force;
+	float side = pReflect(p, FN_normal, FN_offset);
+	return FN_INPUT(p);
 }
 // end of the function body
 #endif 
@@ -38,7 +36,6 @@ float3 FN_ (float3 p)
 #define VF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 technique11 RemoveMe{}
 

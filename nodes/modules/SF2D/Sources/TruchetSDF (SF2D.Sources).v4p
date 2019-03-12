@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\TruchetSDF (SF2D.Sources).v4p" systemname="TruchetSDF (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D.Sources).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="12255" top="2685" width="13440" height="11055">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
+   <PATCH nodename="D:\Dropbox (Quayola Studio)\_Q-Production\0524_Painting-Tool\VectorGenTests\vvvv_50beta37_x64\packs\FieldTrip\nodes\modules\SF2D\Sources\TruchetSDF (SF2D.Sources).v4p" systemname="TruchetSDF (SF2D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TruchetSDF (SF2D.Sources).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="12252" top="2676" width="15876" height="16068">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -177,7 +177,7 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="3">
+   <PIN pinname="Vector Size" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -285,7 +285,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6285" top="1155" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.14">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -504,7 +504,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="115">
    <BOUNDS type="Node" left="3660" top="8250" width="100" height="100">
@@ -641,20 +641,6 @@
    <LINK srcnodeid="121" srcpinname="Output" dstnodeid="122" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="63" srcpinname="Output" dstnodeid="122" dstpinname="Input 2">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="123">
-   <BOUNDS type="Box" left="7650" top="8265" width="10455" height="10485">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7650" top="8265" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="123" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="122" srcpinname="Output" dstnodeid="115" dstpinname="HLSL">
    </LINK>

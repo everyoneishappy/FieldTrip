@@ -291,7 +291,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Size XYZ" slicecount="3" values="0.49,0.49,0.49" visible="1">
+   <PIN pinname="Size XYZ" slicecount="3" visible="1" values="0.49,0.49,0.49">
    </PIN>
    <PIN pinname="Round" slicecount="1" values="0.08">
    </PIN>
@@ -316,12 +316,12 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchTriPlane (SF3D.Usages DX11.Layer)" componentmode="InAWindow" id="25">
+   <NODE systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchTriPlane (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="2040" top="5385" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="1305" top="4305" width="15870" height="11295">
+   <BOUNDS type="Window" left="1290" top="4305" width="15870" height="11295">
    </BOUNDS>
    <PIN pinname="SF3D Class" visible="1">
    </PIN>
