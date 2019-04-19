@@ -99,6 +99,7 @@ PS_OUT PS_Grad(VS_OUT In)
 	return Out;
 }
 
+bool humanNormals;
 PS_OUT PS_Norm(VS_OUT In)
 {
 	// Raymarcher 
@@ -109,10 +110,33 @@ PS_OUT PS_Norm(VS_OUT In)
 	////////////////////////////////////////////////////////////////
 	
 	float4 c=1;
-	c.rgb = n*0.5+0.5; // remap normals to 0-1
-	c.rgb *= INPUTRGB(p);
+	c.rgb = n;
+	if (humanNormals) c.rgb = c.rgb *0.5 + 0.5; // remap normals to 0-1
 	c.a = alpha;
 
+	PS_OUT Out;
+	Out.Color=c;
+	
+	#if WRITEDEPTH == 1
+	float4 PosWVP=mul(float4(p.xyz,1),tVP);
+	Out.Depth=PosWVP.z/PosWVP.w;
+	#endif
+	
+	return Out;
+}
+
+PS_OUT PS_Pos(VS_OUT In)
+{
+	// Raymarcher 
+	////////////////////////////////////////////////////////////////
+	float2 uv = In.TexCd.xy; // Takes uv as input
+	float3 rd, p, n;   	float z; // Outputs surface posistion(p) & normals(n), ray direction(rd) & length(z) 
+	rayMarcher(uv, p, n, rd, z);
+	////////////////////////////////////////////////////////////////
+	
+	float4 c=1;
+	c.rgb = p;
+	c.a = alpha;
 	PS_OUT Out;
 	Out.Color=c;
 	
@@ -152,6 +176,14 @@ technique11 RayMarchNormals
 	}
 }
 
+technique11 RayMarchPosistion
+{
+	pass P0
+	{
+		SetVertexShader(CompileShader(vs_5_0,VS()));
+		SetPixelShader(CompileShader(ps_5_0,PS_Pos()));
+	}
+}
 
 
 

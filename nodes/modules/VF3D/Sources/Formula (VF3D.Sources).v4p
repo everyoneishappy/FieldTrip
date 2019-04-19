@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\Formula (VF3D.Sources).v4p" scrollx="0" scrolly="0" systemname="Formula (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p">
-   <BOUNDS type="Window" left="14040" top="2160" width="13155" height="11715">
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\Formula (VF3D.Sources).v4p" scrollx="0" scrolly="0" systemname="Formula (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Formula\Formula (VF3D.Sources).v4p">
+   <BOUNDS type="Window" left="12555" top="2145" width="13155" height="11715">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1365" top="7725" width="795" height="240">
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="780" top="480" width="1890" height="2370">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|#ifndef {0}BODY &cr;&lf;#define {0}BODY&cr;&lf;&cr;&lf;float {0} (float3 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D {0}&cr;&lf;#endif|">
+   <PIN pinname="Input String" slicecount="1" values="|#ifndef {0}BODY &cr;&lf;#define {0}BODY&cr;&lf;&cr;&lf;float3 {0} (float3 p)&cr;&lf;{1}&cr;&lf;#endif &cr;&lf;&cr;&lf;#ifndef VF3D&cr;&lf;#define VF3D {0}&cr;&lf;#endif|">
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
@@ -137,7 +137,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3285" top="450" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|return float3(sin(p.x),  cos(p.y), sin(p.z));|">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|return p;|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
