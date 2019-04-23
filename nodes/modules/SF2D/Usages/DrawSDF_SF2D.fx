@@ -11,7 +11,7 @@
 cbuffer cbControls:register(b0)
 {
 	float4x4 tVP:VIEWPROJECTION;
-	float4x4 tW:WORLD;
+	float4x4 tW;
 	float4 drawCol  = { 1.0f,1.0f,1.0f,1.0f };
 	float2 apsectRatio = 1;
 	float softness;
@@ -39,6 +39,7 @@ float4 PS_Dist(VS_OUT In) : SV_TARGET
 	float2 p = In.TexCd.xy;
 	p = p*2-1;
 	p.y *=-1;
+	p = mul(float4(p,0,1), tW).xy;
 	p *= apsectRatio; 
 	float dist = SF2D(p);
 	return drawCol * dist;
