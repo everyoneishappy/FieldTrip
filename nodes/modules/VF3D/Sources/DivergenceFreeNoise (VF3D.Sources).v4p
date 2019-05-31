@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\DivergenceFreeNoise (VF3D.Sources).v4p" systemname="DivergenceFreeNoise (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\DivergenceFreeNoise (VF3D.Sources).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources).v4p" systemname="DivergenceFreeNoise (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\DivergenceFreeNoise (VF3D.Sources).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="-17055" top="3090" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
    <BOUNDS type="Box" left="60" top="7545" width="795" height="240">
@@ -99,7 +99,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="660" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="4,4.07,4.07">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.41,0.41,0.41">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -119,7 +119,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1860" top="465" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="2.13,2.13,2.13">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -204,8 +204,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="Output Enum" dstnodeid="62" dstpinname="Noise Basis">
-   </LINK>
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="90" top="6225" width="1290" height="270">
    </BOUNDS>
@@ -448,7 +446,7 @@
    </LINK>
    <LINK srcnodeid="77" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Input">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="98" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1890" top="9180" width="795" height="240">
@@ -480,4 +478,6 @@
    </INFO>
    <LINK srcnodeid="63" srcpinname="Output Enum" dstnodeid="62" dstpinname="Basis">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

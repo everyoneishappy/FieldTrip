@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\DomainDistortion (SF3D.Operators).v4p" systemname="DomainDistortion (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainDistortion (SF3D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\DomainDistortion (SF3D.Operators).v4p" systemname="DomainDistortion (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainDistortion (SF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="-20640" top="2310" width="13470" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="6015" top="3720" width="1290" height="270">
@@ -494,7 +494,7 @@
    </LINK>
    <LINK srcnodeid="68" srcpinname="Output" dstnodeid="40" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="Split (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (VF3D)" componentmode="Hidden" id="65">
    <BOUNDS type="Node" left="5055" top="1770" width="100" height="100">
@@ -564,4 +564,6 @@
    </LINK>
    <INFO author="" description="Displaces the domain of a 3D scalar field with a 3D vector field" tags="">
    </INFO>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

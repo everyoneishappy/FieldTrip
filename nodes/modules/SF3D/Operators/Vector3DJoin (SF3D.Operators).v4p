@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\Vector3DJoin (SF3D.Operators).v4p" systemname="Vector3DJoin (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DJoin (SF3D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\Vector3DJoin (SF3D.Operators).v4p" systemname="Vector3DJoin (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DJoin (SF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="12210" top="3630" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1170" top="9525" width="795" height="240">
@@ -278,7 +278,7 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="39" dstpinname="Input">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="3015" top="7515" width="100" height="100">
@@ -622,4 +622,6 @@
    </NODE>
    <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

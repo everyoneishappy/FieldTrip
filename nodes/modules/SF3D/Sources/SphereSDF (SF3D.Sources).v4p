@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\SphereSDF (SF3D.Sources).v4p" systemname="SphereSDF (SF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\SphereSDF (SF3D.Sources).v4p" scrollx="0" scrolly="1815">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Sources\SphereSDF (SF3D.Sources).v4p" systemname="SphereSDF (SF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\SphereSDF (SF3D.Sources).v4p" scrollx="0" scrolly="1815">
    <BOUNDS type="Window" left="1125" top="4965" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE id="64" systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden">
    <BOUNDS type="Node" left="2985" top="1380" width="100" height="100">
@@ -456,8 +456,6 @@
    <PIN pinname="DataXYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="87" dstpinname="DataXY">
-   </LINK>
    <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Element Count">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="77" dstpinname="Input 1">
@@ -468,7 +466,7 @@
    </LINK>
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="87" dstpinname="DataXYZ">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden" id="95">
    <BOUNDS type="Node" left="8250" top="5970" width="100" height="100">
@@ -538,4 +536,6 @@
    </LINK>
    <INFO author="" description="Creates a 3D signed distance field of a sphere" tags="">
    </INFO>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

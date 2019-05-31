@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\CombineSDF (SF3D.Operators).v4p" systemname="CombineSDF (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\CombineSDF (SF3D.Operators).v4p" systemname="CombineSDF (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="5115" top="3990" width="24060" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="6015" top="3720" width="1290" height="270">
@@ -566,7 +566,7 @@
    </NODE>
    <LINK srcnodeid="65" srcpinname="Output String" dstnodeid="80" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="81">
+   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="6705" top="1200" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enum" slicecount="1" visible="1" values="|Combination Operation|">
@@ -579,7 +579,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7395" top="555" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Union">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Intersect">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Combination Operation|">
    </PIN>
@@ -674,7 +674,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="Split (SF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF3D)" componentmode="Hidden" id="86">
    <BOUNDS type="Node" left="3375" top="1200" width="100" height="100">
@@ -744,4 +744,6 @@
    </LINK>
    <INFO author="" description="Combine two 3D signed distance fields.  Includes options for Union, Subtraction, Intersection and many more" tags="">
    </INFO>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

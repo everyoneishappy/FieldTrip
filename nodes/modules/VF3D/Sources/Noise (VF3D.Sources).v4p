@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\Noise (VF3D.Sources).v4p" systemname="Noise (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (VF3D.Sources).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="10395" top="2985" width="13335" height="11055">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\Noise (VF3D.Sources).v4p" systemname="Noise (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Noise\Noise (VF3D.Sources).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="-24885" top="2340" width="13335" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
    <BOUNDS type="Box" left="60" top="7545" width="810" height="240">
@@ -87,7 +87,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2640" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="5.93,5.93,5.93">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1.44,1.44,1.44">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -107,7 +107,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3915" top="960" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.07,0.07,0.07">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.32,0.32,0.32">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -476,7 +476,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="Join (VF3D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (VF3D)" componentmode="Hidden" id="107">
    <BOUNDS type="Node" left="1230" top="8595" width="100" height="100">
@@ -498,4 +498,6 @@
    </LINK>
    <LINK srcnodeid="101" srcpinname="Output Enum" dstnodeid="100" dstpinname="Basis">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

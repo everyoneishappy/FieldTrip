@@ -12,6 +12,7 @@
 uint threadCount;
 uint iterations = 2;
 float offset = 0;
+float eps = 0.001;
 StructuredBuffer<float3> bPos <string uiname="Sample Position 3D Buffer";>;
 RWStructuredBuffer<float3> Output : BACKBUFFER;
 
@@ -24,7 +25,7 @@ void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )
 	for (uint i = 0; i < iterations; i++)
 	{
 		float3 g;
-		g = calcNormS3(SF3D, p, 0.001);
+		g = calcNormS3(SF3D, p, eps);
 		float v = SF3D(p)-offset;
 		p -= g * v;
 	}

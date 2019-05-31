@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\ScalarOp (SF3D.Operators).v4p" systemname="ScalarOp (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF3D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\ScalarOp (SF3D.Operators).v4p" systemname="ScalarOp (SF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF3D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="540" top="1725" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1065" top="9465" width="795" height="240">
@@ -460,7 +460,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="78" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1125" top="690" width="795" height="240">
@@ -620,7 +620,7 @@
    </NODE>
    <LINK srcnodeid="95" srcpinname="Output String" dstnodeid="96" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="94">
+   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="94">
    <BOUNDS type="Node" left="10440" top="990" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
@@ -633,7 +633,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10860" top="630" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="+">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="*">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Operation">
    </PIN>
@@ -824,4 +824,6 @@
    <LINKPOINT x="9135" y="4710">
    </LINKPOINT>
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>
