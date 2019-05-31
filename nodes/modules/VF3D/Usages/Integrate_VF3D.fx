@@ -26,7 +26,7 @@ void CS_SimpleAgent( uint3 dtid : SV_DispatchThreadID )
 {
 	if (dtid.x >= threadCount) { return; }
 	float stepSize = sbLoad(stepSizeBuffer, stepSizeDefault, dtid.x);
-	float3 p = bPos[dtid.x];
+	float3 p = bPos[dtid.x % sbSize(bPos)];
 	#if (INTEGRATIONMODE==1) 
 	calcRK2V3(VF3D, p, stepSize);
 	#elif (INTEGRATIONMODE==2) 
