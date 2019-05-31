@@ -1,0 +1,367 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\DomainDistortion (SF2D.Operators) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="570" top="225" width="11010" height="8670">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="225" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|DomainDistortion (SF2D.Operators)|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2">
+   <BOUNDS type="Node" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <BOUNDS type="Box" left="225" top="600" width="5100" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Displaces the domain of a 2D scalar field with a 2D vector field|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="450" top="4455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="19">
+   <BOUNDS type="Node" left="465" top="5430" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="465" top="5430" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11535" top="195" width="4560" height="4890">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="18">
+   <BOUNDS type="Node" left="2040" top="6780" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2040" top="6780" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15960" top="210" width="4665" height="4905">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="465" top="2010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="1.17">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Texture" dstnodeid="19" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Gradient (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Gradient (SF2D.Operators).v4p" nodename="Gradient (SF2D.Operators)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="2100" top="3540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="15" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2085" top="3900" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2085" top="3900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="15" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="AsTexture (VF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\AsTexture (VF2D.Usages DX11.Texture).v4p" nodename="AsTexture (VF2D.Usages DX11.Texture)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="2040" top="5715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture SizeXY" slicecount="2" values="512,512">
+   </PIN>
+   <PIN pinname="Target Format" slicecount="1" values="R16G16B16A16_Float">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="5715">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ScalarOp (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\ScalarOp (VF2D.Operators).v4p" nodename="ScalarOp (VF2D.Operators)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="2040" top="4980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Operation" slicecount="1" values="*">
+   </PIN>
+   <PIN pinname="Input 2 Default Value" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 Defualt Value" slicecount="1" values="0.5">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="4980">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ScalarOp (VF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\ScalarOp (VF2D.Operators).v4p" nodename="ScalarOp (VF2D.Operators)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="2040" top="5280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 Defualt Value" slicecount="1" values="0.5">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="5280">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="13" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <NODE systemname="ColorChannelRemap (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\ColorChannelRemap.tfx" nodename="ColorChannelRemap (DX11.TextureFX)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="2040" top="6165" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Input Blue" slicecount="1" values="One">
+   </PIN>
+   <PIN pinname="Input Alpha" slicecount="1" values="One">
+   </PIN>
+   <PIN pinname="Input Green" slicecount="1" values="Green">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Box" left="2040" top="6165">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Texture" dstnodeid="11" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Texture Out" dstnodeid="18" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="GridSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\GridSDF (SF2D.Sources).v4p" nodename="GridSDF (SF2D.Sources)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="6210" top="2490" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.027">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="12.08">
+   </PIN>
+   <PIN pinname="Lattice Function" slicecount="1" values="Hexogon">
+   </PIN>
+   <BOUNDS type="Box" left="6210" top="2490">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="6165" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Box" left="6165" top="6645">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="8">
+   <BOUNDS type="Node" left="6165" top="7140" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6165" top="7140" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11655" top="5040" width="8970" height="8970">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="8" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="DomainDistortion (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\DomainDistortion (SF2D.Operators).v4p" nodename="DomainDistortion (SF2D.Operators)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="6165" top="5415" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Distortion Function" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Distortion Strength" slicecount="1" visible="1" values="0.009">
+   </PIN>
+   <BOUNDS type="Box" left="6165" top="5415">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1380" top="1575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Position Out" dstnodeid="17" dstpinname="Time">
+   </LINK>
+   <NODE systemname="FBM (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\FBM (SF2D.Operators).v4p" nodename="FBM (SF2D.Operators)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="465" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Function" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Persistence" slicecount="1" values="0.38">
+   </PIN>
+   <PIN pinname="Lacunarity" slicecount="1" values="1.93">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="4">
+   <BOUNDS type="Box" left="465" top="2775" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="465" top="2775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="16" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="5" dstpinname="Input Function">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="21">
+   <BOUNDS type="Node" left="1350" top="2640" width="1350" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1350" top="2640" width="1350" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|make some noise|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="22">
+   <BOUNDS type="Node" left="3165" top="3525" width="2340" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3165" top="3525" width="2340" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|take the gradient (or any VF2D)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="23">
+   <BOUNDS type="Box" left="6210" top="3135" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6210" top="3135" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Output Node" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="24">
+   <BOUNDS type="Box" left="6885" top="4470" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6885" top="4470" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Distortion Function|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="7" dstpinname="Distortion Function">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="23" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25">
+   <BOUNDS type="Box" left="8025" top="5325" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8025" top="5325" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Distortion Strength|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Distortion Strength">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="26">
+   <BOUNDS type="Node" left="7005" top="3075" width="1995" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7005" top="3075" width="1995" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|function before distortion|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="27">
+   <BOUNDS type="Node" left="8265" top="5520" width="1920" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8265" top="5520" width="1920" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|just scales the distortion|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Output Node" dstnodeid="24" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="38.1.0">
+   </PACK>
+   </PATCH>
