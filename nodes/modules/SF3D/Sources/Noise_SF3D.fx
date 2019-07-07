@@ -51,7 +51,7 @@ float FN_ (float3 p)
 	//Ridge
 	noise = 1 - abs(noise);
 	#endif
-	return noise * noise * FN_amp + FN_center;
+	return noise * FN_amp + FN_center;
 }
 // end of the function body
 #endif 
