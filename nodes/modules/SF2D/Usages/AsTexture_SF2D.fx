@@ -7,6 +7,8 @@
 
 float4x4 tVP:LAYERVIEWPROJECTION;
 float4x4 tW : WORLD;
+bool setAlpha;
+float alpha = 1.0;
 
 struct vsInput
 {
@@ -35,7 +37,10 @@ float4 PS(psInput input): SV_Target
 	p = p*2-1;
 	p.y *=-1;
 	p = mul(float4(p,0,1), tW).xy;
-	return SF2D(p);
+	float4 result = SF2D(p);
+	if (setAlpha) result.a = alpha;
+	
+	return result;
 }
 
 

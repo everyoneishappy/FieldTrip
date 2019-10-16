@@ -30,7 +30,7 @@ float FN_distFallOff(float dist, float radius)
 float2 FN_pointForceField(float2 p, StructuredBuffer<float2> pointPosBuffer, StructuredBuffer<float> controlDirBuffer, StructuredBuffer<float> radiusBuffer, StructuredBuffer<float> strengthBuffer, uint pointCount)
 {
 	float2 force = 0;
-	for (uint i = 0; i < pointCount; i++)
+	for (uint i = 0; i < FN_pointCount; i++)
 	{
 		float2 gradient = p-pointPosBuffer[i];
 		float dist = length(gradient);

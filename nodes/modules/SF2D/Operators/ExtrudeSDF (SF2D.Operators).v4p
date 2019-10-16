@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ExtrudeSDF (SF2D.Operators).v4p" systemname="ExtrudeSDF (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="4140" top="2940" width="14670" height="12255">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ExtrudeSDF (SF2D.Operators).v4p" systemname="ExtrudeSDF (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" scrollx="0" scrolly="3165">
+   <BOUNDS type="Window" left="6180" top="8835" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1065" top="9465" width="795" height="240">
@@ -293,11 +293,11 @@
    <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="61" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="62" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="11505" top="6765" width="1320" height="675">
+   <BOUNDS type="Box" left="11475" top="6240" width="1320" height="675">
    </BOUNDS>
-   <BOUNDS type="Node" left="11505" top="6765" width="0" height="0">
+   <BOUNDS type="Node" left="11475" top="6240" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="DEPTH,RADIUS">
+   <PIN pinname="Input String" slicecount="3" visible="1" values="DEPTH,RADIUS,AXIS">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -307,7 +307,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    </NODE>
    <LINK srcnodeid="62" srcpinname="Output String" dstnodeid="61" dstpinname="Input 2">
@@ -365,11 +365,15 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11520" top="780" width="795" height="240">
+   <BOUNDS type="Box" left="11520" top="660" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11520" top="780" width="0" height="0">
+   <BOUNDS type="Node" left="11520" top="660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.04">
    </PIN>
@@ -416,7 +420,7 @@
    </NODE>
    <LINK srcnodeid="79" srcpinname="Output String" dstnodeid="80" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="78">
+   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="78">
    <BOUNDS type="Node" left="8850" top="1410" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enum" slicecount="1" values="|Extrude Type|">
@@ -425,9 +429,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="77" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="9225" top="750" width="2115" height="240">
+   <BOUNDS type="Box" left="9225" top="660" width="2115" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9225" top="750" width="0" height="0">
+   <BOUNDS type="Node" left="9225" top="660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="Extrude">
    </PIN>
@@ -565,9 +569,9 @@
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="65" dstpinname="Input Node">
    </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="87">
-   <BOUNDS type="Node" left="1170" top="915" width="100" height="100">
+   <BOUNDS type="Node" left="1200" top="690" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1170" top="915" width="795" height="240">
+   <BOUNDS type="Box" left="1200" top="690" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2D SDF|">
    </PIN>
@@ -582,7 +586,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="Split (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Split (SF2D)" componentmode="Hidden" id="86">
    <BOUNDS type="Node" left="1185" top="1290" width="100" height="100">
@@ -633,7 +637,35 @@
    </BOUNDS>
    <PIN pinname="Shader Path" visible="1" pintype="Output">
    </PIN>
+   <PIN pinname="FN_axis" visible="1" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90">
+   <BOUNDS type="Box" left="7290" top="660" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7290" top="660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Axis">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Input 3">
    </LINK>
    </PATCH>

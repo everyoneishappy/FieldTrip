@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="10155" top="3915" width="12075" height="11295">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (SF2D.Usages DX11.Texture).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="42870" top="4560" width="12075" height="11295">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Semantics (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Semantics (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2055" top="4965" width="100" height="100">
@@ -209,7 +209,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7230" top="3570" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="256,256">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="512,512">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -240,7 +240,7 @@
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output Enum" dstnodeid="41" dstpinname="Target Format">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="48" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="645" top="150" width="795" height="240">
@@ -309,7 +309,7 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="||">
+   <PIN pinname="ConfigShader" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;2D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS2D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fNoiseS2D_0_BODY &cr;&lf;#define fNoiseS2D_0_BODY&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS2D_0_NOISEBASIS perlin&cr;&lf;#define fNoiseS2D_0_INFLECTION 0&cr;&lf;#define fNoiseS2D_0_USETIME 1 // preprocessor options from patch inserted here&cr;&lf;#ifndef fNoiseS2D_0_NOISEBASIS&cr;&lf;#define fNoiseS2D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS2D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseS2D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS2D_0_INFLECTION&cr;&lf;#define fNoiseS2D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS2D_0_USETIME&cr;&lf;#define fNoiseS2D_0_USETIME 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float fNoiseS2D_0_freq : fNoiseS2D_0_FREQ = 2; &cr;&lf;float fNoiseS2D_0_amp : fNoiseS2D_0_AMP = .1; &cr;&lf;float fNoiseS2D_0_center : fNoiseS2D_0_CENTER; &cr;&lf;float fNoiseS2D_0_bias : fNoiseS2D_0_BIAS = 0.5;&cr;&lf;float fNoiseS2D_0_time : fNoiseS2D_0_TIME; &cr;&lf;float2 fNoiseS2D_0_domainOffset : fNoiseS2D_0_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS2D_0_ (float2 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS2D_0_freq + fNoiseS2D_0_domainOffset;&cr;&lf;&tab;&cr;&lf;&tab;#if fNoiseS2D_0_USETIME == 1&cr;&lf;&tab;float3 pt = float3(p, fNoiseS2D_0_time);&cr;&lf;&tab;float noise = fNoiseS2D_0_NOISEBASIS(pt fNoiseS2D_0_WORLEYOPTIONS);&cr;&lf;&tab;#else&cr;&lf;&tab;float noise = fNoiseS2D_0_NOISEBASIS(p fNoiseS2D_0_WORLEYOPTIONS);&cr;&lf;&tab;#endif&cr;&lf;&tab;&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS2D_0_bias);&cr;&lf;&tab;#if fNoiseS2D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS2D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseS2D_0_amp + fNoiseS2D_0_center;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D fNoiseS2D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SF2D&cr;&lf;#define SF2D length // Just a place holder&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;float4x4 tVP:LAYERVIEWPROJECTION;&cr;&lf;float4x4 tW : WORLD;&cr;&lf;bool setAlpha;&cr;&lf;float alpha = 1.0;&cr;&lf;&cr;&lf;struct vsInput&cr;&lf;{&cr;&lf;    float4 posObject : POSITION;&cr;&lf;&tab;float4 uv: TEXCOORD0;&cr;&lf;};&cr;&lf;&cr;&lf;struct psInput&cr;&lf;{&cr;&lf;    float4 posScreen : SV_Position;&cr;&lf;    float4 uv: TEXCOORD0;&cr;&lf;};&cr;&lf;&cr;&lf;&cr;&lf;psInput VS(vsInput input)&cr;&lf;{&cr;&lf;&tab;psInput output;&cr;&lf;&tab;output.posScreen = mul(input.posObject, tVP);&cr;&lf;&tab;output.uv = input.uv;&cr;&lf;&tab;return output;&cr;&lf;}&cr;&lf;&cr;&lf;float4 PS(psInput input): SV_Target&cr;&lf;{&cr;&lf;&tab;float2 p = input.uv.xy;&cr;&lf;&tab;p = p*2-1;&cr;&lf;&tab;p.y *=-1;&cr;&lf;&tab;p = mul(float4(p,0,1), tW).xy;&cr;&lf;&tab;float4 result = SF2D(p);&cr;&lf;&tab;if (setAlpha) result.a = alpha;&cr;&lf;&tab;&cr;&lf;&tab;return result;&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;technique11 AsTexture&cr;&lf;{&cr;&lf;&tab;pass P0 //&lt;string format=&quot;R32_Float&quot;;&gt;&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetVertexShader(CompileShader(vs_5_0,VS()));&cr;&lf;&tab;&tab;SetPixelShader(CompileShader(ps_5_0,PS()));&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="||">
    </PIN>
@@ -351,6 +351,10 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="setAlpha" visible="1">
+   </PIN>
+   <PIN pinname="alpha" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="2" dstpinname="Layer In">
    </LINK>
@@ -378,4 +382,42 @@
    </LINK>
    <INFO author="" description="Renders a texture from a 2D scalar field" tags="">
    </INFO>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54">
+   <BOUNDS type="Box" left="6480" top="690" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6480" top="690" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Set Alpha|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="7" dstpinname="setAlpha">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55">
+   <BOUNDS type="Box" left="7200" top="1095" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7200" top="1095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Alpha">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="7" dstpinname="alpha">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

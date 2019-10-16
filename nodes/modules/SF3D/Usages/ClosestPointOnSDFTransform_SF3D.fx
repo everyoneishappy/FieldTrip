@@ -32,6 +32,7 @@ float placeHolderSDF(float3 p)
 uint threadCount;
 uint iterations = 2;
 float offset = 0;
+float3 lookup = float3(0,1,0);
 StructuredBuffer<float3> bPos <string uiname="Sample Position 3D Buffer";>;
 RWStructuredBuffer<float4x4> Output : BACKBUFFER;
 
@@ -50,7 +51,7 @@ void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )
 	
 	float4x4 m = identity4x4();
 	m = translateM (p, m);
-	m = mul(lookat4x4(g), m);
+	m = mul(lookat4x4(g, lookup), m);
 	Output[dtid.x] = m;
 }
 

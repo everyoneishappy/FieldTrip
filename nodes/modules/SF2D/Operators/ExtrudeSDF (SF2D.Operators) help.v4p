@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators) help.v4p" scrollx="0" scrolly="30">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ExtrudeSDF (SF2D.Operators) help.v4p" scrollx="0" scrolly="30">
    <BOUNDS type="Window" left="2670" top="1245" width="9000" height="8730">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -154,20 +154,6 @@
    </NODE>
    <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="20" dstpinname="Texture In">
    </LINK>
-   <NODE systemname="ExtrudeSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" nodename="ExtrudeSDF (SF2D.Operators)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="2595" top="4575" width="2925" height="270">
-   </BOUNDS>
-   <PIN pinname="Input 2D SDF" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bevel Radius" slicecount="1" visible="1" values="0.12">
-   </PIN>
-   <PIN pinname="Extrude Depth" slicecount="1" visible="1" values="0.07">
-   </PIN>
-   <PIN pinname="Extrude Type" slicecount="1" visible="1" values="|Extrude Rounded Outside|">
-   </PIN>
-   </NODE>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="22">
    <BOUNDS type="Node" left="5370" top="2475" width="100" height="100">
    </BOUNDS>
@@ -210,14 +196,12 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Bevel Radius|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Bevel Radius">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="25">
    <BOUNDS type="Box" left="4515" top="3105" width="2190" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="4515" top="3105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Extrude Rounded Outside|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Extrude">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="Extrude">
    </PIN>
@@ -228,14 +212,12 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Extrude Type|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Output Enum" dstnodeid="21" dstpinname="Extrude Type">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26">
    <BOUNDS type="Box" left="3555" top="3855" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="3555" top="3855" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.08">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -244,8 +226,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Extrude Depth|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Extrude Depth">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="27">
    <BOUNDS type="Box" left="1875" top="3645" width="795" height="240">
    </BOUNDS>
@@ -256,8 +236,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2D SDF|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="21" dstpinname="Input 2D SDF">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="28">
    <BOUNDS type="Box" left="2595" top="5295" width="795" height="240">
    </BOUNDS>
@@ -266,8 +244,6 @@
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="28" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="29">
    <BOUNDS type="Node" left="3510" top="5295" width="2445" height="270">
    </BOUNDS>
@@ -296,13 +272,13 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="TextureSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\TextureSDF (SF2D.Sources).v4p" nodename="TextureSDF (SF2D.Sources)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="1860" top="2745" width="100" height="100">
@@ -356,4 +332,50 @@
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="14" dstpinname="Input">
    </LINK>
+   <NODE systemname="ExtrudeSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" nodename="ExtrudeSDF (SF2D.Operators)" componentmode="InAWindow" id="21">
+   <BOUNDS type="Node" left="2595" top="4575" width="2925" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 2D SDF" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Bevel Radius" slicecount="1" visible="1" values="0.12">
+   </PIN>
+   <PIN pinname="Extrude Depth" slicecount="1" visible="1" values="0.07">
+   </PIN>
+   <PIN pinname="Extrude Type" slicecount="1" visible="1" values="|Extrude Rounded Outside|">
+   </PIN>
+   <PIN pinname="Axis" slicecount="1" visible="1" values="2">
+   </PIN>
+   <BOUNDS type="Window" left="6180" top="8835" width="14670" height="12255">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Bevel Radius">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output Enum" dstnodeid="21" dstpinname="Extrude Type">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Extrude Depth">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Output Node" dstnodeid="21" dstpinname="Input 2D SDF">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="28" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="31">
+   <BOUNDS type="Box" left="4500" top="4005" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4500" top="4005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Axis">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

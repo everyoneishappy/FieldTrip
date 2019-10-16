@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Pre Curl Vortex Function
+//		Only calculate an SDF if a 2nd bounding SDF returns less then 0
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -10,35 +10,32 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-#ifndef CALC_FXH
-#include <packs\happy.fxh\calc.fxh>
+// Parameters
+float FN_padding : FN_PADDING;
+// Input function placeholder
+#ifndef FN_INPUT1
+#define FN_INPUT1 length
 #endif
 
-// Parameters
-StructuredBuffer<float2> FN_pointPosBuffer : FN_POINTPOSBUFFER;
-StructuredBuffer<float> FN_radiusBuffer : FN_RADIUSBUFFER; 
-StructuredBuffer<float> FN_strengthBuffer :  FN_STRENGTHBUFFER;
-int FN_pointCount : FN_POINTCOUNT;
+// Input function placeholder
+#ifndef FN_INPUT2
+#define FN_INPUT2 length
+#endif
 
-	
 
-float FN_ (float2 p)
+float FN_ (float3 p)
 {
-	float force = 0;
-	
-	for (uint i = 0; i < FN_pointCount; i++)
-	{
-		force += preCurlVortex(p, FN_pointPosBuffer[i], FN_strengthBuffer[i], FN_radiusBuffer[i]);
-	}
-	
-	return force;  
+	float test = FN_INPUT2(p);
+	if ((test - FN_padding) > 0) return test;
+	else return FN_INPUT1(p);
 }
-// end of the function body
+
+
 #endif 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef SF2D
-#define SF2D FN_
+#ifndef SF3D
+#define SF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
 

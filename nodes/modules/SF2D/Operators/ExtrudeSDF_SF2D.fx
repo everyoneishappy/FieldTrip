@@ -22,6 +22,7 @@
 // Parameters
 float FN_depth : FN_DEPTH;
 float FN_radius : FN_RADIUS;
+float FN_axis : FN_AXIS;
 
 // DEFINES
 #ifndef FN_OP 
@@ -30,6 +31,9 @@ float FN_radius : FN_RADIUS;
 
 float FN_ (float3 p)
 {
+	
+		if (FN_axis == 1) p = p.xzy;
+		if (FN_axis == 2) p = p.zyx;
 		return FN_OP;
  
 }

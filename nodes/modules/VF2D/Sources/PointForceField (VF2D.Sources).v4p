@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\Dropbox (Quayola Studio)\_Q-Production\0524_Painting-Tool\VectorGenTests\vvvv_50beta37_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\PointForceField (VF2D.Sources).v4p" systemname="PointForceField (VF2D.Sources)" filename="D:\Dropbox (Quayola Studio)\_Q-Production\0524_Painting-Tool\VectorGenTests\vvvv_50beta37_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\PointForceField (VF2D.Sources).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="3585" top="1935" width="14670" height="12255">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\PointForceField (VF2D.Sources).v4p" systemname="PointForceField (VF2D.Sources)" filename="D:\Dropbox (Quayola Studio)\_Q-Production\0524_Painting-Tool\VectorGenTests\vvvv_50beta37_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\PointForceField (VF2D.Sources).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="10200" top="1920" width="14670" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2055" top="9405" width="795" height="240">
@@ -31,7 +31,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="2100" top="7185" width="1290" height="270">
+   <BOUNDS type="Node" left="1500" top="7185" width="1290" height="270">
    </BOUNDS>
    <PIN pinname="File Path" visible="1" slicecount="1" values="..\..\..\..\..\Happy.fxh\nodes\modules\sdfTemplate.fx">
    </PIN>
@@ -45,7 +45,7 @@
    </PIN>
    </NODE>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="2070" top="7950" width="1455" height="270">
+   <BOUNDS type="Node" left="1470" top="7950" width="1455" height="270">
    </BOUNDS>
    <PIN pinname="Regular Expression" visible="1" slicecount="1" values="(CL_)">
    </PIN>
@@ -59,9 +59,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2970" top="5820" width="2040" height="240">
+   <BOUNDS type="Box" left="2370" top="5820" width="2040" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2970" top="5820" width="0" height="0">
+   <BOUNDS type="Node" left="2370" top="5820" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="MYCLASS2">
    </PIN>
@@ -77,9 +77,9 @@
    <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="42" dstpinname="To">
    </LINK>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="40">
-   <BOUNDS type="Node" left="1575" top="4935" width="100" height="100">
+   <BOUNDS type="Node" left="975" top="4935" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1575" top="4935" width="1950" height="240">
+   <BOUNDS type="Box" left="975" top="4935" width="1950" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="fPointForceFieldV2D">
    </PIN>
@@ -91,7 +91,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="4005" top="5355" width="100" height="100">
+   <BOUNDS type="Node" left="3405" top="5355" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
    </PIN>
@@ -101,7 +101,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="38">
-   <BOUNDS type="Node" left="2985" top="5490" width="100" height="100">
+   <BOUNDS type="Node" left="2385" top="5490" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -123,9 +123,9 @@
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="41" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="37" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3930" top="4800" width="795" height="240">
+   <BOUNDS type="Box" left="3330" top="4800" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3930" top="4800" width="0" height="0">
+   <BOUNDS type="Node" left="3330" top="4800" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -143,7 +143,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="3915" top="4425" width="100" height="100">
+   <BOUNDS type="Node" left="3315" top="4425" width="100" height="100">
    </BOUNDS>
    <PIN pinname="ID in ParentPatch" visible="-1" pintype="Output">
    </PIN>
@@ -169,9 +169,9 @@
    <LINK srcnodeid="43" srcpinname="Shader Content" dstnodeid="42" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="35" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="2550" top="7635" width="795" height="240">
+   <BOUNDS type="Box" left="1950" top="7635" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2550" top="7635" width="0" height="0">
+   <BOUNDS type="Node" left="1950" top="7635" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="(FN_)">
    </PIN>
@@ -231,7 +231,7 @@
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="2" dstpinname="Input String">
    </LINK>
    <NODE systemname="DynamicBuffer (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Value)" componentmode="Hidden" id="92">
-   <BOUNDS type="Node" left="7680" top="3366" width="100" height="100">
+   <BOUNDS type="Node" left="7680" top="3360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -241,13 +241,13 @@
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="7680" top="3366">
+   <BOUNDS type="Box" left="7680" top="3360">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8085" top="1815" width="795" height="240">
+   <BOUNDS type="Box" left="7680" top="1875" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8085" top="1815" width="0" height="0">
+   <BOUNDS type="Node" left="7680" top="1875" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
@@ -355,7 +355,7 @@
    <LINK srcnodeid="92" srcpinname="Buffer" dstnodeid="98" dstpinname="Input 3">
    </LINK>
    <NODE systemname="DynamicBuffer (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Value)" componentmode="Hidden" id="101">
-   <BOUNDS type="Node" left="9111" top="3318" width="100" height="100">
+   <BOUNDS type="Node" left="9105" top="3360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Data" visible="1" slicecount="3" values="1,1,1">
    </PIN>
@@ -365,13 +365,13 @@
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="9111" top="3318">
+   <BOUNDS type="Box" left="9105" top="3360">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="100" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9525" top="2085" width="795" height="240">
+   <BOUNDS type="Box" left="9105" top="1815" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9525" top="2085" width="0" height="0">
+   <BOUNDS type="Node" left="9105" top="1815" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -405,7 +405,7 @@
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="75" dstpinname="Input Node">
    </LINK>
    <NODE systemname="Resample (Spreads)" nodename="Resample (Spreads)" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="7710" top="2760" width="100" height="100">
+   <BOUNDS type="Node" left="7680" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
    </PIN>
@@ -419,7 +419,7 @@
    <LINK srcnodeid="109" srcpinname="Output" dstnodeid="92" dstpinname="Data">
    </LINK>
    <NODE systemname="Resample (Spreads)" nodename="Resample (Spreads)" componentmode="Hidden" id="110">
-   <BOUNDS type="Node" left="9246" top="2700" width="100" height="100">
+   <BOUNDS type="Node" left="9105" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1" slicecount="1" values="1">
    </PIN>
@@ -442,12 +442,12 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.3.1">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <INFO author="" description="Creates a 2D vector field from point force(s)" tags="">
    </INFO>
    <NODE systemname="PointForceField_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Sources\PointForceField_VF2D.fx" nodename="PointForceField_VF2D (DX11.Effect)" componentmode="Hidden" id="68">
-   <BOUNDS type="Node" left="615" top="4260" width="100" height="100">
+   <BOUNDS type="Node" left="15" top="4260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shader Path" visible="1" pintype="Output">
    </PIN>
@@ -455,7 +455,7 @@
    <LINK srcnodeid="68" srcpinname="Shader Path" dstnodeid="43" dstpinname="File Path">
    </LINK>
    <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="4725" top="3090" width="100" height="100">
+   <BOUNDS type="Node" left="4365" top="3285" width="100" height="100">
    </BOUNDS>
    <PIN pinname="DataXYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>
@@ -489,7 +489,7 @@
    <LINK srcnodeid="113" srcpinname="Y Output Value" dstnodeid="85" dstpinname="DataXY">
    </LINK>
    <NODE systemname="Count (2d)" filename="%VVVV%\lib\nodes\modules\2D\Count (2D).v4p" nodename="Count (2d)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="4908" top="4056" width="100" height="100">
+   <BOUNDS type="Node" left="4443" top="2196" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -507,9 +507,9 @@
    <LINK srcnodeid="113" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="114">
-   <BOUNDS type="Box" left="6516" top="1896" width="792" height="240">
+   <BOUNDS type="Box" left="6510" top="1890" width="792" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6516" top="1896" width="0" height="0">
+   <BOUNDS type="Node" left="6510" top="1890" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -523,7 +523,7 @@
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Value)" componentmode="Hidden" id="90">
-   <BOUNDS type="Node" left="6330" top="3450" width="100" height="100">
+   <BOUNDS type="Node" left="6510" top="3360" width="100" height="100">
    </BOUNDS>
    <PIN pinname="DataXYZ" visible="1" slicecount="3" values="0,0,1">
    </PIN>
@@ -533,7 +533,7 @@
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="6330" top="3450">
+   <BOUNDS type="Box" left="6510" top="3360">
    </BOUNDS>
    <PIN pinname="Data" visible="1">
    </PIN>
@@ -543,7 +543,7 @@
    <LINK srcnodeid="88" srcpinname="Count" dstnodeid="90" dstpinname="Element Count">
    </LINK>
    <NODE systemname="Resample (Spreads)" filename="" nodename="Resample (Spreads)" componentmode="Hidden" id="107">
-   <BOUNDS type="Node" left="6495" top="2760" width="100" height="100">
+   <BOUNDS type="Node" left="6510" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="BinSize" slicecount="1" values="3">
    </PIN>
@@ -594,4 +594,6 @@
    </LINK>
    <LINK srcnodeid="114" srcpinname="Y Output Value" dstnodeid="107" dstpinname="Input">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>
