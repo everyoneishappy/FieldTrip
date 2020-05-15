@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		3D Volume Texture Distance Function
+//		3D Scalar Domain Twist Function
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -11,34 +11,31 @@
 #define FN_BODY
 
 
-#ifndef SDF_FXH
-#include <packs\happy.fxh\sdf.fxh>
-#endif
 
-// DEFINES
-#ifndef FN_SAMPLEMODE
-#define FN_SAMPLEMODE Clamp
+// Input SF3D function placeholder
+#ifndef FN_INPUT
+#define FN_INPUT length
 #endif
 
 
-// Paramaters
-float4x4 FN_InvMat : FN_INVMAT;
-Texture3D FN_dVol : FN_DVOL;
-float FN_repeat : FN_REPEAT;
-SamplerState FN_Samp : Immutable
+float3 pTwist(float3 p, float strength)
 {
-	Filter = MIN_MAG_MIP_LINEAR;
-	AddressU = FN_SAMPLEMODE;
-	AddressV = FN_SAMPLEMODE;
-	AddressW = FN_SAMPLEMODE;
-};
+    float c = cos(strength * p.y);
+    float s = sin(strength * p.y);
+    float2x2  m = float2x2(c, s, -s, c);
+    float3  q = float3(mul(p.xz, m), p.y);
+    return q;
+}
 
 
+
+// Parameters
+float FN_Strength : FN_STRENGTH = 1.0;
 
 float FN_ (float3 p)
 {
-	return fDistVolume(p, FN_dVol, FN_Samp, FN_InvMat, FN_repeat);
-
+	p = pTwist(p, FN_Strength);
+	return FN_INPUT(p);
 }
 // end of the function body
 #endif 
@@ -48,8 +45,6 @@ float FN_ (float3 p)
 #define SF3D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 technique11 RemoveMe{}
 

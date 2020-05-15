@@ -12,8 +12,7 @@ RWTexture3D<float4> OUTPUT : BACKBUFFER;
 
 float4x4 InvTransform;
 float3 InvVolumeSize : INVTARGETSIZE;
-uint tranformCount, radCount, maxCount;
-//float3 VolumeSize : TARGETSIZE;
+
 
 
 

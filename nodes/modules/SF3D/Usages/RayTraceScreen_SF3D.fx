@@ -90,6 +90,7 @@ PS_OUT PS_TransferTexture (VS_OUT In)
 	float3 pos = ro + rd * rayStart;; //minDist?
 	float3 dpos =999999;
 	float3 stepDir = rd*stepSize;
+	float maxDist = 64.0;
 
 	// Ray loop
 	float4 col = 0;

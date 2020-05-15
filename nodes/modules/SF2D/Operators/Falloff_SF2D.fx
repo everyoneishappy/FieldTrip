@@ -1,7 +1,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		3D Volume Texture Distance Function
+//		2D Scalar Falloff op
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -10,42 +10,38 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-
-#ifndef SDF_FXH
-#include <packs\happy.fxh\sdf.fxh>
+// Input SF2D function placeholder
+#ifndef FN_INPUT
+#define FN_INPUT length
 #endif
 
 // DEFINES
-#ifndef FN_SAMPLEMODE
-#define FN_SAMPLEMODE Clamp
+#ifndef MAP_FXH
+#include <packs\happy.fxh\map.fxh>
+#endif
+
+#ifndef FN_MAPMODE
+#define FN_MAPMODE map
 #endif
 
 
-// Paramaters
-float4x4 FN_InvMat : FN_INVMAT;
-Texture3D FN_dVol : FN_DVOL;
-float FN_repeat : FN_REPEAT;
-SamplerState FN_Samp : Immutable
-{
-	Filter = MIN_MAG_MIP_LINEAR;
-	AddressU = FN_SAMPLEMODE;
-	AddressV = FN_SAMPLEMODE;
-	AddressW = FN_SAMPLEMODE;
-};
+// parameters
+
+float FN_falloffDist : FN_FALLOFFDIST;
+float FN_bias : FN_BIAS;
 
 
-
-float FN_ (float3 p)
-{
-	return fDistVolume(p, FN_dVol, FN_Samp, FN_InvMat, FN_repeat);
-
+float FN_ (float2 p)
+{  
+	float dist = FN_INPUT(p);
+	return bias(1.0 - mapClamp(FN_INPUT(p), 0, FN_falloffDist, 0, 1), FN_bias);
 }
 // end of the function body
 #endif 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-#ifndef SF3D
-#define SF3D FN_
+#ifndef SF2D
+#define SF2D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
 

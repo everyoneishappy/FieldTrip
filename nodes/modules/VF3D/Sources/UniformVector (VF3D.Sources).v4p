@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p" scrollx="75" scrolly="30" systemname="UniformVector (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p" scrollx="75" scrolly="30" systemname="UniformVector (VF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p">
    <BOUNDS type="Window" left="3495" top="4350" width="13155" height="11715">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1" systemname="IOBox (Node)">
@@ -116,13 +116,13 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="14" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1185" top="4860" width="7200" height="3045">
@@ -221,6 +221,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="InputXYZ">
    </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="16" dstpinname="InputXYZ">
    </LINK>
@@ -244,4 +246,6 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="0" dstpinname="Custom Semantic">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

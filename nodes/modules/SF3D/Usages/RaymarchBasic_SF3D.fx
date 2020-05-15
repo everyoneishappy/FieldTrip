@@ -176,7 +176,7 @@ technique11 RayMarchNormals
 	}
 }
 
-technique11 RayMarchPosistion
+technique11 RayMarchPosition
 {
 	pass P0
 	{

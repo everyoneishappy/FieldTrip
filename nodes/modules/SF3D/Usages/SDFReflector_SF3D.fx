@@ -52,8 +52,26 @@ void CSReflect(csin input)
 		ParticleBuffer[particleIndex].position -= 1.01 * d * n;	// move particle back outside
 		ParticleBuffer[particleIndex].velocity = reflect(ParticleBuffer[particleIndex].velocity * damping, n); // bounce off of normal
 	}
+}
+
+[numthreads(XTHREADS, YTHREADS, ZTHREADS)]
+void CSReflect_Inside(csin input)
+{
+	uint particleIndex = GetParticleIndex( input.DTID.x );
+	if (particleIndex == -1 ) return;
+	float3 p = ParticleBuffer[particleIndex].position;
+	float d = -SF3D(p);
 	
+	if (d < .0) // particle has gone inside surface
+	{
+		float3 n = -calcGradS3(SF3D, p, eps);
+		n = normalize(n);
+		
+		ParticleBuffer[particleIndex].position -= 1.01 * d * n;	// move particle back outside
+		ParticleBuffer[particleIndex].velocity = reflect(ParticleBuffer[particleIndex].velocity * damping, n); // bounce off of normal
+	}
 }
 
 
 technique11 SDFReflect { pass P0{SetComputeShader( CompileShader( cs_5_0, CSReflect() ) );} }
+technique11 SDFReflectInside { pass P0{SetComputeShader( CompileShader( cs_5_0, CSReflect_Inside() ) );} }

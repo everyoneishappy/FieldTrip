@@ -26,7 +26,7 @@ cbuffer cbControls:register(b0)
 
 
 Texture2D matCapTex <string uiname="MatCap Texture";> ;
-
+float alpha = 1.0;
 SamplerState sMatCap <bool visible=false;>
 {
 	Filter=MIN_MAG_MIP_LINEAR;
@@ -89,6 +89,8 @@ PS_OUT PS_MatCap(VS_OUT In)
 	float shadow = calcShadow(p);
 	c.rgb *= shadow;
 	#endif
+	
+	c.a = alpha;
 	
 	float4 PosWVP=mul(float4(p.xyz,1),tVP);
 	PS_OUT Out;

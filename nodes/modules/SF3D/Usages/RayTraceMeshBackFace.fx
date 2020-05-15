@@ -1,17 +1,4 @@
-//@author: vux
-//@help: standard constant shader
-//@tags: color
-//@credits: 
 
-Texture2D texture2d <string uiname="Texture";>;
-float4x4 tTex <string uiname="Texture Transform"; bool uvspace=true; >;
-bool nNormals <string uiname="Human Friendly Normals";>;
-SamplerState g_samLinear <string uiname="Sampler State";>
-{
-    Filter = MIN_MAG_MIP_LINEAR;
-    AddressU = Clamp;
-    AddressV = Clamp;
-};
 
  
 cbuffer cbPerDraw : register( b0 )
