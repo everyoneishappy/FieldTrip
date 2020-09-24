@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TriPrismSDF (SF3D.Sources).v4p" systemname="TriPrismSDF (SF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TriPrismSDF (SF3D.Sources).v4p" scrollx="75" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Sources\TriPrismSDF (SF3D.Sources).v4p" systemname="TriPrismSDF (SF3D.Sources)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\TriPrismSDF (SF3D.Sources).v4p" scrollx="75" scrolly="0">
    <BOUNDS type="Window" left="11295" top="3825" width="11640" height="11055">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE id="68" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
    <BOUNDS type="Node" left="8340" top="4665" width="330" height="270">
@@ -353,7 +353,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7575" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.08,0.08,0.08">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.04,0.15">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -388,7 +388,7 @@
    </NODE>
    <LINK srcnodeid="68" srcpinname="Output" dstnodeid="80" dstpinname="Semantic">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE id="93" systemname="RenderSemantic (DX11 StructuredBuffer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11 StructuredBuffer)" componentmode="Hidden">
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
@@ -606,4 +606,6 @@
    </LINK>
    <INFO author="" description="Creates a 3D signed distance field of a triangular prism" tags="">
    </INFO>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

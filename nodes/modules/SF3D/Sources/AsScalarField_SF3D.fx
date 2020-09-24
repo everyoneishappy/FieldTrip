@@ -19,7 +19,7 @@ float4x4 FN_InvMat : FN_INVMAT=  { 1, 0, 0,  0,
 Texture3D FN_vfTex : FN_VFTEX;
 SamplerState FN_Samp : Immutable;
 
-float3 FN_ (float3 p)
+float FN_ (float3 p)
 {
 	p = mul(float4(p, 1), FN_InvMat).xyz; 
 	p.y = -p.y;

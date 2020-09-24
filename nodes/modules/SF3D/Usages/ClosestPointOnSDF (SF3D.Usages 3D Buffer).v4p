@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages 3D Buffer).v4p" systemname="ClosestPointOnSDF (SF3D.Usages 3D Buffer)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF3D.Usages 3D Buffer).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2175" top="3435" width="12750" height="11100">
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages 3D Buffer).v4p" systemname="ClosestPointOnSDF (SF3D.Usages 3D Buffer)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF3D.Usages 3D Buffer).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="13620" top="4260" width="12750" height="11100">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="38.1.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
    <BOUNDS type="Box" left="210" top="1260" width="795" height="240">
@@ -85,9 +85,9 @@
    <LINK srcnodeid="18" srcpinname="Output Node" dstnodeid="15" dstpinname="Resource Semantics">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9630" top="570" width="480" height="480">
+   <BOUNDS type="Box" left="10410" top="555" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="9630" top="570" width="0" height="0">
+   <BOUNDS type="Node" left="10410" top="555" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -117,9 +117,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
-   <BOUNDS type="Node" left="10485" top="570" width="100" height="100">
+   <BOUNDS type="Node" left="11265" top="555" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10485" top="570" width="795" height="240">
+   <BOUNDS type="Box" left="11265" top="555" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
@@ -151,13 +151,15 @@
    </PIN>
    <BOUNDS type="Box" left="840" top="5175">
    </BOUNDS>
+   <PIN pinname="Thread Group X" slicecount="1" values="128">
+   </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Count X">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="38" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4995" top="570" width="795" height="240">
+   <BOUNDS type="Box" left="4680" top="585" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4995" top="570" width="0" height="0">
+   <BOUNDS type="Node" left="4680" top="585" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -241,11 +243,11 @@
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Element Count">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7965" top="450" width="795" height="240">
+   <BOUNDS type="Box" left="9060" top="525" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7965" top="450" width="0" height="0">
+   <BOUNDS type="Node" left="9060" top="525" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="48">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -261,17 +263,19 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6855" top="555" width="795" height="240">
+   <BOUNDS type="Box" left="6585" top="720" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6855" top="555" width="0" height="0">
+   <BOUNDS type="Node" left="6585" top="720" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.55">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="offset">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Offset Defualt|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <PACK Name="dx11" Version="1.3.1.1">
@@ -315,7 +319,7 @@
    </BOUNDS>
    <PIN pinname="ShaderCode" visible="1" slicecount="1" values="|// INTEGRATIONMODE: Integrate postion by vector field&cr;&lf;// 0:Euler, 1:RK2, 2:RK4&cr;&lf;&cr;&lf;#ifndef FIELDS_FXH&cr;&lf;#include &lt;packs\happy.fxh\fields.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Vector Field Function Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// VF3D START&cr;&lf;&cr;&lf;&tab;// placeholders for two input firld classes&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT1 START&cr;&lf;&tab;class cInput1 : iVectorField3D &cr;&lf;&tab;{&cr;&lf;&tab;&tab;&cr;&lf;&tab;&tab;float3 Vector (float3 p)&cr;&lf;&tab;&tab;{&cr;&lf;&tab;&tab;&tab;return float3(.01,0,0);&cr;&lf;&tab;&tab;}&cr;&lf;&tab;};&cr;&lf;&tab;cInput1 INPUT1;&cr;&lf;&tab;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&tab;// INPUT2 START&cr;&lf;// paramaters&cr;&lf;float3 direction : DIRECTION = float3(1.0, 0.0, 0.0);&cr;&lf;&tab;&cr;&lf;// classes&cr;&lf;class cDirection3D : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;//return direction;  // getting glitches???&cr;&lf;&tab;&tab;return mad(p, .00001, direction);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cDirection3D INPUT2; &cr;&lf;&cr;&lf;// INPUT2 END&cr;&lf;&tab;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;class cAdd : iVectorField3D &cr;&lf;{&cr;&lf;&tab;float3 Vector (float3 p)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;return INPUT1.Vector(p) + INPUT2.Vector(p);&cr;&lf;&tab;}&cr;&lf;};&cr;&lf;&cr;&lf;//final field function class instance&cr;&lf;cAdd VF3D; &cr;&lf;&cr;&lf;// VF3D END&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Seed Position 3D Buffer&quot;;&gt;;&cr;&lf;&cr;&lf;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;uint stepCount = 12;&cr;&lf;float stepSize = 0.01666;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_StreamLine( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&cr;&lf;&tab;Output[dtid.x] = bPos[dtid.x];&cr;&lf;&tab;float3 p = bPos[dtid.x];&cr;&lf;&tab;for (uint i = 0; i &lt; stepCount; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;uint index = dtid.x * stepCount + i;&cr;&lf;&tab;&tab;p = integrate(VF3D, p, stepSize); &cr;&lf;&tab;&tab;Output[index] =  p;&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 StreamLine&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_StreamLine() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
-   <PIN pinname="ConfigShader" slicecount="1" values="|&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Simple Sphere Distance Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fSphere3DSDF_1_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fSphere3DSDF_1_BODY &cr;&lf;#define fSphere3DSDF_1_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;StructuredBuffer&lt;float3&gt; fSphere3DSDF_1_pos : fSphere3DSDF_1_POS;&cr;&lf;StructuredBuffer&lt;float&gt; fSphere3DSDF_1_radius : fSphere3DSDF_1_RADIUS;&cr;&lf;int fSphere3DSDF_1_count : fSphere3DSDF_1_COUNT = 1 ;&cr;&lf;&cr;&lf;float fSphere3DSDF_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fSphere3DSDF_1_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;d = min (d, fSphere(p-fSphere3DSDF_1_pos[i], fSphere3DSDF_1_radius[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fCombineSDF3D_1_INPUT1&cr;&lf;#define fCombineSDF3D_1_INPUT1 fSphere3DSDF_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Simple Sphere Distance Class&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fSphere3DSDF_1_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fSphere3DSDF_1_BODY &cr;&lf;#define fSphere3DSDF_1_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;StructuredBuffer&lt;float3&gt; fSphere3DSDF_1_pos : fSphere3DSDF_1_POS;&cr;&lf;StructuredBuffer&lt;float&gt; fSphere3DSDF_1_radius : fSphere3DSDF_1_RADIUS;&cr;&lf;int fSphere3DSDF_1_count : fSphere3DSDF_1_COUNT = 1 ;&cr;&lf;&cr;&lf;float fSphere3DSDF_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fSphere3DSDF_1_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;d = min (d, fSphere(p-fSphere3DSDF_1_pos[i], fSphere3DSDF_1_radius[i]));&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fScalarOpS3D_0_INPUT1&cr;&lf;#define fScalarOpS3D_0_INPUT1 fSphere3DSDF_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_1_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fNoiseS3D_1_BODY &cr;&lf;#define fNoiseS3D_1_BODY&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_1_NOISEBASIS perlin&cr;&lf;#define fNoiseS3D_1_INFLECTION 0 // preprocessor options from patch inserted here&cr;&lf;#ifndef fNoiseS3D_1_NOISEBASIS&cr;&lf;#define fNoiseS3D_1_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_1_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_1_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_1_INFLECTION&cr;&lf;#define fNoiseS3D_1_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_1_freq : fNoiseS3D_1_FREQ = 2; &cr;&lf;float fNoiseS3D_1_amp : fNoiseS3D_1_AMP = .1; &cr;&lf;float fNoiseS3D_1_center : fNoiseS3D_1_CENTER; &cr;&lf;float fNoiseS3D_1_bias : fNoiseS3D_1_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_1_domainOffset : fNoiseS3D_1_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_1_freq + fNoiseS3D_1_domainOffset;&cr;&lf;&tab;float noise = fNoiseS3D_1_NOISEBASIS(p  fNoiseS3D_1_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_1_bias);&cr;&lf;&tab;#if fNoiseS3D_1_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_1_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * noise * fNoiseS3D_1_amp + fNoiseS3D_1_center;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fScalarOpS3D_0_INPUT2&cr;&lf;#define fScalarOpS3D_0_INPUT2 fNoiseS3D_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Scalar Field Basic Ops Functions + - * /&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fScalarOpS3D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fScalarOpS3D_0_BODY &cr;&lf;#define fScalarOpS3D_0_BODY&cr;&lf;&cr;&lf;#define fScalarOpS3D_0_OP fScalarOpS3D_0_INPUT1(p) + fScalarOpS3D_0_INPUT2(p) // preprocessor options from patch inserted here&cr;&lf;#ifndef fScalarOpS3D_0_OP&cr;&lf;#define fScalarOpS3D_0_OP fScalarOpS3D_0_INPUT1(p) + fScalarOpS3D_0_INPUT2(p); &cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;float fScalarOpS3D_0_Default : fScalarOpS3D_0_DEFAULT;&cr;&lf;float fScalarOpS3D_0_reverseOrder : fScalarOpS3D_0_REVERSEORDER;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fScalarOpS3D_0_INPUT1&cr;&lf;#define fScalarOpS3D_0_INPUT1 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input 2 Defualt option&cr;&lf;#ifndef fScalarOpS3D_0_INPUT2&cr;&lf;float fScalarOpS3D_0_singleValue (float3 p)&cr;&lf;{&cr;&lf;&tab;return fScalarOpS3D_0_Default; // if a second input class is not provided defualt to semantic&cr;&lf;}&cr;&lf;#define fScalarOpS3D_0_INPUT2 fScalarOpS3D_0_singleValue&cr;&lf;#endif&cr;&lf;&cr;&lf;float fScalarOpS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;return fScalarOpS3D_0_OP; &cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fCombineSDF3D_1_INPUT2&cr;&lf;#define fCombineSDF3D_1_INPUT2 fScalarOpS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D SDF Combination Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fCombineSDF3D_1_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fCombineSDF3D_1_BODY &cr;&lf;#define fCombineSDF3D_1_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fCombineSDF3D_1_OP I(fCombineSDF3D_1_INPUT1(p), fCombineSDF3D_1_INPUT2(p)) // preprocessor options from patch inserted here&cr;&lf;#ifndef fCombineSDF3D_1_OP &cr;&lf;#define fCombineSDF3D_1_OP U(fCombineSDF3D_1_INPUT1(p), fCombineSDF3D_1_INPUT2(p))&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fCombineSDF3D_1_INPUT1&cr;&lf;#define fCombineSDF3D_1_INPUT1 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef fCombineSDF3D_1_INPUT2&cr;&lf;#define fCombineSDF3D_1_INPUT2 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float fCombineSDF3D_1_p1 : fCombineSDF3D_1_P1;&cr;&lf;float fCombineSDF3D_1_p2 : fCombineSDF3D_1_P2;&cr;&lf;&cr;&lf;float fCombineSDF3D_1_ (float3 p)&cr;&lf;{&cr;&lf;&tab;&tab;return fCombineSDF3D_1_OP; // #defined in patch&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D fCombineSDF3D_1_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;uint iterations = 2;&cr;&lf;float offset = 0;&cr;&lf;float eps = 0.001;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Sample Position 3D Buffer&quot;;&gt;;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(64, 1, 1)]&cr;&lf;void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&tab;float3 p = bPos[dtid.x];&cr;&lf;&tab;for (uint i = 0; i &lt; iterations; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 g;&cr;&lf;&tab;&tab;g = calcNormS3(SF3D, p, eps);&cr;&lf;&tab;&tab;float v = SF3D(p)-offset;&cr;&lf;&tab;&tab;p -= g * v;&lf;&tab;}&cr;&lf;&tab;&cr;&lf;    Output[dtid.x] = p; &cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 ClosestPoint&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_ClosestPoint() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
+   <PIN pinname="ConfigShader" slicecount="1" values="|////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D Noise Basis Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fNoiseS3D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fNoiseS3D_0_BODY &cr;&lf;#define fNoiseS3D_0_BODY&cr;&lf;&cr;&lf;#ifndef NOISE_FXH&cr;&lf;#include &lt;packs\happy.fxh\noise.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef MAP_FXH&cr;&lf;#include &lt;packs\happy.fxh\map.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fNoiseS3D_0_NOISEBASIS perlin&cr;&lf;#define fNoiseS3D_0_INFLECTION 0 // preprocessor options from patch inserted here&cr;&lf;#ifndef fNoiseS3D_0_NOISEBASIS&cr;&lf;#define fNoiseS3D_0_NOISEBASIS perlin&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#define fNoiseS3D_0_WORLEYOPTIONS&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef fNoiseS3D_0_INFLECTION&cr;&lf;#define fNoiseS3D_0_INFLECTION 0&cr;&lf;#endif&cr;&lf;&cr;&lf;// paramaters&cr;&lf;float fNoiseS3D_0_freq : fNoiseS3D_0_FREQ = 2; &cr;&lf;float fNoiseS3D_0_amp : fNoiseS3D_0_AMP = .1; &cr;&lf;float fNoiseS3D_0_center : fNoiseS3D_0_CENTER; &cr;&lf;float fNoiseS3D_0_bias : fNoiseS3D_0_BIAS = 0.5;&cr;&lf;float3 fNoiseS3D_0_domainOffset : fNoiseS3D_0_DOMAINOFFSET;&cr;&lf;&tab;&cr;&lf;&cr;&lf;&cr;&lf;float fNoiseS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;p = p * fNoiseS3D_0_freq + fNoiseS3D_0_domainOffset;&cr;&lf;&tab;float noise = fNoiseS3D_0_NOISEBASIS(p  fNoiseS3D_0_WORLEYOPTIONS);&cr;&lf;&tab;noise = sign(noise) * bias(abs(noise), fNoiseS3D_0_bias);&cr;&lf;&tab;#if fNoiseS3D_0_INFLECTION == 1&cr;&lf;&tab;// Billow&cr;&lf;&tab;noise = abs(noise);&cr;&lf;&tab;#elif fNoiseS3D_0_INFLECTION == 2&cr;&lf;&tab;//Ridge&cr;&lf;&tab;noise = 1 - abs(noise);&cr;&lf;&tab;#endif&cr;&lf;&tab;return noise * fNoiseS3D_0_amp + fNoiseS3D_0_center;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fCombineSDF3D_0_INPUT1&cr;&lf;#define fCombineSDF3D_0_INPUT1 fNoiseS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D box Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fBox3DSDF_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fBox3DSDF_0_BODY &cr;&lf;#define fBox3DSDF_0_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;StructuredBuffer&lt;float4x4&gt; fBox3DSDF_0_invTransform : fBox3DSDF_0_INVTRANSFORM;&cr;&lf;StructuredBuffer&lt;float3&gt; fBox3DSDF_0_size : fBox3DSDF_0_SIZE;&cr;&lf;&cr;&lf;int fBox3DSDF_0_count : fBox3DSDF_0_COUNT;&cr;&lf;&cr;&lf;float fBox3DSDF_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fBox3DSDF_0_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 tp = mul(float4(p, 1), fBox3DSDF_0_invTransform[i]).xyz;&cr;&lf;&tab;&tab;d = min (d, fBox(tp, fBox3DSDF_0_size[i]));&cr;&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fCombineSDF3D_0_INPUT2&cr;&lf;#define fCombineSDF3D_0_INPUT2 fBox3DSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D SDF Combination Functions&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fCombineSDF3D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fCombineSDF3D_0_BODY &cr;&lf;#define fCombineSDF3D_0_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#define fCombineSDF3D_0_OP I(fCombineSDF3D_0_INPUT1(p), fCombineSDF3D_0_INPUT2(p)) // preprocessor options from patch inserted here&cr;&lf;#ifndef fCombineSDF3D_0_OP &cr;&lf;#define fCombineSDF3D_0_OP U(fCombineSDF3D_0_INPUT1(p), fCombineSDF3D_0_INPUT2(p))&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fCombineSDF3D_0_INPUT1&cr;&lf;#define fCombineSDF3D_0_INPUT1 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input class placeholder&cr;&lf;#ifndef fCombineSDF3D_0_INPUT2&cr;&lf;#define fCombineSDF3D_0_INPUT2 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Paramaters&cr;&lf;float fCombineSDF3D_0_p1 : fCombineSDF3D_0_P1;&cr;&lf;float fCombineSDF3D_0_p2 : fCombineSDF3D_0_P2;&cr;&lf;&cr;&lf;float fCombineSDF3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;&tab;return fCombineSDF3D_0_OP; // #defined in patch&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fBoundingSDFS3D_0_INPUT1&cr;&lf;#define fBoundingSDFS3D_0_INPUT1 fCombineSDF3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;3D box Distance Function&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fBox3DSDF_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fBox3DSDF_0_BODY &cr;&lf;#define fBox3DSDF_0_BODY&cr;&lf;&cr;&lf;#ifndef SDF_FXH&cr;&lf;#include &lt;packs\happy.fxh\sdf.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;// Parameters&cr;&lf;StructuredBuffer&lt;float4x4&gt; fBox3DSDF_0_invTransform : fBox3DSDF_0_INVTRANSFORM;&cr;&lf;StructuredBuffer&lt;float3&gt; fBox3DSDF_0_size : fBox3DSDF_0_SIZE;&cr;&lf;&cr;&lf;int fBox3DSDF_0_count : fBox3DSDF_0_COUNT;&cr;&lf;&cr;&lf;float fBox3DSDF_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float d = 999999;&cr;&lf;&tab;for(int i = 0; i&lt; fBox3DSDF_0_count; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 tp = mul(float4(p, 1), fBox3DSDF_0_invTransform[i]).xyz;&cr;&lf;&tab;&tab;d = min (d, fBox(tp, fBox3DSDF_0_size[i]));&cr;&lf;&tab;}&cr;&lf;&tab;return d;&cr;&lf;}&cr;&lf;// end of the function body&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef fBoundingSDFS3D_0_INPUT2&cr;&lf;#define fBoundingSDFS3D_0_INPUT2 fBox3DSDF_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;//&cr;&lf;//&tab;&tab;Only calculate an SDF if a 2nd bounding SDF returns less then 0&cr;&lf;//&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;// This token will be replaced with function name via RegExpr: &quot;fBoundingSDFS3D_0_&quot;&cr;&lf;&cr;&lf;// ensures the function is defined only once per instance&cr;&lf;#ifndef fBoundingSDFS3D_0_BODY &cr;&lf;#define fBoundingSDFS3D_0_BODY&cr;&lf;&cr;&lf;// Parameters&cr;&lf;float fBoundingSDFS3D_0_padding : fBoundingSDFS3D_0_PADDING;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fBoundingSDFS3D_0_INPUT1&cr;&lf;#define fBoundingSDFS3D_0_INPUT1 length&cr;&lf;#endif&cr;&lf;&cr;&lf;// Input function placeholder&cr;&lf;#ifndef fBoundingSDFS3D_0_INPUT2&cr;&lf;#define fBoundingSDFS3D_0_INPUT2 length&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;float fBoundingSDFS3D_0_ (float3 p)&cr;&lf;{&cr;&lf;&tab;float test = fBoundingSDFS3D_0_INPUT2(p);&cr;&lf;&tab;if ((test - fBoundingSDFS3D_0_padding) &gt; 0) return test;&cr;&lf;&tab;else return fBoundingSDFS3D_0_INPUT1(p);&cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;#endif &cr;&lf;&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D fBoundingSDFS3D_0_&cr;&lf;#endif&cr;&lf;////////////////////////////////////////////////////////////////////////////////////////////////&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SBUFFER_FXH&cr;&lf;#include &lt;packs\happy.fxh\sbuffer.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;#ifndef CALC_FXH&cr;&lf;#include &lt;packs\happy.fxh\calc.fxh&gt;&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;#ifndef SF3D&cr;&lf;#define SF3D placeHolderS3&cr;&lf;#endif&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;uint threadCount;&cr;&lf;uint iterations = 2;&cr;&lf;&cr;&lf;float eps = 0.001;&cr;&lf;StructuredBuffer&lt;float3&gt; bPos &lt;string uiname=&quot;Sample Position 3D Buffer&quot;;&gt;;&cr;&lf;&cr;&lf;float offsetDefault = 0;&cr;&lf;StructuredBuffer&lt;float&gt; offsetBuffer;&cr;&lf;RWStructuredBuffer&lt;float3&gt; Output : BACKBUFFER;&cr;&lf;&cr;&lf;//GROUPSIZE&cr;&lf;[numthreads(128, 1, 1)]&cr;&lf;void CS_ClosestPoint( uint3 dtid : SV_DispatchThreadID )&cr;&lf;{&cr;&lf;&tab;if (dtid.x &gt;= threadCount) { return; }&cr;&lf;&tab;&cr;&lf;&tab;float offset = sbLoad(offsetBuffer, offsetDefault, dtid.x);&cr;&lf;&tab;float3 p = bPos[dtid.x];&cr;&lf;&tab;for (uint i = 0; i &lt; iterations; i++)&cr;&lf;&tab;{&cr;&lf;&tab;&tab;float3 g;&cr;&lf;&tab;&tab;g = calcNormS3(SF3D, p, eps);&cr;&lf;&tab;&tab;float v = SF3D(p) - offset;&cr;&lf;&tab;&tab;p -= g * v;&lf;&tab;}&cr;&lf;&tab;&cr;&lf;    Output[dtid.x] = p; &cr;&lf;}&cr;&lf;&cr;&lf;&cr;&lf;technique11 ClosestPoint&cr;&lf;{&cr;&lf;&tab;pass P0&cr;&lf;&tab;{&cr;&lf;&tab;&tab;SetComputeShader( CompileShader( cs_5_0, CS_ClosestPoint() ) );&cr;&lf;&tab;}&cr;&lf;}&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="ConfigDefines" slicecount="1" values="||">
    </PIN>
@@ -359,6 +363,10 @@
    </PIN>
    <PIN pinname="eps" visible="1">
    </PIN>
+   <PIN pinname="offsetDefault" visible="1">
+   </PIN>
+   <PIN pinname="offsetBuffer" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="0" dstpinname="offset">
    </LINK>
@@ -373,9 +381,9 @@
    <LINK srcnodeid="35" srcpinname="Geometry Out" dstnodeid="0" dstpinname="Geometry">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="9700" y="2870">
+   <LINKPOINT x="10220" y="2860">
    </LINKPOINT>
-   <LINKPOINT x="2435" y="3370">
+   <LINKPOINT x="2695" y="3365">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="15" dstpinname="Layer In">
@@ -417,15 +425,17 @@
    </PIN>
    <PIN pinname="Shader Path" visible="1" pintype="Output">
    </PIN>
+   <PIN pinname="eps" slicecount="1" values="0.001">
+   </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Shader Path" dstnodeid="12" dstpinname="File Path">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="61">
-   <BOUNDS type="Box" left="7260" top="1260" width="795" height="240">
+   <BOUNDS type="Box" left="7860" top="735" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7260" top="1260" width="0" height="0">
+   <BOUNDS type="Node" left="7860" top="735" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.00100000004749745">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -438,4 +448,18 @@
    </LINK>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
+   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="0" dstpinname="offsetDefault">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="62">
+   <BOUNDS type="Box" left="6855" top="1290" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6855" top="1290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Offset Buffer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output Node" dstnodeid="0" dstpinname="offsetBuffer">
+   </LINK>
    </PATCH>

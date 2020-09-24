@@ -92,10 +92,13 @@ PS_OUT PS_MatCap(VS_OUT In)
 	
 	c.a = alpha;
 	
-	float4 PosWVP=mul(float4(p.xyz,1),tVP);
+
 	PS_OUT Out;
 	Out.Color=c;
+	#if WRITEDEPTH == 1
+	float4 PosWVP=mul(float4(p.xyz,1),tVP);
 	Out.Depth=PosWVP.z/PosWVP.w;
+	#endif
 	return Out;
 }
 
