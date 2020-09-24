@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" systemname="AsVF3D (VF2D.Operators)" filename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" scrollx="105" scrolly="15">
-   <BOUNDS type="Window" left="13605" top="1620" width="15195" height="12255">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" systemname="AsVF3D (VF2D.Operators)" filename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D (VF2D.Operators).v4p" scrollx="1455" scrolly="225">
+   <BOUNDS type="Window" left="30555" top="3720" width="15195" height="12255">
    </BOUNDS>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1065" top="9465" width="795" height="240">
@@ -113,9 +113,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="6855" top="4395" width="1530" height="240">
+   <BOUNDS type="Box" left="4260" top="4290" width="1530" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6855" top="4395" width="0" height="0">
+   <BOUNDS type="Node" left="4260" top="4290" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="MYCLASS2">
    </PIN>
@@ -131,9 +131,9 @@
    <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="42" dstpinname="To">
    </LINK>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="40">
-   <BOUNDS type="Node" left="6465" top="3660" width="100" height="100">
+   <BOUNDS type="Node" left="3870" top="3555" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6465" top="3660" width="1125" height="240">
+   <BOUNDS type="Box" left="3870" top="3555" width="1125" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="fAsV3D2D">
    </PIN>
@@ -145,7 +145,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="7830" top="3870" width="100" height="100">
+   <BOUNDS type="Node" left="5235" top="3765" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
    </PIN>
@@ -155,7 +155,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="38">
-   <BOUNDS type="Node" left="6870" top="4065" width="100" height="100">
+   <BOUNDS type="Node" left="4275" top="3960" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -177,9 +177,9 @@
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="41" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="37" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7815" top="3375" width="795" height="240">
+   <BOUNDS type="Box" left="5220" top="3270" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7815" top="3375" width="0" height="0">
+   <BOUNDS type="Node" left="5220" top="3270" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -197,7 +197,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="7800" top="3000" width="100" height="100">
+   <BOUNDS type="Node" left="5205" top="2895" width="100" height="100">
    </BOUNDS>
    <PIN pinname="ID in ParentPatch" visible="-1" pintype="Output">
    </PIN>
@@ -321,14 +321,14 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="2">
+   <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="65" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <INFO author="" description="Convert a 2D scalar field to a 3D scalar field" tags="">
    </INFO>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8505" top="885" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -431,9 +431,9 @@
    </PIN>
    </NODE>
    <NODE systemname="RenderSemantic (DX11.Layer Transform)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Transform)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="8595" top="7665" width="100" height="100">
+   <BOUNDS type="Node" left="7215" top="5805" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8595" top="7665" width="3000" height="3000">
+   <BOUNDS type="Box" left="7215" top="5805" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -452,12 +452,10 @@
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="86" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Switch">
    </LINK>
    <NODE id="88" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
-   <BOUNDS type="Node" left="9105" top="7215" width="330" height="270">
+   <BOUNDS type="Node" left="7065" top="5220" width="330" height="270">
    </BOUNDS>
    <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
    </PIN>
@@ -473,9 +471,9 @@
    <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="88" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="87" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="9255" top="6915" width="1350" height="240">
+   <BOUNDS type="Box" left="7215" top="4920" width="1350" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="9255" top="6915" width="0" height="0">
+   <BOUNDS type="Node" left="7215" top="4920" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="MAT">
    </PIN>
@@ -573,7 +571,7 @@
    <LINK srcnodeid="96" srcpinname="Output String" dstnodeid="83" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="97">
-   <BOUNDS type="Node" left="9735" top="2520" width="100" height="100">
+   <BOUNDS type="Node" left="7320" top="2940" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -585,7 +583,7 @@
    <LINK srcnodeid="97" srcpinname="Transform Out" dstnodeid="85" dstpinname="Input">
    </LINK>
    <NODE systemname="AsVF3D_VF2D (DX11.Effect)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Operators\AsVF3D_VF2D.fx" nodename="AsVF3D_VF2D (DX11.Effect)" componentmode="Hidden" id="67">
-   <BOUNDS type="Node" left="4785" top="2595" width="100" height="100">
+   <BOUNDS type="Node" left="4830" top="1605" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Shader Path" visible="1" pintype="Output">
    </PIN>
@@ -634,4 +632,146 @@
    </LINK>
    <LINK srcnodeid="72" srcpinname="Resource Semantics" dstnodeid="70" dstpinname="Resource Semantic">
    </LINK>
+   <NODE systemname="RenderSemantic (DX11.Layer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Value)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="12255" top="8310" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12255" top="8310" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Semantic" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="99">
+   <BOUNDS type="Box" left="13650" top="7680" width="1380" height="405">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13650" top="7680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="USEPROJECTION">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="SEMANTIC">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="98">
+   <BOUNDS type="Node" left="12720" top="7875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Output String" dstnodeid="98" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="100" dstpinname="Semantic">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="98" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="101">
+   <BOUNDS type="Box" left="12165" top="1350" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12165" top="1350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Projection">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="100" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Output" dstnodeid="73" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="RenderSemantic (DX11.Layer Transform)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="RenderSemantic (DX11.Layer Transform)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="8490" top="4185" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8490" top="4185" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Semantic" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE id="104" systemname="Add (String)" nodename="Add (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="9000" top="3735" width="330" height="270">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" visible="-1" pintype="Input" values="None">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="INPUT2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="104" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="103" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="9150" top="3435" width="1350" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9150" top="3435" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="INVMAT">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Output String" dstnodeid="104" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Output" dstnodeid="105" dstpinname="Semantic">
+   </LINK>
+   <NODE systemname="Cons (DX11.RenderSemantic)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.RenderSemantic)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="7275" top="6180" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7275" top="6180" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="105" srcpinname="Output" dstnodeid="106" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="106" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Output Node" dstnodeid="105" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Output" dstnodeid="86" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

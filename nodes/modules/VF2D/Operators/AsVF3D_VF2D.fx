@@ -22,7 +22,8 @@
 #if FN_USEMAT==1
 float4x4 FN_Mat : FN_MAT;
 #endif
-
+float4x4 FN_invMat : FN_INVMAT;
+float FN_useProjection : FN_USEPROJECTION;
 
 // Input VF2D function placeholder
 #ifndef FN_INPUT
@@ -33,6 +34,9 @@ float3 FN_ (float3 p)
 {
 	#if FN_USEMAT==1
 	p = mul(float4(p, 1), FN_Mat).xyz;
+	
+	if(FN_useProjection) return mul(float4(FN_INPUT(p.xy / p.z), 0.0, 0.0), FN_invMat).xyz;
+	//float3(FN_INPUT(p.xy / p.z), 0);
 	#endif
 	
 	float2 input = FN_INPUT(p.FN_Swizzle);
