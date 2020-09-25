@@ -1,21 +1,21 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" bgcolor="16777215" systemname="FG_01_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" bgcolor="16777215" systemname="FG_01_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="315" top="0" width="12090" height="15210">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
-   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
+   <NODE systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="8085" top="15495" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="9">
@@ -65,9 +65,9 @@
    <LINK srcnodeid="13" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 1">
    </LINK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="24">
-   <BOUNDS type="Node" left="7155" top="7515" width="100" height="100">
+   <BOUNDS type="Node" left="7050" top="7950" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7155" top="7515" width="6000" height="4500">
+   <BOUNDS type="Box" left="7050" top="7950" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="18105" top="165" width="6045" height="5925">
    </BOUNDS>
@@ -708,9 +708,9 @@
    </NODE>
    <LINK srcnodeid="116" srcpinname="XYZ Transformed" dstnodeid="118" dstpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="117" dstpinname="XY">
+   <LINK srcnodeid="5" srcpinname="Position (Projection) XY" dstnodeid="117" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="44" dstpinname="Input Value">
+   <LINK srcnodeid="5" srcpinname="Position (Projection) XY" dstnodeid="44" dstpinname="Input Value">
    </LINK>
    <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="119">
    <BOUNDS type="Node" left="5625" top="16230" width="100" height="100">
@@ -983,6 +983,8 @@
    </PIN>
    <PIN pinname="Frequency XY" slicecount="2" values="2,2">
    </PIN>
+   <PIN pinname="Time" slicecount="1" values="5.24">
+   </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
    </LINK>
@@ -1006,22 +1008,6 @@
    </LINK>
    <LINK srcnodeid="47" srcpinname="Buffer" dstnodeid="30" dstpinname="Sample Position 2D Buffer">
    </LINK>
-   <NODE systemname="VectorFieldArrows (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\VectorFieldArrows (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="115">
-   <BOUNDS type="Node" left="6450" top="6645" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="scale" slicecount="1" values="0.2">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="115" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="115" srcpinname="Layer" dstnodeid="23" dstpinname="Layer 1">
-   </LINK>
    <NODE systemname="VectorFieldArrows (VF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\VectorFieldArrows (VF3D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF3D.Usages DX11.Layer)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="6975" top="12660" width="100" height="100">
    </BOUNDS>
@@ -1031,7 +1017,7 @@
    </PIN>
    <PIN pinname="Grid Size XYZ" slicecount="3" values="2,2,2">
    </PIN>
-   <PIN pinname="scale" slicecount="1" values="0.2">
+   <PIN pinname="scale" slicecount="1" values="0.25">
    </PIN>
    </NODE>
    <LINK srcnodeid="79" srcpinname="Layer" dstnodeid="101" dstpinname="Layer 2">
@@ -1246,4 +1232,24 @@
    <PIN pinname="Size" slicecount="1" values="24">
    </PIN>
    </NODE>
+   <NODE systemname="VectorFieldArrows (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\VectorFieldArrows (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldArrows (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="6450" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="scale" slicecount="1" values="0.25">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="0.1">
+   </PIN>
+   <BOUNDS type="Window" left="25650" top="1815" width="14190" height="11055">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="115" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="Layer" dstnodeid="23" dstpinname="Layer 1">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

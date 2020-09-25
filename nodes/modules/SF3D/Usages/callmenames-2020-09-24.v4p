@@ -1,0 +1,9 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\callmenames-2020-09-24.v4p">
+   <BOUNDS type="Window" left="11505" top="10245" width="9000" height="9000">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="addonpack" Version="40.0.0">
+   </PACK>
+   </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages 2D Buffer) help.v4p" scrollx="75" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages 2D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="435" top="675" width="8400" height="10275">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -24,13 +24,13 @@
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="54">
    <BOUNDS type="Node" left="2655" top="8970" width="100" height="100">
@@ -99,7 +99,7 @@
    <LINK srcnodeid="50" srcpinname="XYZ" dstnodeid="51" dstpinname="XYZ">
    </LINK>
    <NODE systemname="RandomSpread (Spreads 2d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 2d).v4p" nodename="RandomSpread (Spreads 2d)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="1215" top="2760" width="100" height="100">
+   <BOUNDS type="Node" left="1215" top="2340" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -113,9 +113,9 @@
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="1185" top="4545" width="100" height="100">
+   <BOUNDS type="Node" left="1185" top="4125" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1185" top="4545" width="3000" height="3000">
+   <BOUNDS type="Box" left="1185" top="4125" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="DataXY" visible="1">
    </PIN>
@@ -143,7 +143,7 @@
    <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Spread Count">
    </LINK>
    <NODE systemname="Cartesian (2d Vector)" nodename="Cartesian (2d Vector)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="1185" top="3555" width="100" height="100">
+   <BOUNDS type="Node" left="1185" top="3135" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Angle" visible="1">
    </PIN>
@@ -153,7 +153,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="1200" top="3135" width="100" height="100">
+   <BOUNDS type="Node" left="1200" top="2715" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -169,9 +169,9 @@
    <LINK srcnodeid="41" srcpinname="Y" dstnodeid="42" dstpinname="Length">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
-   <BOUNDS type="Box" left="1185" top="3930" width="795" height="480">
+   <BOUNDS type="Box" left="1185" top="3510" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1185" top="3930" width="0" height="0">
+   <BOUNDS type="Node" left="1185" top="3510" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -351,7 +351,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages 2D Buffer).v4p" nodename="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="870" top="4995" width="100" height="100">
+   <BOUNDS type="Node" left="870" top="4575" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
@@ -420,8 +420,6 @@
    <PIN pinname="Spread Count" visible="1" slicecount="1" values="256">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Buffer" dstnodeid="60" dstpinname="Value A 3D Buffer">
-   </LINK>
    <LINK srcnodeid="60" srcpinname="3D Buffer" dstnodeid="59" dstpinname="Position 3D Buffer">
    </LINK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="61" hiddenwhenlocked="1">
@@ -461,9 +459,9 @@
    <LINK srcnodeid="62" srcpinname="Output" dstnodeid="60" dstpinname="Spread Count">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="63">
-   <BOUNDS type="Box" left="855" top="5580" width="795" height="240">
+   <BOUNDS type="Box" left="855" top="5160" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="855" top="5580" width="0" height="0">
+   <BOUNDS type="Node" left="855" top="5160" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|2D Buffer|">
    </PIN>
@@ -471,10 +469,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="2D Buffer" dstnodeid="63" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Output Node" dstnodeid="58" dstpinname="Position 3D Buffer">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Output Node" dstnodeid="60" dstpinname="Value B 3D Buffer">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="64">
    <BOUNDS type="Box" left="6525" top="2565" width="1590" height="270">
@@ -512,4 +506,64 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 4">
    </LINK>
+   <NODE systemname="XYZ (3D Buffer Swizzle)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p" componentmode="Hidden" id="67" nodename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p">
+   <BOUNDS type="Node" left="825" top="5700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="5700" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="38160" top="11940" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Output Node" dstnodeid="67" dstpinname="2D Buffer">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="3D Buffer" dstnodeid="58" dstpinname="Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="3D Buffer" dstnodeid="60" dstpinname="Value B 3D Buffer">
+   </LINK>
+   <NODE systemname="XYZ (3D Buffer Swizzle)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p" componentmode="Hidden" id="68" nodename="%VVVV%\packs\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p">
+   <BOUNDS type="Node" left="1740" top="5700" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1740" top="5700" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="38160" top="11940" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Single Component" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Buffer" dstnodeid="68" dstpinname="2D Buffer">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="3D Buffer" dstnodeid="60" dstpinname="Value A 3D Buffer">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="69">
+   <BOUNDS type="Node" left="495" top="6105" width="1920" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="495" top="6105" width="1920" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Just 2D to 3D conversion|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

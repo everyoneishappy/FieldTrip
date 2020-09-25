@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" scrollx="0" scrolly="0" bgcolor="16777215">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" systemname="_FieldTripNodesOverview" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\_FieldTripNodesOverview.v4p" scrollx="0" scrolly="0" bgcolor="16777215">
    <BOUNDS type="Window" left="0" top="0" width="27855" height="15990">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
@@ -128,13 +128,13 @@
    <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="7">
    <BOUNDS type="Node" left="150" top="4860" width="100" height="100">
@@ -435,15 +435,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVolume (SF3D.Usages DX11.Volume)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsVolume\AsVolume (SF3D.Usages DX11.Volume).v4p" nodename="AsVolume (SF3D.Usages DX11.Volume)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="20580" top="5790" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="5550" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20580" top="5790">
+   <BOUNDS type="Box" left="20580" top="5550">
    </BOUNDS>
    </NODE>
    <NODE systemname="BakeTexture (SF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\BakeTexture\BakeTexture (SF3D.Usages DX11.Texture).v4p" nodename="BakeTexture (SF3D.Usages DX11.Texture)" componentmode="Hidden" id="54">
-   <BOUNDS type="Node" left="20580" top="6135" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="5895" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20580" top="6135">
+   <BOUNDS type="Box" left="20580" top="5895">
    </BOUNDS>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF2D.Usages 2D Buffer).v4p" nodename="ClosestPointOnSDF (SF2D.Usages 2D Buffer)" componentmode="Hidden" id="55">
@@ -455,15 +455,15 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF3D.Usages Transform Buffer).v4p" nodename="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="25245" top="6615" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="6375" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="25245" top="6615">
+   <BOUNDS type="Box" left="25245" top="6375">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsTexture (VF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsTexture\AsTexture (VF2D.Usages DX11.Texture).v4p" nodename="AsTexture (VF2D.Usages DX11.Texture)" componentmode="Hidden" id="57">
-   <BOUNDS type="Node" left="20700" top="9375" width="100" height="100">
+   <BOUNDS type="Node" left="20700" top="9165" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20700" top="9375">
+   <BOUNDS type="Box" left="20700" top="9165">
    </BOUNDS>
    </NODE>
    <NODE systemname="AsVolume (VF3D.Usages DX11.Volume)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\AsVolume\AsVolume (VF3D.Usages DX11.Volume).v4p" nodename="AsVolume (VF3D.Usages DX11.Volume)" componentmode="Hidden" id="58">
@@ -515,27 +515,27 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="ProjectPointOnSDF (SF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ProjectPointOnSDF\ProjectPointOnSDF (SF3D.Usages 3D Buffer).v4p" nodename="ProjectPointOnSDF (SF3D.Usages 3D Buffer)" componentmode="Hidden" id="68">
-   <BOUNDS type="Node" left="25245" top="6960" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="6720" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="25245" top="6960">
+   <BOUNDS type="Box" left="25245" top="6720">
    </BOUNDS>
    </NODE>
    <NODE systemname="ProjectPointOnSDF (SF3D.Usages TransformBuffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ProjectPointOnSDF\ProjectPointOnSDF (SF3D.Usages TransformBuffer).v4p" nodename="ProjectPointOnSDF (SF3D.Usages TransformBuffer)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="25245" top="7275" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="7035" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="25245" top="7275">
+   <BOUNDS type="Box" left="25245" top="7035">
    </BOUNDS>
    </NODE>
    <NODE systemname="SimpleAgent (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\SimpleAgent\SimpleAgent (VF2D.Usages 2D Buffer).v4p" nodename="SimpleAgent (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="23925" top="9720" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="9525" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23925" top="9720">
+   <BOUNDS type="Box" left="23925" top="9525">
    </BOUNDS>
    </NODE>
    <NODE systemname="PathLine (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\PathLine\PathLine (VF2D.Usages 2D Buffer).v4p" nodename="PathLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="23925" top="10080" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="9885" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23925" top="10080">
+   <BOUNDS type="Box" left="23925" top="9885">
    </BOUNDS>
    </NODE>
    <NODE systemname="VectorFieldLines (VF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\FieldViz\VectorFieldLines (VF2D.Usages DX11.Layer).v4p" nodename="VectorFieldLines (VF2D.Usages DX11.Layer)" componentmode="Hidden" id="74">
@@ -547,21 +547,21 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="StreakLine (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\StreakLine\StreakLine (VF2D.Usages 2D Buffer).v4p" nodename="StreakLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="23925" top="10425" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="10230" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23925" top="10425">
+   <BOUNDS type="Box" left="23925" top="10230">
    </BOUNDS>
    </NODE>
    <NODE systemname="StreamLine (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\StreamLine\StreamLine (VF2D.Usages 2D Buffer).v4p" nodename="StreamLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="76">
-   <BOUNDS type="Node" left="23925" top="10755" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="10560" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23925" top="10755">
+   <BOUNDS type="Box" left="23925" top="10560">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (VF2D.Usages 2D Buffer).v4p" nodename="FieldSample (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="77">
-   <BOUNDS type="Node" left="23925" top="9375" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="9180" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23925" top="9375">
+   <BOUNDS type="Box" left="23925" top="9180">
    </BOUNDS>
    </NODE>
    <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="79">
@@ -577,45 +577,45 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\SDFReflector (SF3D.Usages DX11.Particles.Modifiers).v4p" nodename="SDFReflector (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="20595" top="7740" width="100" height="100">
+   <BOUNDS type="Node" left="20595" top="7500" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20595" top="7740">
+   <BOUNDS type="Box" left="20595" top="7500">
    </BOUNDS>
    </NODE>
    <NODE systemname="RayTraceMesh (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RayTraceMesh (DX11.Layer SF3D)\RayTraceMesh (SF3D.Usages DX11.Layer).v4p" nodename="RayTraceMesh (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="22335" top="7110" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="6525" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="7110">
+   <BOUNDS type="Box" left="22335" top="6525">
    </BOUNDS>
    </NODE>
    <NODE systemname="FieldSample (SF3D.Usages Value Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\FieldSample\FieldSample (SF3D.Usages Value Buffer).v4p" nodename="FieldSample (SF3D.Usages Value Buffer)" componentmode="Hidden" id="84">
-   <BOUNDS type="Node" left="25245" top="5910" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="5670" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="25245" top="5910">
+   <BOUNDS type="Box" left="25245" top="5670">
    </BOUNDS>
    </NODE>
    <NODE systemname="RaymarchBasic (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchBasic (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="85">
-   <BOUNDS type="Node" left="22335" top="5970" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="5535" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="5970">
+   <BOUNDS type="Box" left="22335" top="5535">
    </BOUNDS>
    </NODE>
    <NODE systemname="RaymarchMatCap (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchMatCap (DX11.Layer SF3D)\RaymarchMatCap (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchMatCap (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="22335" top="6300" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="5865" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="6300">
+   <BOUNDS type="Box" left="22335" top="5865">
    </BOUNDS>
    </NODE>
    <NODE systemname="RayTraceScreen (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RayTraceScreen (DX11.Layer SF3D)\RayTraceScreen (SF3D.Usages DX11.Layer).v4p" nodename="RayTraceScreen (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="22335" top="7455" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="6870" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="7455">
+   <BOUNDS type="Box" left="22335" top="6870">
    </BOUNDS>
    </NODE>
    <NODE systemname="RaymarchTriPlane (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Render\RaymarchTriPlane (DX11.Layer SF3D)\RaymarchTriPlane (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchTriPlane (SF3D.Usages DX11.Layer)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="22335" top="6600" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="6165" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="6600">
+   <BOUNDS type="Box" left="22335" top="6165">
    </BOUNDS>
    </NODE>
    <NODE systemname="BoxSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\BoxSDF (SF3D.Sources).v4p" nodename="BoxSDF (SF3D.Sources)" componentmode="Hidden" id="90">
@@ -999,7 +999,7 @@
    </PIN>
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
-   <PIN pinname="Size" slicecount="1" values="20">
+   <PIN pinname="Size" slicecount="1" values="21">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="195">
@@ -1043,9 +1043,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="200">
-   <BOUNDS type="Node" left="23970" top="8985" width="100" height="100">
+   <BOUNDS type="Node" left="23925" top="8790" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="23970" top="8985" width="795" height="240">
+   <BOUNDS type="Box" left="23925" top="8790" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
@@ -1055,9 +1055,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="201">
-   <BOUNDS type="Node" left="20715" top="8985" width="100" height="100">
+   <BOUNDS type="Node" left="20715" top="8775" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20715" top="8985" width="795" height="240">
+   <BOUNDS type="Box" left="20715" top="8775" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
@@ -1077,9 +1077,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="203">
-   <BOUNDS type="Node" left="20580" top="5490" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="5250" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20580" top="5490" width="795" height="240">
+   <BOUNDS type="Box" left="20580" top="5250" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Texture">
    </PIN>
@@ -1089,9 +1089,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="204">
-   <BOUNDS type="Node" left="22335" top="5490" width="100" height="100">
+   <BOUNDS type="Node" left="22335" top="5250" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="22335" top="5490" width="795" height="240">
+   <BOUNDS type="Box" left="22335" top="5250" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Layer">
    </PIN>
@@ -1101,9 +1101,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="206">
-   <BOUNDS type="Node" left="25245" top="5490" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="5250" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="25245" top="5490" width="795" height="240">
+   <BOUNDS type="Box" left="25245" top="5250" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="Compute">
    </PIN>
@@ -1315,7 +1315,9 @@
    <LINK srcnodeid="219" srcpinname="Output Enum" dstnodeid="223" dstpinname="Operation">
    </LINK>
    <NODE systemname="ClosestPointOnSDF (SF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\Compute\ClosestPointOnSDF\ClosestPointOnSDF (SF3D.Usages 3D Buffer).v4p" nodename="ClosestPointOnSDF (SF3D.Usages 3D Buffer)" componentmode="Hidden" id="226">
-   <BOUNDS type="Node" left="25230" top="6270" width="100" height="100">
+   <BOUNDS type="Node" left="25245" top="6030" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="25245" top="6030">
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainMirror (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainMirror (SF3D.Operators).v4p" nodename="DomainMirror (SF3D.Operators)" componentmode="Hidden" id="227">
@@ -1581,9 +1583,9 @@
    </PIN>
    </NODE>
    <NODE systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Implementations\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers).v4p" nodename="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="20595" top="7380" width="100" height="100">
+   <BOUNDS type="Node" left="20595" top="7140" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20595" top="7380">
+   <BOUNDS type="Box" left="20595" top="7140">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="250">
@@ -2015,9 +2017,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="290">
-   <BOUNDS type="Node" left="20565" top="6810" width="100" height="100">
+   <BOUNDS type="Node" left="20565" top="6570" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20565" top="6810" width="1395" height="465">
+   <BOUNDS type="Box" left="20565" top="6570" width="1395" height="465">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|DX11.Particles (requires pack)|">
    </PIN>
@@ -2161,9 +2163,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DeferredTexture (SF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\DeferredTexture (SF3D.Usages DX11.Texture).v4p" nodename="DeferredTexture (SF3D.Usages DX11.Texture)" componentmode="Hidden" id="307">
-   <BOUNDS type="Node" left="20580" top="6450" width="100" height="100">
+   <BOUNDS type="Node" left="20580" top="6210" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="20580" top="6450">
+   <BOUNDS type="Box" left="20580" top="6210">
    </BOUNDS>
    </NODE>
    <NODE systemname="DeferredTexture (VF3D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\DeferredTexture (VF3D.Usages DX11.Texture).v4p" nodename="DeferredTexture (VF3D.Usages DX11.Texture)" componentmode="Hidden" id="308">
@@ -2174,6 +2176,46 @@
    </NODE>
    <NODE systemname="SurfaceForceField (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\SurfaceForceField (SF2D.Operators).v4p" nodename="SurfaceForceField (SF2D.Operators)" componentmode="Hidden" id="309">
    <BOUNDS type="Node" left="18120" top="4425" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="ProjectPointOnSDF (SF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\ProjectPointOnSDF (SF2D.Usages 2D Buffer).v4p" nodename="ProjectPointOnSDF (SF2D.Usages 2D Buffer)" componentmode="Hidden" id="311">
+   <BOUNDS type="Node" left="25020" top="4380" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Integrate (VF2D.Usages 2D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF2D\Usages\Integrate (VF2D.Usages 2D Buffer).v4p" nodename="Integrate (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="312">
+   <BOUNDS type="Node" left="23925" top="10920" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="23925" top="10920">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Integrate (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\Integrate (VF3D.Usages 3D Buffer).v4p" nodename="Integrate (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="314">
+   <BOUNDS type="Node" left="24795" top="13905" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="24795" top="13905">
+   </BOUNDS>
+   </NODE>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE systemname="RaymarchGBuffer (SF3D.Usages SuperPhysical)" filename="..\nodes\modules\SF3D\Usages\RaymarchGBuffer (SF3D.Usages SuperPhysical).v4p" nodename="RaymarchGBuffer (SF3D.Usages SuperPhysical)" componentmode="Hidden" id="315">
+   <BOUNDS type="Node" left="22335" top="7755" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="22335" top="7755">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="316">
+   <BOUNDS type="Node" left="22335" top="7230" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="22335" top="7230" width="1320" height="495">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="-1" pintype="Input" values="|Super Physical (requires pack)|">
+   </PIN>
+   <PIN pinname="Output String" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="PointDistrubution (SF3D.Usages 3D Buffer)" filename="..\nodes\modules\SF3D\Usages\PointDistrubution (SF3D.Usages 3D Buffer).v4p" nodename="PointDistrubution (SF3D.Usages 3D Buffer)" componentmode="Hidden" id="319">
+   <BOUNDS type="Node" left="25245" top="7380" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="25245" top="7380">
    </BOUNDS>
    </NODE>
    </PATCH>
