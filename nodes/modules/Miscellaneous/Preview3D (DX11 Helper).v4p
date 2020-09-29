@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\Miscellaneous\Preview3D (DX11 Helper).v4p" systemname="Preview3D (DX11 Helper)" filename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\Miscellaneous\Preview3D (DX11 Helper).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="5115" top="1890" width="9090" height="11745">
+   <BOUNDS type="Window" left="18240" top="3165" width="10485" height="11745">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
-   <PACK Name="addonpack" Version="40.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1095" top="7470" width="100" height="100">
@@ -87,9 +87,11 @@
    </PIN>
    <PIN pinname="Initial Distance" visible="1">
    </PIN>
-   <PIN pinname="Initial Longitude" slicecount="1" values="0.06">
+   <PIN pinname="Initial Longitude" slicecount="1" values="-0.06" visible="1">
    </PIN>
-   <PIN pinname="Initial Latitude" slicecount="1" values="0.1">
+   <PIN pinname="Initial Latitude" slicecount="1" values="0.1" visible="1">
+   </PIN>
+   <PIN pinname="Initial FOV" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="View" dstnodeid="0" dstpinname="View">
@@ -131,6 +133,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Cam Initial InterestXYZ|">
    </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="OnlyInspector">
+   </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initial InterestXYZ">
    </LINK>
@@ -139,13 +143,15 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6885" top="1575" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.85">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Cam Initial Distance|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="OnlyInspector">
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initial Distance">
@@ -305,6 +311,10 @@
    </PIN>
    <PIN pinname="Actual BackBuffer SizeXY" visible="1">
    </PIN>
+   <PIN pinname="Depth Buffer Mode" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
+   </PIN>
    </NODE>
    <NODE systemname="DrawFullScreen (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DrawFullScreen (DX11.Layer)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="2190" top="8670" width="100" height="100">
@@ -341,9 +351,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7860" top="2700" width="480" height="480">
+   <BOUNDS type="Box" left="9075" top="2595" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7860" top="2700" width="0" height="0">
+   <BOUNDS type="Node" left="9075" top="2595" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -499,5 +509,63 @@
    <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Axis">
    </LINK>
    <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33">
+   <BOUNDS type="Box" left="7035" top="2250" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7035" top="2250" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.06">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Cam Initial Longitude|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="OnlyInspector">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initial Longitude">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34">
+   <BOUNDS type="Box" left="7185" top="2835" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7185" top="2835" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Cam Initial Latitude|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="OnlyInspector">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initial Latitude">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35">
+   <BOUNDS type="Box" left="7335" top="3480" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7335" top="3480" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Cam Initial FOV|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="OnlyInspector">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Initial FOV">
+   </LINK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
    </PATCH>

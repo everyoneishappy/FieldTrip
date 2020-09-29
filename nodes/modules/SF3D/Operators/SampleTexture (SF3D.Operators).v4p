@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\SampleTexture (SF3D.Operators).v4p" systemname="SampleTexture (SF3D.Operators)" filename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\SampleTexture (SF3D.Operators).v4p" scrollx="0" scrolly="900">
    <BOUNDS type="Window" left="20430" top="2925" width="17925" height="12255">
    </BOUNDS>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1425" top="9015" width="795" height="240">
@@ -500,7 +500,7 @@
    </LINK>
    <LINK srcnodeid="76" srcpinname="HLSL" dstnodeid="30" dstpinname="Input">
    </LINK>
-   <INFO author="" description="Only calculate an SDF if a 2nd bounding SDF returns less then 0" tags="">
+   <INFO author="" description="Sample RGB from a texture given scalar fields for U &amp; V" tags="">
    </INFO>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
@@ -555,7 +555,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="2" values="0.34,0.34">
+   <PIN pinname="Y Input Value" slicecount="2" values="0.5,0.5">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="2">
    </PIN>

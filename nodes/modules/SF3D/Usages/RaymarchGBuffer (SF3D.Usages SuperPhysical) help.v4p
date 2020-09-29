@@ -3,7 +3,7 @@
    <BOUNDS type="Window" left="180" top="315" width="12345" height="13245">
    </BOUNDS>
    <NODE id="4" systemname="RaymarchGBuffer (SF3D.Usages SuperPhysical)" filename="%VVVV%\packs\PackExtensions\nodes\modules\SuperPhysical\RaymarchGBuffer (SF3D.Usages DX11.Layer)\RaymarchGBuffer (SF3D.Usages SuperPhysical).v4p" nodename="RaymarchGBuffer (SF3D.Usages SuperPhysical)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1245" top="5370" width="100" height="100">
+   <BOUNDS type="Node" left="1230" top="4980" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1" pintype="Output">
    </PIN>
@@ -25,7 +25,7 @@
    </PIN>
    <PIN pinname="Bump Strength" visible="1" pintype="Input">
    </PIN>
-   <BOUNDS type="Box" left="0" top="0" width="4800" height="3600">
+   <BOUNDS type="Box" left="0" top="360" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -285,7 +285,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6090" top="8700" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" pintype="Input" values="|0.22128,0.25944,0.24990,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" pintype="Input" values="|0.25944,0.25944,0.25944,1.00000|">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" pintype="Configuration" values="|Global Reflection Color|">
    </PIN>
@@ -1171,9 +1171,9 @@
    </PIN>
    </NODE>
    <NODE id="42" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Box" left="1215" top="4065" width="795" height="240">
+   <BOUNDS type="Box" left="1230" top="3030" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1215" top="4065" width="0" height="0">
+   <BOUNDS type="Node" left="1230" top="3030" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Output Node" visible="1" pintype="Output">
    </PIN>
@@ -1215,9 +1215,9 @@
    </PIN>
    </NODE>
    <NODE id="43" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="1" managers="">
-   <BOUNDS type="Box" left="5130" top="6225" width="720" height="720">
+   <BOUNDS type="Box" left="2685" top="3615" width="720" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="5130" top="6225" width="0" height="0">
+   <BOUNDS type="Node" left="2685" top="3615" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="0">
    </PIN>
@@ -1443,9 +1443,9 @@
    </PIN>
    <PIN pinname="AA Samples per Pixel" slicecount="1" visible="-1" pintype="Input" values="1">
    </PIN>
-   <BOUNDS type="Node" left="900" top="7095" width="1650" height="270">
+   <BOUNDS type="Node" left="675" top="7095" width="1650" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="900" top="7095" width="3000" height="3000">
+   <BOUNDS type="Box" left="675" top="7095" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer" visible="1" slicecount="1" pintype="Input" values="||">
    </PIN>
@@ -2030,8 +2030,6 @@
    </LINK>
    <LINK srcnodeid="51" srcpinname="View" dstnodeid="48" dstpinname="View" linkstyle="PolyLine" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="48" dstpinname="Layer">
-   </LINK>
    <LINK srcnodeid="47" srcpinname="Output Enum" dstnodeid="48" dstpinname="Target Format" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="46" srcpinname="Output" dstnodeid="45" dstpinname="Input 1 SDF">
@@ -2039,9 +2037,9 @@
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="45" dstpinname="Input 2 SDF">
    </LINK>
    <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Material ID" linkstyle="VHV">
-   <LINKPOINT x="5065" y="7710">
+   <LINKPOINT x="2685" y="4643">
    </LINKPOINT>
-   <LINKPOINT x="1535" y="6495">
+   <LINKPOINT x="1455" y="4643">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="36" srcpinname="XYZ" dstnodeid="39" dstpinname="Domain Offset">
@@ -2051,9 +2049,9 @@
    <LINK srcnodeid="24" srcpinname="Output" dstnodeid="26" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Bump Strength" linkstyle="VHV">
-   <LINKPOINT x="7920" y="5930">
+   <LINKPOINT x="7915" y="5800">
    </LINKPOINT>
-   <LINKPOINT x="2175" y="5500">
+   <LINKPOINT x="2165" y="5240">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="22" srcpinname="XYZ" dstnodeid="24" dstpinname="Domain Offset">
@@ -2247,9 +2245,9 @@
    <LINK srcnodeid="50" srcpinname="Texture Out" dstnodeid="49" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="48" srcpinname="Buffers" dstnodeid="50" dstpinname="GBuffer (Pos, Normal  TexCD)" linkstyle="Bezier">
-   <LINKPOINT x="900" y="8188">
+   <LINKPOINT x="750" y="8218">
    </LINKPOINT>
-   <LINKPOINT x="1365" y="8313">
+   <LINKPOINT x="1290" y="8328">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="50" srcpinname="Depth Buffer" dstnodeid="52" dstpinname="Depth Buffer" linkstyle="Bezier">
@@ -2637,9 +2635,9 @@
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="42" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Output Node" dstnodeid="4" dstpinname="Bump" linkstyle="VHV">
-   <LINKPOINT x="5415" y="5430">
+   <LINKPOINT x="5410" y="5300">
    </LINKPOINT>
-   <LINKPOINT x="2535" y="5295">
+   <LINKPOINT x="2525" y="5035">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="63">
@@ -2663,9 +2661,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Use Bump" linkstyle="VHV">
-   <LINKPOINT x="7260" y="6050">
+   <LINKPOINT x="7255" y="5920">
    </LINKPOINT>
-   <LINKPOINT x="1860" y="5620">
+   <LINKPOINT x="1850" y="5360">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64" hiddenwhenlocked="1">
@@ -2705,9 +2703,9 @@
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
    </LINK>
    <NODE id="66" nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="675" top="4515" width="3195" height="270">
+   <BOUNDS type="Node" left="690" top="3480" width="3195" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="675" top="4515" width="1890" height="855">
+   <BOUNDS type="Box" left="690" top="3480" width="1890" height="855">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" pintype="Input" values="|Use a SF3D to define our SDF surface to render with SuperPhhysical|">
    </PIN>
@@ -2841,5 +2839,21 @@
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="19" dstpinname="Filename">
    </LINK>
    <LINK srcnodeid="69" srcpinname="Output" dstnodeid="18" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="1065" top="5355" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1065" top="5355" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="76" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Layer Out" dstnodeid="48" dstpinname="Layer">
    </LINK>
    </PATCH>

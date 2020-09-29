@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Usages\DX11.Particles\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers) help.v4p">
    <BOUNDS type="Window" left="480" top="405" width="8760" height="11820">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="225" top="225" width="8655" height="435">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -450,13 +450,13 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
    </LINK>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE nodename="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="11" systemname="ParticleModifier (SF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\ParticleModifier (SF3D.Usages DX11.Particles.Modifiers).v4p">
    <BOUNDS type="Node" left="5055" top="3735" width="100" height="100">
@@ -498,4 +498,6 @@
    </NODE>
    <LINK srcnodeid="35" srcpinname="Layer" dstnodeid="24" dstpinname="Layer 2">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

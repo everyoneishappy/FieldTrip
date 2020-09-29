@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Usages\ClosestPointOnSDF (SF2D.Usages 2D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="435" top="675" width="8400" height="10275">
    </BOUNDS>
@@ -30,7 +30,7 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="54">
    <BOUNDS type="Node" left="2655" top="8970" width="100" height="100">
@@ -105,11 +105,11 @@
    </PIN>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
-   <PIN pinname="CenterXY" slicecount="2" values="0,0.76">
+   <PIN pinname="CenterXY" slicecount="2" values="0,0.61">
    </PIN>
    <PIN pinname="SizeXY" slicecount="2" values="1,0.1">
    </PIN>
-   <PIN pinname="Random Seed" slicecount="1" values="260">
+   <PIN pinname="Random Seed" slicecount="1" visible="1" values="304">
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="48">
@@ -123,9 +123,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="46">
-   <BOUNDS type="Box" left="2880" top="2130" width="795" height="240">
+   <BOUNDS type="Box" left="1200" top="1905" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2880" top="2130" width="0" height="0">
+   <BOUNDS type="Node" left="1200" top="1905" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="128">
    </PIN>
@@ -199,6 +199,8 @@
    </PIN>
    <BOUNDS type="Box" left="120" top="7530">
    </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="38">
    <BOUNDS type="Node" left="120" top="7170" width="100" height="100">
@@ -225,9 +227,9 @@
    <LINK srcnodeid="51" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 3">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="36">
-   <BOUNDS type="Box" left="5160" top="3555" width="795" height="240">
+   <BOUNDS type="Box" left="3810" top="4155" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5160" top="3555" width="0" height="0">
+   <BOUNDS type="Node" left="3810" top="4155" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -235,7 +237,7 @@
    </PIN>
    </NODE>
    <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="5175" top="3150" width="100" height="100">
+   <BOUNDS type="Node" left="3810" top="2655" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 2 SDF" visible="1" slicecount="1" values="||">
    </PIN>
@@ -250,8 +252,6 @@
    <PIN pinname="Combination Parameter 1" slicecount="1" visible="1" values="0.11">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="36" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Halo (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Halo.tfx" nodename="Halo (DX11.TextureFX)" componentmode="Hidden" id="34" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="3120" top="6240" width="100" height="100">
    </BOUNDS>
@@ -265,7 +265,7 @@
    <LINK srcnodeid="37" srcpinname="Render State" dstnodeid="53" dstpinname="Render State">
    </LINK>
    <NODE systemname="RoundBoxSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\RoundBoxSDF (SF2D.Sources).v4p" nodename="RoundBoxSDF (SF2D.Sources)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="6240" top="2115" width="100" height="100">
+   <BOUNDS type="Node" left="4890" top="1830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -277,13 +277,13 @@
    </PIN>
    <PIN pinname="Round" slicecount="1" values="0.09">
    </PIN>
-   <BOUNDS type="Box" left="6240" top="2115">
+   <BOUNDS type="Box" left="4890" top="1830">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="35" dstpinname="Input 2 SDF">
    </LINK>
    <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\Render\DrawSDF (DX11.Layer SF2D)\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="32">
-   <BOUNDS type="Node" left="3825" top="4665" width="100" height="100">
+   <BOUNDS type="Node" left="3825" top="5100" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -297,7 +297,7 @@
    <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="32" dstpinname="Input">
    </LINK>
    <NODE systemname="CircleSDF (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\CircleSDF (SF2D.Sources).v4p" nodename="CircleSDF (SF2D.Sources)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="5175" top="2115" width="100" height="100">
+   <BOUNDS type="Node" left="3825" top="1830" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -305,15 +305,15 @@
    </PIN>
    <PIN pinname="Radius" slicecount="1" values="0.31">
    </PIN>
-   <BOUNDS type="Box" left="5175" top="2115">
+   <BOUNDS type="Box" left="3825" top="1830">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="35" dstpinname="Input 1 SDF">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="55" hiddenwhenlocked="1">
-   <BOUNDS type="Box" left="6345" top="7590" width="285" height="240">
+   <BOUNDS type="Box" left="6195" top="7560" width="285" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6345" top="7590" width="0" height="0">
+   <BOUNDS type="Node" left="6195" top="7560" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.00000,0.00628,1.00000|">
    </PIN>
@@ -337,9 +337,9 @@
    <LINK srcnodeid="56" srcpinname="Color Output" dstnodeid="51" dstpinname="Color">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57">
-   <BOUNDS type="Box" left="3240" top="3285" width="795" height="240">
+   <BOUNDS type="Box" left="2355" top="4110" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3240" top="3285" width="0" height="0">
+   <BOUNDS type="Node" left="2355" top="4110" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
    </PIN>
@@ -370,12 +370,16 @@
    </LINK>
    <LINK srcnodeid="48" srcpinname="Buffer" dstnodeid="52" dstpinname="Sample Position 2D Buffer">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="52" dstpinname="Input">
+   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="52" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="3810" y="4470">
+   </LINKPOINT>
+   <LINKPOINT x="930" y="4470">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="57" srcpinname="Y Output Value" dstnodeid="52" dstpinname="offset">
    </LINK>
-   <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="58" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="5490" top="7995" width="100" height="100">
+   <NODE systemname="SpriteBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\SpriteBuffered (DX11.Layer)\SpriteBuffered (DX11.Layer).v4p" nodename="SpriteBuffered (DX11.Layer)" componentmode="Hidden" id="58" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="5340" top="7965" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position 3D Buffer" visible="1">
    </PIN>
@@ -389,8 +393,10 @@
    </PIN>
    <PIN pinname="Size Default" slicecount="1" values="0.026">
    </PIN>
-   <BOUNDS type="Box" left="5490" top="7995">
+   <BOUNDS type="Box" left="5340" top="7965">
    </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE systemname="LineBuffered (DX11.Layer)" filename="%VVVV%\packs\InstanceNoodles\nodes\modules\DX11.Layer\LineBuffered (DX11.Layer)\LineBuffered (DX11.Layer).v4p" nodename="LineBuffered (DX11.Layer)" componentmode="Hidden" id="59" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="4905" top="7170" width="100" height="100">
@@ -401,7 +407,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Width Defualt" slicecount="1" values="0.17">
+   <PIN pinname="Width Defualt" slicecount="1" values="0.3">
    </PIN>
    <PIN pinname="Color Defaut" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
@@ -471,9 +477,9 @@
    <LINK srcnodeid="52" srcpinname="2D Buffer" dstnodeid="63" dstpinname="Input Node">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="64">
-   <BOUNDS type="Box" left="6525" top="2565" width="1590" height="270">
+   <BOUNDS type="Box" left="5175" top="2280" width="1590" height="270">
    </BOUNDS>
-   <BOUNDS type="Node" left="6525" top="2565" width="0" height="0">
+   <BOUNDS type="Node" left="5175" top="2280" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="UnionRound">
    </PIN>
@@ -487,9 +493,9 @@
    <LINK srcnodeid="64" srcpinname="Output Enum" dstnodeid="35" dstpinname="Combination Operation">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="65">
-   <BOUNDS type="Box" left="6720" top="2970" width="795" height="240">
+   <BOUNDS type="Box" left="5235" top="2640" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6720" top="2970" width="0" height="0">
+   <BOUNDS type="Node" left="5235" top="2640" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
    </PIN>
@@ -566,4 +572,82 @@
    </NODE>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="6060" top="3540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2 SDF" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Combination Operation" slicecount="1" visible="1" values="Difference">
+   </PIN>
+   <PIN pinname="Combination Parameter 2" slicecount="1" values="2.67">
+   </PIN>
+   <PIN pinname="Combination Parameter 1" slicecount="1" visible="1" values="0.11">
+   </PIN>
+   </NODE>
+   <NODE systemname="CircleSDF (SF2D.Sources)" filename="..\Sources\CircleSDF (SF2D.Sources).v4p" nodename="CircleSDF (SF2D.Sources)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="6090" top="2820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.92">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="CircleSDF (SF2D.Sources)" filename="..\Sources\CircleSDF (SF2D.Sources).v4p" nodename="CircleSDF (SF2D.Sources)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="6390" top="3120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.87">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output" dstnodeid="70" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Output" dstnodeid="70" dstpinname="Input 2 SDF">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="3795" top="3795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2 SDF" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Combination Operation" slicecount="1" visible="1" values="Union">
+   </PIN>
+   <PIN pinname="Combination Parameter 2" slicecount="1" values="2.67">
+   </PIN>
+   <PIN pinname="Combination Parameter 1" slicecount="1" visible="1" values="0.11">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="73" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="73" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="36" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="74">
+   <BOUNDS type="Box" left="2475" top="1845" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2475" top="1845" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="304">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Random Seed|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Random Seed">
+   </LINK>
    </PATCH>

@@ -1,0 +1,743 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\examples\02 2D examples\IntegrationModes.v4p" scrollx="0" scrolly="0" systemname="IntegrationModes" filename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\examples\02 2D examples\IntegrationModes.v4p">
+   <BOUNDS type="Window" left="0" top="300" width="11415" height="11505">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="38.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="540" top="9870" width="705" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="540" top="9870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="fps">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="46" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="540" top="8910" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="540" top="8910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="47">
+   <BOUNDS type="Node" left="0" top="8175" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="8175" width="11955" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="-1" pintype="Input" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE systemname="Preview2D (DX11 Helper)" filename="..\..\nodes\modules\Miscellaneous\Preview2D (DX11 Helper).v4p" componentmode="Hidden" id="39" nodename="Preview2D (DX11 Helper)">
+   <BOUNDS type="Node" left="540" top="9450" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="9450" width="4800" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5115" top="1890" width="9090" height="11745">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Quality" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   <PIN pinname="Camera Enabled" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="fps" dstnodeid="45" dstpinname="Y Input Value" linkstyle="VHV">
+   <LINKPOINT x="385" y="9780">
+   </LINKPOINT>
+   <LINKPOINT x="755" y="9780">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Output Node" dstnodeid="39" dstpinname="Layer">
+   </LINK>
+   <NODE systemname="LineBuffered (DX11.Layer)" filename="..\..\..\InstanceNoodles\nodes\modules\DX11.Layer\LineBuffered (DX11.Layer)\LineBuffered (DX11.Layer).v4p" nodename="LineBuffered (DX11.Layer)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="2220" top="5880" width="1500" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color Defaut" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Center" visible="-1" pintype="Input" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="MaxExtend" visible="-1" pintype="Input" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Transform Defualt" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Default" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Array" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sampler State" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color 4D Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="StreamLine (VF2D.Usages 2D Buffer)" filename="..\..\nodes\modules\VF2D\Usages\StreamLine (VF2D.Usages 2D Buffer).v4p" nodename="StreamLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="2205" top="5115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Step Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Start Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" visible="1" values="RK4">
+   </PIN>
+   <PIN pinname="Step Size Defualt" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="64" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6360" top="2625" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6360" top="2625" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="48">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Count|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Step Count">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Input Bin Size">
+   </LINK>
+   <NODE systemname="XYZ (3d Buffer Swizzle)" filename="..\..\..\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p" nodename="XYZ (3d Buffer Swizzle)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="2220" top="5505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="2D Buffer" dstnodeid="65" dstpinname="2D Buffer">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="3D Buffer" dstnodeid="61" dstpinname="Position 3D Buffer">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="68" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2175" top="3030" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2175" top="3030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="68" srcpinname="Output Node" dstnodeid="62" dstpinname="Input">
+   </LINK>
+   <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="7590" top="2280" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7590" top="2280" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   <PIN pinname="DataXY" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7590" top="1680" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7590" top="1680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="-0.43,0.058">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Start Pos|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="69" dstpinname="DataXY">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="..\..\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="690" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Combination Operation" slicecount="1" values="UnionStairs">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Combination Parameter 1" slicecount="1" values="0.35">
+   </PIN>
+   <PIN pinname="Combination Parameter 2" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="CircleSDF (SF2D.Sources)" filename="..\..\nodes\modules\SF2D\Sources\CircleSDF (SF2D.Sources).v4p" nodename="CircleSDF (SF2D.Sources)" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="720" top="885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="-0.18,-0.18">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.32">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="73" dstpinname="Input 1 SDF">
+   </LINK>
+   <NODE systemname="BoxSDF (SF2D.Sources)" filename="..\..\nodes\modules\SF2D\Sources\BoxSDF (SF2D.Sources).v4p" nodename="BoxSDF (SF2D.Sources)" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="2010" top="900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Position" slicecount="2" values="0.22,0.22">
+   </PIN>
+   <PIN pinname="Size XY" slicecount="2" values="0.28,0.28">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Input 2 SDF">
+   </LINK>
+   <NODE systemname="DrawSDF (SF2D.Usages DX11.Layer)" filename="..\..\nodes\modules\SF2D\Usages\DrawSDF (SF2D.Usages DX11.Layer).v4p" nodename="DrawSDF (SF2D.Usages DX11.Layer)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="705" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.57294,0.57294,0.57294,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="77" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="690" top="2055" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="690" top="2055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output Node" dstnodeid="76" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="540" top="8595" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="8595" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Layer Out" dstnodeid="46" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Curl (SF2D.Operators)" filename="..\..\nodes\modules\SF2D\Operators\Curl (SF2D.Operators).v4p" nodename="Curl (SF2D.Operators)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="2175" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Epsilon" slicecount="1" values="0.001">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Output Node" dstnodeid="79" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="68" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Spread Count" dstnodeid="65" dstpinname="Spread Count">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="80">
+   <BOUNDS type="Box" left="2595" top="4680" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2595" top="4680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Euler">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Euler">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Output Enum" dstnodeid="62" dstpinname="Function Integration Mode">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="81">
+   <BOUNDS type="Box" left="2220" top="4560" width="285" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2220" top="4560" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="Color Output" dstnodeid="61" dstpinname="Color Defaut">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82">
+   <BOUNDS type="Box" left="6180" top="2070" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6180" top="2070" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.074">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Step Size|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Step Size Defualt">
+   </LINK>
+   <NODE systemname="Noise (SF2D.Sources)" filename="..\..\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="2115" top="1365" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="2.44">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.11">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="0.3">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="85">
+   <BOUNDS type="Box" left="7590" top="2670" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7590" top="2670" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="| 2D Buffer|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Output Node" dstnodeid="62" dstpinname="Start Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Buffer" dstnodeid="85" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="705" top="1740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="87">
+   <BOUNDS type="Box" left="4245" top="1290" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4245" top="1290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Switch Input Function|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Output" dstnodeid="86" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="86" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="77" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="LineBuffered (DX11.Layer)" filename="..\..\..\InstanceNoodles\nodes\modules\DX11.Layer\LineBuffered (DX11.Layer)\LineBuffered (DX11.Layer).v4p" nodename="LineBuffered (DX11.Layer)" componentmode="Hidden" id="92">
+   <BOUNDS type="Node" left="5025" top="5910" width="1500" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color Defaut" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Center" visible="-1" pintype="Input" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="MaxExtend" visible="-1" pintype="Input" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Transform Defualt" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Default" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Array" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sampler State" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color 4D Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="StreamLine (VF2D.Usages 2D Buffer)" filename="..\..\nodes\modules\VF2D\Usages\StreamLine (VF2D.Usages 2D Buffer).v4p" nodename="StreamLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="5010" top="5145" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Step Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Start Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" visible="1" values="RK4">
+   </PIN>
+   <PIN pinname="Step Size Defualt" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Step Count">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="92" dstpinname="Input Bin Size">
+   </LINK>
+   <NODE systemname="XYZ (3d Buffer Swizzle)" filename="..\..\..\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p" nodename="XYZ (3d Buffer Swizzle)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="5025" top="5535" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="2D Buffer" dstnodeid="90" dstpinname="2D Buffer">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="3D Buffer" dstnodeid="92" dstpinname="Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output Node" dstnodeid="91" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Spread Count" dstnodeid="90" dstpinname="Spread Count">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="89">
+   <BOUNDS type="Box" left="5400" top="4710" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5400" top="4710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Euler">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Output Enum" dstnodeid="91" dstpinname="Function Integration Mode">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="88">
+   <BOUNDS type="Box" left="5025" top="4590" width="285" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5025" top="4590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.50000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Color Output" dstnodeid="92" dstpinname="Color Defaut">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Step Size Defualt">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output Node" dstnodeid="91" dstpinname="Start Position 2D Buffer">
+   </LINK>
+   <NODE systemname="LineBuffered (DX11.Layer)" filename="..\..\..\InstanceNoodles\nodes\modules\DX11.Layer\LineBuffered (DX11.Layer)\LineBuffered (DX11.Layer).v4p" nodename="LineBuffered (DX11.Layer)" componentmode="Hidden" id="97">
+   <BOUNDS type="Node" left="7830" top="5940" width="1500" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Position 3D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color Defaut" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Center" visible="-1" pintype="Input" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="MaxExtend" visible="-1" pintype="Input" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Transform Defualt" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Default" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Array" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sampler State" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Alpha" visible="-1" pintype="Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Color 4D Buffer" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="StreamLine (VF2D.Usages 2D Buffer)" filename="..\..\nodes\modules\VF2D\Usages\StreamLine (VF2D.Usages 2D Buffer).v4p" nodename="StreamLine (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="96">
+   <BOUNDS type="Node" left="7815" top="5175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Step Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Start Position 2D Buffer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Function Integration Mode" slicecount="1" visible="1" values="RK4">
+   </PIN>
+   <PIN pinname="Step Size Defualt" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="96" dstpinname="Step Count">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="97" dstpinname="Input Bin Size">
+   </LINK>
+   <NODE systemname="XYZ (3d Buffer Swizzle)" filename="..\..\..\InstanceNoodles\nodes\modules\Compute\3D Buffer\XYZ (3D Buffer Swizzle).v4p" nodename="XYZ (3d Buffer Swizzle)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="7830" top="5565" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="2D Buffer" visible="1">
+   </PIN>
+   <PIN pinname="3D Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="96" srcpinname="2D Buffer" dstnodeid="95" dstpinname="2D Buffer">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="3D Buffer" dstnodeid="97" dstpinname="Position 3D Buffer">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Output Node" dstnodeid="96" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Spread Count" dstnodeid="95" dstpinname="Spread Count">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="94">
+   <BOUNDS type="Box" left="8205" top="4740" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8205" top="4740" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Euler">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Output Enum" dstnodeid="96" dstpinname="Function Integration Mode">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="93">
+   <BOUNDS type="Box" left="7830" top="4620" width="285" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7830" top="4620" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,1.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Color Output" dstnodeid="97" dstpinname="Color Defaut">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="96" dstpinname="Step Size Defualt">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output Node" dstnodeid="96" dstpinname="Start Position 2D Buffer">
+   </LINK>
+   <LINK srcnodeid="92" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="Quad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Layer)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="9585" top="3135" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9585" top="3135" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="9720" top="2730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="TranslateXY" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleXY" slicecount="2" values="0.06,0.06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="101" dstpinname="TranslateXY">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Transform Out" dstnodeid="100" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Layer" dstnodeid="78" dstpinname="Layer 5">
+   </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="102">
+   <BOUNDS type="Node" left="2805" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2805" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Uses function 1X|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="103">
+   <BOUNDS type="Node" left="5475" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5475" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Uses function 2X|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="104">
+   <BOUNDS type="Node" left="8400" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8400" top="4365" width="1320" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Uses function 4X|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="SimpleAgent (VF2D.Usages 2D Buffer)" filename="..\..\nodes\modules\VF2D\Usages\SimpleAgent (VF2D.Usages 2D Buffer).v4p" nodename="SimpleAgent (VF2D.Usages 2D Buffer)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="8265" top="7200" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8265" top="7200">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="SimpleAgent (VF3D.Usages 3D Buffer)" filename="..\..\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer).v4p" nodename="SimpleAgent (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="8265" top="7560" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8265" top="7560">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="107">
+   <BOUNDS type="Node" left="8220" top="7920" width="2835" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8220" top="7920" width="3165" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Example of 2D / 3D nodes using these|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="108">
+   <BOUNDS type="Node" left="6075" top="990" width="3435" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6075" top="990" width="1440" height="780">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Note that as step size increases so does error!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>

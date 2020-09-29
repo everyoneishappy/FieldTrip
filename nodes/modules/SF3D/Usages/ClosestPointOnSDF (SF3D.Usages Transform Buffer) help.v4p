@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages Transform Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages Transform Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="255" top="405" width="12060" height="11775">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -43,7 +43,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="6">
+   <PIN pinname="Spread Count" slicecount="1" values="7">
    </PIN>
    <PIN pinname="Random Seed" slicecount="1" values="125">
    </PIN>
@@ -371,7 +371,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3450" top="1455" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\..\assets\Stanford Dragon.dds|">
+   <PIN pinname="Filename" slicecount="1" values="|..\..\..\..\assets\Stanford Dragon.dds|">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -451,7 +451,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="SizeXYZ" slicecount="3" values="0.05,0.03,0.03">
+   <PIN pinname="SizeXYZ" slicecount="3" values="0.07,0.04,0.04">
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Geometry Out" dstnodeid="7" dstpinname="Geometry In">
@@ -580,13 +580,13 @@
    </LINK>
    <LINK srcnodeid="34" srcpinname="Layer Out" dstnodeid="35" dstpinname="Layer In">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE systemname="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Usages\ClosestPointOnSDF (SF3D.Usages Transform Buffer).v4p" nodename="ClosestPointOnSDF (SF3D.Usages Transform Buffer)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="4020" top="5595" width="100" height="100">
@@ -660,4 +660,6 @@
    </LINK>
    <LINK srcnodeid="41" srcpinname="Layer" dstnodeid="34" dstpinname="Layer 2">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

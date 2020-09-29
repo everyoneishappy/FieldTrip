@@ -1,21 +1,21 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_05_Noise_Intro.v4p" bgcolor="16777215" systemname="FG_05_Noise_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_05_Noise_Intro.v4p" scrollx="0" scrolly="810">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\examples\02 2D examples\02_01_Noise_Intro.v4p" bgcolor="16777215" systemname="FG_05_Noise_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_05_Noise_Intro.v4p" scrollx="0" scrolly="810">
    <BOUNDS type="Window" left="165" top="165" width="10905" height="13725">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
-   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
+   <NODE systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="8085" top="15495" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="44">
@@ -80,9 +80,9 @@
    </NODE>
    <LINK srcnodeid="116" srcpinname="XYZ Transformed" dstnodeid="118" dstpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="117" dstpinname="XY">
+   <LINK srcnodeid="5" srcpinname="Position (Projection) XY" dstnodeid="117" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="44" dstpinname="Input Value">
+   <LINK srcnodeid="5" srcpinname="Position (Projection) XY" dstnodeid="44" dstpinname="Input Value">
    </LINK>
    <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="119">
    <BOUNDS type="Node" left="5625" top="16230" width="100" height="100">
@@ -724,16 +724,6 @@
    </LINK>
    <LINK srcnodeid="195" srcpinname="Output" dstnodeid="194" dstpinname="Input">
    </LINK>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="218">
-   <BOUNDS type="Node" left="7140" top="7725" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7140" top="7725" width="2130" height="240">
-   </BOUNDS>
-   <PIN pinname="String Type" slicecount="1" values="Filename">
-   </PIN>
-   <PIN pinname="Input String" slicecount="1" values="FG_06_Noise_Worley.v4p">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" id="219" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="420" top="11700" width="100" height="100">
    </BOUNDS>
@@ -746,4 +736,6 @@
    </NODE>
    <LINK srcnodeid="219" srcpinname="Transform Out" dstnodeid="188" dstpinname="Transform">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

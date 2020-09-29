@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\VVVV Files\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="765" top="255" width="9045" height="12885">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -103,7 +103,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2565" top="3480" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.18,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.1,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -155,7 +155,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="480" top="2205" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.13">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.96">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -171,7 +171,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="870" top="2685" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.13">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -283,7 +283,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3315" top="7260" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -363,7 +363,7 @@
    </PIN>
    <PIN pinname="View" visible="1">
    </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" visible="1" values="2.06">
+   <PIN pinname="Initial Distance" slicecount="1" visible="1" values="1.53">
    </PIN>
    <PIN pinname="Distortion" visible="1" slicecount="1" values="||">
    </PIN>
@@ -473,6 +473,10 @@
    </PIN>
    <PIN pinname="View" visible="1">
    </PIN>
+   <PIN pinname="Depth Buffer Mode" slicecount="1" values="Standard">
+   </PIN>
+   <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
+   </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Layer Out" dstnodeid="32" dstpinname="Layers">
    </LINK>
@@ -480,13 +484,13 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="View" dstnodeid="32" dstpinname="View">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="SimpleAgent (VF3D.Usages 3D Buffer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\SimpleAgent (VF3D.Usages 3D Buffer).v4p" nodename="SimpleAgent (VF3D.Usages 3D Buffer)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="255" top="7635" width="100" height="100">
@@ -542,4 +546,6 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="12" dstpinname="Input">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

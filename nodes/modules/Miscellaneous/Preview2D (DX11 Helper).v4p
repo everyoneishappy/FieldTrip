@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\Miscellaneous\Preview2D (DX11 Helper).v4p" systemname="Preview2D (DX11 Helper)" filename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\Miscellaneous\Preview2D (DX11 Helper).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="5115" top="1890" width="9090" height="11745">
+   <BOUNDS type="Window" left="20235" top="945" width="9090" height="11745">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
@@ -191,6 +191,8 @@
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
+   <PIN pinname="GammaXY" slicecount="2" values="-3.99,-3.99">
+   </PIN>
    </NODE>
    <LINK srcnodeid="13" srcpinname="Texture Out" dstnodeid="14" dstpinname="Texture">
    </LINK>
@@ -206,6 +208,8 @@
    <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="DrawFullScreen (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DrawFullScreen (DX11.Layer)" componentmode="Hidden" id="18">
@@ -314,4 +318,18 @@
    </LINK>
    <INFO author="" description="" tags="">
    </INFO>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="35">
+   <BOUNDS type="Box" left="5940" top="3180" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5940" top="3180" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="View">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Output Node" dstnodeid="0" dstpinname="View">
+   </LINK>
    </PATCH>

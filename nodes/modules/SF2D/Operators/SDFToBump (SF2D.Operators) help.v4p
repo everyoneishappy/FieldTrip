@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\SDFToBump (SF2D.Operators) help.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="7305" top="420" width="9000" height="8115">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\SDFToBump (SF2D.Operators) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="780" top="1335" width="9000" height="8115">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
    <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
@@ -43,7 +43,7 @@
    <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="2460" top="5430" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2430" top="5940" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="16155" top="600" width="5925" height="6045">
+   <BOUNDS type="Window" left="9885" top="1320" width="5925" height="6045">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" values="2.62">
+   <PIN pinname="Frequency" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Width" slicecount="1" values="0.05">
    </PIN>
@@ -79,7 +79,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ScalarOp (SF2D.Operations)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\ScalarOp (SF2D.Operations).v4p" nodename="ScalarOp (SF2D.Operations)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="2460" top="4635" width="100" height="100">
+   <BOUNDS type="Node" left="2460" top="4500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operation" slicecount="1" values="*">
    </PIN>
@@ -91,7 +91,7 @@
    </PIN>
    </NODE>
    <NODE systemname="ScalarOp (SF2D.Operations)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\ScalarOp (SF2D.Operations).v4p" nodename="ScalarOp (SF2D.Operations)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="2445" top="4950" width="100" height="100">
+   <BOUNDS type="Node" left="2445" top="4815" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Operation" slicecount="1" values="+">
    </PIN>
@@ -106,21 +106,19 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="8" dstpinname="Input">
-   </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="10" hiddenwhenlocked="1">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="10" hiddenwhenlocked="0">
    <BOUNDS type="Node" left="4200" top="5940" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4200" top="5940" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="16110" top="6585" width="5985" height="6180">
+   <BOUNDS type="Window" left="9825" top="7395" width="5985" height="6180">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="SDF">
    </PIN>
    </NODE>
-   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="11" hiddenwhenlocked="1">
+   <NODE systemname="AsTexture (SF2D.Usages DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Usages\AsTexture (SF2D.Usages DX11.Texture).v4p" nodename="AsTexture (SF2D.Usages DX11.Texture)" componentmode="Hidden" id="11" hiddenwhenlocked="0">
    <BOUNDS type="Node" left="4200" top="5430" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
@@ -187,7 +185,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4860" top="3075" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.08">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -225,7 +223,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3255" top="1275" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Hexogon">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Grid">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="Grid">
    </PIN>
@@ -238,12 +236,52 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Output Enum" dstnodeid="6" dstpinname="Lattice Function">
    </LINK>
-   <PACK Name="dx11" Version="1.0.4">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
+   <NODE systemname="NormalMap (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\NormalMap.tfx" nodename="NormalMap (DX11.TextureFX)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="6555" top="5640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Texture" dstnodeid="18" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="19">
+   <BOUNDS type="Node" left="6540" top="6090" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6540" top="6090" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15630" top="1305" width="6045" height="6060">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="19" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="20">
+   <BOUNDS type="Node" left="6945" top="3165" width="2925" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6945" top="3165" width="735" height="1305">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Can play with slope to get some nice FX|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

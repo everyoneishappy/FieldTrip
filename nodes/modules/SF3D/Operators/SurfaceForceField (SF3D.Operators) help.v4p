@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\ForceField\SurfaceForceField (SF3D.Operators) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Operators\SurfaceForceField (SF3D.Operators) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="150" top="0" width="10050" height="12600">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -129,7 +129,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="32,20,32">
+   <PIN pinname="Y Input Value" slicecount="3" values="32,32,32">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
-   <PIN pinname="SizeXYZ" visible="1" slicecount="3" values="1,1,1">
+   <PIN pinname="SizeXYZ" visible="1" slicecount="3" values="0.78,0.78,0.78">
    </PIN>
    <PIN pinname="Random Seed" slicecount="1" values="168">
    </PIN>
@@ -169,7 +169,7 @@
    </PIN>
    <PIN pinname="Position 3D Buffer" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Size Default" slicecount="1" values="0.003">
+   <PIN pinname="Size Default" slicecount="1" values="0.0018">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -225,7 +225,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4590" top="5130" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.81,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.67,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -245,7 +245,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2010" top="9720" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.24">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -259,7 +259,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3060" top="8760" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK2">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="RK4">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -323,9 +323,9 @@
    <LINK srcnodeid="14" srcpinname="Buffer" dstnodeid="27" dstpinname="Color 4D Buffer">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="13" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="240" top="3630" width="795" height="240">
+   <BOUNDS type="Box" left="300" top="4665" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="240" top="3630" width="0" height="0">
+   <BOUNDS type="Node" left="300" top="4665" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -440,8 +440,6 @@
    </LINK>
    <LINK srcnodeid="39" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="13" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="DivergenceFreeNoise (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources).v4p" nodename="DivergenceFreeNoise (VF3D.Sources)" componentmode="Hidden" id="6" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="2310" top="2205" width="100" height="100">
    </BOUNDS>
@@ -468,6 +466,8 @@
    <PIN pinname="Domain Offset XYZ" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Amplitude XYZ" slicecount="3" values="0.09,0.09,0.09">
    </PIN>
    </NODE>
    <LINK srcnodeid="23" srcpinname="Position Out" dstnodeid="6" dstpinname="Offset">
@@ -545,7 +545,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3045" top="3900" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.048">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -559,7 +559,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3375" top="3180" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -573,7 +573,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3825" top="4305" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -584,13 +584,13 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Surface Mode 0:symmetrical, 1:constrain outside, 2:constrain inside|">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="SurfaceForceField (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\ForceField\SurfaceForceField (SF3D.Operators).v4p" nodename="SurfaceForceField (SF3D.Operators)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="2745" top="4830" width="100" height="100">
@@ -669,6 +669,8 @@
    </PIN>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Step Size Buffer" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="28" dstpinname="Spread Count">
    </LINK>
@@ -723,6 +725,8 @@
    </PIN>
    <PIN pinname="Compiled" visible="1">
    </PIN>
+   <PIN pinname="Default Color" slicecount="1" values="|0.16267,0.62163,0.48131,1.00000|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Render State" dstnodeid="37" dstpinname="Render State">
    </LINK>
@@ -735,5 +739,153 @@
    <LINK srcnodeid="13" srcpinname="Output Node" dstnodeid="37" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="37" srcpinname="Compiled" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="5595" top="6585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Lightness" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RandomSpread (Spreads)" nodename="RandomSpread (Spreads)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="6210" top="6015" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.41">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.67">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="47" dstpinname="Lightness">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Output" dstnodeid="8" dstpinname="Color Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49">
+   <BOUNDS type="Box" left="6465" top="6660" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6465" top="6660" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.29,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="30" dstpinname="CenterXYZ">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE systemname="DynamicBuffer (DX11.Buffer Value)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Value)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="7755" top="9735" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7755" top="9735" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Data" visible="1">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="51">
+   <BOUNDS type="Box" left="8115" top="8985" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8115" top="8985" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.001,0.002,0.003">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="50" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Buffer" dstnodeid="28" dstpinname="Step Size Buffer">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52">
+   <BOUNDS type="Box" left="1035" top="9405" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1035" top="9405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Show SDF|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="SphereSDF (SF3D.Sources)" filename="..\Sources\SphereSDF (SF3D.Sources).v4p" nodename="SphereSDF (SF3D.Sources)" componentmode="Hidden" id="53" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="720" top="3615" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Radius" slicecount="1" values="0.22">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="54">
+   <BOUNDS type="Node" left="105" top="3645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55">
+   <BOUNDS type="Box" left="4575" top="1470" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4575" top="1470" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Switch Input Function|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="54" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="54" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="54" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="13" dstpinname="Input Node">
    </LINK>
    </PATCH>

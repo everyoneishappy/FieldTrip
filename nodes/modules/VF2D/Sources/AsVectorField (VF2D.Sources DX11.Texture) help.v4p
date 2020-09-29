@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta36_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\AsVectorField (VF2D.Sources DX11.Texture) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF2D\Sources\AsVectorField (VF2D.Sources DX11.Texture) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="435" top="375" width="10125" height="9525">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -127,9 +127,9 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="None">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="4" values="0.595505617977528,-0.224719101123595,0.480081716036773,-0.451481103166496">
+   <PIN pinname="X Input Value" slicecount="4" values="0.595505617977528,-0.449438202247191,0.480081716036773,-0.451481103166496">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="-0.358974358974359,0.58974358974359,0.230769230769231,-0.307692307692307">
+   <PIN pinname="Y Input Value" slicecount="4" values="-0.358974358974359,0.205128205128205,0.230769230769231,-0.307692307692307">
    </PIN>
    <PIN pinname="X Output Value" pintype="Output" visible="1">
    </PIN>
@@ -301,7 +301,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5175" top="1845" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.15,-0.12,-0.08,0.0700000000000001">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.41,-0.12,-0.08,0.0700000000000001">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -462,12 +462,32 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="7" dstpinname="Amplitude XY">
    </LINK>
-   <PACK Name="dx11" Version="1.0.5">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <NODE systemname="AsScalarField (SF2D.Sources DX11.Texture)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\AsScalarField (SF2D.Sources DX11.Texture).v4p" nodename="AsScalarField (SF2D.Sources DX11.Texture)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="720" top="7845" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="32">
+   <BOUNDS type="Node" left="780" top="8160" width="1020" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="780" top="8160" width="1020" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|also as SF2D|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

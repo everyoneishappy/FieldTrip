@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\HeightFieldSDF (SF2D.Operators) help.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="525" top="690" width="6540" height="8370">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\HeightFieldSDF (SF2D.Operators) help.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="285" top="330" width="7035" height="8370">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
    <BOUNDS type="Node" left="225" top="225" width="5100" height="450">
@@ -362,132 +362,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE id="12" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1695" top="5820" width="600" height="270">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" pintype="Input" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Box" left="0" top="0" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Input Count" pintype="Configuration" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Render State" pintype="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Custom Semantics" pintype="Input" visible="-1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Resource Semantics" pintype="Input" visible="-1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Validators" pintype="Input" visible="-1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output">
-   </PIN>
-   <PIN pinname="Query" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <NODE id="14" systemname="AspectRatio (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="AspectRatio (DX11.Layer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1005" top="6300" width="945" height="270">
-   </BOUNDS>
-   <PIN pinname="Layer In" visible="1" pintype="Input">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1" pintype="Output">
-   </PIN>
-   <BOUNDS type="Box" left="0" top="0" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform In" pintype="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Uniform Scale" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Alignment" pintype="Input" visible="1" slicecount="1" values="FitIn">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <NODE id="15" systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\packs\VL.EditingFramework.0.47.149-g29575610a3\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="2580" top="5940" width="1650" height="270">
-   </BOUNDS>
-   <PIN pinname="View" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Projection" visible="1" pintype="Output">
-   </PIN>
-   <PIN pinname="Initial Latitude" slicecount="1" pintype="Input" visible="1" values="0.08">
-   </PIN>
-   <PIN pinname="Initial Distance" slicecount="1" pintype="Input" visible="1" values="1.5">
-   </PIN>
-   <PIN pinname="Initial Longitude" slicecount="1" pintype="Input" visible="1" values="0.39">
-   </PIN>
-   <PIN pinname="Initial FOV" slicecount="1" pintype="Input" visible="1" values="0.09">
-   </PIN>
-   <PIN pinname="Initial InterestXYZ" slicecount="3" pintype="Input" visible="1" values="0,1.15,0">
-   </PIN>
-   <BOUNDS type="Box" left="0" top="0" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1260" top="2010" width="18120" height="9600">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Near Plane" pintype="Input" visible="1" slicecount="1" values="0.1">
-   </PIN>
-   <PIN pinname="Far Plane" pintype="Input" visible="1" slicecount="1" values="100">
-   </PIN>
-   <PIN pinname="Camera Controls" pintype="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Reset" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Patch" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="Camera State" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="View Projection" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Inverse View" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="PositionXYZ" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="InterestXYZ" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="FOV" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Distance" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Renderer Hovered" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Idle" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE id="16" nodename="IOBox (Node)" componentmode="InABox" systemname="IOBox (Node)" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Box" left="315" top="3075" width="795" height="240">
    </BOUNDS>
@@ -535,7 +409,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="315" top="4320" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="6975" top="9135" width="4380" height="4650">
+   <BOUNDS type="Window" left="7080" top="375" width="4380" height="4650">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" pintype="Input" values="||">
    </PIN>
@@ -560,97 +434,9 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE id="19" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1035" top="6690" width="1950" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1035" top="6690" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="6990" top="570" width="8445" height="8535">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" pintype="Input" values="||">
-   </PIN>
-   <PIN pinname="View" visible="1" pintype="Input">
-   </PIN>
-   <PIN pinname="Projection" visible="1" pintype="Input">
-   </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" pintype="Input" visible="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Depth Buffer Mode" pintype="Configuration" slicecount="1" values="None">
-   </PIN>
-   <PIN pinname="VSync" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Buffer Count" pintype="Input" visible="-1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Do Not Wait" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Cursor" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Disable Shortcuts" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Refresh Rate" pintype="Input" visible="-1" slicecount="1" values="60">
-   </PIN>
-   <PIN pinname="Flip Sequential" pintype="Input" visible="-1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Clear" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear Depth" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Background Color" pintype="Input" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Fullscreen" pintype="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enable Depth Buffer" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear Depth Value" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" pintype="Input" visible="0" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Crop" pintype="Input" visible="-1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="ViewPort" pintype="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Window Handle" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="Mouse State" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard State" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Touch Supported" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Touch Data" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Actual BackBuffer SizeXY" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Present Time" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Query" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Control" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="Node Ref" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="14" srcpinname="Layer Out" dstnodeid="19" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Projection" dstnodeid="19" dstpinname="Projection">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="View" dstnodeid="19" dstpinname="View">
-   </LINK>
    <LINK srcnodeid="16" srcpinname="Output Node" dstnodeid="17" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="9" srcpinname="Texture" dstnodeid="16" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Layer Out" dstnodeid="14" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="9" dstpinname="Input">
    </LINK>
@@ -666,13 +452,13 @@
    </NODE>
    <LINK srcnodeid="20" srcpinname="Transform Out" dstnodeid="9" dstpinname="Transform">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE id="10" systemname="RaymarchBasic (SF3D.Usages DX11.Layer)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Usages\Render\RaymarchBasic (DX11.Layer SF3D)\RaymarchBasic (SF3D.Usages DX11.Layer).v4p" nodename="RaymarchBasic (SF3D.Usages DX11.Layer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="1875" top="5055" width="100" height="100">
@@ -685,9 +471,9 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" pintype="Input" values="1">
    </PIN>
-   <PIN pinname="March Max Distance" slicecount="1" pintype="Input" visible="1" values="80">
+   <PIN pinname="March Max Distance" slicecount="1" pintype="Input" visible="1" values="64">
    </PIN>
-   <PIN pinname="March Min Distance" slicecount="1" pintype="Input" visible="1" values="0.2">
+   <PIN pinname="March Min Distance" slicecount="1" pintype="Input" visible="1" values="0.01">
    </PIN>
    <PIN pinname="March Step Length" slicecount="1" pintype="Input" visible="1" values="0.6">
    </PIN>
@@ -726,8 +512,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="12" dstpinname="Layer 2" linkstyle="PolyLine">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="10" dstpinname="Input">
    </LINK>
    <NODE id="11" systemname="HeightFieldSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\HeightFieldSDF (SF2D.Operators).v4p" nodename="HeightFieldSDF (SF2D.Operators)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
@@ -777,7 +561,7 @@
    <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="11" dstpinname="Height Field SF2D Function">
    </LINK>
    <NODE id="18" systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="1905" top="1845" width="100" height="100">
+   <BOUNDS type="Node" left="1350" top="1470" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SF2D Function" visible="1">
    </PIN>
@@ -787,9 +571,9 @@
    </PIN>
    <PIN pinname="Shape" slicecount="1" visible="1" pintype="Input" values="0.5">
    </PIN>
-   <PIN pinname="Frequency" slicecount="1" visible="1" pintype="Input" values="1.84">
+   <PIN pinname="Frequency" slicecount="1" visible="1" pintype="Input" values="2.91">
    </PIN>
-   <PIN pinname="Amplitude" slicecount="1" visible="1" pintype="Input" values="0.35">
+   <PIN pinname="Amplitude" slicecount="1" visible="1" pintype="Input" values="0.4">
    </PIN>
    <PIN pinname="Domain Offset" visible="1" slicecount="2" pintype="Input" values="0,0">
    </PIN>
@@ -805,7 +589,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
-   <BOUNDS type="Box" left="30" top="0" width="4800" height="3600">
+   <BOUNDS type="Box" left="0" top="90" width="4800" height="3600">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -824,6 +608,154 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="27">
+   <BOUNDS type="Node" left="450" top="6330" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="450" top="6330" width="1110" height="1515">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Sample Quality|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1890" top="7245" width="705" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1890" top="7245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="fps">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="25" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1890" top="6315" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1890" top="6315" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="24">
+   <BOUNDS type="Node" left="0" top="5865" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="5865" width="11955" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="-1" pintype="Input" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview3D (DX11 Helper)" filename="..\..\..\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\Miscellaneous\Preview3D (DX11 Helper).v4p" componentmode="Hidden" id="23" nodename="Preview3D (DX11 Helper)">
+   <BOUNDS type="Node" left="1890" top="6855" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1890" top="6855" width="4800" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5115" top="1890" width="9090" height="11745">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Sample Quality" visible="1" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="fps" visible="1">
+   </PIN>
+   <PIN pinname="Cam Initial Distance" slicecount="1" values="2.21">
+   </PIN>
+   <PIN pinname="Cam Initial Longitude" slicecount="1" values="-0.06">
+   </PIN>
+   <PIN pinname="Cam Initial Latitude" slicecount="1" values="0.14">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Sample Quality" linkstyle="VHV">
+   <LINKPOINT x="1705" y="6920">
+   </LINKPOINT>
+   <LINKPOINT x="1010" y="6850">
+   </LINKPOINT>
    </LINK>
+   <LINK srcnodeid="23" srcpinname="fps" dstnodeid="26" dstpinname="Y Input Value" linkstyle="VHV">
+   <LINKPOINT x="1735" y="7175">
+   </LINKPOINT>
+   <LINKPOINT x="2105" y="7165">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Output Node" dstnodeid="23" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="25" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="CombineSDF (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\CombineSDF (SF2D.Operators).v4p" nodename="CombineSDF (SF2D.Operators)" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="1905" top="1935" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Input 1 SDF" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Combination Operation" slicecount="1" values="Groove">
+   </PIN>
+   <PIN pinname="Combination Parameter 1" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Combination Parameter 2" slicecount="1" values="1.13">
+   </PIN>
+   </NODE>
+   <NODE systemname="Noise (SF2D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Sources\Noise (SF2D.Sources).v4p" nodename="Noise (SF2D.Sources)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="3105" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Center" slicecount="1" values="-0.51">
+   </PIN>
+   <PIN pinname="Frequency" slicecount="1" values="1.4">
+   </PIN>
+   <PIN pinname="Amplitude" slicecount="1" values="0.26">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" visible="1" values="2.24">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="28" dstpinname="Input 2 SDF">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="28" dstpinname="Input 1 SDF">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
+   <BOUNDS type="Box" left="5010" top="1470" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5010" top="1470" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Time">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Time">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Time">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

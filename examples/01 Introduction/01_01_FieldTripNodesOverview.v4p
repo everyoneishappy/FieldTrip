@@ -755,21 +755,21 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainTransform (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainTransform (SF3D.Operators).v4p" nodename="DomainTransform (SF3D.Operators)" componentmode="Hidden" id="122">
+   <BOUNDS type="Node" left="18120" top="5295" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="18120" top="5295">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DomainRepeat (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF3D.Operators).v4p" nodename="DomainRepeat (SF3D.Operators)" componentmode="Hidden" id="123">
    <BOUNDS type="Node" left="18120" top="5640" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="18120" top="5640">
    </BOUNDS>
    </NODE>
-   <NODE systemname="DomainRepeat (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainRepeat (SF3D.Operators).v4p" nodename="DomainRepeat (SF3D.Operators)" componentmode="Hidden" id="123">
-   <BOUNDS type="Node" left="18120" top="5985" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="5985">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="DomainDistortion (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainDistortion (SF3D.Operators).v4p" nodename="DomainDistortion (SF3D.Operators)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="18120" top="6300" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="5955" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="6300">
+   <BOUNDS type="Box" left="18120" top="5955">
    </BOUNDS>
    </NODE>
    <NODE systemname="Vector3DSplit (VF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\VectorJoinSplit\Vector3DSplit (VF3D.Operators).v4p" nodename="Vector3DSplit (VF3D.Operators)" componentmode="Hidden" id="126">
@@ -1321,9 +1321,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainMirror (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Domain Manipulation\DomainMirror (SF3D.Operators).v4p" nodename="DomainMirror (SF3D.Operators)" componentmode="Hidden" id="227">
-   <BOUNDS type="Node" left="18120" top="6960" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="6615" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="6960">
+   <BOUNDS type="Box" left="18120" top="6615">
    </BOUNDS>
    </NODE>
    <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="234">
@@ -1661,9 +1661,9 @@
    </BOUNDS>
    </NODE>
    <NODE systemname="DomainLookUp (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\DomainLookUp (SF3D.Operators).v4p" nodename="DomainLookUp (SF3D.Operators)" componentmode="Hidden" id="125">
-   <BOUNDS type="Node" left="18120" top="6630" width="100" height="100">
+   <BOUNDS type="Node" left="18120" top="6285" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="18120" top="6630">
+   <BOUNDS type="Box" left="18120" top="6285">
    </BOUNDS>
    </NODE>
    <NODE systemname="JuliaSDF (SF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Sources\JuliaSDF (SF3D.Sources).v4p" nodename="JuliaSDF (SF3D.Sources)" componentmode="Hidden" id="93">
@@ -1927,9 +1927,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Formula (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF2D\Operators\Formula (SF2D.Operators).v4p" nodename="Formula (SF2D.Operators)" componentmode="Hidden" id="272">
-   <BOUNDS type="Node" left="14685" top="4245" width="100" height="100">
+   <BOUNDS type="Node" left="14685" top="4545" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="14685" top="4245">
+   <BOUNDS type="Box" left="14685" top="4545">
    </BOUNDS>
    </NODE>
    <NODE systemname="Formula (SF3D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\SF3D\Operators\Formula (SF3D.Operators).v4p" nodename="Formula (SF3D.Operators)" componentmode="Hidden" id="273">
@@ -2216,6 +2216,52 @@
    <BOUNDS type="Node" left="25245" top="7380" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="25245" top="7380">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsScalarField (SF3D.Sources DX11.Volume)" filename="..\nodes\modules\SF3D\Sources\AsScalarField (SF3D.Sources DX11.Volume).v4p" nodename="AsScalarField (SF3D.Sources DX11.Volume)" componentmode="Hidden" id="320">
+   <BOUNDS type="Node" left="9315" top="7005" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="BoundingSDF (SF3D.Operators)" filename="..\nodes\modules\SF3D\Operators\BoundingSDF (SF3D.Operators).v4p" nodename="BoundingSDF (SF3D.Operators)" componentmode="Hidden" id="321">
+   <BOUNDS type="Node" left="14835" top="5880" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsSF3D (SF2D.Operators)" filename="..\nodes\modules\SF2D\Operators\AsSF3D (SF2D.Operators).v4p" nodename="AsSF3D (SF2D.Operators)" componentmode="Hidden" id="322">
+   <BOUNDS type="Node" left="14685" top="4215" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14685" top="4215">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="323">
+   <BOUNDS type="Node" left="15630" top="4215" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15630" top="4215" width="285" height="240">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="-1" pintype="Input" values="|0.18316,0.36889,0.78128,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Color Output" visible="-1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="SampleTexture (SF3D.Operators)" filename="..\nodes\modules\SF3D\Operators\SampleTexture (SF3D.Operators).v4p" nodename="SampleTexture (SF3D.Operators)" componentmode="Hidden" id="324">
+   <BOUNDS type="Node" left="18120" top="7605" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Falloff (SF3D.Operators)" filename="..\nodes\modules\SF3D\Operators\Falloff (SF3D.Operators).v4p" nodename="Falloff (SF3D.Operators)" componentmode="Hidden" id="325">
+   <BOUNDS type="Node" left="18105" top="7305" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="DomainTwist (SF3D.Operators)" filename="..\nodes\modules\SF3D\Operators\DomainTwist (SF3D.Operators).v4p" nodename="DomainTwist (SF3D.Operators)" componentmode="Hidden" id="327">
+   <BOUNDS type="Node" left="18120" top="6930" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Pulse (SF3D.Operators)" filename="..\nodes\modules\SF3D\Operators\Pulse (SF3D.Operators).v4p" nodename="Pulse (SF3D.Operators)" componentmode="Hidden" id="328">
+   <BOUNDS type="Node" left="14820" top="7680" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Falloff (SF2D.Operators)" filename="..\nodes\modules\SF2D\Operators\Falloff (SF2D.Operators).v4p" nodename="Falloff (SF2D.Operators)" componentmode="Hidden" id="330">
+   <BOUNDS type="Node" left="13125" top="4305" width="100" height="100">
    </BOUNDS>
    </NODE>
    </PATCH>

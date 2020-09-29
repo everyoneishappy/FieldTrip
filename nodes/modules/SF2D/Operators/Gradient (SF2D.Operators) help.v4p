@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Gradient (SF2D.Operators) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Gradient (SF2D.Operators) help.v4p">
    <BOUNDS type="Window" left="0" top="315" width="9525" height="11925">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -481,7 +481,7 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8">
    <BOUNDS type="Node" left="3210" top="7800" width="3540" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="3210" top="7800" width="3540" height="270">
+   <BOUNDS type="Box" left="3210" top="7800" width="3810" height="360">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|Note that the gradient is 2D since the domain is|">
    </PIN>
@@ -610,13 +610,13 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Output X" dstnodeid="4" dstpinname="Radius">
    </LINK>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE systemname="Gradient (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Gradient (SF2D.Operators).v4p" nodename="Gradient (SF2D.Operators)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="2160" top="6060" width="100" height="100">
@@ -652,4 +652,6 @@
    </LINK>
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="19" dstpinname="Input Node">
    </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

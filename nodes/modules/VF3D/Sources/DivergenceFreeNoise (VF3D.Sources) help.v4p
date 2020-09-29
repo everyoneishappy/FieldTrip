@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources) help.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Sources\DivergenceFreeNoise (VF3D.Sources) help.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="315" top="285" width="9180" height="12495">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -353,7 +353,7 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Normal/DFV">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Regular /DFV Noise|">
    </PIN>
    <PIN pinname="Changed" visible="1" pintype="Output">
    </PIN>
@@ -385,7 +385,9 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Color Default" slicecount="1" values="|0.12332,0.12332,0.12332,1.00000|">
+   <PIN pinname="Color Default" slicecount="1" values="|0.81441,0.81441,0.81441,1.00000|">
+   </PIN>
+   <PIN pinname="Size Default" slicecount="1" values="0.009">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Output Node" dstnodeid="7" dstpinname="Position 3D Buffer">
@@ -524,7 +526,7 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32">
    <BOUNDS type="Box" left="4395" top="8130" width="795" height="240">
@@ -544,4 +546,32 @@
    </LINK>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
+   <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
+   <BOUNDS type="Node" left="7275" top="1110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Maximum Background FPS" visible="1">
+   </PIN>
+   <PIN pinname="Maximum Foreground FPS" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33">
+   <BOUNDS type="Box" left="7335" top="765" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7335" top="765" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="30">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Background FPS">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Foreground FPS">
+   </LINK>
    </PATCH>

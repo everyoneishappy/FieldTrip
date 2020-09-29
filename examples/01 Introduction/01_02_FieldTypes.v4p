@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" bgcolor="16777215" systemname="FG_01_Intro" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\girlpower\FieldGuide\FG_01_Intro.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="315" top="0" width="12090" height="15210">
    </BOUNDS>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="8085" top="15495" width="100" height="100">
@@ -16,6 +16,8 @@
    <BOUNDS type="Box" left="8085" top="15495" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Position (Projection) XY" visible="1">
+   </PIN>
+   <PIN pinname="Cycle On Mouse Down" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="DynamicBuffer (DX11.Buffer 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 2d)" componentmode="Hidden" id="9">
@@ -127,7 +129,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Color" slicecount="1" values="|0.18631,0.90207,1.00000,1.00000|">
+   <PIN pinname="Color" slicecount="1" values="|0.97947,1.00000,0.94125,1.00000|">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -387,7 +389,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Color" slicecount="1" values="|0.18631,0.90207,1.00000,1.00000|">
+   <PIN pinname="Color" slicecount="1" values="|0.97947,1.00000,0.94125,1.00000|">
    </PIN>
    <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>

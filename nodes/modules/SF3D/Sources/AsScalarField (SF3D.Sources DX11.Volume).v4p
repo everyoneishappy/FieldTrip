@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Sources\AsScalarField (SF3D.Sources DX11.Volume).v4p" systemname="AsScalarField (SF3D.Sources DX11.Volume)" filename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF3D\Sources\AsScalarField (SF3D.Sources DX11.Volume).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="10920" top="8070" width="12630" height="9150">
    </BOUNDS>
@@ -8,7 +8,7 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE id="12" systemname="ShaderWatcher (DX11 Shader)" filename="%VVVV%\packs\Happy.fxh\nodes\modules\ShaderWatcher (DX11 Shader).v4p" nodename="ShaderWatcher (DX11 Shader)" componentmode="Hidden">
    <BOUNDS type="Node" left="1125" top="1200" width="100" height="100">
@@ -89,7 +89,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Scalar FIeld Texture|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Scalar FIeld Volume|">
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
