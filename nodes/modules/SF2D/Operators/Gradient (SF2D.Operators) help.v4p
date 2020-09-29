@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Gradient (SF2D.Operators) help.v4p">
    <BOUNDS type="Window" left="0" top="315" width="9525" height="11925">
    </BOUNDS>
@@ -616,7 +616,7 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="38.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE systemname="Gradient (SF2D.Operators)" filename="%VVVV%\packs\FieldTrip\nodes\modules\Operators\Gradient (SF2D.Operators).v4p" nodename="Gradient (SF2D.Operators)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="2160" top="6060" width="100" height="100">
@@ -654,4 +654,32 @@
    </LINK>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="43">
+   <BOUNDS type="Node" left="5490" top="10395" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5490" top="10395" width="3495" height="240">
+   </BOUNDS>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   <PIN pinname="Input String" slicecount="1" values="https://en.wikipedia.org/wiki/Gradient">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="44">
+   <BOUNDS type="Node" left="7020" top="10830" width="2130" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7020" top="10830" width="2130" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; Not this kind of gradient!!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Gradient (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Gradient.tfx" nodename="Gradient (DX11.TextureFX)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="5505" top="10845" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
