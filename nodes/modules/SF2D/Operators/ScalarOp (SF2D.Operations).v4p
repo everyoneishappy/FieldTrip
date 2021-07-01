@@ -1,14 +1,14 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF2D.Operations).v4p" systemname="ScalarOp (SF2D.Operations)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF2D.Operations).v4p" scrollx="375" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ScalarOp (SF2D.Operations).v4p" systemname="ScalarOp (SF2D.Operations)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\ScalarOp\ScalarOp (SF2D.Operations).v4p" scrollx="375" scrolly="0">
    <BOUNDS type="Window" left="12000" top="2280" width="14670" height="12255">
    </BOUNDS>
-   <PACK Name="vvvv-Message" Version="2.9.0">
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE systemname="RegExpr (String Replace)" filename="%VVVV%\addonpack\lib\nodes\plugins\RegExprNodes.dll" nodename="RegExpr (String Replace)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="1095" top="7500" width="100" height="100">
@@ -335,6 +335,8 @@
    </PIN>
    <PIN pinname="Enum Name" slicecount="1" values="Op">
    </PIN>
+   <PIN pinname="Only For Sowing Our Type" visible="1" pintype="Input" slicecount="1" values="+">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="52" systemname="IOBox (String)">
    <BOUNDS type="Box" left="10125" top="1875" width="1035" height="3630">
@@ -362,14 +364,6 @@
    </NODE>
    <LINK srcnodeid="52" srcpinname="Output String" dstnodeid="51" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="53">
-   <BOUNDS type="Node" left="9225" top="1080" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
-   </PIN>
-   <PIN pinname="Enum" visible="1" slicecount="1" values="Op">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="54" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="9645" top="720" width="555" height="240">
    </BOUNDS>
@@ -382,8 +376,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Output Enum" dstnodeid="53" dstpinname="Receive">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="59" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6600" top="5295" width="1200" height="240">
    </BOUNDS>
@@ -534,7 +526,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="88" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2205" top="1230" width="795" height="240">
@@ -788,4 +780,8 @@
    <LINKPOINT x="7920" y="5105">
    </LINKPOINT>
    </LINK>
+   <LINK srcnodeid="54" srcpinname="Output Enum" dstnodeid="51" dstpinname="Only For Sowing Our Type">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

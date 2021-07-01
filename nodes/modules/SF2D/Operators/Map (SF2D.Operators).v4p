@@ -1,14 +1,14 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Map (SF2D.Operators).v4p" systemname="Map (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Map (SF2D.Operators).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Map (SF2D.Operators).v4p" systemname="Map (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\Map (SF2D.Operators).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="2355" top="2520" width="14805" height="12120">
    </BOUNDS>
-   <PACK Name="vvvv-Message" Version="2.9.0">
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
    <BOUNDS type="Box" left="960" top="9510" width="795" height="240">
@@ -376,7 +376,7 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.2">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <NODE systemname="Join (SF2D)" filename="%VVVV%\packs\FieldTrip\nodes\plugins\FieldTripHelpers.dll" nodename="Join (SF2D)" componentmode="Hidden" id="121">
    <BOUNDS type="Node" left="3795" top="10425" width="100" height="100">
@@ -525,6 +525,8 @@
    </PIN>
    <PIN pinname="Strings" visible="1">
    </PIN>
+   <PIN pinname="Only For Sowing Our Type" visible="1" pintype="Input" slicecount="1" values="map">
+   </PIN>
    </NODE>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="132">
    <BOUNDS type="Node" left="10830" top="2640" width="100" height="100">
@@ -544,14 +546,6 @@
    </NODE>
    <LINK srcnodeid="132" srcpinname="Output String" dstnodeid="131" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="133">
-   <BOUNDS type="Node" left="12135" top="1605" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Enum" slicecount="1" values="MAPMODE">
-   </PIN>
-   <PIN pinname="Receive" slicecount="1" visible="1" values="map">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="134">
    <BOUNDS type="Box" left="12555" top="1155" width="1590" height="270">
    </BOUNDS>
@@ -570,18 +564,14 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="134" srcpinname="Output Enum" dstnodeid="133" dstpinname="Receive">
-   </LINK>
    <NODE systemname="Enum2String (Enumerations)" nodename="Enum2String (Enumerations)" componentmode="Hidden" id="135">
    <BOUNDS type="Node" left="12570" top="4950" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Enum" visible="1">
+   <PIN pinname="Enum" visible="1" slicecount="1" values="map">
    </PIN>
    <PIN pinname="String Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="134" srcpinname="Output Enum" dstnodeid="135" dstpinname="Enum">
-   </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="136">
    <BOUNDS type="Node" left="12390" top="5325" width="100" height="100">
    </BOUNDS>
@@ -612,4 +602,10 @@
    </LINK>
    <LINK srcnodeid="136" srcpinname="Output" dstnodeid="12" dstpinname="Substitute To">
    </LINK>
+   <LINK srcnodeid="134" srcpinname="Output Enum" dstnodeid="131" dstpinname="Only For Sowing Our Type">
+   </LINK>
+   <LINK srcnodeid="134" srcpinname="Output Enum" dstnodeid="135" dstpinname="Enum">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

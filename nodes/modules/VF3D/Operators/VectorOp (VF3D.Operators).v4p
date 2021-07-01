@@ -1,8 +1,8 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
    <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Operators\VectorOp (VF3D.Operators).v4p" systemname="VectorOp (VF3D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Operators\VectorOp\VectorOp (VF3D.Operators).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="8535" top="1320" width="14670" height="12255">
+   <BOUNDS type="Window" left="63450" top="13035" width="14670" height="12255">
    </BOUNDS>
-   <PACK Name="vvvv-Message" Version="2.9.0">
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
@@ -585,11 +585,13 @@
    <INFO author="" description="Provides basic dyadic ops such as +, -, *, /, % and others on two 3D vector Fields" tags="+, -, *, /">
    </INFO>
    <NODE systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="11415" top="6270" width="100" height="100">
+   <BOUNDS type="Node" left="11355" top="6255" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Strings" visible="1">
    </PIN>
    <PIN pinname="Enum Name" slicecount="1" values="Op">
+   </PIN>
+   <PIN pinname="Only For Sowing Our Type" visible="1" pintype="Input" slicecount="1" values="+">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="87" systemname="IOBox (String)">
@@ -618,14 +620,6 @@
    </NODE>
    <LINK srcnodeid="87" srcpinname="Output String" dstnodeid="88" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="10485" top="1755" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive" slicecount="1" visible="1" values="Op">
-   </PIN>
-   <PIN pinname="Enum" visible="1" slicecount="1" values="Op">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="85" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="10905" top="1395" width="555" height="240">
    </BOUNDS>
@@ -638,8 +632,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="85" srcpinname="Output Enum" dstnodeid="86" dstpinname="Receive">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11745" top="1305" width="480" height="480">
    </BOUNDS>
@@ -691,13 +683,11 @@
    <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="82">
    <BOUNDS type="Node" left="11595" top="6720" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Enum" visible="1">
+   <PIN pinname="Enum" visible="1" slicecount="1" values="+">
    </PIN>
    <PIN pinname="Ord Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="85" srcpinname="Output Enum" dstnodeid="82" dstpinname="Enum">
-   </LINK>
    <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="10995" top="7125" width="100" height="100">
    </BOUNDS>
@@ -824,4 +814,8 @@
    </LINK>
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
+   <LINK srcnodeid="85" srcpinname="Output Enum" dstnodeid="88" dstpinname="Only For Sowing Our Type">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Output Enum" dstnodeid="82" dstpinname="Enum">
+   </LINK>
    </PATCH>
