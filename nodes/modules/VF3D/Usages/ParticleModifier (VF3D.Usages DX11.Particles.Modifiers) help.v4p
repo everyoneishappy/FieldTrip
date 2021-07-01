@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.7.dtd" >
-   <PATCH nodename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers) help.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers) help.v4p">
    <BOUNDS type="Window" left="930" top="0" width="8160" height="10905">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="3">
@@ -214,36 +214,6 @@
    <LINKPOINT x="3960" y="4108">
    </LINKPOINT>
    </LINK>
-   <NODE id="19" systemname="ParticleSystem (DX11.Particles.Core)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Core\ParticleSystem (DX11.Particles.Core).v4p" nodename="ParticleSystem (DX11.Particles.Core)" componentmode="Hidden" hiddenwhenlocked="1">
-   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS type="Node" left="3585" top="5745" width="1290" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3585" top="5745" width="8640" height="7720">
-   </BOUNDS>
-   <BOUNDS type="Window" left="7665" top="270" width="19950" height="16260">
-   </BOUNDS>
-   <PIN pinname="ParticleSystemBuffers" visible="1">
-   </PIN>
-   <PIN pinname="Defines" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Stride" visible="1">
-   </PIN>
-   <PIN pinname="ParticleCount" visible="1">
-   </PIN>
-   <PIN pinname="IterationType" visible="1" pintype="Input">
-   </PIN>
-   <PIN pinname="Iteration Technique" slicecount="1" values="AvgVelocities">
-   </PIN>
-   <PIN pinname="ParticleSystem Name" visible="1" slicecount="1" values="|Default System|">
-   </PIN>
-   <PIN pinname="Definitions" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="20" srcpinname="Layer Out" dstnodeid="19" dstpinname="Layer In">
-   </LINK>
    <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Emitter Size">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Buffer" dstnodeid="25" dstpinname="Position Buffer">
@@ -277,8 +247,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="29" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="ParticleSystemBuffers" dstnodeid="18" dstpinname="ParticleSystemBuffers">
    </LINK>
    <NODE systemname="Box (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Box (DX11.Geometry)" componentmode="Hidden" id="17" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="2970" top="5790" width="100" height="100">
@@ -378,8 +346,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Reset">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="7">
    <BOUNDS type="Box" left="3810" top="2580" width="1590" height="270">
    </BOUNDS>
@@ -458,13 +424,13 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="dx11" Version="1.0.3">
+   <PACK Name="dx11" Version="1.3.1.1">
    </PACK>
    <PACK Name="vvvv-Message" Version="2.9.0">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="40.0.0">
    </PACK>
    <NODE nodename="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" componentmode="Hidden" id="16" systemname="ParticleModifier (VF3D.Usages DX11.Particles.Modifiers)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Usages\ParticleModifier (VF3D.Usages DX11.Particles.Modifiers).v4p">
    <BOUNDS type="Node" left="3885" top="3030" width="100" height="100">
@@ -530,4 +496,40 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="15" dstpinname="Input">
    </LINK>
+   <NODE id="19" systemname="ParticleSystem (DX11.Particles.Core)" filename="%VVVV%\packs\dx11.particles\nodes\modules\Core\ParticleSystem (DX11.Particles.Core).v4p" nodename="ParticleSystem (DX11.Particles.Core)" componentmode="Hidden" hiddenwhenlocked="1">
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="3585" top="5745" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3585" top="5745" width="8640" height="7720">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7665" top="270" width="19950" height="16260">
+   </BOUNDS>
+   <PIN pinname="ParticleSystemBuffers" visible="1">
+   </PIN>
+   <PIN pinname="Defines" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Stride" visible="1">
+   </PIN>
+   <PIN pinname="ParticleCount" visible="1">
+   </PIN>
+   <PIN pinname="IterationType" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Iteration Technique" slicecount="1" values="AvgVelocities">
+   </PIN>
+   <PIN pinname="ParticleSystem Name" visible="1" slicecount="1" values="|Default System|">
+   </PIN>
+   <PIN pinname="Definitions" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Layer Out" dstnodeid="19" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="ParticleSystemBuffers" dstnodeid="18" dstpinname="ParticleSystemBuffers">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Reset">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
    </PATCH>

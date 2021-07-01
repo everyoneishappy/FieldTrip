@@ -29,7 +29,7 @@ float resetAll;
 StructuredBuffer<float> resetBuffer;
 
 //GROUPSIZE
-[numthreads(64, 1, 1)]
+[numthreads(128, 1, 1)]
 void CS_SimpleAgent( uint3 dtid : SV_DispatchThreadID )
 {
 	if (dtid.x >= threadCount) { return; }

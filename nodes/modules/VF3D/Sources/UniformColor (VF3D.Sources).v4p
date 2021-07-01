@@ -1,0 +1,69 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="D:\Dropbox\03_Projects\! Refik Anadol Studio\NEUROSCIENCE + AI RESEARCH\Patches\Concepting\modules\UniformColor (VF3D.Sources).v4p" systemname="UniformColor (VF3D.Sources)" filename="D:\Dropbox\03_Projects\! Refik Anadol Studio\NEUROSCIENCE + AI RESEARCH\Patches\Concepting\modules\UniformColor (VF3D.Sources).v4p">
+   <BOUNDS type="Window" left="9435" top="5145" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.0">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
+   </PACK>
+   <PACK Name="addonpack" Version="38.0.0">
+   </PACK>
+   <NODE systemname="UniformVector (VF3D.Sources)" filename="%VVVV%\packs\FieldTrip\nodes\modules\VF3D\Sources\UniformVector (VF3D.Sources).v4p" nodename="UniformVector (VF3D.Sources)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1710" top="4305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="InputXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="RGB (Color Split Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.RGBVector.dll" nodename="RGB (Color Split Vector)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1695" top="2640" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1695" top="2640" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname=" RGBA" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="2">
+   <BOUNDS type="Box" left="1710" top="1725" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1710" top="1725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <NODE systemname="xyz (3d)" filename="%VVVV%\addonpack\lib\nodes\plugins\Swizzle4d.dll" nodename="xyz (3d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1710" top="3915" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1710" top="3915" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname=" RGBA" dstnodeid="1" dstpinname="XYZW">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="XYZ" dstnodeid="4" dstpinname="InputXYZ">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="0">
+   <BOUNDS type="Box" left="1680" top="4875" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1680" top="4875" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="0" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

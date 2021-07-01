@@ -1,7 +1,8 @@
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//		Grid Distance Functions
+//		Mean Curvature scalar from a 2d scalar field Function
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // This token will be replaced with function name via RegExpr: "FN_"
@@ -10,51 +11,28 @@
 #ifndef FN_BODY 
 #define FN_BODY
 
-#ifndef SDF_FXH
-#include <packs\happy.fxh\sdf.fxh>
-#endif
-
-// DEFINES
-#ifndef LATTICEFUNC
-#define LATTICEFUNC fBoxGrid 
-#endif
-
-
-
-
-
-// paramaters
-float FN_freq : FN_FREQ = 2; 
-float FN_width : FN_WIDTH = .1; 
-float2 FN_offset : FN_OFFSET;
-
-int FN_count : FN_COUNT;
-
-
-// Input SF2D function placeholder
-#ifndef FN_INPUTFREQ
-float FN_FreqDefualt(float2 p)
-{
-	return FN_freq;
-}
-#define FN_INPUTFREQ FN_FreqDefualt
+#ifndef CALC_FXH
+#include <packs\happy.fxh\calc.fxh>
 #endif
 
 
 // Input SF2D function placeholder
-#ifndef FN_INPUTWIDTH
-float FN_widthDefualt(float2 p)
-{
-	return FN_width;
-}
-#define FN_INPUTWIDTH FN_widthDefualt
+#ifndef FN_INPUT
+#define FN_INPUT length
 #endif
+
+// Parameters
+float FN_eps : FN_EPS = 0.001;
+
+float2 FN_norm (float2 p)
+{
+	return calcNormS2(FN_INPUT, p, FN_eps);
+}
 
 float FN_ (float2 p)
 {
-	float freq = FN_INPUTFREQ(p);
-	float width = FN_INPUTWIDTH(p);
-	return LATTICEFUNC(p * freq + FN_offset, width) / freq;
+	return calcDivV2(FN_norm, p, FN_eps*10) * -.5; 
+
 }
 // end of the function body
 #endif 
@@ -64,6 +42,8 @@ float FN_ (float2 p)
 #define SF2D FN_
 #endif
 ////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 technique11 RemoveMe{}
 

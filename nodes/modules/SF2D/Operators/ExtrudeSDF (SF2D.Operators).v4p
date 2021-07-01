@@ -1,14 +1,14 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\happy\Desktop\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ExtrudeSDF (SF2D.Operators).v4p" systemname="ExtrudeSDF (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" scrollx="0" scrolly="3165">
-   <BOUNDS type="Window" left="6180" top="8835" width="14670" height="12255">
+   <PATCH nodename="D:\Dropbox\02_Tools\VVVV\vvvversions\vvvv_50beta38.1_x64\packs\FieldTrip\nodes\modules\SF2D\Operators\ExtrudeSDF (SF2D.Operators).v4p" systemname="ExtrudeSDF (SF2D.Operators)" filename="C:\Users\Kyle\Desktop\Dropbox\VVVV Files\vvvv_50beta35.7_x64\packs\FieldTrip\nodes\modules\Sources\Signed Distance FIelds\ExtrudeSDF (SF2D.Operators).v4p" scrollx="0" scrolly="15">
+   <BOUNDS type="Window" left="6180" top="8835" width="16905" height="14190">
    </BOUNDS>
-   <PACK Name="vvvv-Message" Version="2.9.0">
+   <PACK Name="vvvv-Message" Version="2.9.10">
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.3">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="38.1.0">
+   <PACK Name="addonpack" Version="38.0.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1065" top="9465" width="795" height="240">
@@ -395,6 +395,8 @@
    </PIN>
    <PIN pinname="Enum Name" slicecount="1" values="|Extrude Type|">
    </PIN>
+   <PIN pinname="Only For Sowing Our Type" visible="1" pintype="Input" slicecount="1" values="Extrude">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="79" systemname="IOBox (String)">
    <BOUNDS type="Box" left="6675" top="1875" width="2325" height="1260">
@@ -420,14 +422,6 @@
    </NODE>
    <LINK srcnodeid="79" srcpinname="Output String" dstnodeid="80" dstpinname="Strings">
    </LINK>
-   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="8850" top="1410" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Enum" slicecount="1" values="|Extrude Type|">
-   </PIN>
-   <PIN pinname="Receive" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="77" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="9225" top="660" width="2115" height="240">
    </BOUNDS>
@@ -440,8 +434,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="77" srcpinname="Output Enum" dstnodeid="78" dstpinname="Receive">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="76" systemname="IOBox (String)">
    <BOUNDS type="Box" left="9075" top="1860" width="5865" height="1245">
    </BOUNDS>
@@ -667,5 +659,7 @@
    <PACK Name="dx11.particles" Version="1.0.6">
    </PACK>
    <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Output Enum" dstnodeid="80" dstpinname="Only For Sowing Our Type">
    </LINK>
    </PATCH>

@@ -34,20 +34,22 @@ float stepSizeDefault <string uiname="Step Size Defualt";> = 0.01666;
 StructuredBuffer<float> stepSizeBuffer <string uiname="Step Size Buffer";>;
 
 //GROUPSIZE
-[numthreads(64, 1, 1)]
+[numthreads(128, 1, 1)]
 void CS_StreamLine( uint3 dtid : SV_DispatchThreadID )
 {
 
 	if (dtid.x >= threadCount) { return; }
 
-	Output[dtid.x] = bPos[dtid.x];
-	float2 p = bPos[dtid.x];
+
+	uint index = dtid.x * stepCount;  // first point
+	float2 p = bPos[dtid.x % sbSize(bPos)];
+	Output[index] = p;
 	float stepSize = sbLoad(stepSizeBuffer, stepSizeDefault, dtid.x);
-	for (uint i = 0; i < stepCount; i++)
+	for (uint i = 1; i <= stepCount -1; i++)
 	{
-		uint index = dtid.x * stepCount + i;
+
 		integrate(VF2D, p, stepSize); 
-		Output[index] =  p;
+		Output[index+i] =  p;
 	}
 }
 
